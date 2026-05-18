@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="texts.xsd" Version="4.26.1">
+  <Languages>
+    <Language Id="GB" />
+  </Languages>
+  <Texts>
+    <TextGroup Id="Slidebar">
+      <Text Id="HARDWARE" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">HARDWARE SETUP</Translation>
+      </Text>
+      <Text Id="LOGS" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">SYSTEM ACTIVITY LOGS</Translation>
+      </Text>
+      <Text Id="ANALYSIS" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">DATA ANALYSIS TRENDS</Translation>
+      </Text>
+      <Text Id="DASHBOARD" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">REAL-TIME MONITORING</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Booting">
+      <Text Id="T_BootingText" Alignment="Center" TypographyId="BootingText">
+        <Translation Language="GB">Starting system...</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="DashboardValues">
+      <Text Id="T_AQI_Val" Alignment="Center" TypographyId="DashboardHuge">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_PM25_Val" Alignment="Right" TypographyId="DashboardHuge">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_PM10_Val" Alignment="Right" TypographyId="DashboardHuge">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_Temp_Val" Alignment="Right" TypographyId="DashboardLarge">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_Humi_Val" Alignment="Right" TypographyId="DashboardLarge">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_Gas_Val" Alignment="Right" TypographyId="DashboardMedium">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_Clock_Val" Alignment="Center" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_Date_Val" Alignment="Right" TypographyId="Small">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="DashboardStatus">
+      <Text Id="T_AQI_Status" Alignment="Center" TypographyId="Typography1">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="T_PM_Status" Alignment="Center" TypographyId="DashboardLabelTiny">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="DashboardLabels">
+      <Text Id="T_Label_AQI" Alignment="Center" TypographyId="Default">
+        <Translation Language="GB">AQI INDEX</Translation>
+      </Text>
+      <Text Id="T_Label_PM25_Static" Alignment="Left" TypographyId="DashboardLabelLarge">
+        <Translation Language="GB">PM 2.5</Translation>
+      </Text>
+      <Text Id="T_Label_PM10_Static" Alignment="Left" TypographyId="DashboardLabelLarge">
+        <Translation Language="GB">PM 10</Translation>
+      </Text>
+      <Text Id="T_Label_NO2_Static" Alignment="Left" TypographyId="DashboardLabelSmall">
+        <Translation Language="GB">NO2</Translation>
+      </Text>
+      <Text Id="T_Label_O3_Static" Alignment="Left" TypographyId="DashboardLabelSmall">
+        <Translation Language="GB">O3</Translation>
+      </Text>
+      <Text Id="T_Label_CO2_Static" Alignment="Left" TypographyId="DashboardLabelSmall">
+        <Translation Language="GB">CO2</Translation>
+      </Text>
+      <Text Id="T_Label_SO2_Static" Alignment="Left" TypographyId="DashboardLabelSmall">
+        <Translation Language="GB">SO2</Translation>
+      </Text>
+      <Text Id="T_Label_TEMP_Static" Alignment="Left" TypographyId="DashboardLabelMedium">
+        <Translation Language="GB">TEMP</Translation>
+      </Text>
+      <Text Id="T_Label_HUMI_Static" Alignment="Left" TypographyId="DashboardLabelMedium">
+        <Translation Language="GB">HUMI</Translation>
+      </Text>
+      <Text Id="T_Stable_Flow" Alignment="Center" TypographyId="DashboardLabelLarge">
+        <Translation Language="GB">STABLE FLOW</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="DashboardSamples">
+      <Text Id="__SingleUse_Clock" Alignment="Center" TypographyId="DashboardSmall">
+        <Translation Language="GB">14:22:05</Translation>
+      </Text>
+      <Text Id="__SingleUse_AQI" Alignment="Center" TypographyId="DashboardHuge">
+        <Translation Language="GB">33</Translation>
+      </Text>
+      <Text Id="__SingleUse_AQIStat" Alignment="Center" TypographyId="DashboardMedium">
+        <Translation Language="GB">EXCELLENT</Translation>
+      </Text>
+      <Text Id="__SingleUse_PM25" Alignment="Left" TypographyId="DashboardHuge">
+        <Translation Language="GB">12.4</Translation>
+      </Text>
+      <Text Id="__SingleUse_PM25Stat" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">NORMAL</Translation>
+      </Text>
+      <Text Id="__SingleUse_PM10" Alignment="Left" TypographyId="DashboardHuge">
+        <Translation Language="GB">28.1</Translation>
+      </Text>
+      <Text Id="__SingleUse_PM10Stat" Alignment="Left" TypographyId="DashboardMini">
+        <Translation Language="GB">GREAT</Translation>
+      </Text>
+      <Text Id="__SingleUse_NO2" Alignment="Left" TypographyId="DashboardMedium">
+        <Translation Language="GB">15.2</Translation>
+      </Text>
+      <Text Id="__SingleUse_O3" Alignment="Left" TypographyId="DashboardMedium">
+        <Translation Language="GB">34.6</Translation>
+      </Text>
+      <Text Id="__SingleUse_CO2" Alignment="Left" TypographyId="DashboardMedium">
+        <Translation Language="GB">418</Translation>
+      </Text>
+      <Text Id="__SingleUse_SO2" Alignment="Left" TypographyId="DashboardMedium">
+        <Translation Language="GB">8.4</Translation>
+      </Text>
+      <Text Id="__SingleUse_Temp" Alignment="Left" TypographyId="DashboardLarge">
+        <Translation Language="GB">24.5</Translation>
+      </Text>
+      <Text Id="__SingleUse_Humi" Alignment="Left" TypographyId="DashboardLarge">
+        <Translation Language="GB">62.0</Translation>
+      </Text>
+      <Text Id="__SingleUse_Date" Alignment="Right" TypographyId="DashboardSmall">
+        <Translation Language="GB">12/05/2026</Translation>
+      </Text>
+    </TextGroup>
+    <TextGroup Id="Unsorted" />
+  </Texts>
+  <Typographies>
+    <Typography Id="Default" Font="Roboto-Regular.ttf" Size="13" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="Large" Font="Roboto-Bold.ttf" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789.:/-" />
+    <Typography Id="Small" Font="Roboto-Regular.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="BootingText" Font="Roboto-Bold.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardHuge" Font="Roboto-Black.ttf" Size="48" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789.-%°C" />
+    <Typography Id="DashboardLarge" Font="Roboto-Bold.ttf" Size="36" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789.-%°C" />
+    <Typography Id="DashboardMedium" Font="Roboto-Bold.ttf" Size="24" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="0123456789.-" />
+    <Typography Id="DashboardSmall" Font="Roboto-Regular.ttf" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardMini" Font="Roboto-Regular.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardLabelLarge" Font="Roboto-Black.ttf" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardLabelMedium" Font="Roboto-Black.ttf" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardLabelSmall" Font="Roboto-Black.ttf" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="DashboardLabelTiny" Font="Roboto-Bold.ttf" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+    <Typography Id="Typography1" Font="Roboto-Black.ttf" Size="27" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacters="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz 0123456789.:/-" />
+  </Typographies>
+</TextDatabase>

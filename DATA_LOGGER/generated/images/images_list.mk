@@ -1,0 +1,1 @@
+GEN_CSRCS += _logo_boot_RGB565A8_256x65.c _bg_settings_base_RGB565A8_800x480.c _weather_RGB565A8_32x32.c _humidity_RGB565A8_32x32.c _wifi_on_RGB565A8_16x16.c _wifi_off_RGB565A8_16x16.c _mqtt_off_RGB565A8_16x16.c _mqtt_on_RGB565A8_16x16.c _next_RGB565A8_32x32.c _left_arrow_RGB565A8_24x24.c
