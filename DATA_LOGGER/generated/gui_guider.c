@@ -74,13 +74,6 @@ void init_scr_del_flag(lv_ui *ui)
 
     ui->scr_booting_del = true;
     ui->scr_dashboard_del = true;
-    ui->scr_analysis_del = true;
-    ui->scr_logs_del = true;
-    ui->scr_hw_del = true;
-    ui->scr_wifi_del = true;
-    ui->screen_4_del = true;
-    ui->screen_5_del = true;
-    ui->screen_6_del = true;
 }
 
 void setup_bottom_layer(void)

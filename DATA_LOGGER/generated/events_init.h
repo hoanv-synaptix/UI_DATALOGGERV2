@@ -19,11 +19,6 @@ extern "C" {
 void events_init(lv_ui *ui);
 
 void events_init_scr_booting(lv_ui *ui);
-void events_init_scr_dashboard(lv_ui *ui);
-void events_init_scr_analysis(lv_ui *ui);
-void events_init_scr_logs(lv_ui *ui);
-void events_init_scr_hw(lv_ui *ui);
-void events_init_scr_wifi(lv_ui *ui);
 
 #ifdef __cplusplus
 }

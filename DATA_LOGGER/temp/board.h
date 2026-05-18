@@ -684,7 +684,7 @@
 
 #define LV_USE_CANVAS 0
 
-#define LV_USE_CHART 0
+#define LV_USE_CHART 1
 
 #define LV_USE_CHECKBOX 0
 
@@ -740,7 +740,7 @@
 
 #define LV_USE_TABVIEW 0
 
-#define LV_USE_TEXTAREA 1
+#define LV_USE_TEXTAREA 0
 #if LV_USE_TEXTAREA
 #define LV_TEXTAREA_DEF_PWD_SHOW_TIME 1500
 #endif    /* LV_USE_TEXTAREA */

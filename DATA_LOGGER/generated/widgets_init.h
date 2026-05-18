@@ -24,38 +24,10 @@ void digital_clock_count(int * hour, int * minute, int * seconds, char * meridie
 #endif
 
 
-void scr_dashboard_datetext_1_event_handler(lv_event_t *e);
-void scr_dashboard_datetext_1_calendar_event_handler(lv_event_t *e);
-void scr_dashboard_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void scr_dashboard_digital_clock_1_timer(lv_timer_t *timer);
-void scr_analysis_datetext_1_event_handler(lv_event_t *e);
-void scr_analysis_datetext_1_calendar_event_handler(lv_event_t *e);
-void scr_analysis_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void scr_analysis_digital_clock_1_timer(lv_timer_t *timer);
-void scr_logs_datetext_1_event_handler(lv_event_t *e);
-void scr_logs_datetext_1_calendar_event_handler(lv_event_t *e);
-void scr_logs_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void scr_logs_digital_clock_1_timer(lv_timer_t *timer);
-void scr_hw_datetext_1_event_handler(lv_event_t *e);
-void scr_hw_datetext_1_calendar_event_handler(lv_event_t *e);
-void scr_hw_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void scr_hw_digital_clock_1_timer(lv_timer_t *timer);
-void scr_wifi_datetext_1_event_handler(lv_event_t *e);
-void scr_wifi_datetext_1_calendar_event_handler(lv_event_t *e);
-void scr_wifi_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void scr_wifi_digital_clock_1_timer(lv_timer_t *timer);
-void screen_4_datetext_1_event_handler(lv_event_t *e);
-void screen_4_datetext_1_calendar_event_handler(lv_event_t *e);
-void screen_4_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void screen_4_digital_clock_1_timer(lv_timer_t *timer);
-void screen_5_datetext_1_event_handler(lv_event_t *e);
-void screen_5_datetext_1_calendar_event_handler(lv_event_t *e);
-void screen_5_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void screen_5_digital_clock_1_timer(lv_timer_t *timer);
-void screen_6_datetext_1_event_handler(lv_event_t *e);
-void screen_6_datetext_1_calendar_event_handler(lv_event_t *e);
-void screen_6_datetext_1_init_calendar(lv_obj_t *obj, char * s);
-void screen_6_digital_clock_1_timer(lv_timer_t *timer);
+void scr_dashboard_date_val_event_handler(lv_event_t *e);
+void scr_dashboard_date_val_calendar_event_handler(lv_event_t *e);
+void scr_dashboard_date_val_init_calendar(lv_obj_t *obj, char * s);
+void scr_dashboard_time_val_timer(lv_timer_t *timer);
 
 
 #ifdef __cplusplus
