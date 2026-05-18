@@ -2414,6 +2414,6423 @@ void setup_scr_scr_dashboard(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restore_cancel, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->scr_dashboard_btn_restore_cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
+    //Write codes scr_dashboard_cont_hw
+    ui->scr_dashboard_cont_hw = lv_obj_create(ui->scr_dashboard);
+    lv_obj_set_pos(ui->scr_dashboard_cont_hw, 101, 49);
+    lv_obj_set_size(ui->scr_dashboard_cont_hw, 680, 420);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_hw, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_hw, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_hw
+    ui->scr_dashboard_label_hw = lv_label_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_label_hw, 0, 5);
+    lv_obj_set_size(ui->scr_dashboard_label_hw, 172, 11);
+    lv_label_set_text(ui->scr_dashboard_label_hw, "HARDWARE SETUP");
+    lv_label_set_long_mode(ui->scr_dashboard_label_hw, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_hw, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_hw, lv_color_hex(0x64748B), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_hw, &lv_font_Roboto_Black_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_hw, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_hw, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_menu
+    ui->scr_dashboard_cont_menu = lv_obj_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_cont_menu, 0, 35);
+    lv_obj_set_size(ui->scr_dashboard_cont_menu, 677, 374);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_menu, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_menu, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_net
+    ui->scr_dashboard_cont_net = lv_obj_create(ui->scr_dashboard_cont_menu);
+    lv_obj_set_pos(ui->scr_dashboard_cont_net, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_net, 660, 80);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_net, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_net, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_net, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_net, 54, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_net, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_net, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_net, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_99
+    ui->scr_dashboard_label_99 = lv_label_create(ui->scr_dashboard_cont_net);
+    lv_obj_set_pos(ui->scr_dashboard_label_99, 80, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_99, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_99, "NETWORK CONFIGURATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_99, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_99, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_99, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_99, &lv_font_Roboto_Bold_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_99, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_99, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_99, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_100
+    ui->scr_dashboard_label_100 = lv_label_create(ui->scr_dashboard_cont_net);
+    lv_obj_set_pos(ui->scr_dashboard_label_100, 80, 46);
+    lv_obj_set_size(ui->scr_dashboard_label_100, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_100, "LTE, WIFI & ETHERNET MANAGEMENT");
+    lv_label_set_long_mode(ui->scr_dashboard_label_100, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_100, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_100, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_100, &lv_font_Roboto_Bold_9, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_100, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_100, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_100, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_14
+    ui->scr_dashboard_img_14 = lv_image_create(ui->scr_dashboard_cont_net);
+    lv_obj_set_pos(ui->scr_dashboard_img_14, 603, 23);
+    lv_obj_set_size(ui->scr_dashboard_img_14, 32, 32);
+    lv_obj_add_flag(ui->scr_dashboard_img_14, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_14, &_next_RGB565A8_32x32);
+    lv_image_set_pivot(ui->scr_dashboard_img_14, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_14, 0);
+
+    //Write style for scr_dashboard_img_14, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_14, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_14, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_14, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_33
+    ui->scr_dashboard_cont_33 = lv_obj_create(ui->scr_dashboard_cont_net);
+    lv_obj_set_pos(ui->scr_dashboard_cont_33, 23, 19);
+    lv_obj_set_size(ui->scr_dashboard_cont_33, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_33, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_33, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_33, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_33, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_33, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_33, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_33, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_33, 38, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_33, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_33, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_33, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_33, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_33, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_33, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_33, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_27
+    ui->scr_dashboard_img_27 = lv_image_create(ui->scr_dashboard_cont_33);
+    lv_obj_set_pos(ui->scr_dashboard_img_27, 7, 8);
+    lv_obj_set_size(ui->scr_dashboard_img_27, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_27, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_27, &_connection_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_27, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_27, 0);
+
+    //Write style for scr_dashboard_img_27, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_27, 129, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_27, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_27, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_net
+    ui->scr_dashboard_btn_net = lv_button_create(ui->scr_dashboard_cont_net);
+    lv_obj_set_pos(ui->scr_dashboard_btn_net, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_net, 660, 80);
+    ui->scr_dashboard_btn_net_label = lv_label_create(ui->scr_dashboard_btn_net);
+    lv_label_set_text(ui->scr_dashboard_btn_net_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_net_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_net_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_net, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_net_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_net, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_net, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_net, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_net, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_net, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_net, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_net, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_net, 43, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_net, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_net, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_net, 20, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_net, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_net, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_net, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_net, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_net, 60, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_net, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_net, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_net, 20, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_net, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_net, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_net, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_net, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_net, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_net, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_net, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_net, 20, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_net, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_net, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_net, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_net, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_net, 56, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_net, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_net, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_net, 20, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_net, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_net, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_net, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_net, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_mqtt
+    ui->scr_dashboard_cont_mqtt = lv_obj_create(ui->scr_dashboard_cont_menu);
+    lv_obj_set_pos(ui->scr_dashboard_cont_mqtt, 0, 90);
+    lv_obj_set_size(ui->scr_dashboard_cont_mqtt, 660, 80);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_mqtt, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_mqtt, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_mqtt, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_mqtt, 54, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_mqtt, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_mqtt, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_mqtt, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_102
+    ui->scr_dashboard_label_102 = lv_label_create(ui->scr_dashboard_cont_mqtt);
+    lv_obj_set_pos(ui->scr_dashboard_label_102, 80, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_102, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_102, "MQTT PROTOCOL");
+    lv_label_set_long_mode(ui->scr_dashboard_label_102, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_102, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_102, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_102, &lv_font_Roboto_Bold_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_102, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_102, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_102, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_101
+    ui->scr_dashboard_label_101 = lv_label_create(ui->scr_dashboard_cont_mqtt);
+    lv_obj_set_pos(ui->scr_dashboard_label_101, 80, 46);
+    lv_obj_set_size(ui->scr_dashboard_label_101, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_101, "BROKER & AUTHENTICATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_101, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_101, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_101, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_101, &lv_font_Roboto_Bold_9, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_101, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_101, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_101, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_15
+    ui->scr_dashboard_img_15 = lv_image_create(ui->scr_dashboard_cont_mqtt);
+    lv_obj_set_pos(ui->scr_dashboard_img_15, 603, 23);
+    lv_obj_set_size(ui->scr_dashboard_img_15, 32, 32);
+    lv_obj_add_flag(ui->scr_dashboard_img_15, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_15, &_next_RGB565A8_32x32);
+    lv_image_set_pivot(ui->scr_dashboard_img_15, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_15, 0);
+
+    //Write style for scr_dashboard_img_15, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_15, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_15, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_15, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_35
+    ui->scr_dashboard_cont_35 = lv_obj_create(ui->scr_dashboard_cont_mqtt);
+    lv_obj_set_pos(ui->scr_dashboard_cont_35, 23, 19);
+    lv_obj_set_size(ui->scr_dashboard_cont_35, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_35, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_35, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_35, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_35, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_35, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_35, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_35, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_35, 38, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_35, lv_color_hex(0x3B82F6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_35, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_35, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_35, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_35, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_35, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_35, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_26
+    ui->scr_dashboard_img_26 = lv_image_create(ui->scr_dashboard_cont_35);
+    lv_obj_set_pos(ui->scr_dashboard_img_26, 7, 8);
+    lv_obj_set_size(ui->scr_dashboard_img_26, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_26, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_26, &_computer_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_26, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_26, 0);
+
+    //Write style for scr_dashboard_img_26, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_26, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_26, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_26, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_mqtt
+    ui->scr_dashboard_btn_mqtt = lv_button_create(ui->scr_dashboard_cont_mqtt);
+    lv_obj_set_pos(ui->scr_dashboard_btn_mqtt, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_mqtt, 660, 80);
+    ui->scr_dashboard_btn_mqtt_label = lv_label_create(ui->scr_dashboard_btn_mqtt);
+    lv_label_set_text(ui->scr_dashboard_btn_mqtt_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_mqtt_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_mqtt_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_mqtt, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_mqtt_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_mqtt, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_mqtt, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_mqtt, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt, 43, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt, 20, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_mqtt, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt, 60, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt, 20, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_mqtt, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt, 20, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_mqtt, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt, 56, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt, 20, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_modbus
+    ui->scr_dashboard_cont_modbus = lv_obj_create(ui->scr_dashboard_cont_menu);
+    lv_obj_set_pos(ui->scr_dashboard_cont_modbus, 0, 180);
+    lv_obj_set_size(ui->scr_dashboard_cont_modbus, 660, 80);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_modbus, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_modbus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_modbus, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_modbus, 54, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_modbus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_modbus, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_modbus, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_104
+    ui->scr_dashboard_label_104 = lv_label_create(ui->scr_dashboard_cont_modbus);
+    lv_obj_set_pos(ui->scr_dashboard_label_104, 80, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_104, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_104, "MODBUS RTU SETUP");
+    lv_label_set_long_mode(ui->scr_dashboard_label_104, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_104, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_104, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_104, &lv_font_Roboto_Bold_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_104, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_104, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_104, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_103
+    ui->scr_dashboard_label_103 = lv_label_create(ui->scr_dashboard_cont_modbus);
+    lv_obj_set_pos(ui->scr_dashboard_label_103, 80, 46);
+    lv_obj_set_size(ui->scr_dashboard_label_103, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_103, "SLAVE SETTINGS & BAUDRATE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_103, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_103, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_103, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_103, &lv_font_Roboto_Bold_9, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_103, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_103, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_103, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_16
+    ui->scr_dashboard_img_16 = lv_image_create(ui->scr_dashboard_cont_modbus);
+    lv_obj_set_pos(ui->scr_dashboard_img_16, 603, 23);
+    lv_obj_set_size(ui->scr_dashboard_img_16, 32, 32);
+    lv_obj_add_flag(ui->scr_dashboard_img_16, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_16, &_next_RGB565A8_32x32);
+    lv_image_set_pivot(ui->scr_dashboard_img_16, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_16, 0);
+
+    //Write style for scr_dashboard_img_16, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_16, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_16, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_16, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_37
+    ui->scr_dashboard_cont_37 = lv_obj_create(ui->scr_dashboard_cont_modbus);
+    lv_obj_set_pos(ui->scr_dashboard_cont_37, 23, 19);
+    lv_obj_set_size(ui->scr_dashboard_cont_37, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_37, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_37, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_37, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_37, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_37, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_37, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_37, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_37, 38, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_37, lv_color_hex(0xF59E0B), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_37, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_37, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_37, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_37, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_37, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_37, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_25
+    ui->scr_dashboard_img_25 = lv_image_create(ui->scr_dashboard_cont_37);
+    lv_obj_set_pos(ui->scr_dashboard_img_25, 7, 8);
+    lv_obj_set_size(ui->scr_dashboard_img_25, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_25, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_25, &_communicative_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_25, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_25, 0);
+
+    //Write style for scr_dashboard_img_25, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_25, 129, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_25, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_25, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_modbus
+    ui->scr_dashboard_btn_modbus = lv_button_create(ui->scr_dashboard_cont_modbus);
+    lv_obj_set_pos(ui->scr_dashboard_btn_modbus, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_modbus, 660, 80);
+    ui->scr_dashboard_btn_modbus_label = lv_label_create(ui->scr_dashboard_btn_modbus);
+    lv_label_set_text(ui->scr_dashboard_btn_modbus_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_modbus_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_modbus_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_modbus, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_modbus_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_modbus, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_modbus, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_modbus, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus, 43, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus, 20, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_modbus, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus, 60, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus, 20, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_modbus, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus, 20, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_modbus, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus, 56, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus, 20, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_sys_admin
+    ui->scr_dashboard_cont_sys_admin = lv_obj_create(ui->scr_dashboard_cont_menu);
+    lv_obj_set_pos(ui->scr_dashboard_cont_sys_admin, 0, 270);
+    lv_obj_set_size(ui->scr_dashboard_cont_sys_admin, 660, 80);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_sys_admin, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_sys_admin, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_sys_admin, 54, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_sys_admin, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_sys_admin, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_sys_admin, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_106
+    ui->scr_dashboard_label_106 = lv_label_create(ui->scr_dashboard_cont_sys_admin);
+    lv_obj_set_pos(ui->scr_dashboard_label_106, 80, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_106, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_106, "SYSTEM ADMINISTRATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_106, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_106, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_106, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_106, &lv_font_Roboto_Bold_14, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_106, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_106, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_106, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_105
+    ui->scr_dashboard_label_105 = lv_label_create(ui->scr_dashboard_cont_sys_admin);
+    lv_obj_set_pos(ui->scr_dashboard_label_105, 80, 46);
+    lv_obj_set_size(ui->scr_dashboard_label_105, 381, 18);
+    lv_label_set_text(ui->scr_dashboard_label_105, "MAINTENANCE, UI & INFIRMATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_105, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_105, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_105, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_105, &lv_font_Roboto_Bold_9, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_105, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_105, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_105, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_17
+    ui->scr_dashboard_img_17 = lv_image_create(ui->scr_dashboard_cont_sys_admin);
+    lv_obj_set_pos(ui->scr_dashboard_img_17, 603, 23);
+    lv_obj_set_size(ui->scr_dashboard_img_17, 32, 32);
+    lv_obj_add_flag(ui->scr_dashboard_img_17, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_17, &_next_RGB565A8_32x32);
+    lv_image_set_pivot(ui->scr_dashboard_img_17, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_17, 0);
+
+    //Write style for scr_dashboard_img_17, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_17, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_17, lv_color_hex(0xababab), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_17, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_39
+    ui->scr_dashboard_cont_39 = lv_obj_create(ui->scr_dashboard_cont_sys_admin);
+    lv_obj_set_pos(ui->scr_dashboard_cont_39, 23, 19);
+    lv_obj_set_size(ui->scr_dashboard_cont_39, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_39, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_39, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_39, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_39, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_39, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_39, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_39, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_39, 38, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_39, lv_color_hex(0xA855F7), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_39, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_39, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_39, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_39, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_39, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_39, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_img_24
+    ui->scr_dashboard_img_24 = lv_image_create(ui->scr_dashboard_cont_39);
+    lv_obj_set_pos(ui->scr_dashboard_img_24, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_24, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_24, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_24, &_system_update_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_24, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_24, 0);
+
+    //Write style for scr_dashboard_img_24, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_24, 128, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_24, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_24, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_sys_admin
+    ui->scr_dashboard_btn_sys_admin = lv_button_create(ui->scr_dashboard_cont_sys_admin);
+    lv_obj_set_pos(ui->scr_dashboard_btn_sys_admin, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_sys_admin, 660, 80);
+    ui->scr_dashboard_btn_sys_admin_label = lv_label_create(ui->scr_dashboard_btn_sys_admin);
+    lv_label_set_text(ui->scr_dashboard_btn_sys_admin_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_sys_admin_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_sys_admin_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_sys_admin, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_sys_admin_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_admin, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_admin, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_admin, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_sys_admin, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_admin, 43, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_admin, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_admin, 20, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_admin, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_admin, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_admin, 60, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_admin, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_admin, 20, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_admin, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_admin, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_admin, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_admin, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_admin, 20, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_admin, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_admin, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_sys_admin, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_admin, 56, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_admin, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_admin, 20, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_admin, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_admin, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_admin, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_admin, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_networkconfig
+    ui->scr_dashboard_cont_networkconfig = lv_obj_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_cont_networkconfig, 0, 35);
+    lv_obj_set_size(ui->scr_dashboard_cont_networkconfig, 677, 374);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_networkconfig, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_networkconfig, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_networkconfig, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_networkconfig, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_back
+    ui->scr_dashboard_cont_back = lv_obj_create(ui->scr_dashboard_cont_networkconfig);
+    lv_obj_set_pos(ui->scr_dashboard_cont_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_back, 71, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_back
+    ui->scr_dashboard_btn_back = lv_button_create(ui->scr_dashboard_cont_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_back, 40, 40);
+    ui->scr_dashboard_btn_back_label = lv_label_create(ui->scr_dashboard_btn_back);
+    lv_label_set_text(ui->scr_dashboard_btn_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_18
+    ui->scr_dashboard_img_18 = lv_image_create(ui->scr_dashboard_cont_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_18, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_18, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_18, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_18, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_18, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_18, 0);
+
+    //Write style for scr_dashboard_img_18, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_18, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_18, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_18, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_107
+    ui->scr_dashboard_label_107 = lv_label_create(ui->scr_dashboard_cont_networkconfig);
+    lv_obj_set_pos(ui->scr_dashboard_label_107, 44, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_107, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_107, "NETWORK CONFIGURATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_107, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_107, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_107, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_107, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_107, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_107, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_107, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_net_option
+    ui->scr_dashboard_ddlist_net_option = lv_dropdown_create(ui->scr_dashboard_cont_networkconfig);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_net_option, 520, 0);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_net_option, 140, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_net_option, "ETHERNET\nWIFI\nLTE/4G");
+
+    //Write style for scr_dashboard_ddlist_net_option, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_net_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_net_option, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_net_option, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_net_option, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_net_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_net_option, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_net_option, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_net_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_net_option, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_net_option, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_net_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_net_option, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_net_option, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_net_option, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_net_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_net_option, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_net_option, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_net_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_net_option, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_net_option, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_net_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_net_option, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_net_option, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_net_option, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_net_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_net_option, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_net_option, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_net_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_net_option, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_net_option, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_net_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_net_option, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_net_option, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_net_option, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_net_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_net_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_net_option, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_net_option, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_net_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_net_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_net_option, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_net_option_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_net_option_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_net_option), &style_scr_dashboard_ddlist_net_option_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_net_option_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_net_option_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_net_option_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_net_option_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_net_option), &style_scr_dashboard_ddlist_net_option_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_net_option), &style_scr_dashboard_ddlist_net_option_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_40
+    ui->scr_dashboard_cont_40 = lv_obj_create(ui->scr_dashboard_cont_networkconfig);
+    lv_obj_set_pos(ui->scr_dashboard_cont_40, 0, 55);
+    lv_obj_set_size(ui->scr_dashboard_cont_40, 660, 320);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_40, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_40, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_40, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_40, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_40, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_40, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_40, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_40, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_40, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_40, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_40, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_40, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_40, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_40, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_40, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_wifi
+    ui->scr_dashboard_cont_wifi = lv_obj_create(ui->scr_dashboard_cont_40);
+    lv_obj_set_pos(ui->scr_dashboard_cont_wifi, 23, 11);
+    lv_obj_set_size(ui->scr_dashboard_cont_wifi, 612, 290);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_wifi, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_wifi, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_wifi, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_wifi, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_wifi, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_wifi, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_wifi, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_wifi, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_wifi, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_wifi, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_wifi, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_wifi, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_wifi, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_wifi, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_wifi, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_wifi, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_108
+    ui->scr_dashboard_label_108 = lv_label_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_label_108, 23, 19);
+    lv_obj_set_size(ui->scr_dashboard_label_108, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_108, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_108, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_108, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_108, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_108, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_108, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_108, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_108, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_109
+    ui->scr_dashboard_label_109 = lv_label_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_label_109, 312, 19);
+    lv_obj_set_size(ui->scr_dashboard_label_109, 161, 13);
+    lv_label_set_text(ui->scr_dashboard_label_109, "PASSWORD");
+    lv_label_set_long_mode(ui->scr_dashboard_label_109, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_109, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_109, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_109, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_109, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_109, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_109, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_wifi_pass
+    ui->scr_dashboard_ta_wifi_pass = lv_textarea_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_ta_wifi_pass, 312, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_wifi_pass, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_wifi_pass, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_wifi_pass, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_wifi_pass, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_wifi_pass, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_wifi_pass, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_wifi_pass, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_wifi_pass, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_wifi_pass, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_wifi_pass, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_pass, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_wifi_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_wifi_pass, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_pass, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_pass, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_pass, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_wifi_pass, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_pass, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_pass, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_pass, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_pass, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_pass, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_wifi_pass, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_pass, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_pass, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_pass, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_pass, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_wifi_ssid
+    ui->scr_dashboard_ta_wifi_ssid = lv_textarea_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_ta_wifi_ssid, 23, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_wifi_ssid, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_wifi_ssid, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_wifi_ssid, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_wifi_ssid, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_wifi_ssid, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_wifi_ssid, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_wifi_ssid, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_wifi_ssid, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_wifi_ssid, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_wifi_ssid, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_ssid, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_ssid, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_wifi_ssid, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_wifi_ssid, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ssid, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ssid, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_ssid, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_ssid, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_ssid, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_ssid, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_ssid, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_ssid, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_ssid, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ssid, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_wifi_ssid, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_ssid, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_ssid, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ssid, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ssid, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_ssid, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_ssid, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_ssid, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_ssid, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_ssid, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_ssid, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_ssid, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ssid, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_wifi_ssid, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ssid, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ssid, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ssid, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ssid, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_110
+    ui->scr_dashboard_label_110 = lv_label_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_label_110, 23, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_110, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_110, "MODE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_110, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_110, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_110, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_110, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_110, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_110, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_110, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_111
+    ui->scr_dashboard_label_111 = lv_label_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_label_111, 177, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_111, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_111, "IP ADDRESS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_111, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_111, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_111, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_111, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_111, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_111, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_111, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_wifi_mode
+    ui->scr_dashboard_ddlist_wifi_mode = lv_dropdown_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_wifi_mode, 23, 112);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_wifi_mode, 140, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_wifi_mode, "DHCP\nSTATIC");
+
+    //Write style for scr_dashboard_ddlist_wifi_mode, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_wifi_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_wifi_mode, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_wifi_mode, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_wifi_mode, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_wifi_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_wifi_mode, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_wifi_mode, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_wifi_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_wifi_mode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_wifi_mode, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_wifi_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_wifi_mode, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_wifi_mode, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_wifi_mode, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_wifi_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_wifi_mode, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_wifi_mode, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_wifi_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_wifi_mode, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_wifi_mode, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_wifi_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_wifi_mode, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_wifi_mode, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_wifi_mode, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_wifi_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_wifi_mode, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_wifi_mode, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_wifi_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_wifi_mode, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_wifi_mode, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_wifi_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_wifi_mode, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_wifi_mode, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_wifi_mode, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_wifi_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_wifi_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_wifi_mode, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_wifi_mode, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_wifi_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_wifi_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_wifi_mode, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_wifi_mode), &style_scr_dashboard_ddlist_wifi_mode_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_wifi_mode), &style_scr_dashboard_ddlist_wifi_mode_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_wifi_mode), &style_scr_dashboard_ddlist_wifi_mode_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_wifi_ip
+    ui->scr_dashboard_ta_wifi_ip = lv_textarea_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_ta_wifi_ip, 177, 112);
+    lv_obj_set_size(ui->scr_dashboard_ta_wifi_ip, 410, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_wifi_ip, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_wifi_ip, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_wifi_ip, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_wifi_ip, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_wifi_ip, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_wifi_ip, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_wifi_ip, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_wifi_ip, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_wifi_ip, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_ip, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_ip, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_wifi_ip, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_wifi_ip, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ip, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ip, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_ip, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_ip, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_ip, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_ip, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_ip, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_ip, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_ip, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ip, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_wifi_ip, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_wifi_ip, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_wifi_ip, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ip, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ip, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_wifi_ip, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_wifi_ip, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_wifi_ip, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_wifi_ip, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_wifi_ip, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_wifi_ip, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_wifi_ip, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ip, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_wifi_ip, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_wifi_ip, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_wifi_ip, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_wifi_ip, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_wifi_ip, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_112
+    ui->scr_dashboard_label_112 = lv_label_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_label_112, 23, 167);
+    lv_obj_set_size(ui->scr_dashboard_label_112, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_112, "WIFI STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_112, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_112, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_112, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_112, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_112, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_112, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_112, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_41
+    ui->scr_dashboard_cont_41 = lv_obj_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_cont_41, 23, 186);
+    lv_obj_set_size(ui->scr_dashboard_cont_41, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_41, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_41, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_41, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_41, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_41, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_41, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_41, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_41, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_41, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_41, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_41, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_41, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_41, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_41, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_41, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_wifi_status
+    ui->scr_dashboard_lbl_wifi_status = lv_label_create(ui->scr_dashboard_cont_41);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_wifi_status, 4, 11);
+    lv_obj_set_size(ui->scr_dashboard_lbl_wifi_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_wifi_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_wifi_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_wifi_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_wifi_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_wifi_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_wifi_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_wifi_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_wifi_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_wifi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_wifi_apply
+    ui->scr_dashboard_btn_wifi_apply = lv_button_create(ui->scr_dashboard_cont_wifi);
+    lv_obj_set_pos(ui->scr_dashboard_btn_wifi_apply, 23, 236);
+    lv_obj_set_size(ui->scr_dashboard_btn_wifi_apply, 560, 38);
+    ui->scr_dashboard_btn_wifi_apply_label = lv_label_create(ui->scr_dashboard_btn_wifi_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_wifi_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_wifi_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_wifi_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_wifi_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_wifi_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_wifi_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_wifi_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_wifi_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_wifi_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_wifi_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_wifi_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_wifi_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_wifi_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_wifi_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_wifi_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_wifi_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_wifi_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_wifi_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_wifi_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_wifi_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_wifi_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_wifi_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_wifi_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_wifi_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_wifi_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_wifi_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_wifi_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_wifi_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_wifi_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_wifi_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_wifi_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_wifi_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_wifi_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_wifi_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_wifi_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_wifi_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_wifi_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_wifi_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_ethernet
+    ui->scr_dashboard_cont_ethernet = lv_obj_create(ui->scr_dashboard_cont_40);
+    lv_obj_set_pos(ui->scr_dashboard_cont_ethernet, 23, 10);
+    lv_obj_set_size(ui->scr_dashboard_cont_ethernet, 612, 290);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_ethernet, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_ethernet, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_ethernet, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_ethernet, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_ethernet, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_ethernet, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_ethernet, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_ethernet, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_ethernet, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_ethernet, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_ethernet, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_ethernet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_ethernet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_ethernet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_ethernet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_ethernet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_118
+    ui->scr_dashboard_label_118 = lv_label_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_label_118, 23, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_118, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_118, "SUBNET MASK");
+    lv_label_set_long_mode(ui->scr_dashboard_label_118, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_118, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_118, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_118, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_118, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_118, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_118, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_117
+    ui->scr_dashboard_label_117 = lv_label_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_label_117, 312, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_117, 161, 13);
+    lv_label_set_text(ui->scr_dashboard_label_117, "GATEWAY");
+    lv_label_set_long_mode(ui->scr_dashboard_label_117, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_117, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_117, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_117, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_117, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_117, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_117, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_ethernet_gateway
+    ui->scr_dashboard_ta_ethernet_gateway = lv_textarea_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_ta_ethernet_gateway, 312, 114);
+    lv_obj_set_size(ui->scr_dashboard_ta_ethernet_gateway, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_ethernet_gateway, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_ethernet_gateway, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_ethernet_gateway, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_ethernet_gateway, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_ethernet_gateway, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_ethernet_gateway, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_ethernet_gateway, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_ethernet_gateway, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_ethernet_gateway, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_gateway, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_gateway, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_ethernet_gateway, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_ethernet_gateway, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_gateway, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_gateway, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_gateway, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_gateway, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_gateway, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_gateway, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_gateway, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_gateway, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_gateway, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_gateway, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_ethernet_gateway, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_gateway, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_gateway, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_gateway, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_gateway, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_gateway, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_gateway, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_gateway, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_gateway, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_gateway, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_gateway, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_gateway, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_gateway, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_ethernet_gateway, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_gateway, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_gateway, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_gateway, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_gateway, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_ethernet_subnet
+    ui->scr_dashboard_ta_ethernet_subnet = lv_textarea_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_ta_ethernet_subnet, 23, 113);
+    lv_obj_set_size(ui->scr_dashboard_ta_ethernet_subnet, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_ethernet_subnet, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_ethernet_subnet, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_ethernet_subnet, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_ethernet_subnet, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_ethernet_subnet, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_ethernet_subnet, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_ethernet_subnet, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_ethernet_subnet, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_ethernet_subnet, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_subnet, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_subnet, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_ethernet_subnet, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_ethernet_subnet, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_subnet, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_subnet, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_subnet, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_subnet, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_subnet, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_subnet, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_subnet, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_subnet, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_subnet, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_subnet, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_ethernet_subnet, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_subnet, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_subnet, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_subnet, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_subnet, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_subnet, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_subnet, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_subnet, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_subnet, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_subnet, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_subnet, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_subnet, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_subnet, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_ethernet_subnet, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_subnet, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_subnet, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_subnet, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_subnet, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_116
+    ui->scr_dashboard_label_116 = lv_label_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_label_116, 23, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_116, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_116, "MODE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_116, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_116, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_116, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_116, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_116, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_116, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_116, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_115
+    ui->scr_dashboard_label_115 = lv_label_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_label_115, 177, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_115, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_115, "IP ADDRESS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_115, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_115, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_115, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_115, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_115, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_115, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_115, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_ethernet_mode
+    ui->scr_dashboard_ddlist_ethernet_mode = lv_dropdown_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_ethernet_mode, 23, 39);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_ethernet_mode, 140, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_ethernet_mode, "DHCP\nSTATIC");
+
+    //Write style for scr_dashboard_ddlist_ethernet_mode, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_ethernet_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_ethernet_mode, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_ethernet_mode, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_ethernet_mode, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_ethernet_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_ethernet_mode, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_ethernet_mode, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_ethernet_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_ethernet_mode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_ethernet_mode, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_ethernet_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_ethernet_mode, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_ethernet_mode, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_ethernet_mode, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_ethernet_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_ethernet_mode, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_ethernet_mode, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_ethernet_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_ethernet_mode, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_ethernet_mode, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_ethernet_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_ethernet_mode, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_ethernet_mode, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_ethernet_mode, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_ethernet_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_ethernet_mode, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_ethernet_mode, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_ethernet_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_ethernet_mode, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_ethernet_mode, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_ethernet_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_ethernet_mode, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_ethernet_mode, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_ethernet_mode, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_ethernet_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_ethernet_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_ethernet_mode, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_ethernet_mode, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_ethernet_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_ethernet_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_ethernet_mode, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_ethernet_mode), &style_scr_dashboard_ddlist_ethernet_mode_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_ethernet_mode), &style_scr_dashboard_ddlist_ethernet_mode_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_ethernet_mode), &style_scr_dashboard_ddlist_ethernet_mode_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_ethernet_ip
+    ui->scr_dashboard_ta_ethernet_ip = lv_textarea_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_ta_ethernet_ip, 177, 40);
+    lv_obj_set_size(ui->scr_dashboard_ta_ethernet_ip, 410, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_ethernet_ip, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_ethernet_ip, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_ethernet_ip, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_ethernet_ip, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_ethernet_ip, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_ethernet_ip, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_ethernet_ip, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_ethernet_ip, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_ethernet_ip, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_ip, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_ip, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_ethernet_ip, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_ethernet_ip, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_ip, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_ip, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_ip, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_ip, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_ip, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_ip, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_ip, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_ip, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_ip, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_ip, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_ethernet_ip, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_ethernet_ip, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_ethernet_ip, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_ip, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_ip, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_ethernet_ip, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_ethernet_ip, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_ethernet_ip, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_ethernet_ip, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_ethernet_ip, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_ethernet_ip, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_ethernet_ip, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_ip, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_ethernet_ip, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_ethernet_ip, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_ethernet_ip, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_ethernet_ip, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_ethernet_ip, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_114
+    ui->scr_dashboard_label_114 = lv_label_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_label_114, 23, 167);
+    lv_obj_set_size(ui->scr_dashboard_label_114, 187, 17);
+    lv_label_set_text(ui->scr_dashboard_label_114, "ETHERNET STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_114, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_114, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_114, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_114, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_114, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_114, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_114, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_43
+    ui->scr_dashboard_cont_43 = lv_obj_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_cont_43, 23, 186);
+    lv_obj_set_size(ui->scr_dashboard_cont_43, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_43, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_43, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_43, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_43, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_43, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_43, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_43, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_43, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_43, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_43, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_43, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_43, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_43, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_43, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_43, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_ethernet_status
+    ui->scr_dashboard_lbl_ethernet_status = lv_label_create(ui->scr_dashboard_cont_43);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_ethernet_status, 0, 11);
+    lv_obj_set_size(ui->scr_dashboard_lbl_ethernet_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_ethernet_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_ethernet_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_ethernet_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_ethernet_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_ethernet_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_ethernet_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_ethernet_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_ethernet_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_ethernet_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_ethernet_apply
+    ui->scr_dashboard_btn_ethernet_apply = lv_button_create(ui->scr_dashboard_cont_ethernet);
+    lv_obj_set_pos(ui->scr_dashboard_btn_ethernet_apply, 23, 236);
+    lv_obj_set_size(ui->scr_dashboard_btn_ethernet_apply, 560, 38);
+    ui->scr_dashboard_btn_ethernet_apply_label = lv_label_create(ui->scr_dashboard_btn_ethernet_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_ethernet_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_ethernet_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_ethernet_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_ethernet_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_ethernet_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_ethernet_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_ethernet_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_ethernet_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_ethernet_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_ethernet_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_ethernet_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_ethernet_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_ethernet_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_ethernet_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_ethernet_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_ethernet_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_ethernet_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_ethernet_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_ethernet_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_ethernet_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_ethernet_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_ethernet_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_ethernet_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_ethernet_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_ethernet_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_ethernet_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_ethernet_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_ethernet_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_ethernet_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_ethernet_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_ethernet_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_ethernet_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_ethernet_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_ethernet_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_ethernet_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_ethernet_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_ethernet_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_ethernet_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_ethernet_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_ethernet_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_ethernet_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_ethernet_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_ethernet_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_ethernet_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_lte
+    ui->scr_dashboard_cont_lte = lv_obj_create(ui->scr_dashboard_cont_40);
+    lv_obj_set_pos(ui->scr_dashboard_cont_lte, 23, 11);
+    lv_obj_set_size(ui->scr_dashboard_cont_lte, 612, 290);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_lte, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_lte, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_lte, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_lte, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_lte, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_lte, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_lte, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_lte, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_lte, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_lte, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_lte, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_lte, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_lte, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_lte, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_lte, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_lte, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_124
+    ui->scr_dashboard_label_124 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_124, 23, 18);
+    lv_obj_set_size(ui->scr_dashboard_label_124, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_124, "APN NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_124, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_124, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_124, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_124, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_124, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_124, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_124, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_123
+    ui->scr_dashboard_label_123 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_123, 312, 19);
+    lv_obj_set_size(ui->scr_dashboard_label_123, 161, 13);
+    lv_label_set_text(ui->scr_dashboard_label_123, "SIM PIN CODE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_123, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_123, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_123, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_123, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_123, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_123, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_123, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_lte_pin_code
+    ui->scr_dashboard_ta_lte_pin_code = lv_textarea_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_ta_lte_pin_code, 312, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_lte_pin_code, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_lte_pin_code, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_lte_pin_code, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_lte_pin_code, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_lte_pin_code, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_lte_pin_code, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_lte_pin_code, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_lte_pin_code, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_lte_pin_code, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_lte_pin_code, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_pin_code, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_pin_code, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_lte_pin_code, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_lte_pin_code, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pin_code, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pin_code, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_pin_code, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_pin_code, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_pin_code, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_pin_code, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_pin_code, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_pin_code, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_pin_code, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pin_code, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_lte_pin_code, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_pin_code, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_pin_code, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pin_code, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pin_code, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_pin_code, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_pin_code, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_pin_code, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_pin_code, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_pin_code, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_pin_code, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_pin_code, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pin_code, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_lte_pin_code, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pin_code, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pin_code, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pin_code, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pin_code, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_lte_apn
+    ui->scr_dashboard_ta_lte_apn = lv_textarea_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_ta_lte_apn, 23, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_lte_apn, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_lte_apn, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_lte_apn, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_lte_apn, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_lte_apn, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_lte_apn, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_lte_apn, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_lte_apn, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_lte_apn, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_lte_apn, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_apn, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_apn, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_lte_apn, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_lte_apn, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_apn, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_apn, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_apn, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_apn, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_apn, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_apn, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_apn, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_apn, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_apn, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_apn, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_lte_apn, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_apn, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_apn, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_apn, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_apn, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_apn, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_apn, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_apn, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_apn, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_apn, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_apn, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_apn, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_apn, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_lte_apn, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_apn, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_apn, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_apn, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_apn, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_122
+    ui->scr_dashboard_label_122 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_122, 23, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_122, 68, 17);
+    lv_label_set_text(ui->scr_dashboard_label_122, "USERNAME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_122, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_122, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_122, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_122, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_122, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_122, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_122, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_121
+    ui->scr_dashboard_label_121 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_121, 312, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_121, 67, 17);
+    lv_label_set_text(ui->scr_dashboard_label_121, "PASSWORD");
+    lv_label_set_long_mode(ui->scr_dashboard_label_121, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_121, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_121, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_121, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_121, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_121, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_121, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_lte_pass
+    ui->scr_dashboard_ta_lte_pass = lv_textarea_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_ta_lte_pass, 312, 112);
+    lv_obj_set_size(ui->scr_dashboard_ta_lte_pass, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_lte_pass, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_lte_pass, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_lte_pass, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_lte_pass, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_lte_pass, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_lte_pass, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_lte_pass, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_lte_pass, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_lte_pass, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_pass, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_lte_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_lte_pass, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pass, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_pass, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_pass, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_lte_pass, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_pass, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pass, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_pass, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_pass, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_pass, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_lte_pass, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_pass, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_pass, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_pass, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_pass, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_120
+    ui->scr_dashboard_label_120 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_120, 23, 167);
+    lv_obj_set_size(ui->scr_dashboard_label_120, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_120, "LTE STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_120, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_120, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_120, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_120, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_120, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_120, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_120, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_45
+    ui->scr_dashboard_cont_45 = lv_obj_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_cont_45, 23, 186);
+    lv_obj_set_size(ui->scr_dashboard_cont_45, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_45, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_45, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_45, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_45, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_45, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_45, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_45, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_45, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_45, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_45, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_45, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_45, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_45, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_45, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_45, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_lte_status
+    ui->scr_dashboard_lbl_lte_status = lv_label_create(ui->scr_dashboard_cont_45);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_lte_status, 4, 11);
+    lv_obj_set_size(ui->scr_dashboard_lbl_lte_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_lte_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_lte_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_lte_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_lte_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_lte_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_lte_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_lte_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_lte_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_lte_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_lte_apply
+    ui->scr_dashboard_btn_lte_apply = lv_button_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_btn_lte_apply, 23, 236);
+    lv_obj_set_size(ui->scr_dashboard_btn_lte_apply, 560, 38);
+    ui->scr_dashboard_btn_lte_apply_label = lv_label_create(ui->scr_dashboard_btn_lte_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_lte_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_lte_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_lte_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_lte_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_lte_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_lte_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_lte_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_lte_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_lte_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_lte_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_lte_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_lte_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_lte_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_lte_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_lte_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_lte_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_lte_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_lte_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_lte_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_lte_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_lte_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_lte_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_lte_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_lte_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_lte_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_lte_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_lte_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_lte_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_lte_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_lte_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_lte_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_lte_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_lte_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_lte_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_lte_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_lte_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_lte_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_lte_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_lte_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_lte_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_lte_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_lte_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_lte_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_lte_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_ta_lte_username
+    ui->scr_dashboard_ta_lte_username = lv_textarea_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_ta_lte_username, 23, 112);
+    lv_obj_set_size(ui->scr_dashboard_ta_lte_username, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_lte_username, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_lte_username, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_lte_username, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_lte_username, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_lte_username, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_lte_username, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_lte_username, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_lte_username, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_lte_username, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_username, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_username, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_lte_username, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_lte_username, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_username, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_username, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_username, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_username, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_username, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_username, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_username, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_username, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_username, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_username, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_lte_username, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_lte_username, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_lte_username, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_username, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_username, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_lte_username, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_lte_username, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_lte_username, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_lte_username, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_lte_username, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_lte_username, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_lte_username, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_username, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_lte_username, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_lte_username, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_lte_username, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_lte_username, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_lte_username, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_125
+    ui->scr_dashboard_label_125 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_125, 94, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_125, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_125, "(OPTIONAL)");
+    lv_label_set_long_mode(ui->scr_dashboard_label_125, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_125, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_125, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_125, &lv_font_Roboto_Regular_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_125, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_125, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_125, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_126
+    ui->scr_dashboard_label_126 = lv_label_create(ui->scr_dashboard_cont_lte);
+    lv_obj_set_pos(ui->scr_dashboard_label_126, 383, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_126, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_126, "(OPTIONAL)");
+    lv_label_set_long_mode(ui->scr_dashboard_label_126, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_126, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_126, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_126, &lv_font_Roboto_Regular_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_126, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_126, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_126, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_mqtt_config
+    ui->scr_dashboard_cont_mqtt_config = lv_obj_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_cont_mqtt_config, 0, 35);
+    lv_obj_set_size(ui->scr_dashboard_cont_mqtt_config, 677, 374);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_mqtt_config, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_mqtt_config, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_mqtt_config, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_mqtt_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_mqtt_back
+    ui->scr_dashboard_cont_mqtt_back = lv_obj_create(ui->scr_dashboard_cont_mqtt_config);
+    lv_obj_set_pos(ui->scr_dashboard_cont_mqtt_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_mqtt_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_mqtt_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_mqtt_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_mqtt_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_mqtt_back, 71, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_mqtt_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_mqtt_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_mqtt_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_mqtt_back
+    ui->scr_dashboard_btn_mqtt_back = lv_button_create(ui->scr_dashboard_cont_mqtt_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_mqtt_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_mqtt_back, 40, 40);
+    ui->scr_dashboard_btn_mqtt_back_label = lv_label_create(ui->scr_dashboard_btn_mqtt_back);
+    lv_label_set_text(ui->scr_dashboard_btn_mqtt_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_mqtt_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_mqtt_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_mqtt_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_mqtt_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_mqtt_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_mqtt_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_mqtt_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_mqtt_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_19
+    ui->scr_dashboard_img_19 = lv_image_create(ui->scr_dashboard_cont_mqtt_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_19, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_19, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_19, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_19, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_19, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_19, 0);
+
+    //Write style for scr_dashboard_img_19, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_19, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_19, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_19, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_147
+    ui->scr_dashboard_label_147 = lv_label_create(ui->scr_dashboard_cont_mqtt_config);
+    lv_obj_set_pos(ui->scr_dashboard_label_147, 44, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_147, 267, 17);
+    lv_label_set_text(ui->scr_dashboard_label_147, "MQTT PROTOCOL SETUP");
+    lv_label_set_long_mode(ui->scr_dashboard_label_147, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_147, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_147, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_147, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_147, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_147, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_147, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_147, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_47
+    ui->scr_dashboard_cont_47 = lv_obj_create(ui->scr_dashboard_cont_mqtt_config);
+    lv_obj_set_pos(ui->scr_dashboard_cont_47, 0, 55);
+    lv_obj_set_size(ui->scr_dashboard_cont_47, 660, 320);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_47, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_47, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_47, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_47, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_47, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_47, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_47, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_47, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_47, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_47, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_47, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_47, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_47, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_47, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_47, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_48
+    ui->scr_dashboard_cont_48 = lv_obj_create(ui->scr_dashboard_cont_47);
+    lv_obj_set_pos(ui->scr_dashboard_cont_48, 23, 11);
+    lv_obj_set_size(ui->scr_dashboard_cont_48, 612, 290);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_48, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_48, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_48, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_48, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_48, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_48, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_48, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_48, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_48, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_48, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_48, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_48, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_48, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_48, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_48, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_134
+    ui->scr_dashboard_label_134 = lv_label_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_label_134, 23, 18);
+    lv_obj_set_size(ui->scr_dashboard_label_134, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_134, "HOST");
+    lv_label_set_long_mode(ui->scr_dashboard_label_134, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_134, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_134, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_134, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_134, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_134, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_134, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_133
+    ui->scr_dashboard_label_133 = lv_label_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_label_133, 312, 19);
+    lv_obj_set_size(ui->scr_dashboard_label_133, 161, 13);
+    lv_label_set_text(ui->scr_dashboard_label_133, "PORT");
+    lv_label_set_long_mode(ui->scr_dashboard_label_133, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_133, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_133, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_133, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_133, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_133, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_133, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_mqtt_port
+    ui->scr_dashboard_ta_mqtt_port = lv_textarea_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_ta_mqtt_port, 312, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_mqtt_port, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_mqtt_port, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_mqtt_port, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_mqtt_port, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_mqtt_port, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_mqtt_port, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_mqtt_port, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_mqtt_port, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_mqtt_port, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_mqtt_port, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_port, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_port, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_mqtt_port, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_mqtt_port, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_port, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_port, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_port, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_port, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_port, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_port, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_port, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_port, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_port, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_port, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_mqtt_port, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_port, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_port, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_port, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_port, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_port, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_port, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_port, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_port, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_port, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_port, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_port, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_port, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_mqtt_port, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_port, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_port, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_port, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_port, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_mqtt_host
+    ui->scr_dashboard_ta_mqtt_host = lv_textarea_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_ta_mqtt_host, 23, 38);
+    lv_obj_set_size(ui->scr_dashboard_ta_mqtt_host, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_mqtt_host, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_mqtt_host, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_mqtt_host, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_mqtt_host, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_mqtt_host, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_mqtt_host, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_mqtt_host, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_mqtt_host, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_mqtt_host, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_host, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_host, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_mqtt_host, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_mqtt_host, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_host, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_host, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_host, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_host, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_host, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_host, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_host, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_host, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_host, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_host, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_mqtt_host, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_host, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_host, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_host, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_host, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_host, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_host, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_host, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_host, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_host, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_host, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_host, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_host, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_mqtt_host, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_host, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_host, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_host, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_host, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_132
+    ui->scr_dashboard_label_132 = lv_label_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_label_132, 23, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_132, 68, 17);
+    lv_label_set_text(ui->scr_dashboard_label_132, "USERNAME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_132, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_132, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_132, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_132, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_132, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_132, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_132, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_131
+    ui->scr_dashboard_label_131 = lv_label_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_label_131, 312, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_131, 67, 17);
+    lv_label_set_text(ui->scr_dashboard_label_131, "PASSWORD");
+    lv_label_set_long_mode(ui->scr_dashboard_label_131, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_131, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_131, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_131, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_131, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_131, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_131, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_mqtt_pass
+    ui->scr_dashboard_ta_mqtt_pass = lv_textarea_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_ta_mqtt_pass, 312, 112);
+    lv_obj_set_size(ui->scr_dashboard_ta_mqtt_pass, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_mqtt_pass, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_mqtt_pass, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_mqtt_pass, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_mqtt_pass, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_mqtt_pass, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_mqtt_pass, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_mqtt_pass, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_mqtt_pass, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_mqtt_pass, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_pass, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_mqtt_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_mqtt_pass, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_pass, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_pass, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_pass, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_pass, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_pass, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_pass, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_mqtt_pass, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_pass, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_pass, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_pass, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_pass, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_pass, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_pass, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_pass, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_pass, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_mqtt_pass, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_pass, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_pass, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_pass, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_pass, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_130
+    ui->scr_dashboard_label_130 = lv_label_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_label_130, 23, 167);
+    lv_obj_set_size(ui->scr_dashboard_label_130, 134, 17);
+    lv_label_set_text(ui->scr_dashboard_label_130, "MQTT STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_130, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_130, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_130, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_130, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_130, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_130, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_130, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_49
+    ui->scr_dashboard_cont_49 = lv_obj_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_cont_49, 23, 186);
+    lv_obj_set_size(ui->scr_dashboard_cont_49, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_49, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_49, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_49, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_49, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_49, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_49, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_49, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_49, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_49, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_49, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_49, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_49, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_49, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_49, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_49, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_mqtt_status
+    ui->scr_dashboard_lbl_mqtt_status = lv_label_create(ui->scr_dashboard_cont_49);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_mqtt_status, 4, 11);
+    lv_obj_set_size(ui->scr_dashboard_lbl_mqtt_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_mqtt_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_mqtt_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_mqtt_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_mqtt_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_mqtt_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_mqtt_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_mqtt_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_mqtt_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_mqtt_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_mqtt_apply
+    ui->scr_dashboard_btn_mqtt_apply = lv_button_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_btn_mqtt_apply, 23, 236);
+    lv_obj_set_size(ui->scr_dashboard_btn_mqtt_apply, 560, 38);
+    ui->scr_dashboard_btn_mqtt_apply_label = lv_label_create(ui->scr_dashboard_btn_mqtt_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_mqtt_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_mqtt_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_mqtt_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_mqtt_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_mqtt_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_mqtt_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_mqtt_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_mqtt_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_mqtt_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_mqtt_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_mqtt_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_mqtt_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_mqtt_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_mqtt_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_mqtt_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_mqtt_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_mqtt_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_mqtt_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_mqtt_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_mqtt_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_mqtt_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_mqtt_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_mqtt_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_mqtt_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_ta_mqtt_user
+    ui->scr_dashboard_ta_mqtt_user = lv_textarea_create(ui->scr_dashboard_cont_48);
+    lv_obj_set_pos(ui->scr_dashboard_ta_mqtt_user, 23, 112);
+    lv_obj_set_size(ui->scr_dashboard_ta_mqtt_user, 275, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_mqtt_user, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_mqtt_user, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_mqtt_user, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_mqtt_user, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_mqtt_user, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_mqtt_user, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_mqtt_user, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_mqtt_user, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_mqtt_user, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_user, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_user, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_mqtt_user, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_mqtt_user, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_user, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_user, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_user, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_user, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_user, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_user, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_user, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_user, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_user, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_user, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_mqtt_user, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_mqtt_user, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_mqtt_user, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_user, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_user, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_mqtt_user, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_mqtt_user, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_mqtt_user, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_mqtt_user, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_mqtt_user, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_mqtt_user, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_mqtt_user, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_user, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_mqtt_user, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_mqtt_user, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_mqtt_user, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_mqtt_user, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_mqtt_user, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_modbus_config
+    ui->scr_dashboard_cont_modbus_config = lv_obj_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_cont_modbus_config, 0, 35);
+    lv_obj_set_size(ui->scr_dashboard_cont_modbus_config, 677, 374);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_modbus_config, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_modbus_config, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_modbus_config, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_modbus_back
+    ui->scr_dashboard_cont_modbus_back = lv_obj_create(ui->scr_dashboard_cont_modbus_config);
+    lv_obj_set_pos(ui->scr_dashboard_cont_modbus_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_modbus_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_modbus_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_modbus_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_modbus_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_modbus_back, 71, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_modbus_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_modbus_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_modbus_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_modbus_back
+    ui->scr_dashboard_btn_modbus_back = lv_button_create(ui->scr_dashboard_cont_modbus_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_modbus_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_modbus_back, 40, 40);
+    ui->scr_dashboard_btn_modbus_back_label = lv_label_create(ui->scr_dashboard_btn_modbus_back);
+    lv_label_set_text(ui->scr_dashboard_btn_modbus_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_modbus_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_modbus_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_modbus_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_modbus_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_modbus_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_modbus_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_modbus_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_modbus_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_20
+    ui->scr_dashboard_img_20 = lv_image_create(ui->scr_dashboard_cont_modbus_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_20, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_20, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_20, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_20, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_20, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_20, 0);
+
+    //Write style for scr_dashboard_img_20, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_20, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_20, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_20, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_168
+    ui->scr_dashboard_label_168 = lv_label_create(ui->scr_dashboard_cont_modbus_config);
+    lv_obj_set_pos(ui->scr_dashboard_label_168, 44, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_168, 270, 17);
+    lv_label_set_text(ui->scr_dashboard_label_168, "MODBUS RTU CONFIGURATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_168, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_168, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_168, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_168, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_168, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_168, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_168, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_168, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_51
+    ui->scr_dashboard_cont_51 = lv_obj_create(ui->scr_dashboard_cont_modbus_config);
+    lv_obj_set_pos(ui->scr_dashboard_cont_51, 0, 55);
+    lv_obj_set_size(ui->scr_dashboard_cont_51, 660, 320);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_51, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_51, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_51, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_51, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_51, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_51, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_51, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_51, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_51, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_51, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_51, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_51, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_51, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_51, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_51, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_54
+    ui->scr_dashboard_cont_54 = lv_obj_create(ui->scr_dashboard_cont_51);
+    lv_obj_set_pos(ui->scr_dashboard_cont_54, 23, 10);
+    lv_obj_set_size(ui->scr_dashboard_cont_54, 612, 290);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_54, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_54, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_54, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_54, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_54, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_54, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_54, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_54, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_54, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_54, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_54, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_161
+    ui->scr_dashboard_label_161 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_161, 23, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_161, 85, 17);
+    lv_label_set_text(ui->scr_dashboard_label_161, "BAUD RATE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_161, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_161, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_161, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_161, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_161, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_161, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_161, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_160
+    ui->scr_dashboard_label_160 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_160, 307, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_160, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_label_160, "DATA BITS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_160, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_160, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_160, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_160, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_160, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_160, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_160, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_159
+    ui->scr_dashboard_label_159 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_159, 23, 21);
+    lv_obj_set_size(ui->scr_dashboard_label_159, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_159, "MODE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_159, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_159, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_159, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_159, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_159, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_159, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_159, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_157
+    ui->scr_dashboard_label_157 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_157, 23, 167);
+    lv_obj_set_size(ui->scr_dashboard_label_157, 187, 17);
+    lv_label_set_text(ui->scr_dashboard_label_157, "MODBUS STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_157, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_157, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_157, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_157, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_157, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_157, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_157, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_55
+    ui->scr_dashboard_cont_55 = lv_obj_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_cont_55, 23, 185);
+    lv_obj_set_size(ui->scr_dashboard_cont_55, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_55, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_55, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_55, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_55, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_55, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_55, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_55, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_55, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_55, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_55, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_55, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_modbus_status
+    ui->scr_dashboard_lbl_modbus_status = lv_label_create(ui->scr_dashboard_cont_55);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_modbus_status, 0, 11);
+    lv_obj_set_size(ui->scr_dashboard_lbl_modbus_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_modbus_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_modbus_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_modbus_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_modbus_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_modbus_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_modbus_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_modbus_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_modbus_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_modbus_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_modbus_apply
+    ui->scr_dashboard_btn_modbus_apply = lv_button_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_btn_modbus_apply, 23, 235);
+    lv_obj_set_size(ui->scr_dashboard_btn_modbus_apply, 560, 38);
+    ui->scr_dashboard_btn_modbus_apply_label = lv_label_create(ui->scr_dashboard_btn_modbus_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_modbus_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_modbus_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_modbus_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_modbus_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_modbus_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_modbus_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_modbus_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_modbus_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_modbus_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_modbus_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_modbus_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_modbus_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_modbus_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_modbus_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_modbus_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_modbus_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_modbus_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_modbus_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_modbus_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_modbus_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_modbus_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_modbus_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_modbus_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_modbus_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_59
+    ui->scr_dashboard_cont_59 = lv_obj_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_cont_59, 175, 7);
+    lv_obj_set_size(ui->scr_dashboard_cont_59, 417, 73);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_59, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_59, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_59, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_59, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_59, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_59, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_59, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_slave_id
+    ui->scr_dashboard_ta_slave_id = lv_textarea_create(ui->scr_dashboard_cont_59);
+    lv_obj_set_pos(ui->scr_dashboard_ta_slave_id, 0, 31);
+    lv_obj_set_size(ui->scr_dashboard_ta_slave_id, 405, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_slave_id, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_slave_id, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_slave_id, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_slave_id, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_slave_id, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_slave_id, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_slave_id, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_slave_id, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_slave_id, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_slave_id, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_slave_id, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_slave_id, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_slave_id, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_slave_id, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_slave_id, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_slave_id, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_slave_id, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_slave_id, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_slave_id, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_slave_id, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_slave_id, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_slave_id, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_slave_id, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_slave_id, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_slave_id, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_slave_id, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_slave_id, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_slave_id, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_slave_id, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_slave_id, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_slave_id, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_slave_id, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_slave_id, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_slave_id, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_slave_id, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_slave_id, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_slave_id, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_slave_id, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_slave_id, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_slave_id, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_158
+    ui->scr_dashboard_label_158 = lv_label_create(ui->scr_dashboard_cont_59);
+    lv_obj_set_pos(ui->scr_dashboard_label_158, 0, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_158, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_label_158, "SLAVE ID");
+    lv_label_set_long_mode(ui->scr_dashboard_label_158, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_158, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_158, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_158, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_158, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_158, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_158, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_60
+    ui->scr_dashboard_cont_60 = lv_obj_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_cont_60, 175, 7);
+    lv_obj_set_size(ui->scr_dashboard_cont_60, 417, 73);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_60, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_60, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_60, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_60, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_60, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_60, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_60, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_60, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_master
+    ui->scr_dashboard_lbl_master = lv_label_create(ui->scr_dashboard_cont_60);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_master, 0, 13);
+    lv_obj_set_size(ui->scr_dashboard_lbl_master, 161, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_master, "MASTER CONTROLS");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_master, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_master, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_master, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_master, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_master, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_master, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_master, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_master_adddeivce
+    ui->scr_dashboard_btn_master_adddeivce = lv_button_create(ui->scr_dashboard_cont_60);
+    lv_obj_set_pos(ui->scr_dashboard_btn_master_adddeivce, -3, 30);
+    lv_obj_set_size(ui->scr_dashboard_btn_master_adddeivce, 198, 38);
+    ui->scr_dashboard_btn_master_adddeivce_label = lv_label_create(ui->scr_dashboard_btn_master_adddeivce);
+    lv_label_set_text(ui->scr_dashboard_btn_master_adddeivce_label, "" LV_SYMBOL_UPLOAD "  ADD DEVICES");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_master_adddeivce_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_master_adddeivce_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_master_adddeivce, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_master_adddeivce_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_master_adddeivce, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_adddeivce, 153, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x4d5256), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_adddeivce, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_adddeivce, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_adddeivce, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_adddeivce, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_adddeivce, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_adddeivce, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_adddeivce, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_master_adddeivce, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_master_adddeivce, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_adddeivce, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_adddeivce, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_adddeivce, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_adddeivce, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_adddeivce, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_adddeivce, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_master_adddeivce, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_adddeivce, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_adddeivce, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_adddeivce, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_adddeivce, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_adddeivce, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_adddeivce, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_master_adddeivce, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_adddeivce, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_adddeivce, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_adddeivce, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_adddeivce, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_adddeivce, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_adddeivce, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_master_adddeivce, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_adddeivce, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_adddeivce, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_adddeivce, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_adddeivce, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_adddeivce, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_adddeivce, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_adddeivce, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_adddeivce, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_btn_masterviewlist
+    ui->scr_dashboard_btn_masterviewlist = lv_button_create(ui->scr_dashboard_cont_60);
+    lv_obj_set_pos(ui->scr_dashboard_btn_masterviewlist, 207, 30);
+    lv_obj_set_size(ui->scr_dashboard_btn_masterviewlist, 198, 38);
+    ui->scr_dashboard_btn_masterviewlist_label = lv_label_create(ui->scr_dashboard_btn_masterviewlist);
+    lv_label_set_text(ui->scr_dashboard_btn_masterviewlist_label, "" LV_SYMBOL_BARS " VIEW LIST");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_masterviewlist_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_masterviewlist_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_masterviewlist, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_masterviewlist_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_masterviewlist, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_masterviewlist, 153, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x4d5256), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_masterviewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_masterviewlist, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_masterviewlist, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_masterviewlist, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_masterviewlist, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_masterviewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_masterviewlist, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_masterviewlist, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_masterviewlist, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_masterviewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_masterviewlist, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_masterviewlist, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_masterviewlist, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_masterviewlist, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_masterviewlist, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_masterviewlist, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_masterviewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_masterviewlist, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_masterviewlist, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_masterviewlist, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_masterviewlist, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_masterviewlist, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_masterviewlist, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_masterviewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_masterviewlist, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_masterviewlist, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_masterviewlist, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_masterviewlist, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_masterviewlist, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_masterviewlist, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_masterviewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_masterviewlist, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_masterviewlist, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_masterviewlist, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_masterviewlist, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_masterviewlist, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_masterviewlist, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_masterviewlist, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_label_170
+    ui->scr_dashboard_label_170 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_170, 165, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_170, 85, 17);
+    lv_label_set_text(ui->scr_dashboard_label_170, "PARITY");
+    lv_label_set_long_mode(ui->scr_dashboard_label_170, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_170, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_170, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_170, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_170, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_170, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_170, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_171
+    ui->scr_dashboard_label_171 = lv_label_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_label_171, 449, 95);
+    lv_obj_set_size(ui->scr_dashboard_label_171, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_label_171, "STOP BITS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_171, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_171, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_171, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_171, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_171, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_171, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_171, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_modbus_mode
+    ui->scr_dashboard_ddlist_modbus_mode = lv_dropdown_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_modbus_mode, 23, 39);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_modbus_mode, 140, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_modbus_mode, "MASTER\nSLAVE");
+
+    //Write style for scr_dashboard_ddlist_modbus_mode, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_mode, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_mode, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_mode, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_mode, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_mode, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_mode, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_modbus_mode, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_mode, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_mode, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_mode, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_mode, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_mode, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_mode, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_modbus_mode, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_mode, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_mode, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_mode, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_mode, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_mode, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_mode, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_modbus_mode, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_mode, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_mode, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_mode, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_mode, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_mode, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_mode, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_mode, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_mode, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_mode, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_mode, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_mode, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_mode), &style_scr_dashboard_ddlist_modbus_mode_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_mode), &style_scr_dashboard_ddlist_modbus_mode_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_mode), &style_scr_dashboard_ddlist_modbus_mode_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_modbus_parity
+    ui->scr_dashboard_ddlist_modbus_parity = lv_dropdown_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_modbus_parity, 165, 114);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_modbus_parity, 133, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_modbus_parity, "NONE\nEVEN\nODD");
+
+    //Write style for scr_dashboard_ddlist_modbus_parity, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_parity, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_parity, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_parity, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_parity, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_parity, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_parity, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_parity, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_parity, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_parity, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_modbus_parity, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_parity, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_parity, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_parity, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_parity, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_parity, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_parity, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_parity, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_parity, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_parity, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_modbus_parity, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_parity, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_parity, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_parity, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_parity, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_parity, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_parity, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_parity, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_parity, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_parity, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_modbus_parity, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_parity, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_parity, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_parity, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_parity, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_parity, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_parity, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_parity, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_parity, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_parity, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_parity, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_parity, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_parity), &style_scr_dashboard_ddlist_modbus_parity_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_parity), &style_scr_dashboard_ddlist_modbus_parity_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_parity), &style_scr_dashboard_ddlist_modbus_parity_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_modbus_databits
+    ui->scr_dashboard_ddlist_modbus_databits = lv_dropdown_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_modbus_databits, 307, 114);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_modbus_databits, 133, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_modbus_databits, "8\n7");
+
+    //Write style for scr_dashboard_ddlist_modbus_databits, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_databits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_databits, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_databits, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_databits, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_databits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_databits, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_databits, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_databits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_databits, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_modbus_databits, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_databits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_databits, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_databits, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_databits, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_databits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_databits, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_databits, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_databits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_databits, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_modbus_databits, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_databits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_databits, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_databits, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_databits, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_databits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_databits, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_databits, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_databits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_databits, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_modbus_databits, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_databits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_databits, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_databits, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_databits, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_databits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_databits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_databits, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_databits, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_databits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_databits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_databits, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_databits), &style_scr_dashboard_ddlist_modbus_databits_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_databits), &style_scr_dashboard_ddlist_modbus_databits_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_databits), &style_scr_dashboard_ddlist_modbus_databits_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_modbus_stopbits
+    ui->scr_dashboard_ddlist_modbus_stopbits = lv_dropdown_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_modbus_stopbits, 449, 114);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_modbus_stopbits, 133, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_modbus_stopbits, "1\n1.5\n2");
+
+    //Write style for scr_dashboard_ddlist_modbus_stopbits, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_stopbits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_stopbits, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_stopbits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_stopbits, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_stopbits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_stopbits, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_modbus_stopbits, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_stopbits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_stopbits, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_stopbits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_stopbits, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_stopbits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_stopbits, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_modbus_stopbits, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_stopbits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_stopbits, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_stopbits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_stopbits, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_stopbits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_stopbits, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_modbus_stopbits, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_stopbits, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_stopbits, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_stopbits, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_stopbits, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_stopbits, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_stopbits, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_stopbits, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_stopbits, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_stopbits, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_stopbits), &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_stopbits), &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_stopbits), &style_scr_dashboard_ddlist_modbus_stopbits_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_modbus_baudrate
+    ui->scr_dashboard_ddlist_modbus_baudrate = lv_dropdown_create(ui->scr_dashboard_cont_54);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_modbus_baudrate, 23, 114);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_modbus_baudrate, 133, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_modbus_baudrate, "4800\n9600\n14400\n19200\n115200");
+
+    //Write style for scr_dashboard_ddlist_modbus_baudrate, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_baudrate, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_baudrate, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_baudrate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_baudrate, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_baudrate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_baudrate, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_modbus_baudrate, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_baudrate, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_baudrate, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_baudrate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_baudrate, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_baudrate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_baudrate, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_modbus_baudrate, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_baudrate, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_baudrate, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_baudrate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_baudrate, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_baudrate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_baudrate, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_modbus_baudrate, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_modbus_baudrate, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_modbus_baudrate, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_modbus_baudrate, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_modbus_baudrate, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_modbus_baudrate, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_modbus_baudrate, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_modbus_baudrate, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_modbus_baudrate, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_modbus_baudrate, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_baudrate), &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_baudrate), &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_modbus_baudrate), &style_scr_dashboard_ddlist_modbus_baudrate_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_system_admin
+    ui->scr_dashboard_cont_system_admin = lv_obj_create(ui->scr_dashboard_cont_hw);
+    lv_obj_set_pos(ui->scr_dashboard_cont_system_admin, 0, 35);
+    lv_obj_set_size(ui->scr_dashboard_cont_system_admin, 677, 374);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_system_admin, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_system_admin, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_system_admin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_sys_back
+    ui->scr_dashboard_cont_sys_back = lv_obj_create(ui->scr_dashboard_cont_system_admin);
+    lv_obj_set_pos(ui->scr_dashboard_cont_sys_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_sys_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_sys_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_sys_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_sys_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_sys_back, 71, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_sys_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_sys_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_sys_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_sys_back
+    ui->scr_dashboard_btn_sys_back = lv_button_create(ui->scr_dashboard_cont_sys_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_sys_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_sys_back, 40, 40);
+    ui->scr_dashboard_btn_sys_back_label = lv_label_create(ui->scr_dashboard_btn_sys_back);
+    lv_label_set_text(ui->scr_dashboard_btn_sys_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_sys_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_sys_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_sys_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_sys_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_sys_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_sys_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_sys_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_sys_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_sys_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_sys_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_sys_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_sys_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_sys_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_sys_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_sys_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_sys_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_23
+    ui->scr_dashboard_img_23 = lv_image_create(ui->scr_dashboard_cont_sys_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_23, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_23, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_23, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_23, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_23, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_23, 0);
+
+    //Write style for scr_dashboard_img_23, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_23, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_23, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_23, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_194
+    ui->scr_dashboard_label_194 = lv_label_create(ui->scr_dashboard_cont_system_admin);
+    lv_obj_set_pos(ui->scr_dashboard_label_194, 44, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_194, 270, 17);
+    lv_label_set_text(ui->scr_dashboard_label_194, "MODBUS RTU CONFIGURATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_194, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_194, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_194, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_194, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_194, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_194, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_194, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_194, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_72
+    ui->scr_dashboard_cont_72 = lv_obj_create(ui->scr_dashboard_cont_system_admin);
+    lv_obj_set_pos(ui->scr_dashboard_cont_72, 5, 53);
+    lv_obj_set_size(ui->scr_dashboard_cont_72, 660, 134);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_72, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_72, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_72, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_72, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_72, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_72, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_72, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_72, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_72, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_72, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_72, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_205
+    ui->scr_dashboard_label_205 = lv_label_create(ui->scr_dashboard_cont_72);
+    lv_obj_set_pos(ui->scr_dashboard_label_205, 25, 13);
+    lv_obj_set_size(ui->scr_dashboard_label_205, 166, 17);
+    lv_label_set_text(ui->scr_dashboard_label_205, "DISPLAY CONFIGURATION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_205, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_205, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_205, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_205, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_205, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_205, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_205, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_206
+    ui->scr_dashboard_label_206 = lv_label_create(ui->scr_dashboard_cont_72);
+    lv_obj_set_pos(ui->scr_dashboard_label_206, 25, 40);
+    lv_obj_set_size(ui->scr_dashboard_label_206, 166, 17);
+    lv_label_set_text(ui->scr_dashboard_label_206, "BRIGHTNESS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_206, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_206, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_206, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_206, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_206, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_206, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_bar_brightness
+    ui->scr_dashboard_bar_brightness = lv_bar_create(ui->scr_dashboard_cont_72);
+    lv_obj_set_pos(ui->scr_dashboard_bar_brightness, 25, 77);
+    lv_obj_set_size(ui->scr_dashboard_bar_brightness, 268, 8);
+    lv_obj_set_style_anim_duration(ui->scr_dashboard_bar_brightness, 1000, 0);
+    lv_bar_set_mode(ui->scr_dashboard_bar_brightness, LV_BAR_MODE_NORMAL);
+    lv_bar_set_range(ui->scr_dashboard_bar_brightness, 0, 100);
+    lv_bar_set_value(ui->scr_dashboard_bar_brightness, 50, LV_ANIM_OFF);
+
+    //Write style for scr_dashboard_bar_brightness, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_bar_brightness, 28, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_bar_brightness, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_bar_brightness, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_bar_brightness, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_bar_brightness, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_bar_brightness, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_bar_brightness, 189, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_bar_brightness, lv_color_hex(0xffffff), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_bar_brightness, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_bar_brightness, 10, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_207
+    ui->scr_dashboard_label_207 = lv_label_create(ui->scr_dashboard_cont_72);
+    lv_obj_set_pos(ui->scr_dashboard_label_207, 353, 40);
+    lv_obj_set_size(ui->scr_dashboard_label_207, 166, 17);
+    lv_label_set_text(ui->scr_dashboard_label_207, "SCREEN TIMEOUT");
+    lv_label_set_long_mode(ui->scr_dashboard_label_207, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_207, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_207, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_207, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_207, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_207, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_207, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_screentime_option
+    ui->scr_dashboard_ddlist_screentime_option = lv_dropdown_create(ui->scr_dashboard_cont_72);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_screentime_option, 353, 62);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_screentime_option, 133, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_screentime_option, "OFF\n1M\n5M\n10M");
+
+    //Write style for scr_dashboard_ddlist_screentime_option, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_screentime_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_screentime_option, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_screentime_option, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_screentime_option, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_screentime_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_screentime_option, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_screentime_option, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_screentime_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_screentime_option, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_screentime_option, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_screentime_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_screentime_option, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_screentime_option, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_screentime_option, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_screentime_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_screentime_option, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_screentime_option, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_screentime_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_screentime_option, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_screentime_option, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_screentime_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_screentime_option, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_screentime_option, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_screentime_option, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_screentime_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_screentime_option, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_screentime_option, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_screentime_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_screentime_option, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_screentime_option, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_screentime_option, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_screentime_option, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_screentime_option, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_screentime_option, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_screentime_option, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_screentime_option, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_screentime_option, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_screentime_option, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_screentime_option, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_screentime_option, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_screentime_option, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_screentime_option), &style_scr_dashboard_ddlist_screentime_option_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_screentime_option_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_screentime_option_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_screentime_option), &style_scr_dashboard_ddlist_screentime_option_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_screentime_option), &style_scr_dashboard_ddlist_screentime_option_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_operations
+    ui->scr_dashboard_cont_operations = lv_obj_create(ui->scr_dashboard_cont_system_admin);
+    lv_obj_set_pos(ui->scr_dashboard_cont_operations, 5, 202);
+    lv_obj_set_size(ui->scr_dashboard_cont_operations, 321, 170);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_operations, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_operations, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_operations, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_operations, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_operations, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_operations, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_operations, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_operations, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_operations, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_operations, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_208
+    ui->scr_dashboard_label_208 = lv_label_create(ui->scr_dashboard_cont_operations);
+    lv_obj_set_pos(ui->scr_dashboard_label_208, 25, 25);
+    lv_obj_set_size(ui->scr_dashboard_label_208, 166, 17);
+    lv_label_set_text(ui->scr_dashboard_label_208, "DEVICE OPERATIONS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_208, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_208, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_208, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_208, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_208, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_208, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_208, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_restart_system
+    ui->scr_dashboard_btn_restart_system = lv_button_create(ui->scr_dashboard_cont_operations);
+    lv_obj_set_pos(ui->scr_dashboard_btn_restart_system, 25, 56);
+    lv_obj_set_size(ui->scr_dashboard_btn_restart_system, 274, 38);
+    ui->scr_dashboard_btn_restart_system_label = lv_label_create(ui->scr_dashboard_btn_restart_system);
+    lv_label_set_text(ui->scr_dashboard_btn_restart_system_label, "RESTART SYSTEM");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_restart_system_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_restart_system_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_restart_system, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_restart_system_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_restart_system, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x191d20), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_restart_system, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_restart_system, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_restart_system, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_restart_system, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_restart_system, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_restart_system, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_restart_system, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_restart_system, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_restart_system, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_restart_system, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_restart_system, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_restart_system, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_restart_system, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_restart_system, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_restart_system, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_restart_system, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_restart_system, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_restart_system, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_restart_system, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_restart_system, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_restart_system, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_restart_system, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_restart_system, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_restart_system, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_restart_system, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_restart_system, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_restart_system, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_restart_system, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_restart_system, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_restart_system, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_restart_system, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_restart_system, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_restart_system, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_restart_system, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_restart_system, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_restart_system, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_restart_system, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_restart_system, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_btn_factory_reset
+    ui->scr_dashboard_btn_factory_reset = lv_button_create(ui->scr_dashboard_cont_operations);
+    lv_obj_set_pos(ui->scr_dashboard_btn_factory_reset, 25, 106);
+    lv_obj_set_size(ui->scr_dashboard_btn_factory_reset, 274, 38);
+    ui->scr_dashboard_btn_factory_reset_label = lv_label_create(ui->scr_dashboard_btn_factory_reset);
+    lv_label_set_text(ui->scr_dashboard_btn_factory_reset_label, "FACTORY RESET");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_factory_reset_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_factory_reset_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_factory_reset, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_factory_reset_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_factory_reset, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_factory_reset, 203, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x91444f), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_factory_reset, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_factory_reset, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_factory_reset, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_factory_reset, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_factory_reset, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_factory_reset, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_factory_reset, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_factory_reset, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_factory_reset, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_factory_reset, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_factory_reset, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_factory_reset, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_factory_reset, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_factory_reset, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_factory_reset, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_factory_reset, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_factory_reset, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_factory_reset, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_factory_reset, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_factory_reset, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_factory_reset, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_factory_reset, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_factory_reset, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_factory_reset, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_factory_reset, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_factory_reset, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_factory_reset, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_factory_reset, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_factory_reset, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_factory_reset, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_factory_reset, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_factory_reset, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_factory_reset, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_factory_reset, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_factory_reset, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_factory_reset, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_factory_reset, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_factory_reset, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_cont_device_operations
+    ui->scr_dashboard_cont_device_operations = lv_obj_create(ui->scr_dashboard_cont_system_admin);
+    lv_obj_set_pos(ui->scr_dashboard_cont_device_operations, 339, 202);
+    lv_obj_set_size(ui->scr_dashboard_cont_device_operations, 321, 170);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_device_operations, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_device_operations, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_device_operations, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_device_operations, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_device_operations, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_device_operations, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_device_operations, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_device_operations, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_device_operations, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_device_operations, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_device_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_device_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_device_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_device_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_device_operations, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_209
+    ui->scr_dashboard_label_209 = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_label_209, 25, 25);
+    lv_obj_set_size(ui->scr_dashboard_label_209, 166, 17);
+    lv_label_set_text(ui->scr_dashboard_label_209, "DEVICE OPERATIONS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_209, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_209, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_209, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_209, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_209, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_209, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_209, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_210
+    ui->scr_dashboard_label_210 = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_label_210, 46, 57);
+    lv_obj_set_size(ui->scr_dashboard_label_210, 81, 17);
+    lv_label_set_text(ui->scr_dashboard_label_210, "FW VERSION");
+    lv_label_set_long_mode(ui->scr_dashboard_label_210, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_210, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_210, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_210, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_210, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_210, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_210, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_211
+    ui->scr_dashboard_label_211 = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_label_211, 46, 92);
+    lv_obj_set_size(ui->scr_dashboard_label_211, 116, 17);
+    lv_label_set_text(ui->scr_dashboard_label_211, "MEMORY STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_211, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_211, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_211, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_211, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_211, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_211, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_211, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_212
+    ui->scr_dashboard_label_212 = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_label_212, 46, 127);
+    lv_obj_set_size(ui->scr_dashboard_label_212, 81, 17);
+    lv_label_set_text(ui->scr_dashboard_label_212, "SYSTEM UPTIME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_212, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_212, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_212, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_212, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_212, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_212, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_212, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_fw_val
+    ui->scr_dashboard_lbl_fw_val = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_fw_val, 183, 57);
+    lv_obj_set_size(ui->scr_dashboard_lbl_fw_val, 81, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_fw_val, "FW VERSION");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_fw_val, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_fw_val, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_fw_val, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_fw_val, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_fw_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_fw_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_fw_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_memory_status_val
+    ui->scr_dashboard_lbl_memory_status_val = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_memory_status_val, 183, 92);
+    lv_obj_set_size(ui->scr_dashboard_lbl_memory_status_val, 81, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_memory_status_val, "FW VERSION");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_memory_status_val, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_memory_status_val, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_memory_status_val, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_memory_status_val, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_memory_status_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_memory_status_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_memory_status_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_system_uptime_val
+    ui->scr_dashboard_lbl_system_uptime_val = lv_label_create(ui->scr_dashboard_cont_device_operations);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_system_uptime_val, 183, 127);
+    lv_obj_set_size(ui->scr_dashboard_lbl_system_uptime_val, 81, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_system_uptime_val, "FW VERSION");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_system_uptime_val, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_system_uptime_val, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_system_uptime_val, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_system_uptime_val, &lv_font_Roboto_Bold_10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_system_uptime_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_system_uptime_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_system_uptime_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_device_config
+    ui->scr_dashboard_cont_device_config = lv_obj_create(ui->scr_dashboard);
+    lv_obj_set_pos(ui->scr_dashboard_cont_device_config, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_device_config, 800, 480);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_device_config, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_device_config, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_device_config, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_device_config, 207, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_device_config, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_device_config, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_device_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_62
+    ui->scr_dashboard_cont_62 = lv_obj_create(ui->scr_dashboard_cont_device_config);
+    lv_obj_set_pos(ui->scr_dashboard_cont_62, 70, 30);
+    lv_obj_set_size(ui->scr_dashboard_cont_62, 660, 420);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_62, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_62, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_62, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_62, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_62, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_62, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_62, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_62, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_62, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_62, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_62, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_62, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_62, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_62, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_62, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_63
+    ui->scr_dashboard_cont_63 = lv_obj_create(ui->scr_dashboard_cont_62);
+    lv_obj_set_pos(ui->scr_dashboard_cont_63, 26, 53);
+    lv_obj_set_size(ui->scr_dashboard_cont_63, 612, 346);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_63, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_63, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_63, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_63, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_63, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_63, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_63, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_63, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_63, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_63, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_63, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_63, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_63, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_63, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_63, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_180
+    ui->scr_dashboard_label_180 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_180, 22, 89);
+    lv_obj_set_size(ui->scr_dashboard_label_180, 85, 17);
+    lv_label_set_text(ui->scr_dashboard_label_180, "SLAVE ID");
+    lv_label_set_long_mode(ui->scr_dashboard_label_180, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_180, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_180, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_180, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_180, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_180, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_180, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_179
+    ui->scr_dashboard_label_179 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_179, 312, 93);
+    lv_obj_set_size(ui->scr_dashboard_label_179, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_label_179, "REGISTER TYPE");
+    lv_label_set_long_mode(ui->scr_dashboard_label_179, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_179, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_179, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_179, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_179, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_179, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_179, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_178
+    ui->scr_dashboard_label_178 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_178, 22, 18);
+    lv_obj_set_size(ui->scr_dashboard_label_178, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_label_178, "DEIVCE NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_label_178, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_178, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_178, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_178, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_178, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_178, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_178, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_177
+    ui->scr_dashboard_label_177 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_177, 22, 227);
+    lv_obj_set_size(ui->scr_dashboard_label_177, 187, 17);
+    lv_label_set_text(ui->scr_dashboard_label_177, "DEVICE CONFIG STATUS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_177, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_177, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_177, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_177, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_177, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_177, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_177, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_66
+    ui->scr_dashboard_cont_66 = lv_obj_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_cont_66, 22, 244);
+    lv_obj_set_size(ui->scr_dashboard_cont_66, 560, 38);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_66, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_66, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_66, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_66, 40, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_66, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_66, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_66, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_66, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_66, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_66, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_66, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_master_device_status
+    ui->scr_dashboard_lbl_master_device_status = lv_label_create(ui->scr_dashboard_cont_66);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_master_device_status, 0, 12);
+    lv_obj_set_size(ui->scr_dashboard_lbl_master_device_status, 517, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_master_device_status, "SSID NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_master_device_status, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_master_device_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_master_device_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_master_device_status, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_master_device_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_master_device_status, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_master_device_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_master_device_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_master_device_apply
+    ui->scr_dashboard_btn_master_device_apply = lv_button_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_btn_master_device_apply, 22, 293);
+    lv_obj_set_size(ui->scr_dashboard_btn_master_device_apply, 560, 38);
+    ui->scr_dashboard_btn_master_device_apply_label = lv_label_create(ui->scr_dashboard_btn_master_device_apply);
+    lv_label_set_text(ui->scr_dashboard_btn_master_device_apply_label, "APPLY CONFIG");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_master_device_apply_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_master_device_apply_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_master_device_apply, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_master_device_apply_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_master_device_apply, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_device_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_device_apply, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_device_apply, 63, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_device_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_device_apply, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_device_apply, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_device_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_master_device_apply, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_master_device_apply, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_device_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_device_apply, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_device_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_device_apply, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_device_apply, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_device_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_btn_master_device_apply, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_device_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_device_apply, 1, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_device_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_device_apply, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_device_apply, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_device_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_master_device_apply, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_device_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_device_apply, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_device_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_device_apply, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_device_apply, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_device_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_btn_master_device_apply, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_master_device_apply, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_master_device_apply, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_btn_master_device_apply, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_master_device_apply, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_master_device_apply, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_master_device_apply, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_master_device_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_master_device_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write codes scr_dashboard_ta_master_device_name
+    ui->scr_dashboard_ta_master_device_name = lv_textarea_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_ta_master_device_name, 22, 36);
+    lv_obj_set_size(ui->scr_dashboard_ta_master_device_name, 560, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_master_device_name, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_master_device_name, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_master_device_name, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_master_device_name, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_master_device_name, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_master_device_name, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_master_device_name, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_master_device_name, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_master_device_name, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_name, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_name, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_master_device_name, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_master_device_name, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_name, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_name, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_name, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_name, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_name, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_name, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_name, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_name, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_name, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_master_device_name, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_name, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_name, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_name, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_name, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_name, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_name, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_name, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_name, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_name, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_name, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_name, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_name, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_master_device_name, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_name, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_name, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_name, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_name, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ddlist_master_device_registers
+    ui->scr_dashboard_ddlist_master_device_registers = lv_dropdown_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_ddlist_master_device_registers, 312, 111);
+    lv_obj_set_size(ui->scr_dashboard_ddlist_master_device_registers, 270, 38);
+    lv_dropdown_set_options(ui->scr_dashboard_ddlist_master_device_registers, "HOLDING REGISTERS\nINPUT REGISTERS\nCOILS\nINPUT STATUS");
+
+    //Write style for scr_dashboard_ddlist_master_device_registers, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_master_device_registers, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_master_device_registers, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_master_device_registers, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_master_device_registers, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_master_device_registers, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_master_device_registers, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_master_device_registers, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_master_device_registers, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_master_device_registers, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ddlist_master_device_registers, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_master_device_registers, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_master_device_registers, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_master_device_registers, 1, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_master_device_registers, 58, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_master_device_registers, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_master_device_registers, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_master_device_registers, 129, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_master_device_registers, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_master_device_registers, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write style for scr_dashboard_ddlist_master_device_registers, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_master_device_registers, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_master_device_registers, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_master_device_registers, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_master_device_registers, 70, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_master_device_registers, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_master_device_registers, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_master_device_registers, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_master_device_registers, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_master_device_registers, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ddlist_master_device_registers, Part: LV_PART_MAIN, State: LV_STATE_DISABLED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ddlist_master_device_registers, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ddlist_master_device_registers, 255, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ddlist_master_device_registers, 1, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ddlist_master_device_registers, 61, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0xe1e6ee), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ddlist_master_device_registers, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ddlist_master_device_registers, 12, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ddlist_master_device_registers, 10, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ddlist_master_device_registers, 130, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ddlist_master_device_registers, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ddlist_master_device_registers, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DISABLED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ddlist_master_device_registers, 0, LV_PART_MAIN|LV_STATE_DISABLED);
+
+    //Write style state: LV_STATE_CHECKED for &style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked
+    static lv_style_t style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked;
+    ui_init_style(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked);
+
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, 255);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, lv_color_hex(0xe1e6ee));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, 1);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, lv_color_hex(0x00a1b5));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_master_device_registers), &style_scr_dashboard_ddlist_master_device_registers_extra_list_selected_checked, LV_PART_SELECTED|LV_STATE_CHECKED);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default
+    static lv_style_t style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default;
+    ui_init_style(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default);
+
+    lv_style_set_max_height(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 90);
+    lv_style_set_text_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, lv_color_hex(0xfdfdfd));
+    lv_style_set_text_font(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, &lv_font_Roboto_Regular_12);
+    lv_style_set_text_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 255);
+    lv_style_set_border_width(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 1);
+    lv_style_set_border_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 54);
+    lv_style_set_border_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, lv_color_hex(0xffffff));
+    lv_style_set_border_side(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, LV_BORDER_SIDE_FULL);
+    lv_style_set_radius(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 5);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, 129);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, lv_color_hex(0x000000));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_master_device_registers), &style_scr_dashboard_ddlist_master_device_registers_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style state: LV_STATE_DEFAULT for &style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default
+    static lv_style_t style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default;
+    ui_init_style(&style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default);
+
+    lv_style_set_radius(&style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default, 3);
+    lv_style_set_bg_opa(&style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_color(&style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
+    lv_style_set_bg_grad_dir(&style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
+    lv_obj_add_style(lv_dropdown_get_list(ui->scr_dashboard_ddlist_master_device_registers), &style_scr_dashboard_ddlist_master_device_registers_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_182
+    ui->scr_dashboard_label_182 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_182, 312, 160);
+    lv_obj_set_size(ui->scr_dashboard_label_182, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_label_182, "LENGTH");
+    lv_label_set_long_mode(ui->scr_dashboard_label_182, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_182, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_182, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_182, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_182, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_182, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_182, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_181
+    ui->scr_dashboard_label_181 = lv_label_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_label_181, 22, 160);
+    lv_obj_set_size(ui->scr_dashboard_label_181, 85, 17);
+    lv_label_set_text(ui->scr_dashboard_label_181, "ADDRESS");
+    lv_label_set_long_mode(ui->scr_dashboard_label_181, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_181, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_181, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_181, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_181, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_181, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_181, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_master_device_slaveid
+    ui->scr_dashboard_ta_master_device_slaveid = lv_textarea_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_ta_master_device_slaveid, 22, 107);
+    lv_obj_set_size(ui->scr_dashboard_ta_master_device_slaveid, 270, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_master_device_slaveid, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_master_device_slaveid, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_master_device_slaveid, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_master_device_slaveid, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_master_device_slaveid, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_master_device_slaveid, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_master_device_slaveid, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_master_device_slaveid, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_master_device_slaveid, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_slaveid, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_slaveid, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_master_device_slaveid, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_master_device_slaveid, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_slaveid, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_slaveid, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_slaveid, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_slaveid, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_slaveid, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_slaveid, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_slaveid, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_slaveid, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_slaveid, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_slaveid, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_master_device_slaveid, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_slaveid, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_slaveid, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_slaveid, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_slaveid, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_slaveid, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_slaveid, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_slaveid, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_slaveid, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_slaveid, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_slaveid, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_slaveid, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_slaveid, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_master_device_slaveid, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_slaveid, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_slaveid, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_slaveid, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_slaveid, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_master_device_address
+    ui->scr_dashboard_ta_master_device_address = lv_textarea_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_ta_master_device_address, 22, 177);
+    lv_obj_set_size(ui->scr_dashboard_ta_master_device_address, 270, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_master_device_address, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_master_device_address, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_master_device_address, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_master_device_address, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_master_device_address, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_master_device_address, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_master_device_address, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_master_device_address, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_master_device_address, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_address, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_address, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_master_device_address, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_master_device_address, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_address, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_address, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_address, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_address, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_address, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_address, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_address, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_address, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_address, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_address, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_master_device_address, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_address, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_address, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_address, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_address, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_address, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_address, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_address, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_address, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_address, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_address, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_address, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_address, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_master_device_address, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_address, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_address, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_address, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_address, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_ta_master_device_length
+    ui->scr_dashboard_ta_master_device_length = lv_textarea_create(ui->scr_dashboard_cont_63);
+    lv_obj_set_pos(ui->scr_dashboard_ta_master_device_length, 312, 177);
+    lv_obj_set_size(ui->scr_dashboard_ta_master_device_length, 270, 38);
+    lv_textarea_set_text(ui->scr_dashboard_ta_master_device_length, "Hello World");
+    lv_textarea_set_placeholder_text(ui->scr_dashboard_ta_master_device_length, "");
+    lv_textarea_set_password_bullet(ui->scr_dashboard_ta_master_device_length, "*");
+    lv_textarea_set_password_mode(ui->scr_dashboard_ta_master_device_length, false);
+    lv_textarea_set_one_line(ui->scr_dashboard_ta_master_device_length, true);
+    lv_textarea_set_accepted_chars(ui->scr_dashboard_ta_master_device_length, "");
+    lv_textarea_set_max_length(ui->scr_dashboard_ta_master_device_length, 32);
+#if LV_USE_KEYBOARD
+    lv_obj_add_event_cb(ui->scr_dashboard_ta_master_device_length, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+#endif
+
+    //Write style for scr_dashboard_ta_master_device_length, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_length, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_length, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_ta_master_device_length, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_ta_master_device_length, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_length, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_length, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_length, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_length, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_length, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_length, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_length, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_length, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_length, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_ta_master_device_length, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_ta_master_device_length, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_ta_master_device_length, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_length, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_length, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_ta_master_device_length, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_ta_master_device_length, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_dashboard_ta_master_device_length, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_ta_master_device_length, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_ta_master_device_length, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_ta_master_device_length, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_ta_master_device_length, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_length, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+
+    //Write style for scr_dashboard_ta_master_device_length, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_ta_master_device_length, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_ta_master_device_length, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_ta_master_device_length, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_ta_master_device_length, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_183
+    ui->scr_dashboard_label_183 = lv_label_create(ui->scr_dashboard_cont_62);
+    lv_obj_set_pos(ui->scr_dashboard_label_183, 209, 15);
+    lv_obj_set_size(ui->scr_dashboard_label_183, 242, 24);
+    lv_label_set_text(ui->scr_dashboard_label_183, "" LV_SYMBOL_DOWNLOAD "  DEVICE CONFIGURATION ");
+    lv_label_set_long_mode(ui->scr_dashboard_label_183, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_183, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_183, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_183, &lv_font_Roboto_Black_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_183, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_183, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_183, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_deviceconfig_back
+    ui->scr_dashboard_cont_deviceconfig_back = lv_obj_create(ui->scr_dashboard_cont_62);
+    lv_obj_set_pos(ui->scr_dashboard_cont_deviceconfig_back, 5, 5);
+    lv_obj_set_size(ui->scr_dashboard_cont_deviceconfig_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_deviceconfig_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_deviceconfig_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_deviceconfig_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_deviceconfig_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_deviceconfig_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_deviceconfig_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_deviceconfig_back
+    ui->scr_dashboard_btn_deviceconfig_back = lv_button_create(ui->scr_dashboard_cont_deviceconfig_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_deviceconfig_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_deviceconfig_back, 40, 40);
+    ui->scr_dashboard_btn_deviceconfig_back_label = lv_label_create(ui->scr_dashboard_btn_deviceconfig_back);
+    lv_label_set_text(ui->scr_dashboard_btn_deviceconfig_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_deviceconfig_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_deviceconfig_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_deviceconfig_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_deviceconfig_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_deviceconfig_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_deviceconfig_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_deviceconfig_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_deviceconfig_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_deviceconfig_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_deviceconfig_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_deviceconfig_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_deviceconfig_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_deviceconfig_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_deviceconfig_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_deviceconfig_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_deviceconfig_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_deviceconfig_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_deviceconfig_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_deviceconfig_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_deviceconfig_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_deviceconfig_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_deviceconfig_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_deviceconfig_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_deviceconfig_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_deviceconfig_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_deviceconfig_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_22
+    ui->scr_dashboard_img_22 = lv_image_create(ui->scr_dashboard_cont_deviceconfig_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_22, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_22, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_22, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_22, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_22, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_22, 0);
+
+    //Write style for scr_dashboard_img_22, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_22, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_22, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_22, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_device_viewlist
+    ui->scr_dashboard_cont_device_viewlist = lv_obj_create(ui->scr_dashboard);
+    lv_obj_set_pos(ui->scr_dashboard_cont_device_viewlist, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_cont_device_viewlist, 800, 480);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_device_viewlist, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_dashboard_cont_device_viewlist, LV_OBJ_FLAG_HIDDEN);
+
+    //Write style for scr_dashboard_cont_device_viewlist, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_device_viewlist, 207, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_device_viewlist, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_device_viewlist, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_device_viewlist, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_68
+    ui->scr_dashboard_cont_68 = lv_obj_create(ui->scr_dashboard_cont_device_viewlist);
+    lv_obj_set_pos(ui->scr_dashboard_cont_68, 70, 30);
+    lv_obj_set_size(ui->scr_dashboard_cont_68, 660, 420);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_68, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_68, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_68, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_68, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_68, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_68, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_68, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_68, 243, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_68, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_68, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_68, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_68, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_68, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_68, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_68, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_69
+    ui->scr_dashboard_cont_69 = lv_obj_create(ui->scr_dashboard_cont_68);
+    lv_obj_set_pos(ui->scr_dashboard_cont_69, 26, 51);
+    lv_obj_set_size(ui->scr_dashboard_cont_69, 612, 346);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_69, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_69, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_69, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_69, 65, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_69, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_69, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_69, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_69, 51, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_69, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_69, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_69, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_69, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_69, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_69, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_69, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_70
+    ui->scr_dashboard_cont_70 = lv_obj_create(ui->scr_dashboard_cont_69);
+    lv_obj_set_pos(ui->scr_dashboard_cont_70, 0, 20);
+    lv_obj_set_size(ui->scr_dashboard_cont_70, 612, 44);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_70, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_70, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_70, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_70, 56, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_70, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_70, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_70, 43, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_cont_70, lv_color_hex(0x1c0f0f), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_cont_70, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_70, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_device_action
+    ui->scr_dashboard_lbl_device_action = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_device_action, 529, 15);
+    lv_obj_set_size(ui->scr_dashboard_lbl_device_action, 68, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_device_action, "ACTION");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_device_action, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_device_action, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_device_action, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_device_action, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_device_action, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_device_action, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_device_action, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_deivce_length
+    ui->scr_dashboard_lbl_deivce_length = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_deivce_length, 437, 17);
+    lv_obj_set_size(ui->scr_dashboard_lbl_deivce_length, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_lbl_deivce_length, "LENGTH");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_deivce_length, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_deivce_length, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_deivce_length, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_deivce_length, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_deivce_length, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_deivce_length, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_deivce_length, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_device_name
+    ui->scr_dashboard_lbl_device_name = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_device_name, 74, 15);
+    lv_obj_set_size(ui->scr_dashboard_lbl_device_name, 80, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_device_name, "DEIVCE NAME");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_device_name, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_device_name, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_device_name, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_device_name, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_device_name, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_device_name, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_device_name, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_device_register
+    ui->scr_dashboard_lbl_device_register = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_device_register, 331, 17);
+    lv_obj_set_size(ui->scr_dashboard_lbl_device_register, 71, 13);
+    lv_label_set_text(ui->scr_dashboard_lbl_device_register, "REGISTER TYPE");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_device_register, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_device_register, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_device_register, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_device_register, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_device_register, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_device_register, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_device_register, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_device_slave_id
+    ui->scr_dashboard_lbl_device_slave_id = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_device_slave_id, 218, 15);
+    lv_obj_set_size(ui->scr_dashboard_lbl_device_slave_id, 85, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_device_slave_id, "SLAVE ID");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_device_slave_id, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_device_slave_id, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_device_slave_id, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_device_slave_id, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_device_slave_id, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_device_slave_id, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_device_slave_id, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_lbl_device_stt
+    ui->scr_dashboard_lbl_device_stt = lv_label_create(ui->scr_dashboard_cont_70);
+    lv_obj_set_pos(ui->scr_dashboard_lbl_device_stt, 14, 15);
+    lv_obj_set_size(ui->scr_dashboard_lbl_device_stt, 36, 17);
+    lv_label_set_text(ui->scr_dashboard_lbl_device_stt, "STT");
+    lv_label_set_long_mode(ui->scr_dashboard_lbl_device_stt, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_lbl_device_stt, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_lbl_device_stt, lv_color_hex(0x71717A), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_lbl_device_stt, &lv_font_Roboto_Bold_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_lbl_device_stt, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_lbl_device_stt, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_lbl_device_stt, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_label_184
+    ui->scr_dashboard_label_184 = lv_label_create(ui->scr_dashboard_cont_68);
+    lv_obj_set_pos(ui->scr_dashboard_label_184, 209, 15);
+    lv_obj_set_size(ui->scr_dashboard_label_184, 242, 24);
+    lv_label_set_text(ui->scr_dashboard_label_184, " " LV_SYMBOL_LIST "  DEVICE LIST");
+    lv_label_set_long_mode(ui->scr_dashboard_label_184, LV_LABEL_LONG_WRAP);
+
+    //Write style for scr_dashboard_label_184, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_label_184, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_label_184, &lv_font_Roboto_Black_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_label_184, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_line_space(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_label_184, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_label_184, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_cont_devicelist_back
+    ui->scr_dashboard_cont_devicelist_back = lv_obj_create(ui->scr_dashboard_cont_68);
+    lv_obj_set_pos(ui->scr_dashboard_cont_devicelist_back, 5, 5);
+    lv_obj_set_size(ui->scr_dashboard_cont_devicelist_back, 40, 40);
+    lv_obj_set_scrollbar_mode(ui->scr_dashboard_cont_devicelist_back, LV_SCROLLBAR_MODE_OFF);
+
+    //Write style for scr_dashboard_cont_devicelist_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_border_width(ui->scr_dashboard_cont_devicelist_back, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_dashboard_cont_devicelist_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_dashboard_cont_devicelist_back, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_cont_devicelist_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_cont_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write codes scr_dashboard_btn_devicelist_back
+    ui->scr_dashboard_btn_devicelist_back = lv_button_create(ui->scr_dashboard_cont_devicelist_back);
+    lv_obj_set_pos(ui->scr_dashboard_btn_devicelist_back, 0, 0);
+    lv_obj_set_size(ui->scr_dashboard_btn_devicelist_back, 40, 40);
+    ui->scr_dashboard_btn_devicelist_back_label = lv_label_create(ui->scr_dashboard_btn_devicelist_back);
+    lv_label_set_text(ui->scr_dashboard_btn_devicelist_back_label, "");
+    lv_label_set_long_mode(ui->scr_dashboard_btn_devicelist_back_label, LV_LABEL_LONG_WRAP);
+    lv_obj_align(ui->scr_dashboard_btn_devicelist_back_label, LV_ALIGN_CENTER, 0, 0);
+    lv_obj_set_style_pad_all(ui->scr_dashboard_btn_devicelist_back, 0, LV_STATE_DEFAULT);
+    lv_obj_set_width(ui->scr_dashboard_btn_devicelist_back_label, LV_PCT(100));
+
+    //Write style for scr_dashboard_btn_devicelist_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_devicelist_back, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_devicelist_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_devicelist_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_devicelist_back, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_dashboard_btn_devicelist_back, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_dashboard_btn_devicelist_back, Part: LV_PART_MAIN, State: LV_STATE_PRESSED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_devicelist_back, 42, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_devicelist_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_devicelist_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_devicelist_back, 10, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_devicelist_back, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_devicelist_back, &lv_font_montserratMedium_16, LV_PART_MAIN|LV_STATE_PRESSED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_devicelist_back, 255, LV_PART_MAIN|LV_STATE_PRESSED);
+
+    //Write style for scr_dashboard_btn_devicelist_back, Part: LV_PART_MAIN, State: LV_STATE_CHECKED.
+    lv_obj_set_style_bg_opa(ui->scr_dashboard_btn_devicelist_back, 44, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_color(ui->scr_dashboard_btn_devicelist_back, lv_color_hex(0x10B981), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_dashboard_btn_devicelist_back, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_border_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_radius(ui->scr_dashboard_btn_devicelist_back, 10, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_shadow_width(ui->scr_dashboard_btn_devicelist_back, 0, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_color(ui->scr_dashboard_btn_devicelist_back, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_font(ui->scr_dashboard_btn_devicelist_back, &lv_font_montserratMedium_12, LV_PART_MAIN|LV_STATE_CHECKED);
+    lv_obj_set_style_text_opa(ui->scr_dashboard_btn_devicelist_back, 255, LV_PART_MAIN|LV_STATE_CHECKED);
+
+    //Write codes scr_dashboard_img_21
+    ui->scr_dashboard_img_21 = lv_image_create(ui->scr_dashboard_cont_devicelist_back);
+    lv_obj_set_pos(ui->scr_dashboard_img_21, 7, 7);
+    lv_obj_set_size(ui->scr_dashboard_img_21, 24, 24);
+    lv_obj_add_flag(ui->scr_dashboard_img_21, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_dashboard_img_21, &_left_arrow_RGB565A8_24x24);
+    lv_image_set_pivot(ui->scr_dashboard_img_21, 50,50);
+    lv_image_set_rotation(ui->scr_dashboard_img_21, 0);
+
+    //Write style for scr_dashboard_img_21, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_dashboard_img_21, 189, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_dashboard_img_21, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_dashboard_img_21, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+
     //The custom code of scr_dashboard.
 
 
