@@ -1,42 +1,21 @@
-/*
-* Copyright 2024 NXP
-* NXP Proprietary. This software is owned or controlled by NXP and may only be used strictly in
-* accordance with the applicable license terms. By expressly accepting such terms or by downloading, installing,
-* activating and/or otherwise using the software, you are agreeing that you have read, and that you agree to
-* comply with and are bound by, such license terms.  If you do not agree to be bound by the applicable license
-* terms, then you may not retain, install, activate or otherwise use the software.
-*/
-
-
-/*********************
- *      INCLUDES
- *********************/
-#include <stdio.h>
-#include "lvgl.h"
 #include "custom.h"
+#include "ui_runtime_guard.h"
+#include "ui_screen_controller.h"
 
-/*********************
- *      DEFINES
- *********************/
-
-/**********************
- *      TYPEDEFS
- **********************/
-
-/**********************
- *  STATIC PROTOTYPES
- **********************/
-
-/**********************
- *  STATIC VARIABLES
- **********************/
-
-/**
- * Create a demo application
- */
+static void custom_runtime_rebind(lv_ui *ui)
+{
+    if (!ui) return;
+    ui_screen_controller_enter(ui);
+    ui_runtime_guard_mark_bound(ui->scr_base);
+}
 
 void custom_init(lv_ui *ui)
 {
-    /* Add your codes here */
+    ui_runtime_guard_init(ui, custom_runtime_rebind);
+    custom_runtime_rebind(ui);
 }
 
+void custom_input_reset(void)
+{
+    ui_screen_controller_restore_input();
+}

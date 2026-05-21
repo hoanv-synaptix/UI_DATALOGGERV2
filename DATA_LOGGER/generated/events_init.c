@@ -22,7 +22,7 @@ static void scr_booting_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_SCREEN_LOADED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.scr_dashboard, guider_ui.scr_dashboard_del, &guider_ui.scr_booting_del, setup_scr_scr_dashboard, LV_SCR_LOAD_ANIM_NONE, 200, 1600, false, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.scr_base, guider_ui.scr_base_del, &guider_ui.scr_booting_del, setup_scr_scr_base, LV_SCR_LOAD_ANIM_NONE, 200, 1600, false, true);
         break;
     }
     default:

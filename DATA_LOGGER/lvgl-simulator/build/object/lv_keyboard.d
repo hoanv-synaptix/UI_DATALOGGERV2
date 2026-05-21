@@ -106,7 +106,18 @@ build/object/lv_keyboard.o: \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\keyboard\lv_keyboard.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\buttonmatrix\lv_buttonmatrix.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj_class_private.h
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj_class_private.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\textarea\lv_textarea.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\label\lv_label.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_font.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_symbol_def.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_assert.h \
+ d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\keyboard\lv_keyboard_private.h:
 
@@ -321,3 +332,25 @@ d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\keyboard\lv_keyboard.h:
 d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\buttonmatrix\lv_buttonmatrix.h:
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj_class_private.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\textarea\lv_textarea.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\widgets\label\lv_label.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\core\lv_obj.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_font.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_symbol_def.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_assert.h:
+
+d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h:

@@ -7,10 +7,10 @@
 		"defaultFamily": "montserratMedium",
 		"defaultScreen": "xv98t88q",
 		"keyBoard": {
-			"display_kb": false,
+			"display_kb": true,
 			"chinese_input": false,
 			"chinese_library": "mini",
-			"keyboard_font_type": "SourceHanSerifSC_Regular",
+			"keyboard_font_type": "Roboto_Regular",
 			"keyboard_font_size": 18
 		},
 		"resolution": {
@@ -535,7 +535,7 @@
 			}
 		},
 		{
-			"name": "scr_dashboard",
+			"name": "scr_base",
 			"id": "emg7n4dm",
 			"type": "scr",
 			"version": 190,
@@ -2377,7 +2377,7 @@
 											"name": "ta_master_device_address",
 											"id": "i5vf1yw9",
 											"type": "ta",
-											"left": 22,
+											"left": 21,
 											"top": 177,
 											"visible": true,
 											"isLock": false,
@@ -4055,7 +4055,7 @@
 					"type": "cont",
 					"left": 101,
 					"top": 49,
-					"visible": true,
+					"visible": false,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
@@ -4075,7 +4075,7 @@
 							"rm_flag": [],
 							"flag": [],
 							"width": 677,
-							"height": 374,
+							"height": 380,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -6590,7 +6590,7 @@
 							"rm_flag": [],
 							"flag": [],
 							"width": 677,
-							"height": 374,
+							"height": 380,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -6614,7 +6614,7 @@
 											"id": "gceu7kgx",
 											"type": "cont",
 											"left": 23,
-											"top": 10,
+											"top": 14,
 											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
@@ -7956,12 +7956,12 @@
 													"dropToGap": false
 												},
 												{
-													"name": "cont_60",
+													"name": "cont_master",
 													"id": "ddim6isx",
 													"type": "cont",
 													"left": 175,
 													"top": 7,
-													"visible": false,
+													"visible": true,
 													"isLock": false,
 													"rm_flag": [],
 													"flag": [],
@@ -8175,7 +8175,7 @@
 															"name": "btn_master_adddeivce",
 															"id": "yzd5h0rx",
 															"type": "btn",
-															"left": -3,
+															"left": 0,
 															"top": 30,
 															"visible": true,
 															"isLock": false,
@@ -8522,12 +8522,12 @@
 													"dropToGap": false
 												},
 												{
-													"name": "cont_59",
+													"name": "cont_slave",
 													"id": "trwv1or3",
 													"type": "cont",
 													"left": 175,
 													"top": 7,
-													"visible": true,
+													"visible": false,
 													"isLock": false,
 													"rm_flag": [],
 													"flag": [],
@@ -10120,7 +10120,7 @@
 							"rm_flag": [],
 							"flag": [],
 							"width": 677,
-							"height": 374,
+							"height": 380,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -10144,7 +10144,7 @@
 											"id": "0qyn1ijo",
 											"type": "cont",
 											"left": 23,
-											"top": 11,
+											"top": 14,
 											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
@@ -12008,7 +12008,7 @@
 							"rm_flag": [],
 							"flag": [],
 							"width": 677,
-							"height": 374,
+							"height": 380,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -13624,8 +13624,8 @@
 											"id": "b60g5nni",
 											"type": "cont",
 											"left": 23,
-											"top": 10,
-											"visible": false,
+											"top": 14,
+											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
 											"flag": [],
@@ -16959,7 +16959,7 @@
 									"dropToGap": false
 								},
 								{
-									"name": "cont_back",
+									"name": "cont_net_back",
 									"id": "by7f5647",
 									"type": "cont",
 									"left": 0,
@@ -17009,7 +17009,7 @@
 											"dropToGap": false
 										},
 										{
-											"name": "btn_back",
+											"name": "btn_net_back",
 											"id": "eczixkxx",
 											"type": "btn",
 											"left": 0,
@@ -17297,7 +17297,7 @@
 							"type": "cont",
 							"left": 0,
 							"top": 35,
-							"visible": true,
+							"visible": false,
 							"isLock": false,
 							"rm_flag": [],
 							"flag": [],
@@ -19748,7 +19748,7 @@
 							"id": "hp1ab984",
 							"type": "label",
 							"left": 0,
-							"top": 5,
+							"top": 10,
 							"visible": true,
 							"isLock": false,
 							"rm_flag": [],
@@ -19773,7 +19773,7 @@
 									"font": 10,
 									"text_align": "LV_TEXT_ALIGN_LEFT",
 									"font_family": "Roboto_Black",
-									"letter_space": 0,
+									"letter_space": 1,
 									"line_space": 0,
 									"bg_color": "#2195f6",
 									"bg_grad_color": "#2195f6",
@@ -21967,7 +21967,7 @@
 							"id": "uyxdpvzy",
 							"type": "label",
 							"left": 0,
-							"top": 5,
+							"top": 10,
 							"visible": true,
 							"isLock": false,
 							"rm_flag": [],
@@ -21992,7 +21992,7 @@
 									"font": 10,
 									"text_align": "LV_TEXT_ALIGN_LEFT",
 									"font_family": "Roboto_Black",
-									"letter_space": 0,
+									"letter_space": 1,
 									"line_space": 0,
 									"bg_color": "#2195f6",
 									"bg_grad_color": "#2195f6",
@@ -22359,7 +22359,7 @@
 									"name": "btn_generate_report",
 									"id": "ibbo6m84",
 									"type": "btn",
-									"left": 24,
+									"left": 22,
 									"top": 175,
 									"visible": true,
 									"isLock": false,
@@ -23445,7 +23445,7 @@
 							"id": "ags0xota",
 							"type": "label",
 							"left": 0,
-							"top": 5,
+							"top": 10,
 							"visible": true,
 							"isLock": false,
 							"rm_flag": [],
@@ -23470,7 +23470,7 @@
 									"font": 10,
 									"text_align": "LV_TEXT_ALIGN_LEFT",
 									"font_family": "Roboto_Black",
-									"letter_space": 0,
+									"letter_space": 1,
 									"line_space": 0,
 									"bg_color": "#2195f6",
 									"bg_grad_color": "#2195f6",
@@ -27522,7 +27522,7 @@
 											"font": 12,
 											"text_align": "LV_TEXT_ALIGN_LEFT",
 											"font_family": "Roboto_Black",
-											"letter_space": 0,
+											"letter_space": 2,
 											"line_space": 0,
 											"bg_color": "#2195f6",
 											"bg_grad_color": "#2195f6",
@@ -27645,7 +27645,7 @@
 							"id": "s2y1go3i",
 							"type": "label",
 							"left": 0,
-							"top": 5,
+							"top": 10,
 							"visible": true,
 							"isLock": false,
 							"rm_flag": [],
@@ -27670,7 +27670,7 @@
 									"font": 10,
 									"text_align": "LV_TEXT_ALIGN_LEFT",
 									"font_family": "Roboto_Black",
-									"letter_space": 0,
+									"letter_space": 1,
 									"line_space": 0,
 									"bg_color": "#2195f6",
 									"bg_grad_color": "#2195f6",
@@ -28801,13 +28801,13 @@
 					"id": "cd42g379",
 					"type": "img",
 					"left": 546,
-					"top": 32,
+					"top": 35,
 					"visible": true,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
-					"width": 16,
-					"height": 16,
+					"width": 12,
+					"height": 12,
 					"default_style": false,
 					"style": [
 						{
@@ -28836,13 +28836,13 @@
 					"id": "z2wszfe2",
 					"type": "img",
 					"left": 546,
-					"top": 32,
+					"top": 35,
 					"visible": false,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
-					"width": 16,
-					"height": 16,
+					"width": 12,
+					"height": 12,
 					"default_style": false,
 					"use_fs": false,
 					"fs_type": "flash",
@@ -28870,14 +28870,14 @@
 					"name": "img_net_off",
 					"id": "0w9ymax0",
 					"type": "img",
-					"left": 476,
-					"top": 32,
+					"left": 468,
+					"top": 35,
 					"visible": false,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
-					"width": 16,
-					"height": 16,
+					"width": 12,
+					"height": 12,
 					"default_style": false,
 					"use_fs": false,
 					"fs_type": "flash",
@@ -28905,14 +28905,14 @@
 					"name": "img_net_on",
 					"id": "orwi3nl5",
 					"type": "img",
-					"left": 476,
-					"top": 32,
+					"left": 468,
+					"top": 35,
 					"visible": true,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
-					"width": 16,
-					"height": 16,
+					"width": 12,
+					"height": 12,
 					"default_style": false,
 					"use_fs": false,
 					"fs_type": "flash",
@@ -28939,7 +28939,7 @@
 					"name": "time_val",
 					"id": "ykqgnotq",
 					"type": "digital_clock",
-					"left": 695,
+					"left": 703,
 					"top": 30,
 					"visible": true,
 					"isLock": false,
@@ -28980,9 +28980,9 @@
 							"shadow_ofs_y": 0,
 							"text_align": "LV_TEXT_ALIGN_CENTER",
 							"text_color": "#64748B",
-							"font": 10,
+							"font": 11,
 							"font_family": "Roboto_Bold",
-							"letter_space": 0,
+							"letter_space": 2,
 							"text_opa": 255
 						},
 						{
@@ -29047,9 +29047,9 @@
 							"radius": 0,
 							"text_align": "LV_TEXT_ALIGN_CENTER",
 							"text_color": "#64748B",
-							"font": 10,
+							"font": 11,
 							"font_family": "Roboto_Bold",
-							"letter_space": 0,
+							"letter_space": 1,
 							"bg_color": "#2195f6",
 							"bg_grad_color": "#2195f6",
 							"bg_opa": 0,
@@ -29116,7 +29116,7 @@
 					"left": 0,
 					"top": 0,
 					"visible": true,
-					"isLock": true,
+					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
 					"width": 800,
@@ -29135,11 +29135,11 @@
 					"use_fs": false,
 					"fs_type": "flash",
 					"sd_path": "",
-					"img_path": "import\\image\\bg_settings_base.png",
+					"img_path": "import\\image\\bg_base.png",
 					"rotate": 0,
 					"x": 50,
 					"y": 50,
-					"color_format": "RGB565A8",
+					"color_format": "RGB565",
 					"compress_method": "NONE",
 					"dither_algorithm": ""
 				}
@@ -29165,8 +29165,7 @@
 					"bg_img_recolor": "#ffffff",
 					"bg_img_recolor_opa": 0
 				}
-			],
-			"layerName": "scr_dashboard"
+			]
 		}
 	],
 	"Application": {
@@ -29180,10 +29179,10 @@
 		},
 		"version": "test_v1",
 		"keyBoard": {
-			"display_kb": false,
+			"display_kb": true,
 			"chinese_input": false,
 			"chinese_library": "mini",
-			"keyboard_font_type": "SourceHanSerifSC_Regular",
+			"keyboard_font_type": "Roboto_Regular",
 			"keyboard_font_size": 18
 		},
 		"default_scr": "scr_booting",
@@ -29234,7 +29233,7 @@
 							"condition": [],
 							"action": [
 								{
-									"dst": "scr_dashboard",
+									"dst": "scr_base",
 									"bindCondi": "",
 									"actionList": {
 										"load_screen": {
@@ -29248,7 +29247,7 @@
 									},
 									"dst_type": "scr",
 									"_target": {
-										"name": "scr_dashboard",
+										"name": "scr_base",
 										"id": "emg7n4dm",
 										"type": "scr",
 										"version": 190,
@@ -31090,7 +31089,7 @@
 																		"name": "ta_master_device_address",
 																		"id": "i5vf1yw9",
 																		"type": "ta",
-																		"left": 22,
+																		"left": 21,
 																		"top": 177,
 																		"visible": true,
 																		"isLock": false,
@@ -32768,7 +32767,7 @@
 												"type": "cont",
 												"left": 101,
 												"top": 49,
-												"visible": true,
+												"visible": false,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
@@ -32788,7 +32787,7 @@
 														"rm_flag": [],
 														"flag": [],
 														"width": 677,
-														"height": 374,
+														"height": 380,
 														"default_style": false,
 														"scrollbar_mode": "OFF",
 														"child": [
@@ -35303,7 +35302,7 @@
 														"rm_flag": [],
 														"flag": [],
 														"width": 677,
-														"height": 374,
+														"height": 380,
 														"default_style": false,
 														"scrollbar_mode": "OFF",
 														"child": [
@@ -35327,7 +35326,7 @@
 																		"id": "gceu7kgx",
 																		"type": "cont",
 																		"left": 23,
-																		"top": 10,
+																		"top": 14,
 																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
@@ -36669,12 +36668,12 @@
 																				"dropToGap": false
 																			},
 																			{
-																				"name": "cont_60",
+																				"name": "cont_master",
 																				"id": "ddim6isx",
 																				"type": "cont",
 																				"left": 175,
 																				"top": 7,
-																				"visible": false,
+																				"visible": true,
 																				"isLock": false,
 																				"rm_flag": [],
 																				"flag": [],
@@ -36888,7 +36887,7 @@
 																						"name": "btn_master_adddeivce",
 																						"id": "yzd5h0rx",
 																						"type": "btn",
-																						"left": -3,
+																						"left": 0,
 																						"top": 30,
 																						"visible": true,
 																						"isLock": false,
@@ -37235,12 +37234,12 @@
 																				"dropToGap": false
 																			},
 																			{
-																				"name": "cont_59",
+																				"name": "cont_slave",
 																				"id": "trwv1or3",
 																				"type": "cont",
 																				"left": 175,
 																				"top": 7,
-																				"visible": true,
+																				"visible": false,
 																				"isLock": false,
 																				"rm_flag": [],
 																				"flag": [],
@@ -38833,7 +38832,7 @@
 														"rm_flag": [],
 														"flag": [],
 														"width": 677,
-														"height": 374,
+														"height": 380,
 														"default_style": false,
 														"scrollbar_mode": "OFF",
 														"child": [
@@ -38857,7 +38856,7 @@
 																		"id": "0qyn1ijo",
 																		"type": "cont",
 																		"left": 23,
-																		"top": 11,
+																		"top": 14,
 																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
@@ -40721,7 +40720,7 @@
 														"rm_flag": [],
 														"flag": [],
 														"width": 677,
-														"height": 374,
+														"height": 380,
 														"default_style": false,
 														"scrollbar_mode": "OFF",
 														"child": [
@@ -42337,8 +42336,8 @@
 																		"id": "b60g5nni",
 																		"type": "cont",
 																		"left": 23,
-																		"top": 10,
-																		"visible": false,
+																		"top": 14,
+																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
 																		"flag": [],
@@ -45672,7 +45671,7 @@
 																"dropToGap": false
 															},
 															{
-																"name": "cont_back",
+																"name": "cont_net_back",
 																"id": "by7f5647",
 																"type": "cont",
 																"left": 0,
@@ -45722,7 +45721,7 @@
 																		"dropToGap": false
 																	},
 																	{
-																		"name": "btn_back",
+																		"name": "btn_net_back",
 																		"id": "eczixkxx",
 																		"type": "btn",
 																		"left": 0,
@@ -46010,7 +46009,7 @@
 														"type": "cont",
 														"left": 0,
 														"top": 35,
-														"visible": true,
+														"visible": false,
 														"isLock": false,
 														"rm_flag": [],
 														"flag": [],
@@ -48461,7 +48460,7 @@
 														"id": "hp1ab984",
 														"type": "label",
 														"left": 0,
-														"top": 5,
+														"top": 10,
 														"visible": true,
 														"isLock": false,
 														"rm_flag": [],
@@ -48486,7 +48485,7 @@
 																"font": 10,
 																"text_align": "LV_TEXT_ALIGN_LEFT",
 																"font_family": "Roboto_Black",
-																"letter_space": 0,
+																"letter_space": 1,
 																"line_space": 0,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
@@ -50680,7 +50679,7 @@
 														"id": "uyxdpvzy",
 														"type": "label",
 														"left": 0,
-														"top": 5,
+														"top": 10,
 														"visible": true,
 														"isLock": false,
 														"rm_flag": [],
@@ -50705,7 +50704,7 @@
 																"font": 10,
 																"text_align": "LV_TEXT_ALIGN_LEFT",
 																"font_family": "Roboto_Black",
-																"letter_space": 0,
+																"letter_space": 1,
 																"line_space": 0,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
@@ -51072,7 +51071,7 @@
 																"name": "btn_generate_report",
 																"id": "ibbo6m84",
 																"type": "btn",
-																"left": 24,
+																"left": 22,
 																"top": 175,
 																"visible": true,
 																"isLock": false,
@@ -52158,7 +52157,7 @@
 														"id": "ags0xota",
 														"type": "label",
 														"left": 0,
-														"top": 5,
+														"top": 10,
 														"visible": true,
 														"isLock": false,
 														"rm_flag": [],
@@ -52183,7 +52182,7 @@
 																"font": 10,
 																"text_align": "LV_TEXT_ALIGN_LEFT",
 																"font_family": "Roboto_Black",
-																"letter_space": 0,
+																"letter_space": 1,
 																"line_space": 0,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
@@ -56235,7 +56234,7 @@
 																		"font": 12,
 																		"text_align": "LV_TEXT_ALIGN_LEFT",
 																		"font_family": "Roboto_Black",
-																		"letter_space": 0,
+																		"letter_space": 2,
 																		"line_space": 0,
 																		"bg_color": "#2195f6",
 																		"bg_grad_color": "#2195f6",
@@ -56358,7 +56357,7 @@
 														"id": "s2y1go3i",
 														"type": "label",
 														"left": 0,
-														"top": 5,
+														"top": 10,
 														"visible": true,
 														"isLock": false,
 														"rm_flag": [],
@@ -56383,7 +56382,7 @@
 																"font": 10,
 																"text_align": "LV_TEXT_ALIGN_LEFT",
 																"font_family": "Roboto_Black",
-																"letter_space": 0,
+																"letter_space": 1,
 																"line_space": 0,
 																"bg_color": "#2195f6",
 																"bg_grad_color": "#2195f6",
@@ -57514,13 +57513,13 @@
 												"id": "cd42g379",
 												"type": "img",
 												"left": 546,
-												"top": 32,
+												"top": 35,
 												"visible": true,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
-												"width": 16,
-												"height": 16,
+												"width": 12,
+												"height": 12,
 												"default_style": false,
 												"style": [
 													{
@@ -57549,13 +57548,13 @@
 												"id": "z2wszfe2",
 												"type": "img",
 												"left": 546,
-												"top": 32,
+												"top": 35,
 												"visible": false,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
-												"width": 16,
-												"height": 16,
+												"width": 12,
+												"height": 12,
 												"default_style": false,
 												"use_fs": false,
 												"fs_type": "flash",
@@ -57583,14 +57582,14 @@
 												"name": "img_net_off",
 												"id": "0w9ymax0",
 												"type": "img",
-												"left": 476,
-												"top": 32,
+												"left": 468,
+												"top": 35,
 												"visible": false,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
-												"width": 16,
-												"height": 16,
+												"width": 12,
+												"height": 12,
 												"default_style": false,
 												"use_fs": false,
 												"fs_type": "flash",
@@ -57618,14 +57617,14 @@
 												"name": "img_net_on",
 												"id": "orwi3nl5",
 												"type": "img",
-												"left": 476,
-												"top": 32,
+												"left": 468,
+												"top": 35,
 												"visible": true,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
-												"width": 16,
-												"height": 16,
+												"width": 12,
+												"height": 12,
 												"default_style": false,
 												"use_fs": false,
 												"fs_type": "flash",
@@ -57652,7 +57651,7 @@
 												"name": "time_val",
 												"id": "ykqgnotq",
 												"type": "digital_clock",
-												"left": 695,
+												"left": 703,
 												"top": 30,
 												"visible": true,
 												"isLock": false,
@@ -57693,9 +57692,9 @@
 														"shadow_ofs_y": 0,
 														"text_align": "LV_TEXT_ALIGN_CENTER",
 														"text_color": "#64748B",
-														"font": 10,
+														"font": 11,
 														"font_family": "Roboto_Bold",
-														"letter_space": 0,
+														"letter_space": 2,
 														"text_opa": 255
 													},
 													{
@@ -57760,9 +57759,9 @@
 														"radius": 0,
 														"text_align": "LV_TEXT_ALIGN_CENTER",
 														"text_color": "#64748B",
-														"font": 10,
+														"font": 11,
 														"font_family": "Roboto_Bold",
-														"letter_space": 0,
+														"letter_space": 1,
 														"bg_color": "#2195f6",
 														"bg_grad_color": "#2195f6",
 														"bg_opa": 0,
@@ -57829,7 +57828,7 @@
 												"left": 0,
 												"top": 0,
 												"visible": true,
-												"isLock": true,
+												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
 												"width": 800,
@@ -57848,11 +57847,11 @@
 												"use_fs": false,
 												"fs_type": "flash",
 												"sd_path": "",
-												"img_path": "import\\image\\bg_settings_base.png",
+												"img_path": "import\\image\\bg_base.png",
 												"rotate": 0,
 												"x": 50,
 												"y": 50,
-												"color_format": "RGB565A8",
+												"color_format": "RGB565",
 												"compress_method": "NONE",
 												"dither_algorithm": ""
 											}
@@ -57879,7 +57878,7 @@
 												"bg_img_recolor_opa": 0
 											}
 										],
-										"layerName": "scr_dashboard"
+										"layerName": "scr_base"
 									}
 								}
 							]
@@ -58121,7 +58120,7 @@
 				]
 			},
 			{
-				"name": "scr_dashboard",
+				"name": "scr_base",
 				"id": "emg7n4dm",
 				"type": "scr",
 				"version": 190,
@@ -58160,14 +58159,14 @@
 						"bg_img_recolor_opa": 0
 					}
 				],
-				"layerName": "scr_dashboard",
+				"layerName": "scr_base",
 				"size": [
 					800,
 					480
 				],
 				"widgets": [
 					{
-						"name": "scr_dashboard_img_bg",
+						"name": "scr_base_img_bg",
 						"id": "l6rw6n98",
 						"type": "img",
 						"visible": true,
@@ -58182,16 +58181,16 @@
 							480
 						],
 						"default_style": false,
-						"img_path": "import\\image\\bg_settings_base.png",
-						"color_format": "RGB565A8",
+						"img_path": "import\\image\\bg_base.png",
+						"color_format": "RGB565",
 						"compress_method": "NONE",
 						"dither_algorithm": "",
 						"rotate": 0,
 						"pivot": "50,50",
 						"use_fs": false,
 						"fs_type": "flash",
-						"img_flash_path": "F:/bg_settings_base.png",
-						"img_sd_path": "S:/bg_settings_base.png",
+						"img_flash_path": "F:/bg_base.png",
+						"img_sd_path": "S:/bg_base.png",
 						"style": [
 							{
 								"part": "LV_PART_MAIN",
@@ -58204,7 +58203,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_date_val",
+						"name": "scr_base_date_val",
 						"id": "hu7hm4rw",
 						"type": "datetext",
 						"visible": true,
@@ -58228,9 +58227,9 @@
 								"radius": 0,
 								"text_align": "LV_TEXT_ALIGN_CENTER",
 								"text_color": "#64748B",
-								"font": 10,
+								"font": 11,
 								"font_family": "Roboto_Bold",
-								"letter_space": 0,
+								"letter_space": 1,
 								"bg_color": "#2195f6",
 								"bg_grad_color": "#2195f6",
 								"bg_opa": 0,
@@ -58290,14 +58289,14 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_time_val",
+						"name": "scr_base_time_val",
 						"id": "ykqgnotq",
 						"type": "digital_clock",
 						"visible": true,
 						"flag": [],
 						"rm_flag": [],
 						"pos": [
-							695,
+							703,
 							30
 						],
 						"size": [
@@ -58340,9 +58339,9 @@
 								"shadow_ofs_y": 0,
 								"text_align": "LV_TEXT_ALIGN_CENTER",
 								"text_color": "#64748B",
-								"font": 10,
+								"font": 11,
 								"font_family": "Roboto_Bold",
-								"letter_space": 0,
+								"letter_space": 2,
 								"text_opa": 255
 							},
 							{
@@ -58384,19 +58383,19 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_img_net_on",
+						"name": "scr_base_img_net_on",
 						"id": "orwi3nl5",
 						"type": "img",
 						"visible": true,
 						"flag": [],
 						"rm_flag": [],
 						"pos": [
-							476,
-							32
+							468,
+							35
 						],
 						"size": [
-							16,
-							16
+							12,
+							12
 						],
 						"default_style": false,
 						"img_path": "import\\image\\wifi_on.png",
@@ -58421,19 +58420,19 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_img_net_off",
+						"name": "scr_base_img_net_off",
 						"id": "0w9ymax0",
 						"type": "img",
 						"visible": false,
 						"flag": [],
 						"rm_flag": [],
 						"pos": [
-							476,
-							32
+							468,
+							35
 						],
 						"size": [
-							16,
-							16
+							12,
+							12
 						],
 						"default_style": false,
 						"img_path": "import\\image\\wifi_off.png",
@@ -58458,7 +58457,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_img_mqtt_off",
+						"name": "scr_base_img_mqtt_off",
 						"id": "z2wszfe2",
 						"type": "img",
 						"visible": false,
@@ -58466,11 +58465,11 @@
 						"rm_flag": [],
 						"pos": [
 							546,
-							32
+							35
 						],
 						"size": [
-							16,
-							16
+							12,
+							12
 						],
 						"default_style": false,
 						"img_path": "import\\image\\mqtt_off.png",
@@ -58495,7 +58494,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_img_mqtt_on",
+						"name": "scr_base_img_mqtt_on",
 						"id": "cd42g379",
 						"type": "img",
 						"visible": true,
@@ -58503,11 +58502,11 @@
 						"rm_flag": [],
 						"pos": [
 							546,
-							32
+							35
 						],
 						"size": [
-							16,
-							16
+							12,
+							12
 						],
 						"default_style": false,
 						"img_path": "import\\image\\mqtt_on.png",
@@ -58532,7 +58531,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_btn_dashboard",
+						"name": "scr_base_btn_dashboard",
 						"id": "71m97f0w",
 						"type": "btn",
 						"visible": true,
@@ -58736,7 +58735,7 @@
 						"toggle": false
 					},
 					{
-						"name": "scr_dashboard_btn_analystis",
+						"name": "scr_base_btn_analystis",
 						"id": "2618btnt",
 						"type": "btn",
 						"visible": true,
@@ -58943,7 +58942,7 @@
 						"toggle": false
 					},
 					{
-						"name": "scr_dashboard_btn_event_logs",
+						"name": "scr_base_btn_event_logs",
 						"id": "d1blpcl9",
 						"type": "btn",
 						"visible": true,
@@ -59150,7 +59149,7 @@
 						"toggle": false
 					},
 					{
-						"name": "scr_dashboard_btn_settings",
+						"name": "scr_base_btn_settings",
 						"id": "sx4npadj",
 						"type": "btn",
 						"visible": true,
@@ -59357,7 +59356,7 @@
 						"toggle": false
 					},
 					{
-						"name": "scr_dashboard_btn_restart",
+						"name": "scr_base_btn_restart",
 						"id": "k34tb6hs",
 						"type": "btn",
 						"visible": true,
@@ -59561,7 +59560,7 @@
 						"toggle": false
 					},
 					{
-						"name": "scr_dashboard_cont_dashboard",
+						"name": "scr_base_cont_dashboard",
 						"id": "h7wa4lx6",
 						"type": "cont",
 						"visible": false,
@@ -59579,7 +59578,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_lbl_dashboard",
+								"name": "scr_base_lbl_dashboard",
 								"id": "s2y1go3i",
 								"type": "label",
 								"visible": true,
@@ -59587,7 +59586,7 @@
 								"rm_flag": [],
 								"pos": [
 									0,
-									5
+									10
 								],
 								"size": [
 									172,
@@ -59616,7 +59615,7 @@
 										"font": 10,
 										"text_align": "LV_TEXT_ALIGN_LEFT",
 										"font_family": "Roboto_Black",
-										"letter_space": 0,
+										"letter_space": 1,
 										"line_space": 0,
 										"bg_color": "#2195f6",
 										"bg_grad_color": "#2195f6",
@@ -59689,7 +59688,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_aqi",
+								"name": "scr_base_cont_aqi",
 								"id": "yhtxe9ig",
 								"type": "cont",
 								"visible": true,
@@ -59707,7 +59706,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_aqi",
+										"name": "scr_base_lbl_aqi",
 										"id": "bym3udlg",
 										"type": "label",
 										"visible": true,
@@ -59744,7 +59743,7 @@
 												"font": 12,
 												"text_align": "LV_TEXT_ALIGN_LEFT",
 												"font_family": "Roboto_Black",
-												"letter_space": 0,
+												"letter_space": 2,
 												"line_space": 0,
 												"bg_color": "#2195f6",
 												"bg_grad_color": "#2195f6",
@@ -59817,7 +59816,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_aqi_val",
+										"name": "scr_base_lbl_aqi_val",
 										"id": "0ld8123o",
 										"type": "label",
 										"visible": true,
@@ -59927,7 +59926,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_arc_aqi",
+										"name": "scr_base_arc_aqi",
 										"id": "egl9ibux",
 										"type": "arc",
 										"visible": true,
@@ -60126,7 +60125,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_aqi_status",
+										"name": "scr_base_cont_aqi_status",
 										"id": "tonkrr7l",
 										"type": "cont",
 										"visible": true,
@@ -60144,7 +60143,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_lbl_Aqi_status",
+												"name": "scr_base_lbl_Aqi_status",
 												"id": "o0shm2ri",
 												"type": "label",
 												"visible": true,
@@ -60334,7 +60333,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_pm10",
+								"name": "scr_base_cont_pm10",
 								"id": "7wfaa486",
 								"type": "cont",
 								"visible": true,
@@ -60352,7 +60351,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_pm10",
+										"name": "scr_base_lbl_pm10",
 										"id": "ruyqux4v",
 										"type": "label",
 										"visible": true,
@@ -60462,7 +60461,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_pm10_val",
+										"name": "scr_base_lbl_pm10_val",
 										"id": "nwmn7c34",
 										"type": "label",
 										"visible": true,
@@ -60572,7 +60571,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_pm10_unit",
+										"name": "scr_base_lbl_pm10_unit",
 										"id": "os5ggylp",
 										"type": "label",
 										"visible": true,
@@ -60682,7 +60681,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_pm10_status",
+										"name": "scr_base_cont_pm10_status",
 										"id": "jt08owsa",
 										"type": "cont",
 										"visible": true,
@@ -60700,7 +60699,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_lbl_pm10_status",
+												"name": "scr_base_lbl_pm10_status",
 												"id": "rjwyohul",
 												"type": "label",
 												"visible": true,
@@ -60890,7 +60889,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_pm25",
+								"name": "scr_base_cont_pm25",
 								"id": "xto8mk6r",
 								"type": "cont",
 								"visible": true,
@@ -60908,7 +60907,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_pm25",
+										"name": "scr_base_lbl_pm25",
 										"id": "w72al2m9",
 										"type": "label",
 										"visible": true,
@@ -61018,7 +61017,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_pm25_val",
+										"name": "scr_base_lbl_pm25_val",
 										"id": "pgzp5rzt",
 										"type": "label",
 										"visible": true,
@@ -61128,7 +61127,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_pm25_uint",
+										"name": "scr_base_lbl_pm25_uint",
 										"id": "uowwzjbd",
 										"type": "label",
 										"visible": true,
@@ -61238,7 +61237,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_status",
+										"name": "scr_base_cont_status",
 										"id": "ks42dq5s",
 										"type": "cont",
 										"visible": true,
@@ -61256,7 +61255,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_lbl_status",
+												"name": "scr_base_lbl_status",
 												"id": "3xfdd2o7",
 												"type": "label",
 												"visible": true,
@@ -61446,7 +61445,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_21",
+								"name": "scr_base_cont_21",
 								"id": "7ga8iygg",
 								"type": "cont",
 								"visible": true,
@@ -61464,7 +61463,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_temp",
+										"name": "scr_base_lbl_temp",
 										"id": "ndbrt8uq",
 										"type": "label",
 										"visible": true,
@@ -61574,7 +61573,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_temp_val",
+										"name": "scr_base_lbl_temp_val",
 										"id": "zq63b48q",
 										"type": "label",
 										"visible": true,
@@ -61684,7 +61683,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_temp_unit",
+										"name": "scr_base_lbl_temp_unit",
 										"id": "g4th4uis",
 										"type": "label",
 										"visible": true,
@@ -61794,7 +61793,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_img_temp",
+										"name": "scr_base_img_temp",
 										"id": "x1suiwxb",
 										"type": "img",
 										"visible": true,
@@ -61871,7 +61870,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_humi",
+								"name": "scr_base_cont_humi",
 								"id": "y6mib922",
 								"type": "cont",
 								"visible": true,
@@ -61889,7 +61888,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_humi",
+										"name": "scr_base_lbl_humi",
 										"id": "7d9gef36",
 										"type": "label",
 										"visible": true,
@@ -61999,7 +61998,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_humi_val",
+										"name": "scr_base_lbl_humi_val",
 										"id": "54cfh5jg",
 										"type": "label",
 										"visible": true,
@@ -62109,7 +62108,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_humi_unit",
+										"name": "scr_base_lbl_humi_unit",
 										"id": "8ox1d9v2",
 										"type": "label",
 										"visible": true,
@@ -62219,7 +62218,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_img_humi",
+										"name": "scr_base_img_humi",
 										"id": "uh9l9eos",
 										"type": "img",
 										"visible": true,
@@ -62296,7 +62295,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_no2",
+								"name": "scr_base_cont_no2",
 								"id": "59206v1a",
 								"type": "cont",
 								"visible": true,
@@ -62314,7 +62313,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_no2",
+										"name": "scr_base_lbl_no2",
 										"id": "vlnonqmc",
 										"type": "label",
 										"visible": true,
@@ -62424,7 +62423,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_no2_val",
+										"name": "scr_base_lbl_no2_val",
 										"id": "88q6ti1h",
 										"type": "label",
 										"visible": true,
@@ -62534,7 +62533,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_no2_unit",
+										"name": "scr_base_lbl_no2_unit",
 										"id": "c7gb09s9",
 										"type": "label",
 										"visible": true,
@@ -62684,7 +62683,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_o3",
+								"name": "scr_base_cont_o3",
 								"id": "kn9t8e5e",
 								"type": "cont",
 								"visible": true,
@@ -62702,7 +62701,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_03",
+										"name": "scr_base_lbl_03",
 										"id": "6ibtmrgd",
 										"type": "label",
 										"visible": true,
@@ -62812,7 +62811,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_03_val",
+										"name": "scr_base_lbl_03_val",
 										"id": "8y8n1id9",
 										"type": "label",
 										"visible": true,
@@ -62922,7 +62921,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_o3_unit",
+										"name": "scr_base_lbl_o3_unit",
 										"id": "qz820h7l",
 										"type": "label",
 										"visible": true,
@@ -63072,7 +63071,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_co2",
+								"name": "scr_base_cont_co2",
 								"id": "u34k5c4v",
 								"type": "cont",
 								"visible": true,
@@ -63090,7 +63089,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_co2",
+										"name": "scr_base_lbl_co2",
 										"id": "kan4oqoa",
 										"type": "label",
 										"visible": true,
@@ -63200,7 +63199,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_co2_val",
+										"name": "scr_base_lbl_co2_val",
 										"id": "yugwq4ur",
 										"type": "label",
 										"visible": true,
@@ -63310,7 +63309,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_co2_unit",
+										"name": "scr_base_lbl_co2_unit",
 										"id": "1b3cn97r",
 										"type": "label",
 										"visible": true,
@@ -63460,7 +63459,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_so2",
+								"name": "scr_base_cont_so2",
 								"id": "sfgfb4mx",
 								"type": "cont",
 								"visible": true,
@@ -63478,7 +63477,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_so2",
+										"name": "scr_base_lbl_so2",
 										"id": "fwu1mjmo",
 										"type": "label",
 										"visible": true,
@@ -63588,7 +63587,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_so2_val",
+										"name": "scr_base_lbl_so2_val",
 										"id": "s5rvc9q9",
 										"type": "label",
 										"visible": true,
@@ -63698,7 +63697,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_so2_unit",
+										"name": "scr_base_lbl_so2_unit",
 										"id": "6h70sj45",
 										"type": "label",
 										"visible": true,
@@ -63888,7 +63887,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_data_analysis",
+						"name": "scr_base_cont_data_analysis",
 						"id": "25tvsi86",
 						"type": "cont",
 						"visible": false,
@@ -63906,7 +63905,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_label_analysis",
+								"name": "scr_base_label_analysis",
 								"id": "ags0xota",
 								"type": "label",
 								"visible": true,
@@ -63914,7 +63913,7 @@
 								"rm_flag": [],
 								"pos": [
 									0,
-									5
+									10
 								],
 								"size": [
 									172,
@@ -63943,7 +63942,7 @@
 										"font": 10,
 										"text_align": "LV_TEXT_ALIGN_LEFT",
 										"font_family": "Roboto_Black",
-										"letter_space": 0,
+										"letter_space": 1,
 										"line_space": 0,
 										"bg_color": "#2195f6",
 										"bg_grad_color": "#2195f6",
@@ -64016,7 +64015,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_trends",
+								"name": "scr_base_cont_trends",
 								"id": "2hdp741b",
 								"type": "cont",
 								"visible": true,
@@ -64034,7 +64033,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_chart",
+										"name": "scr_base_cont_chart",
 										"id": "h3za4p2p",
 										"type": "cont",
 										"visible": true,
@@ -64052,7 +64051,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_chart",
+												"name": "scr_base_chart",
 												"id": "z1xrbk04",
 												"type": "chart",
 												"visible": true,
@@ -64225,7 +64224,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_trends",
+										"name": "scr_base_label_trends",
 										"id": "s2q68u6i",
 										"type": "label",
 										"visible": true,
@@ -64335,7 +64334,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_ddlist_trends",
+										"name": "scr_base_ddlist_trends",
 										"id": "ya7git8v",
 										"type": "ddlist",
 										"visible": true,
@@ -64579,7 +64578,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_avg",
+								"name": "scr_base_cont_avg",
 								"id": "r9dydle9",
 								"type": "cont",
 								"visible": true,
@@ -64597,7 +64596,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_avg",
+										"name": "scr_base_lbl_avg",
 										"id": "niqfv1yw",
 										"type": "label",
 										"visible": true,
@@ -64707,7 +64706,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_avg_val",
+										"name": "scr_base_label_avg_val",
 										"id": "dfkbc353",
 										"type": "label",
 										"visible": true,
@@ -64857,7 +64856,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_insights",
+								"name": "scr_base_cont_insights",
 								"id": "7vubdpu9",
 								"type": "cont",
 								"visible": true,
@@ -64875,14 +64874,14 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_btn_generate_report",
+										"name": "scr_base_btn_generate_report",
 										"id": "ibbo6m84",
 										"type": "btn",
 										"visible": true,
 										"flag": [],
 										"rm_flag": [],
 										"pos": [
-											24,
+											22,
 											175
 										],
 										"size": [
@@ -65079,7 +65078,7 @@
 										"toggle": false
 									},
 									{
-										"name": "scr_dashboard_label_insights",
+										"name": "scr_base_label_insights",
 										"id": "4eoq6fhz",
 										"type": "label",
 										"visible": true,
@@ -65189,7 +65188,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_lbl_advice",
+										"name": "scr_base_lbl_advice",
 										"id": "9ut49jpz",
 										"type": "label",
 										"visible": true,
@@ -65379,7 +65378,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_event_logs",
+						"name": "scr_base_cont_event_logs",
 						"id": "73pzg72s",
 						"type": "cont",
 						"visible": false,
@@ -65397,7 +65396,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_lbl_event_logs",
+								"name": "scr_base_lbl_event_logs",
 								"id": "uyxdpvzy",
 								"type": "label",
 								"visible": true,
@@ -65405,7 +65404,7 @@
 								"rm_flag": [],
 								"pos": [
 									0,
-									5
+									10
 								],
 								"size": [
 									172,
@@ -65434,7 +65433,7 @@
 										"font": 10,
 										"text_align": "LV_TEXT_ALIGN_LEFT",
 										"font_family": "Roboto_Black",
-										"letter_space": 0,
+										"letter_space": 1,
 										"line_space": 0,
 										"bg_color": "#2195f6",
 										"bg_grad_color": "#2195f6",
@@ -65507,7 +65506,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_logs",
+								"name": "scr_base_cont_logs",
 								"id": "8gsh5env",
 								"type": "cont",
 								"visible": true,
@@ -65525,7 +65524,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_lbl_critical_logs",
+										"name": "scr_base_lbl_critical_logs",
 										"id": "whcd18hb",
 										"type": "label",
 										"visible": true,
@@ -65635,7 +65634,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_btn_clear_history",
+										"name": "scr_base_btn_clear_history",
 										"id": "ic54t7wm",
 										"type": "btn",
 										"visible": true,
@@ -65839,7 +65838,7 @@
 										"toggle": false
 									},
 									{
-										"name": "scr_dashboard_cont_logs_detail",
+										"name": "scr_base_cont_logs_detail",
 										"id": "fqh7snv0",
 										"type": "cont",
 										"visible": true,
@@ -65857,7 +65856,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_lbl_log_detail",
+												"name": "scr_base_lbl_log_detail",
 												"id": "8eln3bov",
 												"type": "label",
 												"visible": true,
@@ -66087,7 +66086,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_restart",
+						"name": "scr_base_cont_restart",
 						"id": "j2z3gybq",
 						"type": "cont",
 						"visible": false,
@@ -66105,7 +66104,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_cont_restart_system",
+								"name": "scr_base_cont_restart_system",
 								"id": "ifd1erhz",
 								"type": "cont",
 								"visible": true,
@@ -66123,7 +66122,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_img_12",
+										"name": "scr_base_img_12",
 										"id": "4wleflji",
 										"type": "img",
 										"visible": true,
@@ -66160,7 +66159,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_95",
+										"name": "scr_base_label_95",
 										"id": "is3wu2eb",
 										"type": "label",
 										"visible": true,
@@ -66270,7 +66269,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_96",
+										"name": "scr_base_label_96",
 										"id": "xad34g8p",
 										"type": "label",
 										"visible": true,
@@ -66380,7 +66379,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_btn_restart_confirm",
+										"name": "scr_base_btn_restart_confirm",
 										"id": "srl40asi",
 										"type": "btn",
 										"visible": true,
@@ -66584,7 +66583,7 @@
 										"toggle": false
 									},
 									{
-										"name": "scr_dashboard_btn_restart_cancel",
+										"name": "scr_base_btn_restart_cancel",
 										"id": "h6ubwreu",
 										"type": "btn",
 										"visible": true,
@@ -66868,7 +66867,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_restore",
+						"name": "scr_base_cont_restore",
 						"id": "b3f2ayii",
 						"type": "cont",
 						"visible": false,
@@ -66886,7 +66885,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_cont_31",
+								"name": "scr_base_cont_31",
 								"id": "gz105wxw",
 								"type": "cont",
 								"visible": true,
@@ -66904,7 +66903,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_img_13",
+										"name": "scr_base_img_13",
 										"id": "lssdoypw",
 										"type": "img",
 										"visible": true,
@@ -66941,7 +66940,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_98",
+										"name": "scr_base_label_98",
 										"id": "7ey23fco",
 										"type": "label",
 										"visible": true,
@@ -67051,7 +67050,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_97",
+										"name": "scr_base_label_97",
 										"id": "g7l0tp3s",
 										"type": "label",
 										"visible": true,
@@ -67161,7 +67160,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_btn_restore_confirm",
+										"name": "scr_base_btn_restore_confirm",
 										"id": "vqp4wxpk",
 										"type": "btn",
 										"visible": true,
@@ -67365,7 +67364,7 @@
 										"toggle": false
 									},
 									{
-										"name": "scr_dashboard_btn_restore_cancel",
+										"name": "scr_base_btn_restore_cancel",
 										"id": "umx65i4j",
 										"type": "btn",
 										"visible": true,
@@ -67649,10 +67648,10 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_hw",
+						"name": "scr_base_cont_hw",
 						"id": "c631qf21",
 						"type": "cont",
-						"visible": true,
+						"visible": false,
 						"scrollbar_mode": "OFF",
 						"flag": [],
 						"rm_flag": [],
@@ -67667,7 +67666,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_label_hw",
+								"name": "scr_base_label_hw",
 								"id": "hp1ab984",
 								"type": "label",
 								"visible": true,
@@ -67675,7 +67674,7 @@
 								"rm_flag": [],
 								"pos": [
 									0,
-									5
+									10
 								],
 								"size": [
 									172,
@@ -67704,7 +67703,7 @@
 										"font": 10,
 										"text_align": "LV_TEXT_ALIGN_LEFT",
 										"font_family": "Roboto_Black",
-										"letter_space": 0,
+										"letter_space": 1,
 										"line_space": 0,
 										"bg_color": "#2195f6",
 										"bg_grad_color": "#2195f6",
@@ -67777,10 +67776,10 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_menu",
+								"name": "scr_base_cont_menu",
 								"id": "45cfr8tv",
 								"type": "cont",
-								"visible": true,
+								"visible": false,
 								"scrollbar_mode": "OFF",
 								"flag": [],
 								"rm_flag": [],
@@ -67795,7 +67794,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_net",
+										"name": "scr_base_cont_net",
 										"id": "oo5e806r",
 										"type": "cont",
 										"visible": true,
@@ -67813,7 +67812,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_99",
+												"name": "scr_base_label_99",
 												"id": "k8dn78ew",
 												"type": "label",
 												"visible": true,
@@ -67923,7 +67922,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_100",
+												"name": "scr_base_label_100",
 												"id": "z38gxzbb",
 												"type": "label",
 												"visible": true,
@@ -68033,7 +68032,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_img_14",
+												"name": "scr_base_img_14",
 												"id": "67tn7qmc",
 												"type": "img",
 												"visible": true,
@@ -68070,7 +68069,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_33",
+												"name": "scr_base_cont_33",
 												"id": "r17ml4xi",
 												"type": "cont",
 												"visible": true,
@@ -68088,7 +68087,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_img_27",
+														"name": "scr_base_img_27",
 														"id": "wa847ylq",
 														"type": "img",
 														"visible": true,
@@ -68165,7 +68164,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_net",
+												"name": "scr_base_btn_net",
 												"id": "xcaruiv3",
 												"type": "btn",
 												"visible": true,
@@ -68409,7 +68408,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_mqtt",
+										"name": "scr_base_cont_mqtt",
 										"id": "t1icuny4",
 										"type": "cont",
 										"visible": true,
@@ -68427,7 +68426,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_102",
+												"name": "scr_base_label_102",
 												"id": "cobk3ttt",
 												"type": "label",
 												"visible": true,
@@ -68537,7 +68536,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_101",
+												"name": "scr_base_label_101",
 												"id": "ug6kj8qu",
 												"type": "label",
 												"visible": true,
@@ -68647,7 +68646,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_img_15",
+												"name": "scr_base_img_15",
 												"id": "xqx2te49",
 												"type": "img",
 												"visible": true,
@@ -68684,7 +68683,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_35",
+												"name": "scr_base_cont_35",
 												"id": "q9jf2mnk",
 												"type": "cont",
 												"visible": true,
@@ -68702,7 +68701,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_img_26",
+														"name": "scr_base_img_26",
 														"id": "pqrmckb9",
 														"type": "img",
 														"visible": true,
@@ -68779,7 +68778,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_mqtt",
+												"name": "scr_base_btn_mqtt",
 												"id": "orlwhdul",
 												"type": "btn",
 												"visible": true,
@@ -69023,7 +69022,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_modbus",
+										"name": "scr_base_cont_modbus",
 										"id": "5n3sfw1y",
 										"type": "cont",
 										"visible": true,
@@ -69041,7 +69040,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_104",
+												"name": "scr_base_label_104",
 												"id": "6sdnauyq",
 												"type": "label",
 												"visible": true,
@@ -69151,7 +69150,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_103",
+												"name": "scr_base_label_103",
 												"id": "7wlwbwde",
 												"type": "label",
 												"visible": true,
@@ -69261,7 +69260,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_img_16",
+												"name": "scr_base_img_16",
 												"id": "3125x69g",
 												"type": "img",
 												"visible": true,
@@ -69298,7 +69297,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_37",
+												"name": "scr_base_cont_37",
 												"id": "sijkp3rb",
 												"type": "cont",
 												"visible": true,
@@ -69316,7 +69315,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_img_25",
+														"name": "scr_base_img_25",
 														"id": "32f9d907",
 														"type": "img",
 														"visible": true,
@@ -69393,7 +69392,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_modbus",
+												"name": "scr_base_btn_modbus",
 												"id": "7kwd1f1r",
 												"type": "btn",
 												"visible": true,
@@ -69637,7 +69636,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_sys_admin",
+										"name": "scr_base_cont_sys_admin",
 										"id": "s9sy5cjd",
 										"type": "cont",
 										"visible": true,
@@ -69655,7 +69654,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_106",
+												"name": "scr_base_label_106",
 												"id": "hz7izl7b",
 												"type": "label",
 												"visible": true,
@@ -69765,7 +69764,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_105",
+												"name": "scr_base_label_105",
 												"id": "na5jignb",
 												"type": "label",
 												"visible": true,
@@ -69875,7 +69874,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_img_17",
+												"name": "scr_base_img_17",
 												"id": "fnkyvmxm",
 												"type": "img",
 												"visible": true,
@@ -69912,7 +69911,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_39",
+												"name": "scr_base_cont_39",
 												"id": "s94k6vwv",
 												"type": "cont",
 												"visible": true,
@@ -69930,7 +69929,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_img_24",
+														"name": "scr_base_img_24",
 														"id": "k8732oos",
 														"type": "img",
 														"visible": true,
@@ -70007,7 +70006,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_sys_admin",
+												"name": "scr_base_btn_sys_admin",
 												"id": "0uxmcud2",
 												"type": "btn",
 												"visible": true,
@@ -70291,7 +70290,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_networkconfig",
+								"name": "scr_base_cont_networkconfig",
 								"id": "ok2hmcnj",
 								"type": "cont",
 								"visible": false,
@@ -70304,12 +70303,12 @@
 								],
 								"size": [
 									677,
-									374
+									380
 								],
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_back",
+										"name": "scr_base_cont_net_back",
 										"id": "by7f5647",
 										"type": "cont",
 										"visible": true,
@@ -70327,7 +70326,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_back",
+												"name": "scr_base_btn_net_back",
 												"id": "eczixkxx",
 												"type": "btn",
 												"visible": true,
@@ -70531,7 +70530,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_18",
+												"name": "scr_base_img_18",
 												"id": "gd0oklwq",
 												"type": "img",
 												"visible": true,
@@ -70608,7 +70607,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_107",
+										"name": "scr_base_label_107",
 										"id": "t6vmim90",
 										"type": "label",
 										"visible": true,
@@ -70718,7 +70717,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_ddlist_net_option",
+										"name": "scr_base_ddlist_net_option",
 										"id": "rw01pzc2",
 										"type": "ddlist",
 										"visible": true,
@@ -70922,7 +70921,7 @@
 										"draw_arrow": true
 									},
 									{
-										"name": "scr_dashboard_cont_40",
+										"name": "scr_base_cont_40",
 										"id": "4bs88mqq",
 										"type": "cont",
 										"visible": true,
@@ -70940,7 +70939,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_cont_wifi",
+												"name": "scr_base_cont_wifi",
 												"id": "ovyogbqv",
 												"type": "cont",
 												"visible": false,
@@ -70958,7 +70957,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_label_108",
+														"name": "scr_base_label_108",
 														"id": "e3vhujnq",
 														"type": "label",
 														"visible": true,
@@ -71068,7 +71067,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_109",
+														"name": "scr_base_label_109",
 														"id": "reye27yi",
 														"type": "label",
 														"visible": true,
@@ -71178,7 +71177,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_wifi_pass",
+														"name": "scr_base_ta_wifi_pass",
 														"id": "76tgf06e",
 														"type": "ta",
 														"visible": true,
@@ -71284,7 +71283,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_wifi_ssid",
+														"name": "scr_base_ta_wifi_ssid",
 														"id": "5j6msi26",
 														"type": "ta",
 														"visible": true,
@@ -71390,7 +71389,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_110",
+														"name": "scr_base_label_110",
 														"id": "rt9xca5f",
 														"type": "label",
 														"visible": true,
@@ -71500,7 +71499,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_111",
+														"name": "scr_base_label_111",
 														"id": "c0o75pit",
 														"type": "label",
 														"visible": true,
@@ -71610,7 +71609,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ddlist_wifi_mode",
+														"name": "scr_base_ddlist_wifi_mode",
 														"id": "b8b5d7w9",
 														"type": "ddlist",
 														"visible": true,
@@ -71814,7 +71813,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ta_wifi_ip",
+														"name": "scr_base_ta_wifi_ip",
 														"id": "wwm4ql9l",
 														"type": "ta",
 														"visible": true,
@@ -71920,7 +71919,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_112",
+														"name": "scr_base_label_112",
 														"id": "xglrg4n0",
 														"type": "label",
 														"visible": true,
@@ -72030,7 +72029,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_41",
+														"name": "scr_base_cont_41",
 														"id": "d25v7vbr",
 														"type": "cont",
 														"visible": true,
@@ -72048,7 +72047,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_wifi_status",
+																"name": "scr_base_lbl_wifi_status",
 																"id": "cgzgihxk",
 																"type": "label",
 																"visible": true,
@@ -72198,7 +72197,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_btn_wifi_apply",
+														"name": "scr_base_btn_wifi_apply",
 														"id": "bcrjwddg",
 														"type": "btn",
 														"visible": true,
@@ -72442,16 +72441,16 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_ethernet",
+												"name": "scr_base_cont_ethernet",
 												"id": "b60g5nni",
 												"type": "cont",
-												"visible": false,
+												"visible": true,
 												"scrollbar_mode": "OFF",
 												"flag": [],
 												"rm_flag": [],
 												"pos": [
 													23,
-													10
+													14
 												],
 												"size": [
 													612,
@@ -72460,7 +72459,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_label_118",
+														"name": "scr_base_label_118",
 														"id": "gruv91fs",
 														"type": "label",
 														"visible": true,
@@ -72570,7 +72569,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_117",
+														"name": "scr_base_label_117",
 														"id": "auet046n",
 														"type": "label",
 														"visible": true,
@@ -72680,7 +72679,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_ethernet_gateway",
+														"name": "scr_base_ta_ethernet_gateway",
 														"id": "thx5cnit",
 														"type": "ta",
 														"visible": true,
@@ -72786,7 +72785,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_ethernet_subnet",
+														"name": "scr_base_ta_ethernet_subnet",
 														"id": "1v91dce0",
 														"type": "ta",
 														"visible": true,
@@ -72892,7 +72891,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_116",
+														"name": "scr_base_label_116",
 														"id": "14pbbca4",
 														"type": "label",
 														"visible": true,
@@ -73002,7 +73001,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_115",
+														"name": "scr_base_label_115",
 														"id": "llq6k3vs",
 														"type": "label",
 														"visible": true,
@@ -73112,7 +73111,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ddlist_ethernet_mode",
+														"name": "scr_base_ddlist_ethernet_mode",
 														"id": "ioyhtx98",
 														"type": "ddlist",
 														"visible": true,
@@ -73316,7 +73315,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ta_ethernet_ip",
+														"name": "scr_base_ta_ethernet_ip",
 														"id": "l2nafqal",
 														"type": "ta",
 														"visible": true,
@@ -73422,7 +73421,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_114",
+														"name": "scr_base_label_114",
 														"id": "28l7qnqt",
 														"type": "label",
 														"visible": true,
@@ -73532,7 +73531,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_43",
+														"name": "scr_base_cont_43",
 														"id": "dxb9mjno",
 														"type": "cont",
 														"visible": true,
@@ -73550,7 +73549,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_ethernet_status",
+																"name": "scr_base_lbl_ethernet_status",
 																"id": "vfhsvigs",
 																"type": "label",
 																"visible": true,
@@ -73700,7 +73699,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_btn_ethernet_apply",
+														"name": "scr_base_btn_ethernet_apply",
 														"id": "1mwg9lhi",
 														"type": "btn",
 														"visible": true,
@@ -73944,7 +73943,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_lte",
+												"name": "scr_base_cont_lte",
 												"id": "4lgxctsk",
 												"type": "cont",
 												"visible": false,
@@ -73962,7 +73961,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_label_124",
+														"name": "scr_base_label_124",
 														"id": "r6ikjffz",
 														"type": "label",
 														"visible": true,
@@ -74072,7 +74071,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_123",
+														"name": "scr_base_label_123",
 														"id": "gxs7z4l5",
 														"type": "label",
 														"visible": true,
@@ -74182,7 +74181,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_lte_pin_code",
+														"name": "scr_base_ta_lte_pin_code",
 														"id": "5d70lbwb",
 														"type": "ta",
 														"visible": true,
@@ -74288,7 +74287,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_lte_apn",
+														"name": "scr_base_ta_lte_apn",
 														"id": "lbkqc9rq",
 														"type": "ta",
 														"visible": true,
@@ -74394,7 +74393,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_122",
+														"name": "scr_base_label_122",
 														"id": "zdh0y1at",
 														"type": "label",
 														"visible": true,
@@ -74504,7 +74503,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_121",
+														"name": "scr_base_label_121",
 														"id": "j6cjiqqw",
 														"type": "label",
 														"visible": true,
@@ -74614,7 +74613,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_lte_pass",
+														"name": "scr_base_ta_lte_pass",
 														"id": "jwswf4jl",
 														"type": "ta",
 														"visible": true,
@@ -74720,7 +74719,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_120",
+														"name": "scr_base_label_120",
 														"id": "btttez2f",
 														"type": "label",
 														"visible": true,
@@ -74830,7 +74829,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_45",
+														"name": "scr_base_cont_45",
 														"id": "1tu8pdzc",
 														"type": "cont",
 														"visible": true,
@@ -74848,7 +74847,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_lte_status",
+																"name": "scr_base_lbl_lte_status",
 																"id": "urx6rtzm",
 																"type": "label",
 																"visible": true,
@@ -74998,7 +74997,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_btn_lte_apply",
+														"name": "scr_base_btn_lte_apply",
 														"id": "cpvbeanm",
 														"type": "btn",
 														"visible": true,
@@ -75202,7 +75201,7 @@
 														"toggle": false
 													},
 													{
-														"name": "scr_dashboard_ta_lte_username",
+														"name": "scr_base_ta_lte_username",
 														"id": "k1awmdo1",
 														"type": "ta",
 														"visible": true,
@@ -75308,7 +75307,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_125",
+														"name": "scr_base_label_125",
 														"id": "h9dp68we",
 														"type": "label",
 														"visible": true,
@@ -75418,7 +75417,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_126",
+														"name": "scr_base_label_126",
 														"id": "asftxs5z",
 														"type": "label",
 														"visible": true,
@@ -75648,7 +75647,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_mqtt_config",
+								"name": "scr_base_cont_mqtt_config",
 								"id": "cthl0zj2",
 								"type": "cont",
 								"visible": false,
@@ -75661,12 +75660,12 @@
 								],
 								"size": [
 									677,
-									374
+									380
 								],
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_mqtt_back",
+										"name": "scr_base_cont_mqtt_back",
 										"id": "7env7tjm",
 										"type": "cont",
 										"visible": true,
@@ -75684,7 +75683,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_mqtt_back",
+												"name": "scr_base_btn_mqtt_back",
 												"id": "8b6fu1qm",
 												"type": "btn",
 												"visible": true,
@@ -75888,7 +75887,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_19",
+												"name": "scr_base_img_19",
 												"id": "qwa2egk5",
 												"type": "img",
 												"visible": true,
@@ -75965,7 +75964,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_147",
+										"name": "scr_base_label_147",
 										"id": "uj2oj60j",
 										"type": "label",
 										"visible": true,
@@ -76075,7 +76074,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_47",
+										"name": "scr_base_cont_47",
 										"id": "hw5rela1",
 										"type": "cont",
 										"visible": true,
@@ -76093,7 +76092,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_cont_48",
+												"name": "scr_base_cont_48",
 												"id": "0qyn1ijo",
 												"type": "cont",
 												"visible": true,
@@ -76102,7 +76101,7 @@
 												"rm_flag": [],
 												"pos": [
 													23,
-													11
+													14
 												],
 												"size": [
 													612,
@@ -76111,7 +76110,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_label_134",
+														"name": "scr_base_label_134",
 														"id": "sgmdc1jw",
 														"type": "label",
 														"visible": true,
@@ -76221,7 +76220,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_133",
+														"name": "scr_base_label_133",
 														"id": "46nqdodl",
 														"type": "label",
 														"visible": true,
@@ -76331,7 +76330,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_mqtt_port",
+														"name": "scr_base_ta_mqtt_port",
 														"id": "kqyd3t8z",
 														"type": "ta",
 														"visible": true,
@@ -76437,7 +76436,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_mqtt_host",
+														"name": "scr_base_ta_mqtt_host",
 														"id": "c9qszvgy",
 														"type": "ta",
 														"visible": true,
@@ -76543,7 +76542,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_132",
+														"name": "scr_base_label_132",
 														"id": "1m41xsyp",
 														"type": "label",
 														"visible": true,
@@ -76653,7 +76652,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_131",
+														"name": "scr_base_label_131",
 														"id": "6kotg7yx",
 														"type": "label",
 														"visible": true,
@@ -76763,7 +76762,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ta_mqtt_pass",
+														"name": "scr_base_ta_mqtt_pass",
 														"id": "so25iw6j",
 														"type": "ta",
 														"visible": true,
@@ -76869,7 +76868,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_130",
+														"name": "scr_base_label_130",
 														"id": "33yiyjq3",
 														"type": "label",
 														"visible": true,
@@ -76979,7 +76978,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_49",
+														"name": "scr_base_cont_49",
 														"id": "rvrq3cci",
 														"type": "cont",
 														"visible": true,
@@ -76997,7 +76996,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_mqtt_status",
+																"name": "scr_base_lbl_mqtt_status",
 																"id": "8fuwu5d7",
 																"type": "label",
 																"visible": true,
@@ -77147,7 +77146,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_btn_mqtt_apply",
+														"name": "scr_base_btn_mqtt_apply",
 														"id": "zsc0dzm1",
 														"type": "btn",
 														"visible": true,
@@ -77351,7 +77350,7 @@
 														"toggle": false
 													},
 													{
-														"name": "scr_dashboard_ta_mqtt_user",
+														"name": "scr_base_ta_mqtt_user",
 														"id": "x7qxna85",
 														"type": "ta",
 														"visible": true,
@@ -77577,7 +77576,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_modbus_config",
+								"name": "scr_base_cont_modbus_config",
 								"id": "hc0h3tie",
 								"type": "cont",
 								"visible": false,
@@ -77590,12 +77589,12 @@
 								],
 								"size": [
 									677,
-									374
+									380
 								],
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_modbus_back",
+										"name": "scr_base_cont_modbus_back",
 										"id": "ugk5tc65",
 										"type": "cont",
 										"visible": true,
@@ -77613,7 +77612,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_modbus_back",
+												"name": "scr_base_btn_modbus_back",
 												"id": "799oq6py",
 												"type": "btn",
 												"visible": true,
@@ -77817,7 +77816,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_20",
+												"name": "scr_base_img_20",
 												"id": "gb1yxqqc",
 												"type": "img",
 												"visible": true,
@@ -77894,7 +77893,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_168",
+										"name": "scr_base_label_168",
 										"id": "hwlhn4j1",
 										"type": "label",
 										"visible": true,
@@ -78004,7 +78003,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_51",
+										"name": "scr_base_cont_51",
 										"id": "9wlkl3qa",
 										"type": "cont",
 										"visible": true,
@@ -78022,7 +78021,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_cont_54",
+												"name": "scr_base_cont_54",
 												"id": "gceu7kgx",
 												"type": "cont",
 												"visible": true,
@@ -78031,7 +78030,7 @@
 												"rm_flag": [],
 												"pos": [
 													23,
-													10
+													14
 												],
 												"size": [
 													612,
@@ -78040,7 +78039,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_label_161",
+														"name": "scr_base_label_161",
 														"id": "prtns1aj",
 														"type": "label",
 														"visible": true,
@@ -78150,7 +78149,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_160",
+														"name": "scr_base_label_160",
 														"id": "jzguk5q7",
 														"type": "label",
 														"visible": true,
@@ -78260,7 +78259,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_159",
+														"name": "scr_base_label_159",
 														"id": "d1mtv5zh",
 														"type": "label",
 														"visible": true,
@@ -78370,7 +78369,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_157",
+														"name": "scr_base_label_157",
 														"id": "o96sbui3",
 														"type": "label",
 														"visible": true,
@@ -78480,7 +78479,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_55",
+														"name": "scr_base_cont_55",
 														"id": "kz9c2z13",
 														"type": "cont",
 														"visible": true,
@@ -78498,7 +78497,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_modbus_status",
+																"name": "scr_base_lbl_modbus_status",
 																"id": "sngw8d35",
 																"type": "label",
 																"visible": true,
@@ -78648,7 +78647,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_btn_modbus_apply",
+														"name": "scr_base_btn_modbus_apply",
 														"id": "z333vwv2",
 														"type": "btn",
 														"visible": true,
@@ -78852,10 +78851,10 @@
 														"toggle": false
 													},
 													{
-														"name": "scr_dashboard_cont_59",
+														"name": "scr_base_cont_slave",
 														"id": "trwv1or3",
 														"type": "cont",
-														"visible": true,
+														"visible": false,
 														"scrollbar_mode": "OFF",
 														"flag": [],
 														"rm_flag": [],
@@ -78870,7 +78869,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_ta_slave_id",
+																"name": "scr_base_ta_slave_id",
 																"id": "gind11o9",
 																"type": "ta",
 																"visible": true,
@@ -78976,7 +78975,7 @@
 																]
 															},
 															{
-																"name": "scr_dashboard_label_158",
+																"name": "scr_base_label_158",
 																"id": "enhk91w1",
 																"type": "label",
 																"visible": true,
@@ -79126,10 +79125,10 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_cont_60",
+														"name": "scr_base_cont_master",
 														"id": "ddim6isx",
 														"type": "cont",
-														"visible": false,
+														"visible": true,
 														"scrollbar_mode": "OFF",
 														"flag": [],
 														"rm_flag": [],
@@ -79144,7 +79143,7 @@
 														"default_style": false,
 														"child": [
 															{
-																"name": "scr_dashboard_lbl_master",
+																"name": "scr_base_lbl_master",
 																"id": "x4s5wag2",
 																"type": "label",
 																"visible": true,
@@ -79254,14 +79253,14 @@
 																]
 															},
 															{
-																"name": "scr_dashboard_btn_master_adddeivce",
+																"name": "scr_base_btn_master_adddeivce",
 																"id": "yzd5h0rx",
 																"type": "btn",
 																"visible": true,
 																"flag": [],
 																"rm_flag": [],
 																"pos": [
-																	-3,
+																	0,
 																	30
 																],
 																"size": [
@@ -79458,7 +79457,7 @@
 																"toggle": false
 															},
 															{
-																"name": "scr_dashboard_btn_masterviewlist",
+																"name": "scr_base_btn_masterviewlist",
 																"id": "urm44x7w",
 																"type": "btn",
 																"visible": true,
@@ -79702,7 +79701,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_170",
+														"name": "scr_base_label_170",
 														"id": "kaaim4lu",
 														"type": "label",
 														"visible": true,
@@ -79812,7 +79811,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_label_171",
+														"name": "scr_base_label_171",
 														"id": "wvw3g05a",
 														"type": "label",
 														"visible": true,
@@ -79922,7 +79921,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_ddlist_modbus_mode",
+														"name": "scr_base_ddlist_modbus_mode",
 														"id": "7bt7xjsn",
 														"type": "ddlist",
 														"visible": true,
@@ -80126,7 +80125,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ddlist_modbus_parity",
+														"name": "scr_base_ddlist_modbus_parity",
 														"id": "rsf2jfw7",
 														"type": "ddlist",
 														"visible": true,
@@ -80330,7 +80329,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ddlist_modbus_databits",
+														"name": "scr_base_ddlist_modbus_databits",
 														"id": "k87yc045",
 														"type": "ddlist",
 														"visible": true,
@@ -80534,7 +80533,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ddlist_modbus_stopbits",
+														"name": "scr_base_ddlist_modbus_stopbits",
 														"id": "hv0vdjbm",
 														"type": "ddlist",
 														"visible": true,
@@ -80738,7 +80737,7 @@
 														"draw_arrow": true
 													},
 													{
-														"name": "scr_dashboard_ddlist_modbus_baudrate",
+														"name": "scr_base_ddlist_modbus_baudrate",
 														"id": "49nrdbo1",
 														"type": "ddlist",
 														"visible": true,
@@ -81062,7 +81061,7 @@
 								]
 							},
 							{
-								"name": "scr_dashboard_cont_system_admin",
+								"name": "scr_base_cont_system_admin",
 								"id": "2dphgfgu",
 								"type": "cont",
 								"visible": false,
@@ -81075,12 +81074,12 @@
 								],
 								"size": [
 									677,
-									374
+									380
 								],
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_sys_back",
+										"name": "scr_base_cont_sys_back",
 										"id": "z6k9vjlk",
 										"type": "cont",
 										"visible": true,
@@ -81098,7 +81097,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_sys_back",
+												"name": "scr_base_btn_sys_back",
 												"id": "h3xa30b6",
 												"type": "btn",
 												"visible": true,
@@ -81302,7 +81301,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_23",
+												"name": "scr_base_img_23",
 												"id": "61lglsbg",
 												"type": "img",
 												"visible": true,
@@ -81379,7 +81378,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_194",
+										"name": "scr_base_label_194",
 										"id": "n63vps3p",
 										"type": "label",
 										"visible": true,
@@ -81489,7 +81488,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_72",
+										"name": "scr_base_cont_72",
 										"id": "xc8fowhm",
 										"type": "cont",
 										"visible": true,
@@ -81507,7 +81506,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_205",
+												"name": "scr_base_label_205",
 												"id": "afs3cmzl",
 												"type": "label",
 												"visible": true,
@@ -81617,7 +81616,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_206",
+												"name": "scr_base_label_206",
 												"id": "nb9lw4y6",
 												"type": "label",
 												"visible": true,
@@ -81727,7 +81726,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_bar_brightness",
+												"name": "scr_base_bar_brightness",
 												"id": "ekjubkgd",
 												"type": "bar",
 												"visible": true,
@@ -81807,7 +81806,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_207",
+												"name": "scr_base_label_207",
 												"id": "hm31zlol",
 												"type": "label",
 												"visible": true,
@@ -81917,7 +81916,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_ddlist_screentime_option",
+												"name": "scr_base_ddlist_screentime_option",
 												"id": "yku886ru",
 												"type": "ddlist",
 												"visible": true,
@@ -82161,7 +82160,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_operations",
+										"name": "scr_base_cont_operations",
 										"id": "wq1clqrt",
 										"type": "cont",
 										"visible": true,
@@ -82179,7 +82178,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_208",
+												"name": "scr_base_label_208",
 												"id": "96pr33g7",
 												"type": "label",
 												"visible": true,
@@ -82289,7 +82288,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_restart_system",
+												"name": "scr_base_btn_restart_system",
 												"id": "1rsr7erz",
 												"type": "btn",
 												"visible": true,
@@ -82493,7 +82492,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_btn_factory_reset",
+												"name": "scr_base_btn_factory_reset",
 												"id": "btppty3x",
 												"type": "btn",
 												"visible": true,
@@ -82737,7 +82736,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_device_operations",
+										"name": "scr_base_cont_device_operations",
 										"id": "ddg50roz",
 										"type": "cont",
 										"visible": true,
@@ -82755,7 +82754,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_209",
+												"name": "scr_base_label_209",
 												"id": "m3jx1xnx",
 												"type": "label",
 												"visible": true,
@@ -82865,7 +82864,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_210",
+												"name": "scr_base_label_210",
 												"id": "zehq15n1",
 												"type": "label",
 												"visible": true,
@@ -82975,7 +82974,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_211",
+												"name": "scr_base_label_211",
 												"id": "6l0og71f",
 												"type": "label",
 												"visible": true,
@@ -83085,7 +83084,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_212",
+												"name": "scr_base_label_212",
 												"id": "i6f8h1qg",
 												"type": "label",
 												"visible": true,
@@ -83195,7 +83194,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_lbl_fw_val",
+												"name": "scr_base_lbl_fw_val",
 												"id": "v5c2yjlg",
 												"type": "label",
 												"visible": true,
@@ -83305,7 +83304,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_lbl_memory_status_val",
+												"name": "scr_base_lbl_memory_status_val",
 												"id": "dwq5iu8j",
 												"type": "label",
 												"visible": true,
@@ -83415,7 +83414,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_lbl_system_uptime_val",
+												"name": "scr_base_lbl_system_uptime_val",
 												"id": "zgwuenx0",
 												"type": "label",
 												"visible": true,
@@ -83645,7 +83644,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_device_config",
+						"name": "scr_base_cont_device_config",
 						"id": "z4w4zpmz",
 						"type": "cont",
 						"visible": false,
@@ -83663,7 +83662,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_cont_62",
+								"name": "scr_base_cont_62",
 								"id": "4dlyq21a",
 								"type": "cont",
 								"visible": true,
@@ -83681,7 +83680,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_63",
+										"name": "scr_base_cont_63",
 										"id": "gk2darrr",
 										"type": "cont",
 										"visible": true,
@@ -83699,7 +83698,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_label_180",
+												"name": "scr_base_label_180",
 												"id": "rjqxl8gh",
 												"type": "label",
 												"visible": true,
@@ -83809,7 +83808,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_179",
+												"name": "scr_base_label_179",
 												"id": "cfqwlra8",
 												"type": "label",
 												"visible": true,
@@ -83919,7 +83918,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_178",
+												"name": "scr_base_label_178",
 												"id": "cec2d8t2",
 												"type": "label",
 												"visible": true,
@@ -84029,7 +84028,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_177",
+												"name": "scr_base_label_177",
 												"id": "lcsl95j0",
 												"type": "label",
 												"visible": true,
@@ -84139,7 +84138,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_cont_66",
+												"name": "scr_base_cont_66",
 												"id": "2k7vs7sa",
 												"type": "cont",
 												"visible": true,
@@ -84157,7 +84156,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_lbl_master_device_status",
+														"name": "scr_base_lbl_master_device_status",
 														"id": "8gi1bmqn",
 														"type": "label",
 														"visible": true,
@@ -84307,7 +84306,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_btn_master_device_apply",
+												"name": "scr_base_btn_master_device_apply",
 												"id": "nyzvvkkl",
 												"type": "btn",
 												"visible": true,
@@ -84511,7 +84510,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_ta_master_device_name",
+												"name": "scr_base_ta_master_device_name",
 												"id": "dli163z6",
 												"type": "ta",
 												"visible": true,
@@ -84617,7 +84616,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_ddlist_master_device_registers",
+												"name": "scr_base_ddlist_master_device_registers",
 												"id": "dzt6eq9o",
 												"type": "ddlist",
 												"visible": true,
@@ -84821,7 +84820,7 @@
 												"draw_arrow": true
 											},
 											{
-												"name": "scr_dashboard_label_182",
+												"name": "scr_base_label_182",
 												"id": "k7iie4el",
 												"type": "label",
 												"visible": true,
@@ -84931,7 +84930,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_label_181",
+												"name": "scr_base_label_181",
 												"id": "dmtjkamm",
 												"type": "label",
 												"visible": true,
@@ -85041,7 +85040,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_ta_master_device_slaveid",
+												"name": "scr_base_ta_master_device_slaveid",
 												"id": "yq7a52gx",
 												"type": "ta",
 												"visible": true,
@@ -85147,14 +85146,14 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_ta_master_device_address",
+												"name": "scr_base_ta_master_device_address",
 												"id": "i5vf1yw9",
 												"type": "ta",
 												"visible": true,
 												"flag": [],
 												"rm_flag": [],
 												"pos": [
-													22,
+													21,
 													177
 												],
 												"size": [
@@ -85253,7 +85252,7 @@
 												]
 											},
 											{
-												"name": "scr_dashboard_ta_master_device_length",
+												"name": "scr_base_ta_master_device_length",
 												"id": "t9n9enqi",
 												"type": "ta",
 												"visible": true,
@@ -85399,7 +85398,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_183",
+										"name": "scr_base_label_183",
 										"id": "lkp00tug",
 										"type": "label",
 										"visible": true,
@@ -85509,7 +85508,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_deviceconfig_back",
+										"name": "scr_base_cont_deviceconfig_back",
 										"id": "4toiw5xl",
 										"type": "cont",
 										"visible": true,
@@ -85527,7 +85526,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_deviceconfig_back",
+												"name": "scr_base_btn_deviceconfig_back",
 												"id": "s0n6i8jc",
 												"type": "btn",
 												"visible": true,
@@ -85731,7 +85730,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_22",
+												"name": "scr_base_img_22",
 												"id": "me57iv9h",
 												"type": "img",
 												"visible": true,
@@ -85888,7 +85887,7 @@
 						]
 					},
 					{
-						"name": "scr_dashboard_cont_device_viewlist",
+						"name": "scr_base_cont_device_viewlist",
 						"id": "75qktykg",
 						"type": "cont",
 						"visible": false,
@@ -85906,7 +85905,7 @@
 						"default_style": false,
 						"child": [
 							{
-								"name": "scr_dashboard_cont_68",
+								"name": "scr_base_cont_68",
 								"id": "x2fnafuh",
 								"type": "cont",
 								"visible": true,
@@ -85924,7 +85923,7 @@
 								"default_style": false,
 								"child": [
 									{
-										"name": "scr_dashboard_cont_69",
+										"name": "scr_base_cont_69",
 										"id": "rsfz9yo0",
 										"type": "cont",
 										"visible": true,
@@ -85942,7 +85941,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_cont_70",
+												"name": "scr_base_cont_70",
 												"id": "p5ihu4uj",
 												"type": "cont",
 												"visible": true,
@@ -85960,7 +85959,7 @@
 												"default_style": false,
 												"child": [
 													{
-														"name": "scr_dashboard_lbl_device_action",
+														"name": "scr_base_lbl_device_action",
 														"id": "ju3uumd0",
 														"type": "label",
 														"visible": true,
@@ -86070,7 +86069,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_lbl_deivce_length",
+														"name": "scr_base_lbl_deivce_length",
 														"id": "mhvx4r3r",
 														"type": "label",
 														"visible": true,
@@ -86180,7 +86179,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_lbl_device_name",
+														"name": "scr_base_lbl_device_name",
 														"id": "iuq5twcd",
 														"type": "label",
 														"visible": true,
@@ -86290,7 +86289,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_lbl_device_register",
+														"name": "scr_base_lbl_device_register",
 														"id": "4f1kg244",
 														"type": "label",
 														"visible": true,
@@ -86400,7 +86399,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_lbl_device_slave_id",
+														"name": "scr_base_lbl_device_slave_id",
 														"id": "2hwjbkgx",
 														"type": "label",
 														"visible": true,
@@ -86510,7 +86509,7 @@
 														]
 													},
 													{
-														"name": "scr_dashboard_lbl_device_stt",
+														"name": "scr_base_lbl_device_stt",
 														"id": "zpes2fi1",
 														"type": "label",
 														"visible": true,
@@ -86700,7 +86699,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_label_184",
+										"name": "scr_base_label_184",
 										"id": "cngyotcn",
 										"type": "label",
 										"visible": true,
@@ -86810,7 +86809,7 @@
 										]
 									},
 									{
-										"name": "scr_dashboard_cont_devicelist_back",
+										"name": "scr_base_cont_devicelist_back",
 										"id": "dznlv125",
 										"type": "cont",
 										"visible": true,
@@ -86828,7 +86827,7 @@
 										"default_style": false,
 										"child": [
 											{
-												"name": "scr_dashboard_btn_devicelist_back",
+												"name": "scr_base_btn_devicelist_back",
 												"id": "qrd7n2f9",
 												"type": "btn",
 												"visible": true,
@@ -87032,7 +87031,7 @@
 												"toggle": false
 											},
 											{
-												"name": "scr_dashboard_img_21",
+												"name": "scr_base_img_21",
 												"id": "pz129fxv",
 												"type": "img",
 												"visible": true,

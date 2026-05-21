@@ -93,47 +93,47 @@ void digital_clock_count(int * hour, int * minute, int * seconds, char * meridie
     }
 }
 
-static lv_obj_t * scr_dashboard_date_val_calendar;
+static lv_obj_t * scr_base_date_val_calendar;
 
-void scr_dashboard_date_val_event_handler(lv_event_t *e)
+void scr_base_date_val_event_handler(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t * btn = lv_event_get_target(e);
     if(code == LV_EVENT_FOCUSED) {
         char * s = lv_label_get_text(btn);
-        if(scr_dashboard_date_val_calendar == NULL) {
-            scr_dashboard_date_val_init_calendar(btn, s);
+        if(scr_base_date_val_calendar == NULL) {
+            scr_base_date_val_init_calendar(btn, s);
         }
     }
 }
 
-void scr_dashboard_date_val_init_calendar(lv_obj_t *obj, char * s)
+void scr_base_date_val_init_calendar(lv_obj_t *obj, char * s)
 {
-    if (scr_dashboard_date_val_calendar == NULL) {
+    if (scr_base_date_val_calendar == NULL) {
         lv_obj_add_flag(lv_layer_top(), LV_OBJ_FLAG_CLICKABLE);
-        scr_dashboard_date_val_calendar = lv_calendar_create(lv_layer_top());
+        scr_base_date_val_calendar = lv_calendar_create(lv_layer_top());
         lv_obj_t * scr = lv_obj_get_screen(obj);
         int32_t scr_height = lv_obj_get_height(scr);
         int32_t scr_width = lv_obj_get_width(scr);
-        lv_obj_set_size(scr_dashboard_date_val_calendar, scr_width * 0.8, scr_height * 0.8);
+        lv_obj_set_size(scr_base_date_val_calendar, scr_width * 0.8, scr_height * 0.8);
         char * year = strtok(s, "/");
         char * month = strtok(NULL, "/");
         char * day = strtok(NULL, "/");
-        lv_calendar_set_showed_date(scr_dashboard_date_val_calendar, atoi(year), atoi(month));
+        lv_calendar_set_showed_date(scr_base_date_val_calendar, atoi(year), atoi(month));
         lv_calendar_date_t highlighted_days[1];       /*Only its pointer will be saved so should be static*/
         highlighted_days[0].year = atoi(year);
         highlighted_days[0].month = atoi(month);
         highlighted_days[0].day = atoi(day);
-        lv_calendar_set_highlighted_dates(scr_dashboard_date_val_calendar, highlighted_days, 1);
-        lv_obj_align(scr_dashboard_date_val_calendar,LV_ALIGN_CENTER, 0, 0);
+        lv_calendar_set_highlighted_dates(scr_base_date_val_calendar, highlighted_days, 1);
+        lv_obj_align(scr_base_date_val_calendar,LV_ALIGN_CENTER, 0, 0);
 
-        lv_obj_add_event_cb(scr_dashboard_date_val_calendar, scr_dashboard_date_val_calendar_event_handler, LV_EVENT_ALL,NULL);
-        lv_calendar_header_arrow_create(scr_dashboard_date_val_calendar);
+        lv_obj_add_event_cb(scr_base_date_val_calendar, scr_base_date_val_calendar_event_handler, LV_EVENT_ALL,NULL);
+        lv_calendar_header_arrow_create(scr_base_date_val_calendar);
         lv_obj_update_layout(scr);
     }
 }
 
-void scr_dashboard_date_val_calendar_event_handler(lv_event_t *e)
+void scr_base_date_val_calendar_event_handler(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t * obj = lv_event_get_current_target(e);
@@ -143,25 +143,25 @@ void scr_dashboard_date_val_calendar_event_handler(lv_event_t *e)
         lv_calendar_get_pressed_date(obj,&date);
         char buf[16];
         lv_snprintf(buf,sizeof(buf),"%d/%02d/%02d", date.year, date.month,date.day);
-        lv_label_set_text(guider_ui.scr_dashboard_date_val, buf);
+        lv_label_set_text(guider_ui.scr_base_date_val, buf);
         lv_obj_remove_flag(lv_layer_top(), LV_OBJ_FLAG_CLICKABLE);
         lv_obj_set_style_bg_opa(lv_layer_top(), LV_OPA_TRANSP, 0);
-        lv_obj_delete(scr_dashboard_date_val_calendar);
-        scr_dashboard_date_val_calendar = NULL;
+        lv_obj_delete(scr_base_date_val_calendar);
+        scr_base_date_val_calendar = NULL;
     }
 }
 
 
-extern int scr_dashboard_time_val_hour_value;
-extern int scr_dashboard_time_val_min_value;
-extern int scr_dashboard_time_val_sec_value;
+extern int scr_base_time_val_hour_value;
+extern int scr_base_time_val_min_value;
+extern int scr_base_time_val_sec_value;
 
-void scr_dashboard_time_val_timer(lv_timer_t *timer)
+void scr_base_time_val_timer(lv_timer_t *timer)
 {
-    clock_count(&scr_dashboard_time_val_hour_value, &scr_dashboard_time_val_min_value, &scr_dashboard_time_val_sec_value);
-    if (lv_obj_is_valid(guider_ui.scr_dashboard_time_val))
+    clock_count(&scr_base_time_val_hour_value, &scr_base_time_val_min_value, &scr_base_time_val_sec_value);
+    if (lv_obj_is_valid(guider_ui.scr_base_time_val))
     {
-        lv_label_set_text_fmt(guider_ui.scr_dashboard_time_val, "%d:%02d:%02d", scr_dashboard_time_val_hour_value, scr_dashboard_time_val_min_value, scr_dashboard_time_val_sec_value);
+        lv_label_set_text_fmt(guider_ui.scr_base_time_val, "%d:%02d:%02d", scr_base_time_val_hour_value, scr_base_time_val_min_value, scr_base_time_val_sec_value);
     }
 }
 
