@@ -27,12 +27,6 @@ typedef struct
 	lv_obj_t *scr_base;
 	bool scr_base_del;
 	lv_obj_t *scr_base_img_bg;
-	lv_obj_t *scr_base_date_val;
-	lv_obj_t *scr_base_time_val;
-	lv_obj_t *scr_base_img_net_on;
-	lv_obj_t *scr_base_img_net_off;
-	lv_obj_t *scr_base_img_mqtt_off;
-	lv_obj_t *scr_base_img_mqtt_on;
 	lv_obj_t *scr_base_btn_dashboard;
 	lv_obj_t *scr_base_btn_dashboard_label;
 	lv_obj_t *scr_base_btn_analystis;
@@ -62,7 +56,7 @@ typedef struct
 	lv_obj_t *scr_base_lbl_pm25_val;
 	lv_obj_t *scr_base_lbl_pm25_uint;
 	lv_obj_t *scr_base_cont_status;
-	lv_obj_t *scr_base_lbl_status;
+	lv_obj_t *scr_base_lbl_pm25_status;
 	lv_obj_t *scr_base_cont_21;
 	lv_obj_t *scr_base_lbl_temp;
 	lv_obj_t *scr_base_lbl_temp_val;
@@ -115,24 +109,6 @@ typedef struct
 	lv_obj_t *scr_base_btn_clear_history_label;
 	lv_obj_t *scr_base_cont_logs_detail;
 	lv_obj_t *scr_base_lbl_log_detail;
-	lv_obj_t *scr_base_cont_restart;
-	lv_obj_t *scr_base_cont_restart_system;
-	lv_obj_t *scr_base_img_12;
-	lv_obj_t *scr_base_label_95;
-	lv_obj_t *scr_base_label_96;
-	lv_obj_t *scr_base_btn_restart_confirm;
-	lv_obj_t *scr_base_btn_restart_confirm_label;
-	lv_obj_t *scr_base_btn_restart_cancel;
-	lv_obj_t *scr_base_btn_restart_cancel_label;
-	lv_obj_t *scr_base_cont_restore;
-	lv_obj_t *scr_base_cont_31;
-	lv_obj_t *scr_base_img_13;
-	lv_obj_t *scr_base_label_98;
-	lv_obj_t *scr_base_label_97;
-	lv_obj_t *scr_base_btn_restore_confirm;
-	lv_obj_t *scr_base_btn_restore_confirm_label;
-	lv_obj_t *scr_base_btn_restore_cancel;
-	lv_obj_t *scr_base_btn_restore_cancel_label;
 	lv_obj_t *scr_base_cont_hw;
 	lv_obj_t *scr_base_label_hw;
 	lv_obj_t *scr_base_cont_menu;
@@ -190,6 +166,10 @@ typedef struct
 	lv_obj_t *scr_base_lbl_wifi_status;
 	lv_obj_t *scr_base_btn_wifi_apply;
 	lv_obj_t *scr_base_btn_wifi_apply_label;
+	lv_obj_t *scr_base_ta_1;
+	lv_obj_t *scr_base_ta_2;
+	lv_obj_t *scr_base_label_213;
+	lv_obj_t *scr_base_label_214;
 	lv_obj_t *scr_base_cont_ethernet;
 	lv_obj_t *scr_base_label_118;
 	lv_obj_t *scr_base_label_117;
@@ -299,6 +279,33 @@ typedef struct
 	lv_obj_t *scr_base_lbl_fw_val;
 	lv_obj_t *scr_base_lbl_memory_status_val;
 	lv_obj_t *scr_base_lbl_system_uptime_val;
+	lv_obj_t *scr_base_cont_data_time;
+	lv_obj_t *scr_base_time_val;
+	lv_obj_t *scr_base_date_val;
+	lv_obj_t *scr_base_line_1;
+	lv_obj_t *scr_base_cont_net_mqtt;
+	lv_obj_t *scr_base_line_2;
+	lv_obj_t *scr_base_lbl_net;
+	lv_obj_t *scr_base_lbl_mqtt;
+	lv_obj_t *scr_base_img_mqtt_on;
+	lv_obj_t *scr_base_img_net_on;
+	lv_obj_t *scr_base_img_mqtt_off;
+	lv_obj_t *scr_base_img_net_off;
+	lv_obj_t *scr_base_cont_device_viewlist;
+	lv_obj_t *scr_base_cont_68;
+	lv_obj_t *scr_base_cont_69;
+	lv_obj_t *scr_base_cont_70;
+	lv_obj_t *scr_base_lbl_device_action;
+	lv_obj_t *scr_base_lbl_deivce_length;
+	lv_obj_t *scr_base_lbl_device_name;
+	lv_obj_t *scr_base_lbl_device_register;
+	lv_obj_t *scr_base_lbl_device_slave_id;
+	lv_obj_t *scr_base_lbl_device_stt;
+	lv_obj_t *scr_base_label_184;
+	lv_obj_t *scr_base_cont_devicelist_back;
+	lv_obj_t *scr_base_btn_devicelist_back;
+	lv_obj_t *scr_base_btn_devicelist_back_label;
+	lv_obj_t *scr_base_img_21;
 	lv_obj_t *scr_base_cont_device_config;
 	lv_obj_t *scr_base_cont_62;
 	lv_obj_t *scr_base_cont_63;
@@ -322,21 +329,24 @@ typedef struct
 	lv_obj_t *scr_base_btn_deviceconfig_back;
 	lv_obj_t *scr_base_btn_deviceconfig_back_label;
 	lv_obj_t *scr_base_img_22;
-	lv_obj_t *scr_base_cont_device_viewlist;
-	lv_obj_t *scr_base_cont_68;
-	lv_obj_t *scr_base_cont_69;
-	lv_obj_t *scr_base_cont_70;
-	lv_obj_t *scr_base_lbl_device_action;
-	lv_obj_t *scr_base_lbl_deivce_length;
-	lv_obj_t *scr_base_lbl_device_name;
-	lv_obj_t *scr_base_lbl_device_register;
-	lv_obj_t *scr_base_lbl_device_slave_id;
-	lv_obj_t *scr_base_lbl_device_stt;
-	lv_obj_t *scr_base_label_184;
-	lv_obj_t *scr_base_cont_devicelist_back;
-	lv_obj_t *scr_base_btn_devicelist_back;
-	lv_obj_t *scr_base_btn_devicelist_back_label;
-	lv_obj_t *scr_base_img_21;
+	lv_obj_t *scr_base_cont_restart;
+	lv_obj_t *scr_base_cont_restart_system;
+	lv_obj_t *scr_base_img_12;
+	lv_obj_t *scr_base_label_95;
+	lv_obj_t *scr_base_label_96;
+	lv_obj_t *scr_base_btn_restart_confirm;
+	lv_obj_t *scr_base_btn_restart_confirm_label;
+	lv_obj_t *scr_base_btn_restart_cancel;
+	lv_obj_t *scr_base_btn_restart_cancel_label;
+	lv_obj_t *scr_base_cont_restore;
+	lv_obj_t *scr_base_cont_31;
+	lv_obj_t *scr_base_img_13;
+	lv_obj_t *scr_base_label_98;
+	lv_obj_t *scr_base_label_97;
+	lv_obj_t *scr_base_btn_restore_confirm;
+	lv_obj_t *scr_base_btn_restore_confirm_label;
+	lv_obj_t *scr_base_btn_restore_cancel;
+	lv_obj_t *scr_base_btn_restore_cancel_label;
 	lv_obj_t *g_kb_top_layer;
 }lv_ui;
 
@@ -367,44 +377,46 @@ extern lv_ui guider_ui;
 
 void setup_scr_scr_booting(lv_ui *ui);
 void setup_scr_scr_base(lv_ui *ui);
-LV_IMAGE_DECLARE(_logo_boot_RGB565A8_256x65);
+LV_IMAGE_DECLARE(_text_synaptix_color_RGB565A8_256x65);
 LV_IMAGE_DECLARE(_bg_base_RGB565_800x480);
-LV_IMAGE_DECLARE(_wifi_on_RGB565A8_12x12);
-LV_IMAGE_DECLARE(_wifi_off_RGB565A8_12x12);
-LV_IMAGE_DECLARE(_mqtt_off_RGB565A8_12x12);
-LV_IMAGE_DECLARE(_mqtt_on_RGB565A8_12x12);
 LV_IMAGE_DECLARE(_weather_RGB565A8_32x32);
 LV_IMAGE_DECLARE(_humidity_RGB565A8_32x32);
-LV_IMAGE_DECLARE(_power_button_RGB565A8_100x100);
-LV_IMAGE_DECLARE(_power_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_next_RGB565A8_32x32);
 LV_IMAGE_DECLARE(_connection_RGB565A8_24x24);
 LV_IMAGE_DECLARE(_computer_RGB565A8_24x24);
 LV_IMAGE_DECLARE(_communicative_RGB565A8_24x24);
 LV_IMAGE_DECLARE(_system_update_RGB565A8_24x24);
 LV_IMAGE_DECLARE(_left_arrow_RGB565A8_24x24);
+LV_IMAGE_DECLARE(_mqtt_on_RGB565A8_16x16);
+LV_IMAGE_DECLARE(_wifi_on_RGB565A8_16x16);
+LV_IMAGE_DECLARE(_mqtt_off_RGB565A8_16x16);
+LV_IMAGE_DECLARE(_wifi_off_RGB565A8_16x16);
+LV_IMAGE_DECLARE(_power_button_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_power_RGB565A8_100x100);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_11)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_9)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_10)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
-LV_FONT_DECLARE(lv_font_Roboto_Black_10)
-LV_FONT_DECLARE(lv_font_Roboto_Black_12)
+LV_FONT_DECLARE(lv_font_Roboto_Black_15)
+LV_FONT_DECLARE(lv_font_Roboto_Black_25)
 LV_FONT_DECLARE(lv_font_Roboto_Black_72)
 LV_FONT_DECLARE(lv_font_Roboto_Black_30)
-LV_FONT_DECLARE(lv_font_Roboto_Black_20)
 LV_FONT_DECLARE(lv_font_Roboto_Black_48)
-LV_FONT_DECLARE(lv_font_Roboto_Black_11)
-LV_FONT_DECLARE(lv_font_Roboto_Black_24)
-LV_FONT_DECLARE(lv_font_Roboto_Black_9)
+LV_FONT_DECLARE(lv_font_Roboto_Black_20)
+LV_FONT_DECLARE(lv_font_Roboto_Black_14)
+LV_FONT_DECLARE(lv_font_Roboto_Black_26)
+LV_FONT_DECLARE(lv_font_Roboto_Black_12)
 LV_FONT_DECLARE(lv_font_Roboto_Black_16)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_12)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_40)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_12)
-LV_FONT_DECLARE(lv_font_Roboto_Regular_14)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_14)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_15)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_10)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_13)
+LV_FONT_DECLARE(lv_font_Roboto_Regular_15)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_10)
+LV_FONT_DECLARE(lv_font_Roboto_Regular_14)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_9)
 LV_FONT_DECLARE(lv_font_Roboto_Black_18)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_18)
 

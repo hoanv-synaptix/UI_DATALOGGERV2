@@ -1,7 +1,7 @@
 build/object/generated/ui_state.o: \
  d:\synaptix\gui_data_logger\data_logger\custom\ui_state.c \
  d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h \
- d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h \
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\lvgl.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\lv_version.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src/lv_init.h \
@@ -689,7 +689,7 @@ build/object/generated/ui_state.o: \
 
 d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h:
 
-d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h:
+d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h:
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\lvgl.h:
 

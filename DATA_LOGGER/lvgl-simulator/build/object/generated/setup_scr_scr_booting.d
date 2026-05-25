@@ -688,7 +688,7 @@ build/object/generated/setup_scr_scr_booting.o: \
  d:\synaptix\gui_data_logger\data_logger\generated\events_init.h \
  d:\synaptix\gui_data_logger\data_logger\generated\widgets_init.h \
  d:\synaptix\gui_data_logger\data_logger\custom\custom.h \
- d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\lvgl.h:
 
@@ -2066,4 +2066,4 @@ d:\synaptix\gui_data_logger\data_logger\generated\widgets_init.h:
 
 d:\synaptix\gui_data_logger\data_logger\custom\custom.h:
 
-d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h:
+d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h:

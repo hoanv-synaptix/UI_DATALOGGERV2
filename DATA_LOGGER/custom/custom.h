@@ -4,9 +4,9 @@
 extern "C" {
 #endif
 
-#include "gui_guider.h"
+#include "ui_context.h"
 
-void custom_init(lv_ui *ui);
+void custom_init(void *generated_ui);
 void custom_input_reset(void);
 
 #ifdef __cplusplus

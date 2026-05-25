@@ -24,10 +24,10 @@ void digital_clock_count(int * hour, int * minute, int * seconds, char * meridie
 #endif
 
 
+void scr_base_time_val_timer(lv_timer_t *timer);
 void scr_base_date_val_event_handler(lv_event_t *e);
 void scr_base_date_val_calendar_event_handler(lv_event_t *e);
 void scr_base_date_val_init_calendar(lv_obj_t *obj, char * s);
-void scr_base_time_val_timer(lv_timer_t *timer);
 
 
 #ifdef __cplusplus

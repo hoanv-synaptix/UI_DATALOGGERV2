@@ -93,6 +93,19 @@ void digital_clock_count(int * hour, int * minute, int * seconds, char * meridie
     }
 }
 
+
+extern int scr_base_time_val_hour_value;
+extern int scr_base_time_val_min_value;
+extern int scr_base_time_val_sec_value;
+
+void scr_base_time_val_timer(lv_timer_t *timer)
+{
+    clock_count(&scr_base_time_val_hour_value, &scr_base_time_val_min_value, &scr_base_time_val_sec_value);
+    if (lv_obj_is_valid(guider_ui.scr_base_time_val))
+    {
+        lv_label_set_text_fmt(guider_ui.scr_base_time_val, "%d:%02d:%02d", scr_base_time_val_hour_value, scr_base_time_val_min_value, scr_base_time_val_sec_value);
+    }
+}
 static lv_obj_t * scr_base_date_val_calendar;
 
 void scr_base_date_val_event_handler(lv_event_t *e)
@@ -151,17 +164,4 @@ void scr_base_date_val_calendar_event_handler(lv_event_t *e)
     }
 }
 
-
-extern int scr_base_time_val_hour_value;
-extern int scr_base_time_val_min_value;
-extern int scr_base_time_val_sec_value;
-
-void scr_base_time_val_timer(lv_timer_t *timer)
-{
-    clock_count(&scr_base_time_val_hour_value, &scr_base_time_val_min_value, &scr_base_time_val_sec_value);
-    if (lv_obj_is_valid(guider_ui.scr_base_time_val))
-    {
-        lv_label_set_text_fmt(guider_ui.scr_base_time_val, "%d:%02d:%02d", scr_base_time_val_hour_value, scr_base_time_val_min_value, scr_base_time_val_sec_value);
-    }
-}
 

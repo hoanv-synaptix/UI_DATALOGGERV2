@@ -5,9 +5,9 @@
 extern "C" {
 #endif
 
-#include "gui_guider.h"
+#include "ui_context.h"
 
-void ui_events_navigation_init(lv_ui *ui);
+void ui_events_navigation_init(ui_context_t *ui);
 
 #ifdef __cplusplus
 }

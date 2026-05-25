@@ -1,7 +1,7 @@
 build/object/generated/custom.o: \
  d:\synaptix\gui_data_logger\data_logger\custom\custom.c \
  d:\synaptix\gui_data_logger\data_logger\custom\custom.h \
- d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h \
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\lvgl.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\lv_version.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src/lv_init.h \
@@ -686,13 +686,15 @@ build/object/generated/custom.o: \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
  d:\synaptix\gui_data_logger\data_logger\lvgl\src/osal/lv_os_private.h \
- d:\synaptix\gui_data_logger\data_logger\custom\ui_runtime_guard.h \
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_platform_port.h \
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_register_types.h \
+ d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h \
  d:\synaptix\gui_data_logger\data_logger\custom\ui_screen_controller.h \
- d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h
+ d:\synaptix\gui_data_logger\data_logger\sim\ui_sim_backend.h
 
 d:\synaptix\gui_data_logger\data_logger\custom\custom.h:
 
-d:\synaptix\gui_data_logger\data_logger\generated\gui_guider.h:
+d:\synaptix\gui_data_logger\data_logger\custom\ui_context.h:
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\lvgl.h:
 
@@ -2062,8 +2064,12 @@ d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
 
 d:\synaptix\gui_data_logger\data_logger\lvgl\src/osal/lv_os_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\custom\ui_runtime_guard.h:
+d:\synaptix\gui_data_logger\data_logger\custom\ui_platform_port.h:
+
+d:\synaptix\gui_data_logger\data_logger\custom\ui_register_types.h:
+
+d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h:
 
 d:\synaptix\gui_data_logger\data_logger\custom\ui_screen_controller.h:
 
-d:\synaptix\gui_data_logger\data_logger\custom\ui_state.h:
+d:\synaptix\gui_data_logger\data_logger\sim\ui_sim_backend.h:

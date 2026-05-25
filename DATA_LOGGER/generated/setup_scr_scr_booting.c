@@ -75,10 +75,10 @@ void setup_scr_scr_booting(lv_ui *ui)
 
     //Write codes scr_booting_img_1
     ui->scr_booting_img_1 = lv_image_create(ui->scr_booting);
-    lv_obj_set_pos(ui->scr_booting_img_1, 272, 170);
+    lv_obj_set_pos(ui->scr_booting_img_1, 272, 174);
     lv_obj_set_size(ui->scr_booting_img_1, 256, 65);
     lv_obj_add_flag(ui->scr_booting_img_1, LV_OBJ_FLAG_CLICKABLE);
-    lv_image_set_src(ui->scr_booting_img_1, &_logo_boot_RGB565A8_256x65);
+    lv_image_set_src(ui->scr_booting_img_1, &_text_synaptix_color_RGB565A8_256x65);
     lv_image_set_pivot(ui->scr_booting_img_1, 50,50);
     lv_image_set_rotation(ui->scr_booting_img_1, 0);
 

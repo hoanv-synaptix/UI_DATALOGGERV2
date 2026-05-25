@@ -39,15 +39,13 @@ static void set_disabled_visual(lv_obj_t *obj, bool disabled, bool is_label)
     init_styles();
 
     if (disabled) {
-        lv_obj_add_state(obj, LV_STATE_DISABLED);
-        lv_obj_add_style(obj, is_label ? &s_label_disabled : &s_field_disabled, LV_PART_MAIN | LV_STATE_DISABLED);
+        lv_obj_add_style(obj, is_label ? &s_label_disabled : &s_field_disabled, LV_PART_MAIN | LV_STATE_DEFAULT);
         if (!is_label) {
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICKABLE);
             lv_obj_clear_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE);
         }
     } else {
-        lv_obj_clear_state(obj, LV_STATE_DISABLED);
-        lv_obj_remove_style(obj, is_label ? &s_label_disabled : &s_field_disabled, LV_PART_MAIN | LV_STATE_DISABLED);
+        lv_obj_remove_style(obj, is_label ? &s_label_disabled : &s_field_disabled, LV_PART_MAIN | LV_STATE_DEFAULT);
         if (!is_label) {
             lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICKABLE);
             lv_obj_add_flag(obj, LV_OBJ_FLAG_CLICK_FOCUSABLE);
@@ -72,11 +70,14 @@ static lv_obj_t *create_overlay(lv_obj_t *parent)
     return overlay;
 }
 
-static void ensure_overlays(lv_ui *ui)
+static void ensure_overlays(ui_context_t *ui)
 {
+    ui_network_refs_t refs;
+
     if (!ui) return;
-    if (!s_wifi_overlay || !lv_obj_is_valid(s_wifi_overlay)) s_wifi_overlay = create_overlay(ui->scr_base_cont_wifi);
-    if (!s_eth_overlay || !lv_obj_is_valid(s_eth_overlay)) s_eth_overlay = create_overlay(ui->scr_base_cont_ethernet);
+    ui_context_get_network_refs(ui, &refs);
+    if (!s_wifi_overlay || !lv_obj_is_valid(s_wifi_overlay)) s_wifi_overlay = create_overlay(refs.cont_wifi);
+    if (!s_eth_overlay || !lv_obj_is_valid(s_eth_overlay)) s_eth_overlay = create_overlay(refs.cont_ethernet);
 }
 
 static void place_overlay(lv_obj_t *overlay, lv_obj_t *parent, lv_obj_t *first, lv_obj_t *last)
@@ -111,7 +112,7 @@ static void place_overlay(lv_obj_t *overlay, lv_obj_t *parent, lv_obj_t *first, 
     lv_obj_move_foreground(overlay);
 }
 
-void ui_input_policy_bind(lv_ui *ui)
+void ui_input_policy_bind(ui_context_t *ui)
 {
     ensure_overlays(ui);
 }
@@ -122,52 +123,65 @@ void ui_input_policy_unbind(void)
     s_eth_overlay = NULL;
 }
 
-bool ui_input_policy_is_enabled(lv_ui *ui, lv_obj_t *input_obj)
+bool ui_input_policy_is_enabled(ui_context_t *ui, lv_obj_t *input_obj)
 {
+    ui_network_refs_t refs;
+    ui_input_group_t group;
+
     if (!ui || !input_obj || !lv_obj_is_valid(input_obj)) return false;
+    ui_context_get_network_refs(ui, &refs);
+    group = ui_context_classify_input(ui, input_obj);
 
-    if (input_obj == ui->scr_base_ta_wifi_ip) {
-        return !ui->scr_base_ddlist_wifi_mode || lv_dropdown_get_selected(ui->scr_base_ddlist_wifi_mode) != 0U;
+    if (group == UI_INPUT_GROUP_WIFI_STATIC) {
+        return !refs.ddlist_wifi_mode || lv_dropdown_get_selected(refs.ddlist_wifi_mode) != 0U;
     }
 
-    if (input_obj == ui->scr_base_ta_ethernet_ip ||
-        input_obj == ui->scr_base_ta_ethernet_subnet ||
-        input_obj == ui->scr_base_ta_ethernet_gateway) {
-        return !ui->scr_base_ddlist_ethernet_mode || lv_dropdown_get_selected(ui->scr_base_ddlist_ethernet_mode) != 0U;
+    if (group == UI_INPUT_GROUP_ETHERNET_STATIC) {
+        return !refs.ddlist_ethernet_mode || lv_dropdown_get_selected(refs.ddlist_ethernet_mode) != 0U;
     }
 
-    return !lv_obj_has_state(input_obj, LV_STATE_DISABLED);
+    return !(lv_obj_has_flag(input_obj, LV_OBJ_FLAG_HIDDEN) || !lv_obj_has_flag(input_obj, LV_OBJ_FLAG_CLICKABLE));
 }
 
-void ui_input_policy_apply(lv_ui *ui, const ui_runtime_state_t *state)
+void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state)
 {
+    ui_network_refs_t refs;
+    lv_obj_t *wifi_ip_ta;
+    lv_obj_t *eth_ip_ta;
+    lv_obj_t *eth_subnet_ta;
+    lv_obj_t *eth_gateway_ta;
     bool wifi_disabled;
     bool eth_disabled;
 
     if (!ui || !state) return;
 
     ensure_overlays(ui);
+    ui_context_get_network_refs(ui, &refs);
+    wifi_ip_ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_IP);
+    eth_ip_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_IP);
+    eth_subnet_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_SUBNET);
+    eth_gateway_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_GATEWAY);
     wifi_disabled = state->wifi_mode == UI_IP_MODE_DHCP;
     eth_disabled = state->ethernet_mode == UI_IP_MODE_DHCP;
 
-    set_disabled_visual(ui->scr_base_ta_wifi_ip, wifi_disabled, false);
-    set_disabled_visual(ui->scr_base_label_112, wifi_disabled, true);
+    set_disabled_visual(wifi_ip_ta, wifi_disabled, false);
+    set_disabled_visual(refs.label_wifi_ip, wifi_disabled, true);
 
-    set_disabled_visual(ui->scr_base_ta_ethernet_ip, eth_disabled, false);
-    set_disabled_visual(ui->scr_base_ta_ethernet_subnet, eth_disabled, false);
-    set_disabled_visual(ui->scr_base_ta_ethernet_gateway, eth_disabled, false);
-    set_disabled_visual(ui->scr_base_label_114, eth_disabled, true);
-    set_disabled_visual(ui->scr_base_label_115, eth_disabled, true);
-    set_disabled_visual(ui->scr_base_label_116, eth_disabled, true);
+    set_disabled_visual(eth_ip_ta, eth_disabled, false);
+    set_disabled_visual(eth_subnet_ta, eth_disabled, false);
+    set_disabled_visual(eth_gateway_ta, eth_disabled, false);
+    set_disabled_visual(refs.label_ethernet_ip, eth_disabled, true);
+    set_disabled_visual(refs.label_ethernet_subnet, eth_disabled, true);
+    set_disabled_visual(refs.label_ethernet_gateway, eth_disabled, true);
 
     if (s_wifi_overlay && lv_obj_is_valid(s_wifi_overlay)) {
-        place_overlay(s_wifi_overlay, ui->scr_base_cont_wifi, ui->scr_base_label_112, ui->scr_base_ta_wifi_ip);
+        place_overlay(s_wifi_overlay, refs.cont_wifi, refs.label_wifi_ip, wifi_ip_ta);
         if (wifi_disabled) lv_obj_clear_flag(s_wifi_overlay, LV_OBJ_FLAG_HIDDEN);
         else lv_obj_add_flag(s_wifi_overlay, LV_OBJ_FLAG_HIDDEN);
     }
 
     if (s_eth_overlay && lv_obj_is_valid(s_eth_overlay)) {
-        place_overlay(s_eth_overlay, ui->scr_base_cont_ethernet, ui->scr_base_label_114, ui->scr_base_ta_ethernet_gateway);
+        place_overlay(s_eth_overlay, refs.cont_ethernet, refs.label_ethernet_ip, eth_gateway_ta);
         if (eth_disabled) lv_obj_clear_flag(s_eth_overlay, LV_OBJ_FLAG_HIDDEN);
         else lv_obj_add_flag(s_eth_overlay, LV_OBJ_FLAG_HIDDEN);
     }
