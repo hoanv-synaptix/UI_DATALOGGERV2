@@ -317,7 +317,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_dashboard, 101, 49);
     lv_obj_set_size(ui->scr_base_cont_dashboard, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_dashboard, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_dashboard, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_dashboard, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_dashboard, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -457,8 +456,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_cont_aqi_status
     ui->scr_base_cont_aqi_status = lv_obj_create(ui->scr_base_cont_aqi);
-    lv_obj_set_pos(ui->scr_base_cont_aqi_status, 23, 303);
-    lv_obj_set_size(ui->scr_base_cont_aqi_status, 180, 55);
+    lv_obj_set_pos(ui->scr_base_cont_aqi_status, 14, 303);
+    lv_obj_set_size(ui->scr_base_cont_aqi_status, 200, 55);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_aqi_status, LV_SCROLLBAR_MODE_OFF);
 
     //Write style for scr_base_cont_aqi_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -478,8 +477,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_Aqi_status
     ui->scr_base_lbl_Aqi_status = lv_label_create(ui->scr_base_cont_aqi_status);
-    lv_obj_set_pos(ui->scr_base_lbl_Aqi_status, 23, 11);
-    lv_obj_set_size(ui->scr_base_lbl_Aqi_status, 139, 33);
+    lv_obj_set_pos(ui->scr_base_lbl_Aqi_status, 2, 1);
+    lv_obj_set_size(ui->scr_base_lbl_Aqi_status, 192, 50);
     lv_label_set_text(ui->scr_base_lbl_Aqi_status, "GOOD");
     lv_label_set_long_mode(ui->scr_base_lbl_Aqi_status, LV_LABEL_LONG_WRAP);
 
@@ -493,7 +492,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->scr_base_lbl_Aqi_status, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_base_lbl_Aqi_status, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_bottom(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->scr_base_lbl_Aqi_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -545,8 +544,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_pm10_val
     ui->scr_base_lbl_pm10_val = lv_label_create(ui->scr_base_cont_pm10);
-    lv_obj_set_pos(ui->scr_base_lbl_pm10_val, 19, 52);
-    lv_obj_set_size(ui->scr_base_lbl_pm10_val, 121, 44);
+    lv_obj_set_pos(ui->scr_base_lbl_pm10_val, 5, 52);
+    lv_obj_set_size(ui->scr_base_lbl_pm10_val, 135, 44);
     lv_label_set_text(ui->scr_base_lbl_pm10_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_pm10_val, LV_LABEL_LONG_WRAP);
 
@@ -591,8 +590,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_cont_pm10_status
     ui->scr_base_cont_pm10_status = lv_obj_create(ui->scr_base_cont_pm10);
-    lv_obj_set_pos(ui->scr_base_cont_pm10_status, 120, 13);
-    lv_obj_set_size(ui->scr_base_cont_pm10_status, 70, 30);
+    lv_obj_set_pos(ui->scr_base_cont_pm10_status, 110, 13);
+    lv_obj_set_size(ui->scr_base_cont_pm10_status, 85, 30);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_pm10_status, LV_SCROLLBAR_MODE_OFF);
 
     //Write style for scr_base_cont_pm10_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -612,8 +611,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_pm10_status
     ui->scr_base_lbl_pm10_status = lv_label_create(ui->scr_base_cont_pm10_status);
-    lv_obj_set_pos(ui->scr_base_lbl_pm10_status, 8, 7);
-    lv_obj_set_size(ui->scr_base_lbl_pm10_status, 52, 15);
+    lv_obj_set_pos(ui->scr_base_lbl_pm10_status, 0, 8);
+    lv_obj_set_size(ui->scr_base_lbl_pm10_status, 85, 15);
     lv_label_set_text(ui->scr_base_lbl_pm10_status, "GOOD");
     lv_label_set_long_mode(ui->scr_base_lbl_pm10_status, LV_LABEL_LONG_WRAP);
 
@@ -679,8 +678,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_pm25_val
     ui->scr_base_lbl_pm25_val = lv_label_create(ui->scr_base_cont_pm25);
-    lv_obj_set_pos(ui->scr_base_lbl_pm25_val, 19, 52);
-    lv_obj_set_size(ui->scr_base_lbl_pm25_val, 121, 44);
+    lv_obj_set_pos(ui->scr_base_lbl_pm25_val, 3, 52);
+    lv_obj_set_size(ui->scr_base_lbl_pm25_val, 137, 44);
     lv_label_set_text(ui->scr_base_lbl_pm25_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_pm25_val, LV_LABEL_LONG_WRAP);
 
@@ -725,8 +724,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_cont_status
     ui->scr_base_cont_status = lv_obj_create(ui->scr_base_cont_pm25);
-    lv_obj_set_pos(ui->scr_base_cont_status, 120, 13);
-    lv_obj_set_size(ui->scr_base_cont_status, 70, 30);
+    lv_obj_set_pos(ui->scr_base_cont_status, 110, 13);
+    lv_obj_set_size(ui->scr_base_cont_status, 85, 30);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_status, LV_SCROLLBAR_MODE_OFF);
 
     //Write style for scr_base_cont_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -746,8 +745,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_pm25_status
     ui->scr_base_lbl_pm25_status = lv_label_create(ui->scr_base_cont_status);
-    lv_obj_set_pos(ui->scr_base_lbl_pm25_status, 9, 7);
-    lv_obj_set_size(ui->scr_base_lbl_pm25_status, 52, 15);
+    lv_obj_set_pos(ui->scr_base_lbl_pm25_status, 0, 8);
+    lv_obj_set_size(ui->scr_base_lbl_pm25_status, 85, 15);
     lv_label_set_text(ui->scr_base_lbl_pm25_status, "GOOD");
     lv_label_set_long_mode(ui->scr_base_lbl_pm25_status, LV_LABEL_LONG_WRAP);
 
@@ -813,8 +812,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_temp_val
     ui->scr_base_lbl_temp_val = lv_label_create(ui->scr_base_cont_21);
-    lv_obj_set_pos(ui->scr_base_lbl_temp_val, 19, 51);
-    lv_obj_set_size(ui->scr_base_lbl_temp_val, 121, 44);
+    lv_obj_set_pos(ui->scr_base_lbl_temp_val, 3, 51);
+    lv_obj_set_size(ui->scr_base_lbl_temp_val, 137, 44);
     lv_label_set_text(ui->scr_base_lbl_temp_val, "30.0");
     lv_label_set_long_mode(ui->scr_base_lbl_temp_val, LV_LABEL_LONG_WRAP);
 
@@ -916,8 +915,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_humi_val
     ui->scr_base_lbl_humi_val = lv_label_create(ui->scr_base_cont_humi);
-    lv_obj_set_pos(ui->scr_base_lbl_humi_val, 19, 52);
-    lv_obj_set_size(ui->scr_base_lbl_humi_val, 121, 44);
+    lv_obj_set_pos(ui->scr_base_lbl_humi_val, 4, 52);
+    lv_obj_set_size(ui->scr_base_lbl_humi_val, 136, 44);
     lv_label_set_text(ui->scr_base_lbl_humi_val, "70.0");
     lv_label_set_long_mode(ui->scr_base_lbl_humi_val, LV_LABEL_LONG_WRAP);
 
@@ -1019,8 +1018,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_no2_val
     ui->scr_base_lbl_no2_val = lv_label_create(ui->scr_base_cont_no2);
-    lv_obj_set_pos(ui->scr_base_lbl_no2_val, 8, 45);
-    lv_obj_set_size(ui->scr_base_lbl_no2_val, 66, 27);
+    lv_obj_set_pos(ui->scr_base_lbl_no2_val, 3, 45);
+    lv_obj_set_size(ui->scr_base_lbl_no2_val, 93, 27);
     lv_label_set_text(ui->scr_base_lbl_no2_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_no2_val, LV_LABEL_LONG_WRAP);
 
@@ -1032,7 +1031,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->scr_base_lbl_no2_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_lbl_no2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_no2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_no2_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_lbl_no2_val, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_lbl_no2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_lbl_no2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_no2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1109,8 +1108,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_03_val
     ui->scr_base_lbl_03_val = lv_label_create(ui->scr_base_cont_o3);
-    lv_obj_set_pos(ui->scr_base_lbl_03_val, 8, 45);
-    lv_obj_set_size(ui->scr_base_lbl_03_val, 66, 27);
+    lv_obj_set_pos(ui->scr_base_lbl_03_val, 2, 45);
+    lv_obj_set_size(ui->scr_base_lbl_03_val, 91, 27);
     lv_label_set_text(ui->scr_base_lbl_03_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_03_val, LV_LABEL_LONG_WRAP);
 
@@ -1122,7 +1121,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->scr_base_lbl_03_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_lbl_03_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_03_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_03_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_lbl_03_val, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_lbl_03_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_lbl_03_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_03_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1199,8 +1198,8 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_co2_val
     ui->scr_base_lbl_co2_val = lv_label_create(ui->scr_base_cont_co2);
-    lv_obj_set_pos(ui->scr_base_lbl_co2_val, 8, 45);
-    lv_obj_set_size(ui->scr_base_lbl_co2_val, 66, 27);
+    lv_obj_set_pos(ui->scr_base_lbl_co2_val, 3, 45);
+    lv_obj_set_size(ui->scr_base_lbl_co2_val, 92, 27);
     lv_label_set_text(ui->scr_base_lbl_co2_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_co2_val, LV_LABEL_LONG_WRAP);
 
@@ -1212,7 +1211,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->scr_base_lbl_co2_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_lbl_co2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_co2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_co2_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_lbl_co2_val, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_lbl_co2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_lbl_co2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_co2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1290,7 +1289,7 @@ void setup_scr_scr_base(lv_ui *ui)
     //Write codes scr_base_lbl_so2_val
     ui->scr_base_lbl_so2_val = lv_label_create(ui->scr_base_cont_so2);
     lv_obj_set_pos(ui->scr_base_lbl_so2_val, 8, 45);
-    lv_obj_set_size(ui->scr_base_lbl_so2_val, 66, 27);
+    lv_obj_set_size(ui->scr_base_lbl_so2_val, 86, 27);
     lv_label_set_text(ui->scr_base_lbl_so2_val, "12.4");
     lv_label_set_long_mode(ui->scr_base_lbl_so2_val, LV_LABEL_LONG_WRAP);
 
@@ -1302,7 +1301,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_opa(ui->scr_base_lbl_so2_val, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_lbl_so2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_so2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_so2_val, LV_TEXT_ALIGN_RIGHT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_lbl_so2_val, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_lbl_so2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_lbl_so2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_so2_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1338,6 +1337,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_data_analysis, 100, 49);
     lv_obj_set_size(ui->scr_base_cont_data_analysis, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_data_analysis, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_data_analysis, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_data_analysis, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_data_analysis, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -7507,7 +7507,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_letter_space(ui->scr_base_time_val, 2, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->scr_base_time_val, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_time_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_time_val, 7, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_base_time_val, 6, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_time_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_bottom(ui->scr_base_time_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->scr_base_time_val, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -7529,7 +7529,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_date_val
     ui->scr_base_date_val = lv_label_create(ui->scr_base_cont_data_time);
-    lv_obj_set_pos(ui->scr_base_date_val, 14, 7);
+    lv_obj_set_pos(ui->scr_base_date_val, 13, 7);
     lv_obj_set_size(ui->scr_base_date_val, 87, 26);
     lv_label_set_text(ui->scr_base_date_val, "2025/05/15");
     lv_obj_set_style_text_align(ui->scr_base_date_val, LV_TEXT_ALIGN_CENTER, 0);

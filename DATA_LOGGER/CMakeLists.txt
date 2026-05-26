@@ -52,9 +52,7 @@ else()
 FILE(GLOB_RECURSE SOURCES ./custom/*.c ./custom/*.cpp ./generated/*.c ports/linux/mouse_cursor_icon.c ports/linux/main.c)
 endif()
 
-FILE(GLOB_RECURSE UI_CONTRACT_SRCS ./contract/generated/*.c)
-FILE(GLOB_RECURSE UI_SIM_SRCS ./sim/*.c)
-list(APPEND SOURCES ${UI_CONTRACT_SRCS} ${UI_SIM_SRCS})
+list(APPEND SOURCES)
 
 add_executable (gui_guider ${SOURCES} ${WAYLAND_PROTOCOLS_DIR}/wayland_xdg_shell.c ${WAYLAND_PROTOCOLS_DIR}/wayland_linux_dmabuf.c)
 if(EXISTS ${CMAKE_SOURCE_DIR}/lvgl)
@@ -66,7 +64,7 @@ add_dependencies(lvgl generate_xdg_shell_protocol generate_linux_dmabuf_protocol
 endif()
 
 target_link_libraries(gui_guider PUBLIC lvgl_demos lvgl ${PKG_WAYLAND_LIBRARIES} ${PKG_LIBDRM_LIBRARIES} -lm)
-target_include_directories(gui_guider PRIVATE generated custom contract/generated sim generated/guider_customer_fonts generated/guider_fonts generated/images)
+target_include_directories(gui_guider PRIVATE generated custom generated/guider_customer_fonts generated/guider_fonts generated/images)
 
 if(EXISTS ${CMAKE_SOURCE_DIR}/generated/gg_video.c)
 target_link_libraries(gui_guider PUBLIC -lopenh264)

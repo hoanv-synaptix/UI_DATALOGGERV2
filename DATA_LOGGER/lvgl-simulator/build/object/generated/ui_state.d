@@ -1,14 +1,14 @@
 build/object/generated/ui_state.o: \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\ui_state.c \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\ui_state.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\ui_context.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.c \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_conf_internal.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_conf_kconfig.h \
  G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\config\lv_conf_ext.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/misc/lv_types.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/stdlib/lv_mem.h \
@@ -685,11 +685,15 @@ build/object/generated/ui_state.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/libs/ffmpeg/lv_ffmpeg.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_modbus_list.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\ui_state.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\ui_context.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
@@ -703,7 +707,7 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_conf_kconfig.h:
 
 G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\config\lv_conf_ext.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/misc/lv_types.h:
 
@@ -2058,3 +2062,11 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_modbus_list.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:

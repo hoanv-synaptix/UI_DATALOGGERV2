@@ -1,8 +1,0 @@
-Address,Macro,Domain,Access,ValueType,Scale,Unit,MaxLen,Persist,Owner,Description
-0x1001,REG_WIFI_MODE,wifi,UI_WRITE,uint8,,,0,nvs,ui,"WiFi IP mode: 0 DHCP, 1 Static"
-0x1002,REG_WIFI_SSID,wifi,UI_WRITE,string,,,64,nvs,ui,WiFi SSID
-0x1003,REG_WIFI_PASSWORD,wifi,UI_WRITE,string,,,64,nvs,ui,WiFi password
-0x1004,REG_WIFI_STATIC_IP,wifi,UI_WRITE,string,,,32,nvs,ui,WiFi static IP address
-0x5001,REG_LIVE_WIFI_IP,wifi,BACKEND_WRITE,string,,,32,runtime,backend,Current WiFi IP shown on UI
-0x5002,REG_LIVE_WIFI_STATUS,wifi,BACKEND_WRITE,uint8,,,0,runtime,backend,"Current WiFi status: 0 disconnected, 1 connecting, 2 connected, 3 error"
-0x6001,REG_DASH_TEMP,dashboard,BACKEND_WRITE,int32,0.1,C,0,runtime,backend,Dashboard temperature in scaled Celsius
