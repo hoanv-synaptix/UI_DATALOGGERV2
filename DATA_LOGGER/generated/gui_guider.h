@@ -262,9 +262,9 @@ typedef struct
 	lv_obj_t *scr_base_cont_72;
 	lv_obj_t *scr_base_label_205;
 	lv_obj_t *scr_base_label_206;
-	lv_obj_t *scr_base_bar_brightness;
 	lv_obj_t *scr_base_label_207;
 	lv_obj_t *scr_base_ddlist_screentime_option;
+	lv_obj_t *scr_base_slider_brightness;
 	lv_obj_t *scr_base_cont_operations;
 	lv_obj_t *scr_base_label_208;
 	lv_obj_t *scr_base_btn_restart_system;

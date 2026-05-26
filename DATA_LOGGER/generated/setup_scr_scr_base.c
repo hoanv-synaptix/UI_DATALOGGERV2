@@ -317,6 +317,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_dashboard, 101, 49);
     lv_obj_set_size(ui->scr_base_cont_dashboard, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_dashboard, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_dashboard, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_dashboard, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_dashboard, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1982,7 +1983,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_hw, 101, 48);
     lv_obj_set_size(ui->scr_base_cont_hw, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_hw, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_hw, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_hw, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -5431,6 +5431,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_modbus_config, 0, 35);
     lv_obj_set_size(ui->scr_base_cont_modbus_config, 677, 380);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_modbus_config, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_modbus_config, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_modbus_config, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -6738,7 +6739,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_system_admin, 0, 35);
     lv_obj_set_size(ui->scr_base_cont_system_admin, 677, 380);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_system_admin, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_system_admin, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_system_admin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -6916,28 +6916,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_pad_left(ui->scr_base_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->scr_base_label_206, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes scr_base_bar_brightness
-    ui->scr_base_bar_brightness = lv_bar_create(ui->scr_base_cont_72);
-    lv_obj_set_pos(ui->scr_base_bar_brightness, 25, 77);
-    lv_obj_set_size(ui->scr_base_bar_brightness, 268, 8);
-    lv_obj_set_style_anim_duration(ui->scr_base_bar_brightness, 1000, 0);
-    lv_bar_set_mode(ui->scr_base_bar_brightness, LV_BAR_MODE_NORMAL);
-    lv_bar_set_range(ui->scr_base_bar_brightness, 0, 100);
-    lv_bar_set_value(ui->scr_base_bar_brightness, 50, LV_ANIM_OFF);
-
-    //Write style for scr_base_bar_brightness, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_bar_brightness, 28, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_bar_brightness, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_bar_brightness, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_bar_brightness, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_bar_brightness, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
-    //Write style for scr_base_bar_brightness, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_bar_brightness, 189, LV_PART_INDICATOR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_bar_brightness, lv_color_hex(0xffffff), LV_PART_INDICATOR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_bar_brightness, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_bar_brightness, 10, LV_PART_INDICATOR|LV_STATE_DEFAULT);
-
     //Write codes scr_base_label_207
     ui->scr_base_label_207 = lv_label_create(ui->scr_base_cont_72);
     lv_obj_set_pos(ui->scr_base_label_207, 353, 40);
@@ -7076,6 +7054,32 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_style_set_bg_color(&style_scr_base_ddlist_screentime_option_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
     lv_style_set_bg_grad_dir(&style_scr_base_ddlist_screentime_option_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
     lv_obj_add_style(lv_dropdown_get_list(ui->scr_base_ddlist_screentime_option), &style_scr_base_ddlist_screentime_option_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+
+    //Write codes scr_base_slider_brightness
+    ui->scr_base_slider_brightness = lv_slider_create(ui->scr_base_cont_72);
+    lv_obj_set_pos(ui->scr_base_slider_brightness, 25, 77);
+    lv_obj_set_size(ui->scr_base_slider_brightness, 270, 8);
+    lv_slider_set_range(ui->scr_base_slider_brightness, 0, 100);
+    lv_slider_set_mode(ui->scr_base_slider_brightness, LV_SLIDER_MODE_NORMAL);
+    lv_slider_set_value(ui->scr_base_slider_brightness, 50, LV_ANIM_OFF);
+
+    //Write style for scr_base_slider_brightness, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_slider_brightness, 60, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_slider_brightness, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_slider_brightness, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_slider_brightness, 8, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_outline_width(ui->scr_base_slider_brightness, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_slider_brightness, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+
+    //Write style for scr_base_slider_brightness, Part: LV_PART_INDICATOR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_slider_brightness, 255, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_slider_brightness, lv_color_hex(0xb9d4eb), LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_slider_brightness, LV_GRAD_DIR_NONE, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_slider_brightness, 8, LV_PART_INDICATOR|LV_STATE_DEFAULT);
+
+    //Write style for scr_base_slider_brightness, Part: LV_PART_KNOB, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_slider_brightness, 0, LV_PART_KNOB|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_slider_brightness, 8, LV_PART_KNOB|LV_STATE_DEFAULT);
 
     //Write codes scr_base_cont_operations
     ui->scr_base_cont_operations = lv_obj_create(ui->scr_base_cont_system_admin);
