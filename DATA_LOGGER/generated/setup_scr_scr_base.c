@@ -1338,7 +1338,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_data_analysis, 100, 49);
     lv_obj_set_size(ui->scr_base_cont_data_analysis, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_data_analysis, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_data_analysis, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_data_analysis, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_data_analysis, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -1780,9 +1779,9 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_label_insights
     ui->scr_base_label_insights = lv_label_create(ui->scr_base_cont_insights);
-    lv_obj_set_pos(ui->scr_base_label_insights, 19, 20);
-    lv_obj_set_size(ui->scr_base_label_insights, 197, 19);
-    lv_label_set_text(ui->scr_base_label_insights, "DIAGNOSTIC ÍNSIGHTS");
+    lv_obj_set_pos(ui->scr_base_label_insights, 20, 20);
+    lv_obj_set_size(ui->scr_base_label_insights, 201, 19);
+    lv_label_set_text(ui->scr_base_label_insights, "DIAGNOSTIC INSIGHTS");
     lv_label_set_long_mode(ui->scr_base_label_insights, LV_LABEL_LONG_WRAP);
 
     //Write style for scr_base_label_insights, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -5432,7 +5431,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_modbus_config, 0, 35);
     lv_obj_set_size(ui->scr_base_cont_modbus_config, 677, 380);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_modbus_config, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_modbus_config, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_modbus_config, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_modbus_config, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -5611,7 +5609,7 @@ void setup_scr_scr_base(lv_ui *ui)
     //Write codes scr_base_label_160
     ui->scr_base_label_160 = lv_label_create(ui->scr_base_cont_54);
     lv_obj_set_pos(ui->scr_base_label_160, 307, 95);
-    lv_obj_set_size(ui->scr_base_label_160, 71, 13);
+    lv_obj_set_size(ui->scr_base_label_160, 101, 13);
     lv_label_set_text(ui->scr_base_label_160, "DATA BITS");
     lv_label_set_long_mode(ui->scr_base_label_160, LV_LABEL_LONG_WRAP);
 
@@ -5633,7 +5631,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_label_159
     ui->scr_base_label_159 = lv_label_create(ui->scr_base_cont_54);
-    lv_obj_set_pos(ui->scr_base_label_159, 23, 21);
+    lv_obj_set_pos(ui->scr_base_label_159, 23, 19);
     lv_obj_set_size(ui->scr_base_label_159, 80, 17);
     lv_label_set_text(ui->scr_base_label_159, "MODE");
     lv_label_set_long_mode(ui->scr_base_label_159, LV_LABEL_LONG_WRAP);
@@ -5924,7 +5922,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_lbl_master
     ui->scr_base_lbl_master = lv_label_create(ui->scr_base_cont_master);
-    lv_obj_set_pos(ui->scr_base_lbl_master, 0, 13);
+    lv_obj_set_pos(ui->scr_base_lbl_master, 0, 11);
     lv_obj_set_size(ui->scr_base_lbl_master, 161, 17);
     lv_label_set_text(ui->scr_base_lbl_master, "MASTER CONTROLS");
     lv_label_set_long_mode(ui->scr_base_lbl_master, LV_LABEL_LONG_WRAP);
@@ -6135,7 +6133,7 @@ void setup_scr_scr_base(lv_ui *ui)
     //Write codes scr_base_label_171
     ui->scr_base_label_171 = lv_label_create(ui->scr_base_cont_54);
     lv_obj_set_pos(ui->scr_base_label_171, 449, 95);
-    lv_obj_set_size(ui->scr_base_label_171, 71, 13);
+    lv_obj_set_size(ui->scr_base_label_171, 117, 13);
     lv_label_set_text(ui->scr_base_label_171, "STOP BITS");
     lv_label_set_long_mode(ui->scr_base_label_171, LV_LABEL_LONG_WRAP);
 
@@ -6740,6 +6738,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_system_admin, 0, 35);
     lv_obj_set_size(ui->scr_base_cont_system_admin, 677, 380);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_system_admin, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_system_admin, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_system_admin, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_system_admin, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -8121,7 +8120,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_label_179
     ui->scr_base_label_179 = lv_label_create(ui->scr_base_cont_63);
-    lv_obj_set_pos(ui->scr_base_label_179, 312, 93);
+    lv_obj_set_pos(ui->scr_base_label_179, 312, 89);
     lv_obj_set_size(ui->scr_base_label_179, 225, 13);
     lv_label_set_text(ui->scr_base_label_179, "REGISTER TYPE");
     lv_label_set_long_mode(ui->scr_base_label_179, LV_LABEL_LONG_WRAP);
@@ -8373,9 +8372,9 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_ddlist_master_device_registers
     ui->scr_base_ddlist_master_device_registers = lv_dropdown_create(ui->scr_base_cont_63);
-    lv_obj_set_pos(ui->scr_base_ddlist_master_device_registers, 312, 111);
+    lv_obj_set_pos(ui->scr_base_ddlist_master_device_registers, 312, 107);
     lv_obj_set_size(ui->scr_base_ddlist_master_device_registers, 270, 38);
-    lv_dropdown_set_options(ui->scr_base_ddlist_master_device_registers, "HOLDING REGISTERS\nINPUT REGISTERS\nCOILS\nINPUT STATUS");
+    lv_dropdown_set_options(ui->scr_base_ddlist_master_device_registers, "READ COILS\nREAD DISCRETE INPUTS\nREAD HOLDING REGS\nREAD INPUT REGS\nWRITE SINGLE COIL\nWRITE SINGLE REG\nWRITE MULTI COILS\nWRITE MULTI REGS");
 
     //Write style for scr_base_ddlist_master_device_registers, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_text_color(ui->scr_base_ddlist_master_device_registers, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -8472,7 +8471,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_style_set_border_color(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, lv_color_hex(0xffffff));
     lv_style_set_border_side(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, LV_BORDER_SIDE_FULL);
     lv_style_set_radius(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, 5);
-    lv_style_set_bg_opa(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, 129);
+    lv_style_set_bg_opa(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, 180);
     lv_style_set_bg_color(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, lv_color_hex(0x000000));
     lv_style_set_bg_grad_dir(&style_scr_base_ddlist_master_device_registers_extra_list_main_default, LV_GRAD_DIR_NONE);
     lv_obj_add_style(lv_dropdown_get_list(ui->scr_base_ddlist_master_device_registers), &style_scr_base_ddlist_master_device_registers_extra_list_main_default, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -8482,7 +8481,7 @@ void setup_scr_scr_base(lv_ui *ui)
     ui_init_style(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default);
 
     lv_style_set_radius(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, 3);
-    lv_style_set_bg_opa(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, 54);
+    lv_style_set_bg_opa(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, 47);
     lv_style_set_bg_color(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, lv_color_hex(0xcccccc));
     lv_style_set_bg_grad_dir(&style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, LV_GRAD_DIR_NONE);
     lv_obj_add_style(lv_dropdown_get_list(ui->scr_base_ddlist_master_device_registers), &style_scr_base_ddlist_master_device_registers_extra_list_scrollbar_default, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
@@ -8513,8 +8512,8 @@ void setup_scr_scr_base(lv_ui *ui)
     //Write codes scr_base_label_181
     ui->scr_base_label_181 = lv_label_create(ui->scr_base_cont_63);
     lv_obj_set_pos(ui->scr_base_label_181, 22, 160);
-    lv_obj_set_size(ui->scr_base_label_181, 118, 17);
-    lv_label_set_text(ui->scr_base_label_181, "ADDRESS");
+    lv_obj_set_size(ui->scr_base_label_181, 174, 17);
+    lv_label_set_text(ui->scr_base_label_181, "REGISTER ADDRESS");
     lv_label_set_long_mode(ui->scr_base_label_181, LV_LABEL_LONG_WRAP);
 
     //Write style for scr_base_label_181, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.

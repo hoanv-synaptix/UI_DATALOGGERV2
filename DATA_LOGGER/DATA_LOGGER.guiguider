@@ -2823,10 +2823,10 @@
 											"isLock": false,
 											"rm_flag": [],
 											"flag": [],
-											"width": 118,
+											"width": 174,
 											"height": 17,
 											"default_style": false,
-											"text": "ADDRESS",
+											"text": "REGISTER ADDRESS",
 											"is_static": false,
 											"long_mode": "LV_LABEL_LONG_WRAP",
 											"custom_attribute": [],
@@ -3032,7 +3032,7 @@
 											"id": "dzt6eq9o",
 											"type": "ddlist",
 											"left": 312,
-											"top": 111,
+											"top": 107,
 											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
@@ -3042,16 +3042,28 @@
 											"default_style": false,
 											"list": [
 												{
-													"text": "HOLDING REGISTERS"
+													"text": "READ COILS"
 												},
 												{
-													"text": "INPUT REGISTERS"
+													"text": "READ DISCRETE INPUTS"
 												},
 												{
-													"text": "COILS"
+													"text": "READ HOLDING REGS"
 												},
 												{
-													"text": "INPUT STATUS"
+													"text": "READ INPUT REGS"
+												},
+												{
+													"text": "WRITE SINGLE COIL"
+												},
+												{
+													"text": "WRITE SINGLE REG"
+												},
+												{
+													"text": "WRITE MULTI COILS"
+												},
+												{
+													"text": "WRITE MULTI REGS"
 												}
 											],
 											"draw_arrow": true,
@@ -3221,7 +3233,7 @@
 													"border_width": 1,
 													"border_opa": 54,
 													"radius": 5,
-													"bg_opa": 129
+													"bg_opa": 180
 												},
 												{
 													"part": "LV_PART_SCROLLBAR",
@@ -3230,7 +3242,35 @@
 													"disable": false,
 													"radius": 3,
 													"bg_color": "#cccccc",
-													"bg_opa": 54
+													"bg_opa": 47,
+													"bg_grad_dir": "LV_GRAD_DIR_NONE",
+													"bg_grad_color": null
+												}
+											],
+											"undefined": [
+												{
+													"text": "01 - Read Coils"
+												},
+												{
+													"text": "02 - Read Discrete Inputs"
+												},
+												{
+													"text": "03 - Read Holding Regs"
+												},
+												{
+													"text": "04 - Read Input Regs"
+												},
+												{
+													"text": "05 - Write Single Coil"
+												},
+												{
+													"text": "06 - Write Single Reg"
+												},
+												{
+													"text": "15 - Write Multi Coils"
+												},
+												{
+													"text": "hello"
 												}
 											]
 										},
@@ -3916,7 +3956,7 @@
 											"id": "cfqwlra8",
 											"type": "label",
 											"left": 312,
-											"top": 93,
+											"top": 89,
 											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
@@ -6224,7 +6264,7 @@
 							"type": "cont",
 							"left": 0,
 							"top": 35,
-							"visible": true,
+							"visible": false,
 							"isLock": false,
 							"rm_flag": [],
 							"flag": [],
@@ -8695,7 +8735,7 @@
 							"type": "cont",
 							"left": 0,
 							"top": 35,
-							"visible": false,
+							"visible": true,
 							"isLock": false,
 							"rm_flag": [],
 							"flag": [],
@@ -9764,7 +9804,7 @@
 													"isLock": false,
 													"rm_flag": [],
 													"flag": [],
-													"width": 71,
+													"width": 117,
 													"height": 13,
 													"default_style": false,
 													"text": "STOP BITS",
@@ -10388,7 +10428,7 @@
 															"id": "x4s5wag2",
 															"type": "label",
 															"left": 0,
-															"top": 13,
+															"top": 11,
 															"visible": true,
 															"isLock": false,
 															"rm_flag": [],
@@ -11267,7 +11307,7 @@
 													"id": "d1mtv5zh",
 													"type": "label",
 													"left": 23,
-													"top": 21,
+													"top": 19,
 													"visible": true,
 													"isLock": false,
 													"rm_flag": [],
@@ -11379,7 +11419,7 @@
 													"isLock": false,
 													"rm_flag": [],
 													"flag": [],
-													"width": 71,
+													"width": 101,
 													"height": 13,
 													"default_style": false,
 													"text": "DATA BITS",
@@ -22831,7 +22871,7 @@
 					"type": "cont",
 					"left": 100,
 					"top": 49,
-					"visible": false,
+					"visible": true,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
@@ -22966,16 +23006,16 @@
 									"name": "label_insights",
 									"id": "4eoq6fhz",
 									"type": "label",
-									"left": 19,
+									"left": 20,
 									"top": 20,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
 									"flag": [],
-									"width": 197,
+									"width": 201,
 									"height": 19,
 									"default_style": false,
-									"text": "DIAGNOSTIC ÍNSIGHTS",
+									"text": "DIAGNOSTIC INSIGHTS",
 									"is_static": false,
 									"long_mode": "LV_LABEL_LONG_WRAP",
 									"custom_attribute": [],
@@ -31874,10 +31914,10 @@
 																		"isLock": false,
 																		"rm_flag": [],
 																		"flag": [],
-																		"width": 118,
+																		"width": 174,
 																		"height": 17,
 																		"default_style": false,
-																		"text": "ADDRESS",
+																		"text": "REGISTER ADDRESS",
 																		"is_static": false,
 																		"long_mode": "LV_LABEL_LONG_WRAP",
 																		"custom_attribute": [],
@@ -32083,7 +32123,7 @@
 																		"id": "dzt6eq9o",
 																		"type": "ddlist",
 																		"left": 312,
-																		"top": 111,
+																		"top": 107,
 																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
@@ -32093,16 +32133,28 @@
 																		"default_style": false,
 																		"list": [
 																			{
-																				"text": "HOLDING REGISTERS"
+																				"text": "READ COILS"
 																			},
 																			{
-																				"text": "INPUT REGISTERS"
+																				"text": "READ DISCRETE INPUTS"
 																			},
 																			{
-																				"text": "COILS"
+																				"text": "READ HOLDING REGS"
 																			},
 																			{
-																				"text": "INPUT STATUS"
+																				"text": "READ INPUT REGS"
+																			},
+																			{
+																				"text": "WRITE SINGLE COIL"
+																			},
+																			{
+																				"text": "WRITE SINGLE REG"
+																			},
+																			{
+																				"text": "WRITE MULTI COILS"
+																			},
+																			{
+																				"text": "WRITE MULTI REGS"
 																			}
 																		],
 																		"draw_arrow": true,
@@ -32272,7 +32324,7 @@
 																				"border_width": 1,
 																				"border_opa": 54,
 																				"radius": 5,
-																				"bg_opa": 129
+																				"bg_opa": 180
 																			},
 																			{
 																				"part": "LV_PART_SCROLLBAR",
@@ -32281,7 +32333,35 @@
 																				"disable": false,
 																				"radius": 3,
 																				"bg_color": "#cccccc",
-																				"bg_opa": 54
+																				"bg_opa": 47,
+																				"bg_grad_dir": "LV_GRAD_DIR_NONE",
+																				"bg_grad_color": null
+																			}
+																		],
+																		"undefined": [
+																			{
+																				"text": "01 - Read Coils"
+																			},
+																			{
+																				"text": "02 - Read Discrete Inputs"
+																			},
+																			{
+																				"text": "03 - Read Holding Regs"
+																			},
+																			{
+																				"text": "04 - Read Input Regs"
+																			},
+																			{
+																				"text": "05 - Write Single Coil"
+																			},
+																			{
+																				"text": "06 - Write Single Reg"
+																			},
+																			{
+																				"text": "15 - Write Multi Coils"
+																			},
+																			{
+																				"text": "hello"
 																			}
 																		]
 																	},
@@ -32967,7 +33047,7 @@
 																		"id": "cfqwlra8",
 																		"type": "label",
 																		"left": 312,
-																		"top": 93,
+																		"top": 89,
 																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
@@ -35275,7 +35355,7 @@
 														"type": "cont",
 														"left": 0,
 														"top": 35,
-														"visible": true,
+														"visible": false,
 														"isLock": false,
 														"rm_flag": [],
 														"flag": [],
@@ -37746,7 +37826,7 @@
 														"type": "cont",
 														"left": 0,
 														"top": 35,
-														"visible": false,
+														"visible": true,
 														"isLock": false,
 														"rm_flag": [],
 														"flag": [],
@@ -38815,7 +38895,7 @@
 																				"isLock": false,
 																				"rm_flag": [],
 																				"flag": [],
-																				"width": 71,
+																				"width": 117,
 																				"height": 13,
 																				"default_style": false,
 																				"text": "STOP BITS",
@@ -39439,7 +39519,7 @@
 																						"id": "x4s5wag2",
 																						"type": "label",
 																						"left": 0,
-																						"top": 13,
+																						"top": 11,
 																						"visible": true,
 																						"isLock": false,
 																						"rm_flag": [],
@@ -40318,7 +40398,7 @@
 																				"id": "d1mtv5zh",
 																				"type": "label",
 																				"left": 23,
-																				"top": 21,
+																				"top": 19,
 																				"visible": true,
 																				"isLock": false,
 																				"rm_flag": [],
@@ -40430,7 +40510,7 @@
 																				"isLock": false,
 																				"rm_flag": [],
 																				"flag": [],
-																				"width": 71,
+																				"width": 101,
 																				"height": 13,
 																				"default_style": false,
 																				"text": "DATA BITS",
@@ -51882,7 +51962,7 @@
 												"type": "cont",
 												"left": 100,
 												"top": 49,
-												"visible": false,
+												"visible": true,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
@@ -52017,16 +52097,16 @@
 																"name": "label_insights",
 																"id": "4eoq6fhz",
 																"type": "label",
-																"left": 19,
+																"left": 20,
 																"top": 20,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
 																"flag": [],
-																"width": 197,
+																"width": 201,
 																"height": 19,
 																"default_style": false,
-																"text": "DIAGNOSTIC ÍNSIGHTS",
+																"text": "DIAGNOSTIC INSIGHTS",
 																"is_static": false,
 																"long_mode": "LV_LABEL_LONG_WRAP",
 																"custom_attribute": [],
@@ -64281,7 +64361,7 @@
 						"name": "scr_base_cont_data_analysis",
 						"id": "25tvsi86",
 						"type": "cont",
-						"visible": false,
+						"visible": true,
 						"scrollbar_mode": "OFF",
 						"flag": [],
 						"rm_flag": [],
@@ -65469,17 +65549,17 @@
 										"flag": [],
 										"rm_flag": [],
 										"pos": [
-											19,
+											20,
 											20
 										],
 										"size": [
-											197,
+											201,
 											19
 										],
 										"default_style": false,
 										"attribute_type": "",
 										"custom_attribute": [],
-										"text": "DIAGNOSTIC ÍNSIGHTS",
+										"text": "DIAGNOSTIC INSIGHTS",
 										"long_mode": "LV_LABEL_LONG_WRAP",
 										"is_static": false,
 										"style": [
@@ -76780,7 +76860,7 @@
 								"name": "scr_base_cont_modbus_config",
 								"id": "hc0h3tie",
 								"type": "cont",
-								"visible": false,
+								"visible": true,
 								"scrollbar_mode": "OFF",
 								"flag": [],
 								"rm_flag": [],
@@ -77361,7 +77441,7 @@
 															95
 														],
 														"size": [
-															71,
+															101,
 															13
 														],
 														"default_style": false,
@@ -77468,7 +77548,7 @@
 														"rm_flag": [],
 														"pos": [
 															23,
-															21
+															19
 														],
 														"size": [
 															80,
@@ -78350,7 +78430,7 @@
 																"rm_flag": [],
 																"pos": [
 																	0,
-																	13
+																	11
 																],
 																"size": [
 																	161,
@@ -79021,7 +79101,7 @@
 															95
 														],
 														"size": [
-															71,
+															117,
 															13
 														],
 														"default_style": false,
@@ -80228,7 +80308,7 @@
 								"name": "scr_base_cont_system_admin",
 								"id": "2dphgfgu",
 								"type": "cont",
-								"visible": true,
+								"visible": false,
 								"scrollbar_mode": "OFF",
 								"flag": [],
 								"rm_flag": [],
@@ -85002,7 +85082,7 @@
 												"rm_flag": [],
 												"pos": [
 													312,
-													93
+													89
 												],
 												"size": [
 													225,
@@ -85808,7 +85888,7 @@
 												"rm_flag": [],
 												"pos": [
 													312,
-													111
+													107
 												],
 												"size": [
 													270,
@@ -85981,7 +86061,7 @@
 														"border_width": 1,
 														"border_opa": 54,
 														"radius": 5,
-														"bg_opa": 129
+														"bg_opa": 180
 													},
 													{
 														"part": "LV_PART_SCROLLBAR",
@@ -85990,10 +86070,12 @@
 														"disable": false,
 														"radius": 3,
 														"bg_color": "#cccccc",
-														"bg_opa": 54
+														"bg_opa": 47,
+														"bg_grad_dir": "LV_GRAD_DIR_NONE",
+														"bg_grad_color": null
 													}
 												],
-												"text": "HOLDING REGISTERS\\nINPUT REGISTERS\\nCOILS\\nINPUT STATUS",
+												"text": "READ COILS\\nREAD DISCRETE INPUTS\\nREAD HOLDING REGS\\nREAD INPUT REGS\\nWRITE SINGLE COIL\\nWRITE SINGLE REG\\nWRITE MULTI COILS\\nWRITE MULTI REGS",
 												"draw_arrow": true
 											},
 											{
@@ -86118,13 +86200,13 @@
 													160
 												],
 												"size": [
-													118,
+													174,
 													17
 												],
 												"default_style": false,
 												"attribute_type": "",
 												"custom_attribute": [],
-												"text": "ADDRESS",
+												"text": "REGISTER ADDRESS",
 												"long_mode": "LV_LABEL_LONG_WRAP",
 												"is_static": false,
 												"style": [
