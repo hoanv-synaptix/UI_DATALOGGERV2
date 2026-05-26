@@ -1,347 +1,347 @@
 build/object/lv_draw_sw_blend.o: \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.c \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h \
- D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h \
- d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_math.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw_mask.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_assert.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_log.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_mem.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_palette.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color_op.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_math.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_font.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_symbol_def.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_buf.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_image_dsc.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_anim.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\tick\lv_tick.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_ll.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_sprintf.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_bidi.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_grad.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\lv_layout.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\flex/lv_flex.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\grid/lv_grid.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style_gen.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_profiler.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_matrix.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_image_decoder.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_buf.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_fs.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os_none.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache_entry.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_class.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_rb.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_ll.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_cache_instance.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_image_header_cache.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_image_cache.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\display\lv_display.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_event.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_array.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_vector.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_array.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_image.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_triangle.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_rect.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_label.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_bidi.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_image.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_line.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_arc.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw_utils.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend/lv_draw_sw_blend.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_l8.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_al88.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565_swapped.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888_premultiplied.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb888.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_i1.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.c \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h \
+ G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_math.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw_mask.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_assert.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_log.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_mem.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_palette.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color_op.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_math.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\font\lv_font.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\font\lv_symbol_def.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_buf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_image_dsc.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_anim.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\tick\lv_tick.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_ll.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_text.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_sprintf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_bidi.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_grad.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\lv_layout.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\flex/lv_flex.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\grid/lv_grid.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style_gen.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_text.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_profiler.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_matrix.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_image_decoder.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_buf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_fs.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os_none.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache_entry.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_class.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_rb.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_ll.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_cache_instance.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_image_header_cache.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_image_cache.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\display\lv_display.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_event.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_array.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_vector.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_array.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_image.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_triangle.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_rect.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_label.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_bidi.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_image.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_line.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_arc.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw_utils.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend/lv_draw_sw_blend.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_l8.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_al88.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565_swapped.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888_premultiplied.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb888.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_i1.h
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h:
 
-D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h:
+G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h:
 
-d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_math.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_math.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw_mask.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw_mask.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_assert.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_assert.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_log.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_log.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_mem.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_mem.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_palette.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_palette.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color_op.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color_op.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_math.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_math.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_font.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\font\lv_font.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\font\lv_symbol_def.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\font\lv_symbol_def.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_buf.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_buf.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_image_dsc.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_image_dsc.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_anim.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_anim.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\tick\lv_tick.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\tick\lv_tick.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_ll.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_ll.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_text.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_sprintf.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_sprintf.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_bidi.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_bidi.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_grad.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_grad.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\lv_layout.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\lv_layout.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\flex/lv_flex.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\flex/lv_flex.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\layouts\grid/lv_grid.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\layouts\grid/lv_grid.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style_gen.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style_gen.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_style.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_style.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_text.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_text.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_profiler.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_profiler.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_matrix.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_matrix.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_image_decoder.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_image_decoder.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_buf.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_buf.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_fs.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_fs.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os_none.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os_none.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache_entry.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache_entry.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_class.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_class.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_rb.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_rb.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\lv_cache_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\lv_cache_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_ll.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\class/lv_cache_lru_ll.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_cache_instance.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_cache_instance.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_image_header_cache.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_image_header_cache.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\cache\instance/lv_image_cache.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\cache\instance/lv_image_cache.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\display\lv_display.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\display\lv_display.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_event.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_event.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_array.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_array.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_color.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_color.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_area.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_area.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\osal\lv_os.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\osal\lv_os.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_vector.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_vector.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_array.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_array.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_image.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_image.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_triangle.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_triangle.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_rect.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_rect.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_label.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_label.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_bidi.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_bidi.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_image.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_image.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_line.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_line.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\lv_draw_arc.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\lv_draw_arc.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\lv_draw_sw_utils.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\lv_draw_sw_utils.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend/lv_draw_sw_blend.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend/lv_draw_sw_blend.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_l8.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_l8.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_al88.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_al88.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565_swapped.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb565_swapped.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888_premultiplied.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_argb8888_premultiplied.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb888.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_rgb888.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_i1.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\sw\blend\lv_draw_sw_blend_to_i1.h:

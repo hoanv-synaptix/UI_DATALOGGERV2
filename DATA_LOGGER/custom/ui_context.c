@@ -249,10 +249,10 @@ static void ui_context_get_widgets(ui_context_t *ui, ui_widget_refs_t *out)
     out->ta[UI_TEXTAREA_MQTT_USER] = g->scr_base_ta_mqtt_user;
     out->ta[UI_TEXTAREA_MQTT_PASS] = g->scr_base_ta_mqtt_pass;
     out->ta[UI_TEXTAREA_SLAVE_ID] = g->scr_base_ta_slave_id;
-    out->ta[UI_TEXTAREA_MASTER_DEVICE_NAME] = g->scr_base_ta_master_device_name;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_NAME] = NULL;
     out->ta[UI_TEXTAREA_MASTER_DEVICE_SLAVE_ID] = g->scr_base_ta_master_device_slaveid;
     out->ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] = g->scr_base_ta_master_device_address;
-    out->ta[UI_TEXTAREA_MASTER_DEVICE_LENGTH] = g->scr_base_ta_master_device_length;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_LENGTH] = g->scr_base_ta_master_device_quantity;
 
     out->label_wifi_ip = g->scr_base_label_111;
     out->label_wifi_status = g->scr_base_lbl_wifi_status;

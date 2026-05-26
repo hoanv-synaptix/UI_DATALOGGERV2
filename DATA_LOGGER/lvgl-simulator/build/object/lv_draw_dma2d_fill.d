@@ -1,20 +1,20 @@
 build/object/lv_draw_dma2d_fill.o: \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_fill.c \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h \
- D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h \
- d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_fill.c \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h \
+ G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\draw\dma2d\lv_draw_dma2d.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h:
 
-D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h:
+G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h:
 
-d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h:

@@ -1,50 +1,50 @@
 build/object/lv_async.o: \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_async.c \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_async.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h \
- D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h \
- d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer_private.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\tick\lv_tick.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_ll.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_mem.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h \
- d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_async.c \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_async.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h \
+ G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\tick\lv_tick.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_ll.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_mem.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_async.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_async.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_kconfig.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_kconfig.h:
 
-D:/Synaptix/GUI_DATA_LOGGER/DATA_LOGGER/lvgl-simulator/lv_conf.h:
+G:/HoaNV/Projects/UI_DATALOGGERV2/DATA_LOGGER/lvgl-simulator/lv_conf.h:
 
-d:\synaptix\gui_data_logger\data_logger\custom\lv_conf_ext.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\lv_conf_ext.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer_private.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer_private.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_timer.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_timer.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\tick\lv_tick.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\tick\lv_tick.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_ll.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_ll.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_mem.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_mem.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\lv_conf_internal.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\stdlib\lv_string.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\stdlib\lv_string.h:
 
-d:\synaptix\gui_data_logger\data_logger\lvgl\src\misc\lv_types.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\misc\lv_types.h:
