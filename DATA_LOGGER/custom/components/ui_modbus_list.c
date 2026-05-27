@@ -51,6 +51,9 @@ static void edit_btn_cb(lv_event_t *e) {
     snprintf(buf, sizeof(buf), "%d", list[idx].reg_quantity);
     lv_textarea_set_text(g->scr_base_ta_master_device_quantity, buf);
 
+    snprintf(buf, sizeof(buf), "%d", list[idx].reg_addr_remap);
+    lv_textarea_set_text(g->scr_base_ta_master_device_register_mapping, buf);
+
     /* Map function code back to dropdown index */
     uint8_t func = list[idx].func;
     uint16_t dd_idx = 0;
@@ -137,7 +140,11 @@ void ui_modbus_list_render(void) {
         create_cell_label(row, 70, 85, buf);
 
         /* Column: REGISTER TYPE */
-        create_cell_label(row, 170, 170, ui_modbus_backend_func_name(list[i].func));
+        create_cell_label(row, 170, 100, ui_modbus_backend_func_name(list[i].func));
+
+        /* Column: REGISTER REMAP */
+        snprintf(buf, sizeof(buf), "%d", list[i].reg_addr_remap);
+        create_cell_label(row, 280, 90, buf);
 
         /* Column: QUANTITY */
         snprintf(buf, sizeof(buf), "%d", list[i].reg_quantity);
@@ -214,14 +221,35 @@ void ui_modbus_list_handle_apply(ui_context_t *ui) {
     uint16_t dd_sel = lv_dropdown_get_selected(g->scr_base_ddlist_master_device_registers);
     uint8_t func = ui_modbus_backend_dd_index_to_func(dd_sel);
 
+    /* Read remap address from textarea */
+    const char *remap_str = lv_textarea_get_text(g->scr_base_ta_master_device_register_mapping);
+    uint16_t remap_addr = (uint16_t)atoi(remap_str ? remap_str : "0");
+
     /* Add to backend */
-    if (slave_id > 0 && reg_qty > 0 && func > 0) {
-        ui_modbus_backend_add_cmd(slave_id, func, reg_addr, reg_qty);
+    if (slave_id < 1 || slave_id > 247) {
+        lv_obj_set_style_border_color(g->scr_base_ta_master_device_slaveid, lv_palette_main(LV_PALETTE_RED), LV_PART_MAIN);
+        lv_obj_set_style_border_width(g->scr_base_ta_master_device_slaveid, 2, LV_PART_MAIN);
+        return;
+    } else {
+        lv_obj_set_style_border_width(g->scr_base_ta_master_device_slaveid, 0, LV_PART_MAIN);
+    }
+
+    if (reg_qty < 1 || reg_qty > 125) {
+        lv_obj_set_style_border_color(g->scr_base_ta_master_device_quantity, lv_palette_main(LV_PALETTE_RED), LV_PART_MAIN);
+        lv_obj_set_style_border_width(g->scr_base_ta_master_device_quantity, 2, LV_PART_MAIN);
+        return;
+    } else {
+        lv_obj_set_style_border_width(g->scr_base_ta_master_device_quantity, 0, LV_PART_MAIN);
+    }
+
+    if (func > 0) {
+        ui_modbus_backend_add_cmd(slave_id, func, reg_addr, reg_qty, remap_addr);
     }
 
     /* Clear form fields for next entry */
     lv_textarea_set_text(g->scr_base_ta_master_device_slaveid, "");
     lv_textarea_set_text(g->scr_base_ta_master_device_address, "");
     lv_textarea_set_text(g->scr_base_ta_master_device_quantity, "");
+    lv_textarea_set_text(g->scr_base_ta_master_device_register_mapping, "");
     lv_dropdown_set_selected(g->scr_base_ddlist_master_device_registers, 0);
 }

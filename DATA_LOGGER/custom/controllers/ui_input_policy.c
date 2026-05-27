@@ -112,6 +112,45 @@ static void place_overlay(lv_obj_t *overlay, lv_obj_t *parent, lv_obj_t *first, 
     lv_obj_move_foreground(overlay);
 }
 
+void ui_input_policy_init_constraints(ui_context_t *ui)
+{
+    lv_obj_t *ta;
+
+    if (!ui) return;
+
+    /* IP Fields (Numeric + Dot) */
+    const char *ip_chars = "0123456789.";
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_IP);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_SUBNET);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_GATEWAY);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_IP);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_SUBNET);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_GATEWAY);
+    if (ta) { lv_textarea_set_accepted_chars(ta, ip_chars); lv_textarea_set_max_length(ta, 15); }
+
+    /* Numeric Fields */
+    const char *num_chars = "0123456789";
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_MQTT_PORT);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 5); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_SLAVE_ID);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 3); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_MASTER_DEVICE_SLAVEID);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 3); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_MASTER_DEVICE_ADDRESS);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 5); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_MASTER_DEVICE_QUANTITY);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 3); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_MASTER_DEVICE_REMAP);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 5); }
+    ta = ui_context_get_textarea(ui, UI_TEXTAREA_LTE_PIN_CODE);
+    if (ta) { lv_textarea_set_accepted_chars(ta, num_chars); lv_textarea_set_max_length(ta, 8); }
+}
+
 void ui_input_policy_bind(ui_context_t *ui)
 {
     ensure_overlays(ui);
@@ -147,6 +186,8 @@ void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state)
 {
     ui_network_refs_t refs;
     lv_obj_t *wifi_ip_ta;
+    lv_obj_t *wifi_subnet_ta;
+    lv_obj_t *wifi_gateway_ta;
     lv_obj_t *eth_ip_ta;
     lv_obj_t *eth_subnet_ta;
     lv_obj_t *eth_gateway_ta;
@@ -158,6 +199,8 @@ void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state)
     ensure_overlays(ui);
     ui_context_get_network_refs(ui, &refs);
     wifi_ip_ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_IP);
+    wifi_subnet_ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_SUBNET);
+    wifi_gateway_ta = ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_GATEWAY);
     eth_ip_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_IP);
     eth_subnet_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_SUBNET);
     eth_gateway_ta = ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_GATEWAY);
@@ -165,6 +208,8 @@ void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state)
     eth_disabled = state->ethernet_mode == UI_IP_MODE_DHCP;
 
     set_disabled_visual(wifi_ip_ta, wifi_disabled, false);
+    set_disabled_visual(wifi_subnet_ta, wifi_disabled, false);
+    set_disabled_visual(wifi_gateway_ta, wifi_disabled, false);
     set_disabled_visual(refs.label_wifi_ip, wifi_disabled, true);
 
     set_disabled_visual(eth_ip_ta, eth_disabled, false);
@@ -175,7 +220,8 @@ void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state)
     set_disabled_visual(refs.label_ethernet_gateway, eth_disabled, true);
 
     if (s_wifi_overlay && lv_obj_is_valid(s_wifi_overlay)) {
-        place_overlay(s_wifi_overlay, refs.cont_wifi, refs.label_wifi_ip, wifi_ip_ta);
+        lv_obj_t *bottom_obj = wifi_gateway_ta ? wifi_gateway_ta : wifi_ip_ta;
+        place_overlay(s_wifi_overlay, refs.cont_wifi, refs.label_wifi_ip, bottom_obj);
         if (wifi_disabled) lv_obj_clear_flag(s_wifi_overlay, LV_OBJ_FLAG_HIDDEN);
         else lv_obj_add_flag(s_wifi_overlay, LV_OBJ_FLAG_HIDDEN);
     }

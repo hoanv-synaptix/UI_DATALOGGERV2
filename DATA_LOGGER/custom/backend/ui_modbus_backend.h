@@ -35,7 +35,7 @@ void ui_modbus_backend_init(void);
 
 /* Add a new command. Returns true on success, false if full. */
 bool ui_modbus_backend_add_cmd(uint8_t slave_id, uint8_t func,
-                               uint16_t reg_addr, uint16_t reg_quantity);
+                               uint16_t reg_addr, uint16_t reg_quantity, uint16_t reg_addr_remap);
 
 /* Remove a command by index. Returns true on success. */
 bool ui_modbus_backend_remove_cmd(uint16_t index);

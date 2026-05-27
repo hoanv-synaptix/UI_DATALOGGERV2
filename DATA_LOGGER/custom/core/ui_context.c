@@ -44,6 +44,17 @@ typedef struct {
     lv_obj_t *btn_wifi_apply;
     lv_obj_t *btn_ethernet_apply;
     lv_obj_t *btn_lte_apply;
+    lv_obj_t *cont_booting_login;
+    lv_obj_t *btn_login_booting_confirm;
+    lv_obj_t *btn_login_booting_cancel;
+    lv_obj_t *lbl_login_booting_status;
+    lv_obj_t *cont_login_settings;
+    lv_obj_t *btn_login_settings_confirm;
+    lv_obj_t *btn_login_settings_cancel;
+    lv_obj_t *lbl_status_login_setting;
+    lv_obj_t *cont_generate_report;
+    lv_obj_t *btn_generate_report_confirm;
+    lv_obj_t *btn_generate_report_cancel;
     lv_obj_t *cont_dashboard;
     lv_obj_t *cont_analysis;
     lv_obj_t *cont_event_logs;
@@ -74,6 +85,7 @@ typedef struct {
     lv_obj_t *label_ethernet_ip;
     lv_obj_t *label_ethernet_subnet;
     lv_obj_t *label_ethernet_gateway;
+    lv_obj_t *label_ethernet_status;
 } ui_widget_refs_t;
 
 extern lv_ui guider_ui;
@@ -82,36 +94,15 @@ static ui_context_t s_ui_context = {
     .generated = &guider_ui
 };
 
-static void base_screen_loaded_cb(lv_event_t *e)
+// removed base_screen_loaded_cb
+
+static void check_scr_base_timer_cb(lv_timer_t *t)
 {
-    lv_event_code_t code = lv_event_get_code(e);
     lv_ui *g = s_ui_context.generated;
-
-    if (code != LV_EVENT_SCREEN_LOADED) return;
-    if (!g) return;
-
-    custom_init(g);
-}
-
-static void booting_screen_loaded_cb(lv_event_t *e)
-{
-    lv_event_code_t code = lv_event_get_code(e);
-    lv_ui *g = s_ui_context.generated;
-
-    if (code != LV_EVENT_SCREEN_LOADED) return;
-    if (!g) return;
-    if (!g->scr_base || !lv_obj_is_valid(g->scr_base)) return;
-
-    lv_obj_remove_event_cb(g->scr_base, base_screen_loaded_cb);
-    lv_obj_add_event_cb(g->scr_base, base_screen_loaded_cb, LV_EVENT_ALL, g);
-}
-
-static void bind_booting_lifecycle(lv_ui *g)
-{
-    if (!g || !g->scr_booting || !lv_obj_is_valid(g->scr_booting)) return;
-
-    lv_obj_remove_event_cb(g->scr_booting, booting_screen_loaded_cb);
-    lv_obj_add_event_cb(g->scr_booting, booting_screen_loaded_cb, LV_EVENT_ALL, g);
+    if (g && g->scr_base && lv_obj_is_valid(g->scr_base)) {
+        custom_init(g);
+        lv_timer_del(t);
+    }
 }
 
 static void load_booting_screen(lv_ui *g, uint32_t time, uint32_t delay)
@@ -119,9 +110,10 @@ static void load_booting_screen(lv_ui *g, uint32_t time, uint32_t delay)
     if (!g) return;
 
     setup_scr_scr_booting(g);
-    bind_booting_lifecycle(g);
     g->scr_base_del = true;
     lv_screen_load_anim(g->scr_booting, LV_SCR_LOAD_ANIM_NONE, time, delay, true);
+    
+    lv_timer_create(check_scr_base_timer_cb, 50, NULL);
 }
 
 /*
@@ -210,6 +202,18 @@ static void ui_context_get_widgets(ui_context_t *ui, ui_widget_refs_t *out)
     out->btn_wifi_apply = g->scr_base_btn_wifi_apply;
     out->btn_ethernet_apply = g->scr_base_btn_ethernet_apply;
     out->btn_lte_apply = g->scr_base_btn_lte_apply;
+    
+    out->cont_booting_login = g->scr_base_cont_booting_login;
+    out->btn_login_booting_confirm = g->scr_base_btn_login_booting_confirm;
+    out->btn_login_booting_cancel = g->scr_base_btn_login_booting_cancel;
+    out->lbl_login_booting_status = g->scr_base_label_login_booting_status;
+    out->cont_login_settings = g->scr_base_cont_login_settings;
+    out->btn_login_settings_confirm = g->scr_base_btn_login_settings_confirm;
+    out->btn_login_settings_cancel = g->scr_base_btn_login_settings_cancel;
+    out->lbl_status_login_setting = g->scr_base_lbl_status_login_setting;
+    out->cont_generate_report = g->scr_base_cont_generate_report;
+    out->btn_generate_report_confirm = g->scr_base_btn_generate_report_confirm;
+    out->btn_generate_report_cancel = g->scr_base_btn_generate_report_cancel;
 
     out->cont_dashboard = g->scr_base_cont_dashboard;
     out->cont_analysis = g->scr_base_cont_data_analysis;
@@ -240,6 +244,8 @@ static void ui_context_get_widgets(ui_context_t *ui, ui_widget_refs_t *out)
     out->ta[UI_TEXTAREA_WIFI_SSID] = g->scr_base_ta_wifi_ssid;
     out->ta[UI_TEXTAREA_WIFI_PASS] = g->scr_base_ta_wifi_pass;
     out->ta[UI_TEXTAREA_WIFI_IP] = g->scr_base_ta_wifi_ip;
+    out->ta[UI_TEXTAREA_WIFI_SUBNET] = g->scr_base_ta_wifi_subnetmark;
+    out->ta[UI_TEXTAREA_WIFI_GATEWAY] = g->scr_base_ta_wifi_gateway;
     out->ta[UI_TEXTAREA_ETHERNET_IP] = g->scr_base_ta_ethernet_ip;
     out->ta[UI_TEXTAREA_ETHERNET_SUBNET] = g->scr_base_ta_ethernet_subnet;
     out->ta[UI_TEXTAREA_ETHERNET_GATEWAY] = g->scr_base_ta_ethernet_gateway;
@@ -253,15 +259,20 @@ static void ui_context_get_widgets(ui_context_t *ui, ui_widget_refs_t *out)
     out->ta[UI_TEXTAREA_MQTT_PASS] = g->scr_base_ta_mqtt_pass;
     out->ta[UI_TEXTAREA_SLAVE_ID] = g->scr_base_ta_slave_id;
     out->ta[UI_TEXTAREA_MASTER_DEVICE_NAME] = NULL;
-    out->ta[UI_TEXTAREA_MASTER_DEVICE_SLAVE_ID] = g->scr_base_ta_master_device_slaveid;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] = g->scr_base_ta_master_device_slaveid;
     out->ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] = g->scr_base_ta_master_device_address;
-    out->ta[UI_TEXTAREA_MASTER_DEVICE_LENGTH] = g->scr_base_ta_master_device_quantity;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] = g->scr_base_ta_master_device_quantity;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_REMAP] = g->scr_base_ta_master_device_register_mapping;
+    out->ta[UI_TEXTAREA_LOGIN_USER] = g->scr_base_ta_login_booting_user;
+    out->ta[UI_TEXTAREA_LOGIN_PASS] = g->scr_base_ta_login_booting_pass;
+    out->ta[UI_TEXTAREA_SECURE_SETTINGS_PASS] = g->scr_base_ta_login_settings_pass;
 
     out->label_wifi_ip = g->scr_base_label_111;
     out->label_wifi_status = g->scr_base_lbl_wifi_status;
     out->label_ethernet_ip = g->scr_base_label_114;
     out->label_ethernet_subnet = g->scr_base_label_115;
     out->label_ethernet_gateway = g->scr_base_label_116;
+    out->label_ethernet_status = g->scr_base_lbl_ethernet_status;
 }
 
 void ui_context_get_shell_refs(ui_context_t *ui, ui_shell_refs_t *out)
@@ -348,6 +359,7 @@ void ui_context_get_network_refs(ui_context_t *ui, ui_network_refs_t *out)
     out->label_ethernet_ip = refs.label_ethernet_ip;
     out->label_ethernet_subnet = refs.label_ethernet_subnet;
     out->label_ethernet_gateway = refs.label_ethernet_gateway;
+    out->label_ethernet_status = refs.label_ethernet_status;
 }
 
 void ui_context_get_mqtt_refs(ui_context_t *ui, ui_mqtt_refs_t *out)
@@ -402,6 +414,35 @@ void ui_context_get_system_refs(ui_context_t *ui, ui_system_refs_t *out)
     out->btn_generate_report = refs.btn_generate_report;
 }
 
+void ui_context_get_login_refs(ui_context_t *ui, ui_login_refs_t *out)
+{
+    ui_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    ui_context_get_widgets(ui, &refs);
+    out->cont_booting_login = refs.cont_booting_login;
+    out->btn_login_booting_confirm = refs.btn_login_booting_confirm;
+    out->btn_login_booting_cancel = refs.btn_login_booting_cancel;
+    out->lbl_login_booting_status = refs.lbl_login_booting_status;
+    out->cont_login_settings = refs.cont_login_settings;
+    out->btn_login_settings_confirm = refs.btn_login_settings_confirm;
+    out->btn_login_settings_cancel = refs.btn_login_settings_cancel;
+    out->lbl_status_login_setting = refs.lbl_status_login_setting;
+}
+
+void ui_context_get_report_refs(ui_context_t *ui, ui_report_refs_t *out)
+{
+    ui_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    ui_context_get_widgets(ui, &refs);
+    out->cont_generate_report = refs.cont_generate_report;
+    out->btn_generate_report_confirm = refs.btn_generate_report_confirm;
+    out->btn_generate_report_cancel = refs.btn_generate_report_cancel;
+}
+
 lv_obj_t *ui_context_get_base_screen(ui_context_t *ui)
 {
     ui_shell_refs_t refs;
@@ -442,7 +483,9 @@ lv_obj_t *ui_context_resolve_textarea_container(ui_context_t *ui, lv_obj_t *ta)
     ui_context_get_widgets(ui, &refs);
     if (ta == refs.ta[UI_TEXTAREA_WIFI_SSID] ||
         ta == refs.ta[UI_TEXTAREA_WIFI_PASS] ||
-        ta == refs.ta[UI_TEXTAREA_WIFI_IP]) {
+        ta == refs.ta[UI_TEXTAREA_WIFI_IP] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
         return refs.cont_wifi;
     }
     if (ta == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||
@@ -466,10 +509,18 @@ lv_obj_t *ui_context_resolve_textarea_container(ui_context_t *ui, lv_obj_t *ta)
         return refs.cont_slave;
     }
     if (ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_NAME] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_SLAVE_ID] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] ||
         ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_LENGTH]) {
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_REMAP]) {
         return refs.cont_master_device_form;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_LOGIN_USER] ||
+        ta == refs.ta[UI_TEXTAREA_LOGIN_PASS]) {
+        return refs.cont_booting_login;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_SECURE_SETTINGS_PASS]) {
+        return refs.cont_login_settings;
     }
 
     return lv_obj_get_parent(ta);
@@ -482,7 +533,9 @@ ui_input_group_t ui_context_classify_input(ui_context_t *ui, lv_obj_t *obj)
     if (!obj) return UI_INPUT_GROUP_DEFAULT;
 
     ui_context_get_widgets(ui, &refs);
-    if (obj == refs.ta[UI_TEXTAREA_WIFI_IP]) {
+    if (obj == refs.ta[UI_TEXTAREA_WIFI_IP] ||
+        obj == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        obj == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
         return UI_INPUT_GROUP_WIFI_STATIC;
     }
     if (obj == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||

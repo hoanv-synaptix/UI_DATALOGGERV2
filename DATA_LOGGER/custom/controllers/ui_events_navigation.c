@@ -18,7 +18,7 @@ static void dispatch_simple(lv_event_t *e, ui_action_t action)
 static void btn_dashboard_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_DASHBOARD); }
 static void btn_analysis_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_ANALYSIS); }
 static void btn_event_logs_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_EVENT_LOGS); }
-static void btn_settings_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_SETTINGS_MENU); }
+static void btn_settings_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_SECURE_SETTINGS); }
 static void btn_restart_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_RESTART_DIALOG); }
 static void btn_restart_cancel_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_CANCEL_DIALOG); }
 static void btn_restart_confirm_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_CONFIRM_RESTART); }
@@ -35,7 +35,13 @@ static void btn_master_adddevice_clicked_cb(lv_event_t *e) { dispatch_simple(e, 
 static void btn_master_viewlist_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_MODBUS_DEVICE_VIEWLIST); }
 static void btn_master_device_apply_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_APPLY_MODBUS_DEVICE); }
 static void btn_device_overlay_back_to_modbus_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_BACK_TO_MODBUS); }
-static void btn_generate_report_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_GENERATE_REPORT); }
+static void btn_generate_report_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SHOW_GENERATE_REPORT); }
+static void btn_generate_report_confirm_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_GENERATE_REPORT); }
+static void btn_generate_report_cancel_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_CANCEL_GENERATE_REPORT); }
+static void btn_login_booting_confirm_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_LOGIN); }
+static void btn_login_booting_cancel_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_CANCEL_LOGIN); }
+static void btn_login_settings_confirm_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_SECURE_SETTINGS); }
+static void btn_login_settings_cancel_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_CANCEL_SECURE_SETTINGS); }
 static void btn_wifi_apply_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_WIFI_CONFIG); }
 static void btn_ethernet_apply_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_ETHERNET_CONFIG); }
 static void btn_lte_apply_clicked_cb(lv_event_t *e) { dispatch_simple(e, UI_ACTION_SUBMIT_LTE_CONFIG); }
@@ -102,6 +108,8 @@ void ui_events_navigation_init(ui_context_t *ui)
     ui_network_refs_t network_refs;
     ui_modbus_refs_t modbus_refs;
     ui_system_refs_t system_refs;
+    ui_login_refs_t login_refs;
+    ui_report_refs_t report_refs;
 
     if (!ui) return;
     ui_context_get_shell_refs(ui, &shell_refs);
@@ -110,6 +118,8 @@ void ui_events_navigation_init(ui_context_t *ui)
     ui_context_get_network_refs(ui, &network_refs);
     ui_context_get_modbus_refs(ui, &modbus_refs);
     ui_context_get_system_refs(ui, &system_refs);
+    ui_context_get_login_refs(ui, &login_refs);
+    ui_context_get_report_refs(ui, &report_refs);
 
     bind_cb(shell_refs.btn_dashboard, btn_dashboard_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(shell_refs.btn_analysis, btn_analysis_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
@@ -137,6 +147,12 @@ void ui_events_navigation_init(ui_context_t *ui)
     bind_cb(modbus_refs.btn_deviceconfig_back, btn_device_overlay_back_to_modbus_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(modbus_refs.btn_devicelist_back, btn_device_overlay_back_to_modbus_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(system_refs.btn_generate_report, btn_generate_report_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(report_refs.btn_generate_report_confirm, btn_generate_report_confirm_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(report_refs.btn_generate_report_cancel, btn_generate_report_cancel_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(login_refs.btn_login_booting_confirm, btn_login_booting_confirm_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(login_refs.btn_login_booting_cancel, btn_login_booting_cancel_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(login_refs.btn_login_settings_confirm, btn_login_settings_confirm_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
+    bind_cb(login_refs.btn_login_settings_cancel, btn_login_settings_cancel_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(network_refs.btn_wifi_apply, btn_wifi_apply_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(network_refs.btn_ethernet_apply, btn_ethernet_apply_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);
     bind_cb(network_refs.btn_lte_apply, btn_lte_apply_clicked_cb, LV_EVENT_SHORT_CLICKED, ui);

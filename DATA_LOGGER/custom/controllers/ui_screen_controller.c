@@ -140,27 +140,37 @@ static void textarea_event_cb(lv_event_t *e)
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t *ta = lv_event_get_target(e);
     lv_obj_t *kb = get_keyboard(s_ctx.ui);
-
+    
     if (!is_current_base_object(ta)) return;
 
-    if (code == LV_EVENT_FOCUSED || code == LV_EVENT_CLICKED) {
+    if (code == LV_EVENT_READY || code == LV_EVENT_CANCEL) {
+        if (s_ctx.active_textarea == ta) {
+            reset_input_session(true);
+        }
+    } else if (code == LV_EVENT_FOCUSED || code == LV_EVENT_CLICKED) {
         if (!ui_input_policy_is_enabled(s_ctx.ui, ta)) {
-            dismiss_keyboard();
-            return;
+            lv_obj_clear_state(ta, LV_STATE_FOCUSED);
+        } else {
+            const char *acc = lv_textarea_get_accepted_chars(ta);
+            s_ctx.active_textarea = ta;
+            if (kb) {
+                if (acc != NULL && strlen(acc) > 0) {
+                    lv_keyboard_set_mode(kb, LV_KEYBOARD_MODE_NUMBER);
+                } else {
+                    lv_keyboard_set_mode(kb, LV_KEYBOARD_MODE_TEXT_LOWER);
+                }
+                lv_keyboard_set_textarea(kb, ta);
+                lv_obj_remove_flag(kb, LV_OBJ_FLAG_HIDDEN);
+            }
+            if (code == LV_EVENT_FOCUSED) {
+                schedule_keyboard_adjust(ta);
+            }
         }
-        if (kb && lv_indev_active() && lv_indev_get_type(lv_indev_active()) != LV_INDEV_TYPE_KEYPAD) {
-            lv_keyboard_set_textarea(kb, ta);
-            lv_obj_remove_flag(kb, LV_OBJ_FLAG_HIDDEN);
+    } else if (code == LV_EVENT_DEFOCUSED) {
+        if (s_ctx.active_textarea == ta) {
+            reset_input_session(kb ? false : true);
+            if (kb) lv_keyboard_set_textarea(kb, NULL);
         }
-        s_ctx.active_textarea = ta;
-        schedule_keyboard_adjust(ta);
-    } else if (code == LV_EVENT_DEFOCUSED || code == LV_EVENT_READY || code == LV_EVENT_CANCEL) {
-        reset_input_session(false);
-        if (kb) {
-            lv_keyboard_set_textarea(kb, NULL);
-            lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
-        }
-        if (s_ctx.active_textarea == ta) s_ctx.active_textarea = NULL;
     }
 }
 
@@ -211,6 +221,31 @@ static void bind_textareas(ui_context_t *ui)
     }
 }
 
+static void login_success_timer_cb(lv_timer_t * t)
+{
+    ui_context_t *ui = s_ctx.ui;
+    ui_login_refs_t login_refs;
+    
+    lv_textarea_set_text(ui_context_get_textarea(ui, UI_TEXTAREA_LOGIN_USER), "");
+    lv_textarea_set_text(ui_context_get_textarea(ui, UI_TEXTAREA_LOGIN_PASS), "");
+    ui_context_get_login_refs(ui, &login_refs);
+    lv_label_set_text(login_refs.lbl_login_booting_status, "Enter password to access settings.");
+    lv_obj_set_style_text_color(login_refs.lbl_login_booting_status, lv_color_hex(0xABABAB), 0);
+    
+    ui_screen_controller_dispatch(ui, UI_ACTION_SHOW_DASHBOARD, 0);
+    lv_timer_del(t);
+}
+
+static void secure_settings_success_timer_cb(lv_timer_t * t)
+{
+    ui_context_t *ui = s_ctx.ui;
+    
+    lv_textarea_set_text(ui_context_get_textarea(ui, UI_TEXTAREA_SECURE_SETTINGS_PASS), "");
+    
+    ui_screen_controller_dispatch(ui, UI_ACTION_SHOW_SETTINGS_MENU, 0);
+    lv_timer_del(t);
+}
+
 static void handle_action_effect(ui_context_t *ui, const ui_runtime_state_t *state, ui_action_effect_t effect)
 {
     (void)ui;
@@ -221,6 +256,12 @@ static void handle_action_effect(ui_context_t *ui, const ui_runtime_state_t *sta
         ui_platform_port_submit_json(UI_PLATFORM_TOPIC_SYSTEM_CONTROL, "{\"cmd\": \"restart\"}");
     } else if (effect == UI_ACTION_EFFECT_REQUEST_FACTORY_RESET) {
         ui_platform_port_submit_json(UI_PLATFORM_TOPIC_SYSTEM_CONTROL, "{\"cmd\": \"factory_reset\"}");
+    } else if (effect == UI_ACTION_EFFECT_SUBMIT_GENERATE_REPORT) {
+        ui_platform_port_submit_json(UI_PLATFORM_TOPIC_SYSTEM_CONTROL, "{\"cmd\": \"generate_report\"}");
+    } else if (effect == UI_ACTION_EFFECT_LOGIN_SUCCESS) {
+        lv_timer_create(login_success_timer_cb, 1000, ui);
+    } else if (effect == UI_ACTION_EFFECT_SECURE_SETTINGS_SUCCESS) {
+        lv_timer_create(secure_settings_success_timer_cb, 1000, ui);
     }
 }
 
@@ -260,6 +301,7 @@ void ui_screen_controller_enter(ui_context_t *ui)
 
     ui_state_init_defaults(&s_ctx.state);
     (void)ui_platform_port_load_initial_state(&s_ctx.state);
+    ui_input_policy_init_constraints(ui);
     ui_input_policy_bind(ui);
     ui_events_navigation_init(ui);
     bind_textareas(ui);

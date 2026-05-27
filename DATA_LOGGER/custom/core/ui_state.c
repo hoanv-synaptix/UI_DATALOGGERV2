@@ -1,7 +1,10 @@
 #include "ui_state.h"
+#include <string.h>
+#include <stdio.h>
 #include "lvgl.h"
 #include "ui_dashboard.h"
 #include "ui_modbus_list.h"
+#include "ui_auth.h"
 
 static void hide_obj(lv_obj_t *obj)
 {
@@ -33,32 +36,28 @@ static void set_sidebar_button_active(lv_obj_t *button, bool active)
 static void set_sidebar_active(ui_context_t *ui, ui_main_view_t active)
 {
     ui_shell_refs_t refs;
-    lv_obj_t *buttons[] = {
-        NULL, NULL, NULL, NULL
-    };
-    uint32_t i;
 
     ui_context_get_shell_refs(ui, &refs);
-    buttons[0] = refs.btn_dashboard;
-    buttons[1] = refs.btn_analysis;
-    buttons[2] = refs.btn_event_logs;
-    buttons[3] = refs.btn_settings;
+    if (!refs.btn_dashboard) return;
 
-    for (i = 0U; i < 4U; ++i) {
-        if (!buttons[i]) continue;
-        set_sidebar_button_active(buttons[i], (uint32_t)active == i);
-    }
+    set_sidebar_button_active(refs.btn_dashboard, active == UI_MAIN_VIEW_DASHBOARD);
+    set_sidebar_button_active(refs.btn_analysis, active == UI_MAIN_VIEW_ANALYSIS);
+    set_sidebar_button_active(refs.btn_event_logs, active == UI_MAIN_VIEW_EVENT_LOGS);
+    set_sidebar_button_active(refs.btn_settings, active == UI_MAIN_VIEW_SETTINGS);
 }
 
 static void hide_all_main(ui_context_t *ui)
 {
     ui_main_view_refs_t refs;
+    ui_login_refs_t login_refs;
 
     ui_context_get_main_view_refs(ui, &refs);
+    ui_context_get_login_refs(ui, &login_refs);
     hide_obj(refs.cont_dashboard);
     hide_obj(refs.cont_analysis);
     hide_obj(refs.cont_event_logs);
     hide_obj(refs.cont_hw);
+    hide_obj(login_refs.cont_booting_login);
 }
 
 static void hide_all_settings(ui_context_t *ui)
@@ -86,10 +85,16 @@ static void hide_all_net_transports(ui_context_t *ui)
 static void hide_all_dialogs(ui_context_t *ui)
 {
     ui_system_refs_t refs;
+    ui_login_refs_t login_refs;
+    ui_report_refs_t report_refs;
 
     ui_context_get_system_refs(ui, &refs);
+    ui_context_get_login_refs(ui, &login_refs);
+    ui_context_get_report_refs(ui, &report_refs);
     hide_obj(refs.cont_restart);
     hide_obj(refs.cont_restore);
+    hide_obj(login_refs.cont_login_settings);
+    hide_obj(report_refs.cont_generate_report);
 }
 
 static void hide_all_modbus_overlays(ui_context_t *ui)
@@ -114,6 +119,18 @@ static const char *connection_status_text(ui_connection_status_t status)
     default:
         return "Disconnected";
     }
+}
+
+static bool is_valid_ip(const char *ip) {
+    int a, b, c, d;
+    if (!ip || strlen(ip) == 0) return false;
+    if (sscanf(ip, "%d.%d.%d.%d", &a, &b, &c, &d) == 4) {
+        if (a >= 0 && a <= 255 && b >= 0 && b <= 255 &&
+            c >= 0 && c <= 255 && d >= 0 && d <= 255) {
+            return true;
+        }
+    }
+    return false;
 }
 
 static void render_settings_content(ui_context_t *ui, const ui_runtime_state_t *state)
@@ -181,7 +198,7 @@ static void render_settings_content(ui_context_t *ui, const ui_runtime_state_t *
 void ui_state_init_defaults(ui_runtime_state_t *state)
 {
     if (!state) return;
-    state->main_view = UI_MAIN_VIEW_DASHBOARD;
+    state->main_view = UI_MAIN_VIEW_LOGIN;
     state->settings_view = UI_SETTINGS_VIEW_MENU;
     state->dialog = UI_DIALOG_NONE;
     state->net_transport = UI_NET_TRANSPORT_ETHERNET;
@@ -305,6 +322,61 @@ ui_action_effect_t ui_state_dispatch(ui_runtime_state_t *state, ui_action_t acti
         state->main_view = state->dialog_return_main_view;
         state->settings_view = state->dialog_return_settings_view;
         return UI_ACTION_EFFECT_REQUEST_FACTORY_RESET;
+    case UI_ACTION_SHOW_GENERATE_REPORT:
+        save_dialog_return_target(state);
+        state->dialog = UI_DIALOG_GENERATE_REPORT;
+        state->modbus_overlay = UI_MODBUS_OVERLAY_NONE;
+        break;
+    case UI_ACTION_SHOW_SECURE_SETTINGS:
+        save_dialog_return_target(state);
+        state->dialog = UI_DIALOG_SECURE_SETTINGS;
+        state->modbus_overlay = UI_MODBUS_OVERLAY_NONE;
+        {
+            ui_login_refs_t login_refs;
+            ui_context_get_login_refs(ui_context_get(), &login_refs);
+            lv_label_set_text(login_refs.lbl_status_login_setting, "Enter password to access settings.");
+            lv_obj_set_style_text_color(login_refs.lbl_status_login_setting, lv_color_hex(0xABABAB), 0);
+        }
+        break;
+    case UI_ACTION_CANCEL_SECURE_SETTINGS:
+    case UI_ACTION_CANCEL_GENERATE_REPORT:
+        state->dialog = UI_DIALOG_NONE;
+        state->main_view = state->dialog_return_main_view;
+        state->settings_view = state->dialog_return_settings_view;
+        break;
+    case UI_ACTION_SUBMIT_SECURE_SETTINGS:
+        {
+            const char *pass = lv_textarea_get_text(ui_context_get_textarea(ui_context_get(), UI_TEXTAREA_SECURE_SETTINGS_PASS));
+            ui_login_refs_t login_refs;
+            ui_context_get_login_refs(ui_context_get(), &login_refs);
+            if (ui_auth_verify_secure_settings(pass)) {
+                lv_label_set_text(login_refs.lbl_status_login_setting, "Verification successful!");
+                lv_obj_set_style_text_color(login_refs.lbl_status_login_setting, lv_palette_main(LV_PALETTE_GREEN), 0);
+                return UI_ACTION_EFFECT_SECURE_SETTINGS_SUCCESS;
+            } else {
+                lv_label_set_text(login_refs.lbl_status_login_setting, "Incorrect password!");
+                lv_obj_set_style_text_color(login_refs.lbl_status_login_setting, lv_palette_main(LV_PALETTE_RED), 0);
+            }
+        }
+        break;
+    case UI_ACTION_SUBMIT_LOGIN:
+        {
+            const char *user = lv_textarea_get_text(ui_context_get_textarea(ui_context_get(), UI_TEXTAREA_LOGIN_USER));
+            const char *pass = lv_textarea_get_text(ui_context_get_textarea(ui_context_get(), UI_TEXTAREA_LOGIN_PASS));
+            ui_login_refs_t login_refs;
+            ui_context_get_login_refs(ui_context_get(), &login_refs);
+            if (ui_auth_verify_login(user, pass)) {
+                lv_label_set_text(login_refs.lbl_login_booting_status, "Login successful!");
+                lv_obj_set_style_text_color(login_refs.lbl_login_booting_status, lv_palette_main(LV_PALETTE_GREEN), 0);
+                return UI_ACTION_EFFECT_LOGIN_SUCCESS;
+            } else {
+                lv_label_set_text(login_refs.lbl_login_booting_status, "Wrong username or password!");
+                lv_obj_set_style_text_color(login_refs.lbl_login_booting_status, lv_palette_main(LV_PALETTE_RED), 0);
+            }
+        }
+        break;
+    case UI_ACTION_CANCEL_LOGIN:
+        break;
     case UI_ACTION_SET_NET_TRANSPORT:
         state->net_transport = value == 1U ? UI_NET_TRANSPORT_WIFI : (value == 2U ? UI_NET_TRANSPORT_LTE : UI_NET_TRANSPORT_ETHERNET);
         state->main_view = UI_MAIN_VIEW_SETTINGS;
@@ -351,21 +423,56 @@ ui_action_effect_t ui_state_dispatch(ui_runtime_state_t *state, ui_action_t acti
         state->modbus_overlay = UI_MODBUS_OVERLAY_NONE;
         break;
     case UI_ACTION_SUBMIT_GENERATE_REPORT:
+        state->dialog = UI_DIALOG_NONE;
+        state->main_view = state->dialog_return_main_view;
+        state->settings_view = state->dialog_return_settings_view;
         return UI_ACTION_EFFECT_SUBMIT_GENERATE_REPORT;
     case UI_ACTION_SUBMIT_WIFI_CONFIG:
-        state->main_view = UI_MAIN_VIEW_SETTINGS;
-        state->settings_view = UI_SETTINGS_VIEW_NET;
-        state->dialog = UI_DIALOG_NONE;
-        state->net_transport = UI_NET_TRANSPORT_WIFI;
-        state->live.wifi_connected = false;
-        state->live.wifi_status = UI_CONNECTION_STATUS_CONNECTING;
-        return UI_ACTION_EFFECT_SUBMIT_WIFI_CONFIG;
+        {
+            if (state->wifi_mode == UI_IP_MODE_STATIC) {
+                ui_context_t *ui = ui_context_get();
+                const char *ip = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_IP));
+                const char *gw = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_GATEWAY));
+                const char *sn = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_WIFI_SUBNET));
+                if (!is_valid_ip(ip) || !is_valid_ip(gw) || !is_valid_ip(sn)) {
+                    ui_network_refs_t net_refs;
+                    ui_context_get_network_refs(ui, &net_refs);
+                    if (net_refs.label_wifi_status) {
+                        lv_label_set_text(net_refs.label_wifi_status, "Invalid IP/GW/Subnet!");
+                    }
+                    return UI_ACTION_EFFECT_NONE;
+                }
+            }
+            state->main_view = UI_MAIN_VIEW_SETTINGS;
+            state->settings_view = UI_SETTINGS_VIEW_NET;
+            state->dialog = UI_DIALOG_NONE;
+            state->net_transport = UI_NET_TRANSPORT_WIFI;
+            state->live.wifi_connected = false;
+            state->live.wifi_status = UI_CONNECTION_STATUS_CONNECTING;
+            return UI_ACTION_EFFECT_SUBMIT_WIFI_CONFIG;
+        }
     case UI_ACTION_SUBMIT_ETHERNET_CONFIG:
-        state->main_view = UI_MAIN_VIEW_SETTINGS;
-        state->settings_view = UI_SETTINGS_VIEW_NET;
-        state->dialog = UI_DIALOG_NONE;
-        state->net_transport = UI_NET_TRANSPORT_ETHERNET;
-        return UI_ACTION_EFFECT_SUBMIT_ETHERNET_CONFIG;
+        {
+            if (state->ethernet_mode == UI_IP_MODE_STATIC) {
+                ui_context_t *ui = ui_context_get();
+                const char *ip = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_IP));
+                const char *gw = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_GATEWAY));
+                const char *sn = lv_textarea_get_text(ui_context_get_textarea(ui, UI_TEXTAREA_ETHERNET_SUBNET));
+                if (!is_valid_ip(ip) || !is_valid_ip(gw) || !is_valid_ip(sn)) {
+                    ui_network_refs_t net_refs;
+                    ui_context_get_network_refs(ui, &net_refs);
+                    if (net_refs.label_ethernet_status) {
+                        lv_label_set_text(net_refs.label_ethernet_status, "Invalid IP/GW/Subnet!");
+                    }
+                    return UI_ACTION_EFFECT_NONE;
+                }
+            }
+            state->main_view = UI_MAIN_VIEW_SETTINGS;
+            state->settings_view = UI_SETTINGS_VIEW_NET;
+            state->dialog = UI_DIALOG_NONE;
+            state->net_transport = UI_NET_TRANSPORT_ETHERNET;
+            return UI_ACTION_EFFECT_SUBMIT_ETHERNET_CONFIG;
+        }
     case UI_ACTION_SUBMIT_LTE_CONFIG:
         state->main_view = UI_MAIN_VIEW_SETTINGS;
         state->settings_view = UI_SETTINGS_VIEW_NET;
@@ -404,8 +511,23 @@ void ui_state_render(ui_context_t *ui, const ui_runtime_state_t *state)
         show_obj(system_refs.cont_restart);
     } else if (state->dialog == UI_DIALOG_RESTORE) {
         show_obj(system_refs.cont_restore);
+    } else if (state->dialog == UI_DIALOG_SECURE_SETTINGS) {
+        ui_login_refs_t login_refs;
+        ui_context_get_login_refs(ui, &login_refs);
+        show_obj(login_refs.cont_login_settings);
+    } else if (state->dialog == UI_DIALOG_GENERATE_REPORT) {
+        ui_report_refs_t report_refs;
+        ui_context_get_report_refs(ui, &report_refs);
+        show_obj(report_refs.cont_generate_report);
     } else {
         switch (state->main_view) {
+        case UI_MAIN_VIEW_LOGIN:
+            {
+                ui_login_refs_t login_refs;
+                ui_context_get_login_refs(ui, &login_refs);
+                show_obj(login_refs.cont_booting_login);
+            }
+            break;
         case UI_MAIN_VIEW_ANALYSIS:
             show_obj(main_refs.cont_analysis);
             break;

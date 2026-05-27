@@ -2022,6 +2022,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_menu, 0, 35);
     lv_obj_set_size(ui->scr_base_cont_menu, 677, 374);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_menu, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_menu, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_menu, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_menu, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -3552,119 +3553,119 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_text_font(ui->scr_base_btn_wifi_apply, &lv_font_Roboto_Black_16, LV_PART_MAIN|LV_STATE_DISABLED);
     lv_obj_set_style_text_opa(ui->scr_base_btn_wifi_apply, 255, LV_PART_MAIN|LV_STATE_DISABLED);
 
-    //Write codes scr_base_ta_1
-    ui->scr_base_ta_1 = lv_textarea_create(ui->scr_base_cont_wifi);
-    lv_obj_set_pos(ui->scr_base_ta_1, 215, 112);
-    lv_obj_set_size(ui->scr_base_ta_1, 180, 38);
-    lv_textarea_set_text(ui->scr_base_ta_1, "");
-    lv_textarea_set_placeholder_text(ui->scr_base_ta_1, "Enter subnet mark...");
-    lv_textarea_set_password_bullet(ui->scr_base_ta_1, "*");
-    lv_textarea_set_password_mode(ui->scr_base_ta_1, false);
-    lv_textarea_set_one_line(ui->scr_base_ta_1, true);
-    lv_textarea_set_accepted_chars(ui->scr_base_ta_1, "");
-    lv_textarea_set_max_length(ui->scr_base_ta_1, 32);
+    //Write codes scr_base_ta_wifi_subnetmark
+    ui->scr_base_ta_wifi_subnetmark = lv_textarea_create(ui->scr_base_cont_wifi);
+    lv_obj_set_pos(ui->scr_base_ta_wifi_subnetmark, 215, 112);
+    lv_obj_set_size(ui->scr_base_ta_wifi_subnetmark, 180, 38);
+    lv_textarea_set_text(ui->scr_base_ta_wifi_subnetmark, "");
+    lv_textarea_set_placeholder_text(ui->scr_base_ta_wifi_subnetmark, "Enter subnet mark...");
+    lv_textarea_set_password_bullet(ui->scr_base_ta_wifi_subnetmark, "*");
+    lv_textarea_set_password_mode(ui->scr_base_ta_wifi_subnetmark, false);
+    lv_textarea_set_one_line(ui->scr_base_ta_wifi_subnetmark, true);
+    lv_textarea_set_accepted_chars(ui->scr_base_ta_wifi_subnetmark, "");
+    lv_textarea_set_max_length(ui->scr_base_ta_wifi_subnetmark, 32);
 #if LV_USE_KEYBOARD
-    lv_obj_add_event_cb(ui->scr_base_ta_1, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+    lv_obj_add_event_cb(ui->scr_base_ta_wifi_subnetmark, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
 #endif
 
-    //Write style for scr_base_ta_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_text_color(ui->scr_base_ta_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_ta_1, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_1, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->scr_base_ta_1, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_ta_1, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_1, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui->scr_base_ta_1, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_1, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scr_base_ta_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scr_base_ta_1, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_1, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_1, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_1, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_1, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_wifi_subnetmark, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_base_ta_wifi_subnetmark, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_wifi_subnetmark, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_base_ta_wifi_subnetmark, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_ta_wifi_subnetmark, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_subnetmark, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_subnetmark, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_base_ta_wifi_subnetmark, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_wifi_subnetmark, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_base_ta_wifi_subnetmark, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_wifi_subnetmark, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_wifi_subnetmark, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_wifi_subnetmark, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_wifi_subnetmark, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_subnetmark, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write style for scr_base_ta_1, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
-    lv_obj_set_style_text_color(ui->scr_base_ta_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_font(ui->scr_base_ta_1, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_1, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_1, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_1, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_1, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_width(ui->scr_base_ta_1, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_1, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_color(ui->scr_base_ta_1, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_side(ui->scr_base_ta_1, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_1, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_1, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_1, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_1, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_radius(ui->scr_base_ta_1, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    //Write style for scr_base_ta_wifi_subnetmark, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_base_ta_wifi_subnetmark, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_wifi_subnetmark, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_subnetmark, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_subnetmark, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_base_ta_wifi_subnetmark, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_wifi_subnetmark, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_base_ta_wifi_subnetmark, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_wifi_subnetmark, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_wifi_subnetmark, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_wifi_subnetmark, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_wifi_subnetmark, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_subnetmark, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
-    //Write style for scr_base_ta_1, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_1, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_1, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_1, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_1, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_wifi_subnetmark, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_subnetmark, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_subnetmark, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_subnetmark, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_subnetmark, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
-    //Write codes scr_base_ta_2
-    ui->scr_base_ta_2 = lv_textarea_create(ui->scr_base_cont_wifi);
-    lv_obj_set_pos(ui->scr_base_ta_2, 407, 112);
-    lv_obj_set_size(ui->scr_base_ta_2, 180, 38);
-    lv_textarea_set_text(ui->scr_base_ta_2, "");
-    lv_textarea_set_placeholder_text(ui->scr_base_ta_2, "Enter gatewaty...");
-    lv_textarea_set_password_bullet(ui->scr_base_ta_2, "*");
-    lv_textarea_set_password_mode(ui->scr_base_ta_2, false);
-    lv_textarea_set_one_line(ui->scr_base_ta_2, true);
-    lv_textarea_set_accepted_chars(ui->scr_base_ta_2, "");
-    lv_textarea_set_max_length(ui->scr_base_ta_2, 32);
+    //Write codes scr_base_ta_wifi_gateway
+    ui->scr_base_ta_wifi_gateway = lv_textarea_create(ui->scr_base_cont_wifi);
+    lv_obj_set_pos(ui->scr_base_ta_wifi_gateway, 407, 112);
+    lv_obj_set_size(ui->scr_base_ta_wifi_gateway, 180, 38);
+    lv_textarea_set_text(ui->scr_base_ta_wifi_gateway, "");
+    lv_textarea_set_placeholder_text(ui->scr_base_ta_wifi_gateway, "Enter gatewaty...");
+    lv_textarea_set_password_bullet(ui->scr_base_ta_wifi_gateway, "*");
+    lv_textarea_set_password_mode(ui->scr_base_ta_wifi_gateway, false);
+    lv_textarea_set_one_line(ui->scr_base_ta_wifi_gateway, true);
+    lv_textarea_set_accepted_chars(ui->scr_base_ta_wifi_gateway, "");
+    lv_textarea_set_max_length(ui->scr_base_ta_wifi_gateway, 32);
 #if LV_USE_KEYBOARD
-    lv_obj_add_event_cb(ui->scr_base_ta_2, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+    lv_obj_add_event_cb(ui->scr_base_ta_wifi_gateway, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
 #endif
 
-    //Write style for scr_base_ta_2, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_text_color(ui->scr_base_ta_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_ta_2, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_2, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->scr_base_ta_2, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_ta_2, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_2, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_2, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui->scr_base_ta_2, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_2, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scr_base_ta_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scr_base_ta_2, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_2, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_2, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_2, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_2, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_2, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_wifi_gateway, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_base_ta_wifi_gateway, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_wifi_gateway, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_base_ta_wifi_gateway, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_ta_wifi_gateway, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_gateway, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_gateway, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_base_ta_wifi_gateway, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_wifi_gateway, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_base_ta_wifi_gateway, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_wifi_gateway, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_wifi_gateway, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_wifi_gateway, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_wifi_gateway, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_gateway, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write style for scr_base_ta_2, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
-    lv_obj_set_style_text_color(ui->scr_base_ta_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_font(ui->scr_base_ta_2, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_2, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_2, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_2, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_2, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_width(ui->scr_base_ta_2, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_2, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_color(ui->scr_base_ta_2, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_side(ui->scr_base_ta_2, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_2, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_2, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_2, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_2, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_radius(ui->scr_base_ta_2, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    //Write style for scr_base_ta_wifi_gateway, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_base_ta_wifi_gateway, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_wifi_gateway, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_gateway, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_gateway, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_base_ta_wifi_gateway, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_wifi_gateway, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_base_ta_wifi_gateway, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_wifi_gateway, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_wifi_gateway, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_wifi_gateway, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_wifi_gateway, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_gateway, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
-    //Write style for scr_base_ta_2, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_2, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_2, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_2, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_2, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_wifi_gateway, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_wifi_gateway, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_wifi_gateway, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_wifi_gateway, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_wifi_gateway, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
     //Write codes scr_base_label_213
     ui->scr_base_label_213 = lv_label_create(ui->scr_base_cont_wifi);
@@ -3717,7 +3718,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_ethernet, 23, 14);
     lv_obj_set_size(ui->scr_base_cont_ethernet, 612, 290);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_ethernet, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_ethernet, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_ethernet, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_ethernet, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -4267,6 +4267,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_lte, 23, 11);
     lv_obj_set_size(ui->scr_base_cont_lte, 612, 290);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_lte, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_lte, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_lte, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_lte, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -8560,62 +8561,62 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_master_device_quantity, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->scr_base_ta_master_device_quantity, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
-    //Write codes scr_base_ta_3
-    ui->scr_base_ta_3 = lv_textarea_create(ui->scr_base_cont_63);
-    lv_obj_set_pos(ui->scr_base_ta_3, 21, 245);
-    lv_obj_set_size(ui->scr_base_ta_3, 560, 38);
-    lv_textarea_set_text(ui->scr_base_ta_3, "");
-    lv_textarea_set_placeholder_text(ui->scr_base_ta_3, "Enter register address remapping...");
-    lv_textarea_set_password_bullet(ui->scr_base_ta_3, "*");
-    lv_textarea_set_password_mode(ui->scr_base_ta_3, false);
-    lv_textarea_set_one_line(ui->scr_base_ta_3, true);
-    lv_textarea_set_accepted_chars(ui->scr_base_ta_3, "");
-    lv_textarea_set_max_length(ui->scr_base_ta_3, 32);
+    //Write codes scr_base_ta_master_device_register_mapping
+    ui->scr_base_ta_master_device_register_mapping = lv_textarea_create(ui->scr_base_cont_63);
+    lv_obj_set_pos(ui->scr_base_ta_master_device_register_mapping, 21, 245);
+    lv_obj_set_size(ui->scr_base_ta_master_device_register_mapping, 560, 38);
+    lv_textarea_set_text(ui->scr_base_ta_master_device_register_mapping, "");
+    lv_textarea_set_placeholder_text(ui->scr_base_ta_master_device_register_mapping, "Enter register address remapping...");
+    lv_textarea_set_password_bullet(ui->scr_base_ta_master_device_register_mapping, "*");
+    lv_textarea_set_password_mode(ui->scr_base_ta_master_device_register_mapping, false);
+    lv_textarea_set_one_line(ui->scr_base_ta_master_device_register_mapping, true);
+    lv_textarea_set_accepted_chars(ui->scr_base_ta_master_device_register_mapping, "");
+    lv_textarea_set_max_length(ui->scr_base_ta_master_device_register_mapping, 32);
 #if LV_USE_KEYBOARD
-    lv_obj_add_event_cb(ui->scr_base_ta_3, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
+    lv_obj_add_event_cb(ui->scr_base_ta_master_device_register_mapping, ta_event_cb, LV_EVENT_ALL, ui->g_kb_top_layer);
 #endif
 
-    //Write style for scr_base_ta_3, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_text_color(ui->scr_base_ta_3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_ta_3, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_3, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->scr_base_ta_3, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_ta_3, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_3, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_width(ui->scr_base_ta_3, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_3, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scr_base_ta_3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scr_base_ta_3, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_3, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_3, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_3, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_3, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_3, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_master_device_register_mapping, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_text_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_base_ta_master_device_register_mapping, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_master_device_register_mapping, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_letter_space(ui->scr_base_ta_master_device_register_mapping, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_ta_master_device_register_mapping, LV_TEXT_ALIGN_LEFT, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_master_device_register_mapping, 130, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_master_device_register_mapping, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->scr_base_ta_master_device_register_mapping, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_master_device_register_mapping, 58, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->scr_base_ta_master_device_register_mapping, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_master_device_register_mapping, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_master_device_register_mapping, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_master_device_register_mapping, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_master_device_register_mapping, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_master_device_register_mapping, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write style for scr_base_ta_3, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
-    lv_obj_set_style_text_color(ui->scr_base_ta_3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_font(ui->scr_base_ta_3, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_text_opa(ui->scr_base_ta_3, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_3, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_3, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_3, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_width(ui->scr_base_ta_3, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_opa(ui->scr_base_ta_3, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_color(ui->scr_base_ta_3, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_border_side(ui->scr_base_ta_3, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_shadow_width(ui->scr_base_ta_3, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_top(ui->scr_base_ta_3, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_right(ui->scr_base_ta_3, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_3, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_radius(ui->scr_base_ta_3, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    //Write style for scr_base_ta_master_device_register_mapping, Part: LV_PART_MAIN, State: LV_STATE_FOCUSED.
+    lv_obj_set_style_text_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_font(ui->scr_base_ta_master_device_register_mapping, &lv_font_Roboto_Regular_12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_text_opa(ui->scr_base_ta_master_device_register_mapping, 255, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_master_device_register_mapping, 130, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0x000000), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_master_device_register_mapping, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_width(ui->scr_base_ta_master_device_register_mapping, 1, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_opa(ui->scr_base_ta_master_device_register_mapping, 53, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_border_side(ui->scr_base_ta_master_device_register_mapping, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_shadow_width(ui->scr_base_ta_master_device_register_mapping, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_top(ui->scr_base_ta_master_device_register_mapping, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_right(ui->scr_base_ta_master_device_register_mapping, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_master_device_register_mapping, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_radius(ui->scr_base_ta_master_device_register_mapping, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
-    //Write style for scr_base_ta_3, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_ta_3, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_ta_3, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_3, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_ta_3, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    //Write style for scr_base_ta_master_device_register_mapping, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_bg_opa(ui->scr_base_ta_master_device_register_mapping, 255, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_color(ui->scr_base_ta_master_device_register_mapping, lv_color_hex(0x2195f6), LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_grad_dir(ui->scr_base_ta_master_device_register_mapping, LV_GRAD_DIR_NONE, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->scr_base_ta_master_device_register_mapping, 0, LV_PART_SCROLLBAR|LV_STATE_DEFAULT);
 
     //Write codes scr_base_label_183
     ui->scr_base_label_183 = lv_label_create(ui->scr_base_cont_62);
@@ -9174,7 +9175,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_login_settings, 0, 0);
     lv_obj_set_size(ui->scr_base_cont_login_settings, 800, 480);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_login_settings, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_login_settings, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_login_settings, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_login_settings, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -9214,7 +9214,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_img_29, 160, 22);
     lv_obj_set_size(ui->scr_base_img_29, 100, 100);
     lv_obj_add_flag(ui->scr_base_img_29, LV_OBJ_FLAG_CLICKABLE);
-    lv_image_set_src(ui->scr_base_img_29, &_setting_secure_RGB565A8_100x100);
+    lv_image_set_src(ui->scr_base_img_29, &_configuration_RGB565A8_100x100);
     lv_image_set_pivot(ui->scr_base_img_29, 50,50);
     lv_image_set_rotation(ui->scr_base_img_29, 0);
 
@@ -9368,7 +9368,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_shadow_width(ui->scr_base_ta_login_settings_pass, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_top(ui->scr_base_ta_login_settings_pass, 15, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_right(ui->scr_base_ta_login_settings_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_login_settings_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_login_settings_pass, 45, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_radius(ui->scr_base_ta_login_settings_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
     //Write style for scr_base_ta_login_settings_pass, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
@@ -9413,7 +9413,7 @@ void setup_scr_scr_base(lv_ui *ui)
     //Write codes scr_base_cont_78
     ui->scr_base_cont_78 = lv_obj_create(ui->scr_base_cont_booting_login);
     lv_obj_set_pos(ui->scr_base_cont_78, 180, 50);
-    lv_obj_set_size(ui->scr_base_cont_78, 440, 380);
+    lv_obj_set_size(ui->scr_base_cont_78, 440, 350);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_78, LV_SCROLLBAR_MODE_OFF);
 
     //Write style for scr_base_cont_78, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
@@ -9433,10 +9433,10 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_img_30
     ui->scr_base_img_30 = lv_image_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_img_30, 169, 20);
-    lv_obj_set_size(ui->scr_base_img_30, 100, 100);
+    lv_obj_set_pos(ui->scr_base_img_30, 91, 20);
+    lv_obj_set_size(ui->scr_base_img_30, 256, 65);
     lv_obj_add_flag(ui->scr_base_img_30, LV_OBJ_FLAG_CLICKABLE);
-    lv_image_set_src(ui->scr_base_img_30, &_login_booting_RGB565A8_100x100);
+    lv_image_set_src(ui->scr_base_img_30, &_text_synaptix_color_RGB565A8_256x65);
     lv_image_set_pivot(ui->scr_base_img_30, 50,50);
     lv_image_set_rotation(ui->scr_base_img_30, 0);
 
@@ -9446,7 +9446,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_label_220
     ui->scr_base_label_220 = lv_label_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_label_220, 2, 137);
+    lv_obj_set_pos(ui->scr_base_label_220, 2, 105);
     lv_obj_set_size(ui->scr_base_label_220, 434, 28);
     lv_label_set_text(ui->scr_base_label_220, "LOGIN SYSTEM");
     lv_label_set_long_mode(ui->scr_base_label_220, LV_LABEL_LONG_WRAP);
@@ -9469,7 +9469,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_label_login_booting_status
     ui->scr_base_label_login_booting_status = lv_label_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_label_login_booting_status, 14, 290);
+    lv_obj_set_pos(ui->scr_base_label_login_booting_status, 14, 258);
     lv_obj_set_size(ui->scr_base_label_login_booting_status, 410, 18);
     lv_label_set_text(ui->scr_base_label_login_booting_status, "Enter password to access settings.");
     lv_label_set_long_mode(ui->scr_base_label_login_booting_status, LV_LABEL_LONG_WRAP);
@@ -9492,7 +9492,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_btn_login_booting_confirm
     ui->scr_base_btn_login_booting_confirm = lv_button_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_btn_login_booting_confirm, 225, 322);
+    lv_obj_set_pos(ui->scr_base_btn_login_booting_confirm, 225, 290);
     lv_obj_set_size(ui->scr_base_btn_login_booting_confirm, 174, 38);
     ui->scr_base_btn_login_booting_confirm_label = lv_label_create(ui->scr_base_btn_login_booting_confirm);
     lv_label_set_text(ui->scr_base_btn_login_booting_confirm_label, "CONFIRM");
@@ -9518,7 +9518,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_btn_login_booting_cancel
     ui->scr_base_btn_login_booting_cancel = lv_button_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_btn_login_booting_cancel, 39, 322);
+    lv_obj_set_pos(ui->scr_base_btn_login_booting_cancel, 39, 290);
     lv_obj_set_size(ui->scr_base_btn_login_booting_cancel, 174, 38);
     ui->scr_base_btn_login_booting_cancel_label = lv_label_create(ui->scr_base_btn_login_booting_cancel);
     lv_label_set_text(ui->scr_base_btn_login_booting_cancel_label, "CANCEL");
@@ -9544,7 +9544,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_ta_login_booting_user
     ui->scr_base_ta_login_booting_user = lv_textarea_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_ta_login_booting_user, 39, 180);
+    lv_obj_set_pos(ui->scr_base_ta_login_booting_user, 39, 148);
     lv_obj_set_size(ui->scr_base_ta_login_booting_user, 360, 50);
     lv_textarea_set_text(ui->scr_base_ta_login_booting_user, "");
     lv_textarea_set_placeholder_text(ui->scr_base_ta_login_booting_user, "Enter username...");
@@ -9590,7 +9590,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_shadow_width(ui->scr_base_ta_login_booting_user, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_top(ui->scr_base_ta_login_booting_user, 15, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_right(ui->scr_base_ta_login_booting_user, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_login_booting_user, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_login_booting_user, 45, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_radius(ui->scr_base_ta_login_booting_user, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
     //Write style for scr_base_ta_login_booting_user, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
@@ -9601,7 +9601,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_img_31
     ui->scr_base_img_31 = lv_image_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_img_31, 51, 188);
+    lv_obj_set_pos(ui->scr_base_img_31, 51, 157);
     lv_obj_set_size(ui->scr_base_img_31, 24, 24);
     lv_obj_add_flag(ui->scr_base_img_31, LV_OBJ_FLAG_CLICKABLE);
     lv_image_set_src(ui->scr_base_img_31, &_user_RGB565A8_24x24);
@@ -9615,7 +9615,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_ta_login_booting_pass
     ui->scr_base_ta_login_booting_pass = lv_textarea_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_ta_login_booting_pass, 39, 230);
+    lv_obj_set_pos(ui->scr_base_ta_login_booting_pass, 39, 198);
     lv_obj_set_size(ui->scr_base_ta_login_booting_pass, 360, 50);
     lv_textarea_set_text(ui->scr_base_ta_login_booting_pass, "");
     lv_textarea_set_placeholder_text(ui->scr_base_ta_login_booting_pass, "Enter password...");
@@ -9661,7 +9661,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_shadow_width(ui->scr_base_ta_login_booting_pass, 0, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_top(ui->scr_base_ta_login_booting_pass, 15, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_pad_right(ui->scr_base_ta_login_booting_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
-    lv_obj_set_style_pad_left(ui->scr_base_ta_login_booting_pass, 12, LV_PART_MAIN|LV_STATE_FOCUSED);
+    lv_obj_set_style_pad_left(ui->scr_base_ta_login_booting_pass, 45, LV_PART_MAIN|LV_STATE_FOCUSED);
     lv_obj_set_style_radius(ui->scr_base_ta_login_booting_pass, 10, LV_PART_MAIN|LV_STATE_FOCUSED);
 
     //Write style for scr_base_ta_login_booting_pass, Part: LV_PART_SCROLLBAR, State: LV_STATE_DEFAULT.
@@ -9672,7 +9672,7 @@ void setup_scr_scr_base(lv_ui *ui)
 
     //Write codes scr_base_img_32
     ui->scr_base_img_32 = lv_image_create(ui->scr_base_cont_78);
-    lv_obj_set_pos(ui->scr_base_img_32, 51, 238);
+    lv_obj_set_pos(ui->scr_base_img_32, 51, 206);
     lv_obj_set_size(ui->scr_base_img_32, 24, 24);
     lv_obj_add_flag(ui->scr_base_img_32, LV_OBJ_FLAG_CLICKABLE);
     lv_image_set_src(ui->scr_base_img_32, &_padlock_RGB565A8_24x24);

@@ -20,11 +20,7 @@ static uint16_t s_cmd_count = 0;
 static const uint8_t s_dd_to_func[] = {1, 2, 3, 4, 5, 6, 15, 16};
 #define DD_TO_FUNC_COUNT (sizeof(s_dd_to_func) / sizeof(s_dd_to_func[0]))
 
-static uint16_t calc_next_remap(void) {
-    if (s_cmd_count == 0) return MBS_REMAP_START_ADDRESS;
-    const mbs_command_t *last = &s_cmd_list[s_cmd_count - 1];
-    return last->reg_addr_remap + last->reg_quantity;
-}
+
 
 void ui_modbus_backend_init(void) {
     memset(s_cmd_list, 0, sizeof(s_cmd_list));
@@ -32,7 +28,7 @@ void ui_modbus_backend_init(void) {
 }
 
 bool ui_modbus_backend_add_cmd(uint8_t slave_id, uint8_t func,
-                               uint16_t reg_addr, uint16_t reg_quantity) {
+                               uint16_t reg_addr, uint16_t reg_quantity, uint16_t reg_addr_remap) {
     if (s_cmd_count >= MBS_MAX_COMMANDS) return false;
     if (reg_quantity == 0) return false;
 
@@ -41,7 +37,7 @@ bool ui_modbus_backend_add_cmd(uint8_t slave_id, uint8_t func,
     cmd->func = func;
     cmd->reg_addr = reg_addr;
     cmd->reg_quantity = reg_quantity;
-    cmd->reg_addr_remap = calc_next_remap();
+    cmd->reg_addr_remap = reg_addr_remap;
 
     s_cmd_count++;
     return true;
@@ -55,16 +51,6 @@ bool ui_modbus_backend_remove_cmd(uint16_t index) {
         s_cmd_list[i] = s_cmd_list[i + 1];
     }
     s_cmd_count--;
-
-    /* Recalculate remap addresses for all entries after the removal point */
-    for (uint16_t i = index; i < s_cmd_count; i++) {
-        if (i == 0) {
-            s_cmd_list[i].reg_addr_remap = MBS_REMAP_START_ADDRESS;
-        } else {
-            const mbs_command_t *prev = &s_cmd_list[i - 1];
-            s_cmd_list[i].reg_addr_remap = prev->reg_addr_remap + prev->reg_quantity;
-        }
-    }
 
     return true;
 }

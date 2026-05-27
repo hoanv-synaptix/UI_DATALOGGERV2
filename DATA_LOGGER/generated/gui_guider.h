@@ -166,8 +166,8 @@ typedef struct
 	lv_obj_t *scr_base_lbl_wifi_status;
 	lv_obj_t *scr_base_btn_wifi_apply;
 	lv_obj_t *scr_base_btn_wifi_apply_label;
-	lv_obj_t *scr_base_ta_1;
-	lv_obj_t *scr_base_ta_2;
+	lv_obj_t *scr_base_ta_wifi_subnetmark;
+	lv_obj_t *scr_base_ta_wifi_gateway;
 	lv_obj_t *scr_base_label_213;
 	lv_obj_t *scr_base_label_214;
 	lv_obj_t *scr_base_cont_ethernet;
@@ -319,7 +319,7 @@ typedef struct
 	lv_obj_t *scr_base_ta_master_device_slaveid;
 	lv_obj_t *scr_base_ta_master_device_address;
 	lv_obj_t *scr_base_ta_master_device_quantity;
-	lv_obj_t *scr_base_ta_3;
+	lv_obj_t *scr_base_ta_master_device_register_mapping;
 	lv_obj_t *scr_base_label_183;
 	lv_obj_t *scr_base_cont_deviceconfig_back;
 	lv_obj_t *scr_base_btn_deviceconfig_back;
@@ -423,9 +423,8 @@ LV_IMAGE_DECLARE(_wifi_off_RGB565A8_16x16);
 LV_IMAGE_DECLARE(_power_button_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_power_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_data_analysis_RGB565A8_100x100);
-LV_IMAGE_DECLARE(_setting_secure_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_configuration_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_padlock_RGB565A8_24x24);
-LV_IMAGE_DECLARE(_login_booting_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_user_RGB565A8_24x24);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)

@@ -10,6 +10,7 @@
 extern "C" {
 #endif
 
+void ui_input_policy_init_constraints(ui_context_t *ui);
 void ui_input_policy_bind(ui_context_t *ui);
 void ui_input_policy_unbind(void);
 void ui_input_policy_apply(ui_context_t *ui, const ui_runtime_state_t *state);

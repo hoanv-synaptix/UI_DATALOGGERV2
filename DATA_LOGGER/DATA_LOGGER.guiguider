@@ -579,7 +579,7 @@
 							"rm_flag": [],
 							"flag": [],
 							"width": 440,
-							"height": 380,
+							"height": 350,
 							"default_style": false,
 							"scrollbar_mode": "OFF",
 							"child": [
@@ -588,7 +588,7 @@
 									"id": "mztpta7g",
 									"type": "img",
 									"left": 51,
-									"top": 238,
+									"top": 206,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -622,7 +622,7 @@
 									"id": "37geeakx",
 									"type": "ta",
 									"left": 39,
-									"top": 230,
+									"top": 198,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -690,7 +690,7 @@
 											"shadow_ofs_y": 0,
 											"padding_top": 15,
 											"padding_right": 12,
-											"padding_left": 12,
+											"padding_left": 45,
 											"radius": 10
 										},
 										{
@@ -723,7 +723,7 @@
 									"id": "nfsv0uh7",
 									"type": "img",
 									"left": 51,
-									"top": 188,
+									"top": 157,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -757,7 +757,7 @@
 									"id": "sjphtlwl",
 									"type": "ta",
 									"left": 39,
-									"top": 180,
+									"top": 148,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -825,7 +825,7 @@
 											"shadow_ofs_y": 0,
 											"padding_top": 15,
 											"padding_right": 12,
-											"padding_left": 12,
+											"padding_left": 45,
 											"radius": 10
 										},
 										{
@@ -858,7 +858,7 @@
 									"id": "w1b6a5rd",
 									"type": "btn",
 									"left": 39,
-									"top": 322,
+									"top": 290,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -1058,7 +1058,7 @@
 									"id": "7aqb2qf0",
 									"type": "btn",
 									"left": 225,
-									"top": 322,
+									"top": 290,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -1258,7 +1258,7 @@
 									"id": "7is96iwv",
 									"type": "label",
 									"left": 14,
-									"top": 290,
+									"top": 258,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -1365,7 +1365,7 @@
 									"id": "piskem63",
 									"type": "label",
 									"left": 2,
-									"top": 137,
+									"top": 105,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
@@ -1471,14 +1471,14 @@
 									"name": "img_30",
 									"id": "0j8l5cl5",
 									"type": "img",
-									"left": 169,
+									"left": 91,
 									"top": 20,
 									"visible": true,
 									"isLock": false,
 									"rm_flag": [],
 									"flag": [],
-									"width": 100,
-									"height": 100,
+									"width": 256,
+									"height": 65,
 									"default_style": false,
 									"style": [
 										{
@@ -1493,7 +1493,7 @@
 									"use_fs": false,
 									"fs_type": "flash",
 									"sd_path": "",
-									"img_path": "import\\image\\login_booting.png",
+									"img_path": "import\\image\\text_synaptix_color.png",
 									"rotate": 0,
 									"x": 50,
 									"y": 50,
@@ -1587,7 +1587,7 @@
 					"type": "cont",
 					"left": 0,
 					"top": 0,
-					"visible": false,
+					"visible": true,
 					"isLock": false,
 					"rm_flag": [],
 					"flag": [],
@@ -1718,7 +1718,7 @@
 											"shadow_ofs_y": 0,
 											"padding_top": 15,
 											"padding_right": 12,
-											"padding_left": 12,
+											"padding_left": 45,
 											"radius": 10
 										},
 										{
@@ -2386,7 +2386,7 @@
 									"use_fs": false,
 									"fs_type": "flash",
 									"sd_path": "",
-									"img_path": "import\\image\\setting_secure.png",
+									"img_path": "import\\image\\configuration.png",
 									"rotate": 0,
 									"x": 50,
 									"y": 50,
@@ -5190,7 +5190,7 @@
 									"scrollbar_mode": "OFF",
 									"child": [
 										{
-											"name": "ta_3",
+											"name": "ta_master_device_register_mapping",
 											"id": "j75fke8s",
 											"type": "ta",
 											"left": 21,
@@ -16457,7 +16457,7 @@
 											"type": "cont",
 											"left": 23,
 											"top": 11,
-											"visible": true,
+											"visible": false,
 											"isLock": false,
 											"rm_flag": [],
 											"flag": [],
@@ -18027,7 +18027,7 @@
 											"type": "cont",
 											"left": 23,
 											"top": 14,
-											"visible": false,
+											"visible": true,
 											"isLock": false,
 											"rm_flag": [],
 											"flag": [],
@@ -19707,7 +19707,7 @@
 													]
 												},
 												{
-													"name": "ta_2",
+													"name": "ta_wifi_gateway",
 													"id": "be1bvos8",
 													"type": "ta",
 													"left": 407,
@@ -19808,7 +19808,7 @@
 													]
 												},
 												{
-													"name": "ta_1",
+													"name": "ta_wifi_subnetmark",
 													"id": "2yvnws23",
 													"type": "ta",
 													"left": 215,
@@ -22035,7 +22035,7 @@
 							"type": "cont",
 							"left": 0,
 							"top": 35,
-							"visible": true,
+							"visible": false,
 							"isLock": false,
 							"rm_flag": [],
 							"flag": [],
@@ -32090,7 +32090,7 @@
 														"rm_flag": [],
 														"flag": [],
 														"width": 440,
-														"height": 380,
+														"height": 350,
 														"default_style": false,
 														"scrollbar_mode": "OFF",
 														"child": [
@@ -32099,7 +32099,7 @@
 																"id": "mztpta7g",
 																"type": "img",
 																"left": 51,
-																"top": 238,
+																"top": 206,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32133,7 +32133,7 @@
 																"id": "37geeakx",
 																"type": "ta",
 																"left": 39,
-																"top": 230,
+																"top": 198,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32201,7 +32201,7 @@
 																		"shadow_ofs_y": 0,
 																		"padding_top": 15,
 																		"padding_right": 12,
-																		"padding_left": 12,
+																		"padding_left": 45,
 																		"radius": 10
 																	},
 																	{
@@ -32234,7 +32234,7 @@
 																"id": "nfsv0uh7",
 																"type": "img",
 																"left": 51,
-																"top": 188,
+																"top": 157,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32268,7 +32268,7 @@
 																"id": "sjphtlwl",
 																"type": "ta",
 																"left": 39,
-																"top": 180,
+																"top": 148,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32336,7 +32336,7 @@
 																		"shadow_ofs_y": 0,
 																		"padding_top": 15,
 																		"padding_right": 12,
-																		"padding_left": 12,
+																		"padding_left": 45,
 																		"radius": 10
 																	},
 																	{
@@ -32369,7 +32369,7 @@
 																"id": "w1b6a5rd",
 																"type": "btn",
 																"left": 39,
-																"top": 322,
+																"top": 290,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32569,7 +32569,7 @@
 																"id": "7aqb2qf0",
 																"type": "btn",
 																"left": 225,
-																"top": 322,
+																"top": 290,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32769,7 +32769,7 @@
 																"id": "7is96iwv",
 																"type": "label",
 																"left": 14,
-																"top": 290,
+																"top": 258,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32876,7 +32876,7 @@
 																"id": "piskem63",
 																"type": "label",
 																"left": 2,
-																"top": 137,
+																"top": 105,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
@@ -32982,14 +32982,14 @@
 																"name": "img_30",
 																"id": "0j8l5cl5",
 																"type": "img",
-																"left": 169,
+																"left": 91,
 																"top": 20,
 																"visible": true,
 																"isLock": false,
 																"rm_flag": [],
 																"flag": [],
-																"width": 100,
-																"height": 100,
+																"width": 256,
+																"height": 65,
 																"default_style": false,
 																"style": [
 																	{
@@ -33004,7 +33004,7 @@
 																"use_fs": false,
 																"fs_type": "flash",
 																"sd_path": "",
-																"img_path": "import\\image\\login_booting.png",
+																"img_path": "import\\image\\text_synaptix_color.png",
 																"rotate": 0,
 																"x": 50,
 																"y": 50,
@@ -33098,7 +33098,7 @@
 												"type": "cont",
 												"left": 0,
 												"top": 0,
-												"visible": false,
+												"visible": true,
 												"isLock": false,
 												"rm_flag": [],
 												"flag": [],
@@ -33229,7 +33229,7 @@
 																		"shadow_ofs_y": 0,
 																		"padding_top": 15,
 																		"padding_right": 12,
-																		"padding_left": 12,
+																		"padding_left": 45,
 																		"radius": 10
 																	},
 																	{
@@ -33897,7 +33897,7 @@
 																"use_fs": false,
 																"fs_type": "flash",
 																"sd_path": "",
-																"img_path": "import\\image\\setting_secure.png",
+																"img_path": "import\\image\\configuration.png",
 																"rotate": 0,
 																"x": 50,
 																"y": 50,
@@ -36701,7 +36701,7 @@
 																"scrollbar_mode": "OFF",
 																"child": [
 																	{
-																		"name": "ta_3",
+																		"name": "ta_master_device_register_mapping",
 																		"id": "j75fke8s",
 																		"type": "ta",
 																		"left": 21,
@@ -47968,7 +47968,7 @@
 																		"type": "cont",
 																		"left": 23,
 																		"top": 11,
-																		"visible": true,
+																		"visible": false,
 																		"isLock": false,
 																		"rm_flag": [],
 																		"flag": [],
@@ -49538,7 +49538,7 @@
 																		"type": "cont",
 																		"left": 23,
 																		"top": 14,
-																		"visible": false,
+																		"visible": true,
 																		"isLock": false,
 																		"rm_flag": [],
 																		"flag": [],
@@ -51218,7 +51218,7 @@
 																				]
 																			},
 																			{
-																				"name": "ta_2",
+																				"name": "ta_wifi_gateway",
 																				"id": "be1bvos8",
 																				"type": "ta",
 																				"left": 407,
@@ -51319,7 +51319,7 @@
 																				]
 																			},
 																			{
-																				"name": "ta_1",
+																				"name": "ta_wifi_subnetmark",
 																				"id": "2yvnws23",
 																				"type": "ta",
 																				"left": 215,
@@ -53546,7 +53546,7 @@
 														"type": "cont",
 														"left": 0,
 														"top": 35,
-														"visible": true,
+														"visible": false,
 														"isLock": false,
 														"rm_flag": [],
 														"flag": [],
@@ -71521,7 +71521,7 @@
 								"name": "scr_base_cont_menu",
 								"id": "45cfr8tv",
 								"type": "cont",
-								"visible": true,
+								"visible": false,
 								"scrollbar_mode": "OFF",
 								"flag": [],
 								"rm_flag": [],
@@ -76123,7 +76123,7 @@
 														"toggle": false
 													},
 													{
-														"name": "scr_base_ta_1",
+														"name": "scr_base_ta_wifi_subnetmark",
 														"id": "2yvnws23",
 														"type": "ta",
 														"visible": true,
@@ -76227,7 +76227,7 @@
 														]
 													},
 													{
-														"name": "scr_base_ta_2",
+														"name": "scr_base_ta_wifi_gateway",
 														"id": "be1bvos8",
 														"type": "ta",
 														"visible": true,
@@ -76594,7 +76594,7 @@
 												"name": "scr_base_cont_ethernet",
 												"id": "b60g5nni",
 												"type": "cont",
-												"visible": false,
+												"visible": true,
 												"scrollbar_mode": "OFF",
 												"flag": [],
 												"rm_flag": [],
@@ -78083,7 +78083,7 @@
 												"name": "scr_base_cont_lte",
 												"id": "4lgxctsk",
 												"type": "cont",
-												"visible": true,
+												"visible": false,
 												"scrollbar_mode": "OFF",
 												"flag": [],
 												"rm_flag": [],
@@ -91100,7 +91100,7 @@
 												]
 											},
 											{
-												"name": "scr_base_ta_3",
+												"name": "scr_base_ta_master_device_register_mapping",
 												"id": "j75fke8s",
 												"type": "ta",
 												"visible": true,
@@ -94079,7 +94079,7 @@
 						"name": "scr_base_cont_login_settings",
 						"id": "4man0x1q",
 						"type": "cont",
-						"visible": false,
+						"visible": true,
 						"scrollbar_mode": "OFF",
 						"flag": [],
 						"rm_flag": [],
@@ -94127,7 +94127,7 @@
 											100
 										],
 										"default_style": false,
-										"img_path": "import\\image\\setting_secure.png",
+										"img_path": "import\\image\\configuration.png",
 										"color_format": "RGB565A8",
 										"compress_method": "NONE",
 										"dither_algorithm": "",
@@ -94135,8 +94135,8 @@
 										"pivot": "50,50",
 										"use_fs": false,
 										"fs_type": "flash",
-										"img_flash_path": "F:/setting_secure.png",
-										"img_sd_path": "S:/setting_secure.png",
+										"img_flash_path": "F:/configuration.png",
+										"img_sd_path": "S:/configuration.png",
 										"style": [
 											{
 												"part": "LV_PART_MAIN",
@@ -94859,7 +94859,7 @@
 												"shadow_ofs_y": 0,
 												"padding_top": 15,
 												"padding_right": 12,
-												"padding_left": 12,
+												"padding_left": 45,
 												"radius": 10
 											},
 											{
@@ -95029,7 +95029,7 @@
 								],
 								"size": [
 									440,
-									380
+									350
 								],
 								"default_style": false,
 								"child": [
@@ -95041,15 +95041,15 @@
 										"flag": [],
 										"rm_flag": [],
 										"pos": [
-											169,
+											91,
 											20
 										],
 										"size": [
-											100,
-											100
+											256,
+											65
 										],
 										"default_style": false,
-										"img_path": "import\\image\\login_booting.png",
+										"img_path": "import\\image\\text_synaptix_color.png",
 										"color_format": "RGB565A8",
 										"compress_method": "NONE",
 										"dither_algorithm": "",
@@ -95057,8 +95057,8 @@
 										"pivot": "50,50",
 										"use_fs": false,
 										"fs_type": "flash",
-										"img_flash_path": "F:/login_booting.png",
-										"img_sd_path": "S:/login_booting.png",
+										"img_flash_path": "F:/text_synaptix_color.png",
+										"img_sd_path": "S:/text_synaptix_color.png",
 										"style": [
 											{
 												"part": "LV_PART_MAIN",
@@ -95079,7 +95079,7 @@
 										"rm_flag": [],
 										"pos": [
 											2,
-											137
+											105
 										],
 										"size": [
 											434,
@@ -95189,7 +95189,7 @@
 										"rm_flag": [],
 										"pos": [
 											14,
-											290
+											258
 										],
 										"size": [
 											410,
@@ -95299,7 +95299,7 @@
 										"rm_flag": [],
 										"pos": [
 											225,
-											322
+											290
 										],
 										"size": [
 											174,
@@ -95503,7 +95503,7 @@
 										"rm_flag": [],
 										"pos": [
 											39,
-											322
+											290
 										],
 										"size": [
 											174,
@@ -95707,7 +95707,7 @@
 										"rm_flag": [],
 										"pos": [
 											39,
-											180
+											148
 										],
 										"size": [
 											360,
@@ -95781,7 +95781,7 @@
 												"shadow_ofs_y": 0,
 												"padding_top": 15,
 												"padding_right": 12,
-												"padding_left": 12,
+												"padding_left": 45,
 												"radius": 10
 											},
 											{
@@ -95811,7 +95811,7 @@
 										"rm_flag": [],
 										"pos": [
 											51,
-											188
+											157
 										],
 										"size": [
 											24,
@@ -95848,7 +95848,7 @@
 										"rm_flag": [],
 										"pos": [
 											39,
-											230
+											198
 										],
 										"size": [
 											360,
@@ -95922,7 +95922,7 @@
 												"shadow_ofs_y": 0,
 												"padding_top": 15,
 												"padding_right": 12,
-												"padding_left": 12,
+												"padding_left": 45,
 												"radius": 10
 											},
 											{
@@ -95952,7 +95952,7 @@
 										"rm_flag": [],
 										"pos": [
 											51,
-											238
+											206
 										],
 										"size": [
 											24,

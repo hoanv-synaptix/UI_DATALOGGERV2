@@ -15,6 +15,8 @@ typedef enum {
     UI_TEXTAREA_WIFI_SSID = 0,
     UI_TEXTAREA_WIFI_PASS,
     UI_TEXTAREA_WIFI_IP,
+    UI_TEXTAREA_WIFI_SUBNET,
+    UI_TEXTAREA_WIFI_GATEWAY,
     UI_TEXTAREA_ETHERNET_IP,
     UI_TEXTAREA_ETHERNET_SUBNET,
     UI_TEXTAREA_ETHERNET_GATEWAY,
@@ -28,9 +30,13 @@ typedef enum {
     UI_TEXTAREA_MQTT_PASS,
     UI_TEXTAREA_SLAVE_ID,
     UI_TEXTAREA_MASTER_DEVICE_NAME,
-    UI_TEXTAREA_MASTER_DEVICE_SLAVE_ID,
+    UI_TEXTAREA_MASTER_DEVICE_SLAVEID,
     UI_TEXTAREA_MASTER_DEVICE_ADDRESS,
-    UI_TEXTAREA_MASTER_DEVICE_LENGTH,
+    UI_TEXTAREA_MASTER_DEVICE_QUANTITY,
+    UI_TEXTAREA_MASTER_DEVICE_REMAP,
+    UI_TEXTAREA_LOGIN_USER,
+    UI_TEXTAREA_LOGIN_PASS,
+    UI_TEXTAREA_SECURE_SETTINGS_PASS,
     UI_TEXTAREA_COUNT
 } ui_textarea_id_t;
 
@@ -94,6 +100,7 @@ typedef struct {
     lv_obj_t *label_ethernet_ip;
     lv_obj_t *label_ethernet_subnet;
     lv_obj_t *label_ethernet_gateway;
+    lv_obj_t *label_ethernet_status;
 } ui_network_refs_t;
 
 typedef struct {
@@ -130,6 +137,23 @@ typedef struct {
     lv_obj_t *btn_generate_report;
 } ui_system_refs_t;
 
+typedef struct {
+    lv_obj_t *cont_booting_login;
+    lv_obj_t *btn_login_booting_confirm;
+    lv_obj_t *btn_login_booting_cancel;
+    lv_obj_t *lbl_login_booting_status;
+    lv_obj_t *cont_login_settings;
+    lv_obj_t *btn_login_settings_confirm;
+    lv_obj_t *btn_login_settings_cancel;
+    lv_obj_t *lbl_status_login_setting;
+} ui_login_refs_t;
+
+typedef struct {
+    lv_obj_t *cont_generate_report;
+    lv_obj_t *btn_generate_report_confirm;
+    lv_obj_t *btn_generate_report_cancel;
+} ui_report_refs_t;
+
 ui_context_t *ui_context_get(void);
 void ui_context_bootstrap(void);
 void ui_context_show_booting(ui_context_t *ui);
@@ -142,6 +166,8 @@ void ui_context_get_network_refs(ui_context_t *ui, ui_network_refs_t *out);
 void ui_context_get_mqtt_refs(ui_context_t *ui, ui_mqtt_refs_t *out);
 void ui_context_get_modbus_refs(ui_context_t *ui, ui_modbus_refs_t *out);
 void ui_context_get_system_refs(ui_context_t *ui, ui_system_refs_t *out);
+void ui_context_get_login_refs(ui_context_t *ui, ui_login_refs_t *out);
+void ui_context_get_report_refs(ui_context_t *ui, ui_report_refs_t *out);
 
 lv_obj_t *ui_context_get_base_screen(ui_context_t *ui);
 lv_obj_t *ui_context_get_keyboard(ui_context_t *ui);

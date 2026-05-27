@@ -1,7 +1,5 @@
-build/object/generated/ui_state.o: \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.c \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
+build/object/generated/_configuration_RGB565A8_100x100.o: \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\images\_configuration_rgb565a8_100x100.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
@@ -685,16 +683,7 @@ build/object/generated/ui_state.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/libs/ffmpeg/lv_ffmpeg.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_modbus_list.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_auth.h
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
@@ -2063,13 +2052,3 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_modbus_list.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_auth.h:

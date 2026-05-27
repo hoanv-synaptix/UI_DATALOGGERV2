@@ -55,6 +55,10 @@ static void apply_keyboard_avoidance(void) {
         guider_ui.scr_base_ta_master_device_slaveid,
         guider_ui.scr_base_ta_master_device_address,
         guider_ui.scr_base_ta_master_device_quantity,
+        guider_ui.scr_base_ta_master_device_register_mapping,
+        guider_ui.scr_base_ta_login_booting_user,
+        guider_ui.scr_base_ta_login_booting_pass,
+        guider_ui.scr_base_ta_login_settings_pass,
     };
     
     for (size_t i = 0; i < sizeof(tas)/sizeof(tas[0]); i++) {
