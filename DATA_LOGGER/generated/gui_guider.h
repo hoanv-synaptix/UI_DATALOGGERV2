@@ -311,8 +311,6 @@ typedef struct
 	lv_obj_t *scr_base_label_180;
 	lv_obj_t *scr_base_label_179;
 	lv_obj_t *scr_base_label_177;
-	lv_obj_t *scr_base_cont_66;
-	lv_obj_t *scr_base_lbl_master_device_status;
 	lv_obj_t *scr_base_btn_master_device_apply;
 	lv_obj_t *scr_base_btn_master_device_apply_label;
 	lv_obj_t *scr_base_ddlist_master_device_registers;
@@ -321,6 +319,7 @@ typedef struct
 	lv_obj_t *scr_base_ta_master_device_slaveid;
 	lv_obj_t *scr_base_ta_master_device_address;
 	lv_obj_t *scr_base_ta_master_device_quantity;
+	lv_obj_t *scr_base_ta_3;
 	lv_obj_t *scr_base_label_183;
 	lv_obj_t *scr_base_cont_deviceconfig_back;
 	lv_obj_t *scr_base_btn_deviceconfig_back;
@@ -344,6 +343,39 @@ typedef struct
 	lv_obj_t *scr_base_btn_restore_confirm_label;
 	lv_obj_t *scr_base_btn_restore_cancel;
 	lv_obj_t *scr_base_btn_restore_cancel_label;
+	lv_obj_t *scr_base_cont_generate_report;
+	lv_obj_t *scr_base_cont_74;
+	lv_obj_t *scr_base_img_28;
+	lv_obj_t *scr_base_label_216;
+	lv_obj_t *scr_base_label_215;
+	lv_obj_t *scr_base_btn_generate_report_confirm;
+	lv_obj_t *scr_base_btn_generate_report_confirm_label;
+	lv_obj_t *scr_base_btn_generate_report_cancel;
+	lv_obj_t *scr_base_btn_generate_report_cancel_label;
+	lv_obj_t *scr_base_cont_login_settings;
+	lv_obj_t *scr_base_cont_76;
+	lv_obj_t *scr_base_img_29;
+	lv_obj_t *scr_base_label_218;
+	lv_obj_t *scr_base_lbl_status_login_setting;
+	lv_obj_t *scr_base_btn_login_settings_confirm;
+	lv_obj_t *scr_base_btn_login_settings_confirm_label;
+	lv_obj_t *scr_base_btn_login_settings_cancel;
+	lv_obj_t *scr_base_btn_login_settings_cancel_label;
+	lv_obj_t *scr_base_ta_login_settings_pass;
+	lv_obj_t *scr_base_img_33;
+	lv_obj_t *scr_base_cont_booting_login;
+	lv_obj_t *scr_base_cont_78;
+	lv_obj_t *scr_base_img_30;
+	lv_obj_t *scr_base_label_220;
+	lv_obj_t *scr_base_label_login_booting_status;
+	lv_obj_t *scr_base_btn_login_booting_confirm;
+	lv_obj_t *scr_base_btn_login_booting_confirm_label;
+	lv_obj_t *scr_base_btn_login_booting_cancel;
+	lv_obj_t *scr_base_btn_login_booting_cancel_label;
+	lv_obj_t *scr_base_ta_login_booting_user;
+	lv_obj_t *scr_base_img_31;
+	lv_obj_t *scr_base_ta_login_booting_pass;
+	lv_obj_t *scr_base_img_32;
 	lv_obj_t *g_kb_top_layer;
 }lv_ui;
 
@@ -390,6 +422,11 @@ LV_IMAGE_DECLARE(_mqtt_off_RGB565A8_16x16);
 LV_IMAGE_DECLARE(_wifi_off_RGB565A8_16x16);
 LV_IMAGE_DECLARE(_power_button_RGB565A8_100x100);
 LV_IMAGE_DECLARE(_power_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_data_analysis_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_setting_secure_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_padlock_RGB565A8_24x24);
+LV_IMAGE_DECLARE(_login_booting_RGB565A8_100x100);
+LV_IMAGE_DECLARE(_user_RGB565A8_24x24);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)
