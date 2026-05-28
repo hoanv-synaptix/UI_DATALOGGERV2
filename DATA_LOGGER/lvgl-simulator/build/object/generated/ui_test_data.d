@@ -1,9 +1,9 @@
 build/object/generated/ui_test_data.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\tools\ui_test_data.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\tools\ui_test_data.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_frontend_api.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
@@ -687,15 +687,16 @@ build/object/generated/ui_test_data.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/libs/ffmpeg/lv_ffmpeg.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\tools\ui_test_data.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_frontend_api.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\ui_dashboard.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
@@ -2064,3 +2065,5 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:

@@ -1,7 +1,7 @@
 build/object/generated/ui_runtime_guard.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_runtime_guard.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_runtime_guard.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
@@ -689,7 +689,7 @@ build/object/generated/ui_runtime_guard.o: \
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_runtime_guard.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 

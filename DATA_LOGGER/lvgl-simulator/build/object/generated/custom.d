@@ -1,7 +1,7 @@
 build/object/generated/custom.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\custom.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\custom.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
@@ -686,16 +686,15 @@ build/object/generated/custom.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_platform_port.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_screen_controller.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_frontend_api.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_pub.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\app_state.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_screen.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\keyboard_avoidance.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\custom.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
@@ -2065,14 +2064,12 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_platform_port.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_pub.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_state.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\app_state.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_screen_controller.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_screen.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_frontend_api.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\keyboard_avoidance.h:

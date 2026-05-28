@@ -685,7 +685,10 @@ build/object/generated/keyboard_avoidance.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/libs/ffmpeg/lv_ffmpeg.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\widgets_init.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\gui_guider.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\keyboard_avoidance.h:
 
@@ -2058,3 +2061,9 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\widgets_init.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\gui_guider.h:
+
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h:

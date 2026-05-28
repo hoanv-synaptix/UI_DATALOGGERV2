@@ -732,7 +732,7 @@ build/object/main.o: main.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\gui_guider.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\custom.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\widgets_init.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\gui_guider.h
 
@@ -2202,7 +2202,7 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\custom.h:
 
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\ui_context.h:
+g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\widgets_init.h:
 

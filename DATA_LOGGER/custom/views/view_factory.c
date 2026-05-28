@@ -1,0 +1,574 @@
+#include "view_factory.h"
+
+#include <string.h>
+#include "custom.h"
+#include "events_init.h"
+#include "gui_guider.h"
+
+struct ui_context {
+    lv_ui *generated;
+};
+
+typedef struct {
+    lv_obj_t *base_screen;
+    lv_obj_t *booting_screen;
+    lv_obj_t *keyboard;
+    lv_obj_t *logs_container;
+    lv_obj_t *critical_logs_label;
+    lv_obj_t *clear_history_button;
+    lv_obj_t *btn_dashboard;
+    lv_obj_t *btn_analysis;
+    lv_obj_t *btn_event_logs;
+    lv_obj_t *btn_settings;
+    lv_obj_t *btn_restart;
+    lv_obj_t *btn_restart_cancel;
+    lv_obj_t *btn_restart_confirm;
+    lv_obj_t *btn_restore_confirm;
+    lv_obj_t *btn_restore_cancel;
+    lv_obj_t *btn_net;
+    lv_obj_t *btn_mqtt;
+    lv_obj_t *btn_modbus;
+    lv_obj_t *btn_sys_admin;
+    lv_obj_t *btn_net_back;
+    lv_obj_t *btn_mqtt_back;
+    lv_obj_t *btn_modbus_back;
+    lv_obj_t *btn_sys_back;
+    lv_obj_t *btn_restart_system;
+    lv_obj_t *btn_factory_reset;
+    lv_obj_t *btn_master_adddevice;
+    lv_obj_t *btn_master_viewlist;
+    lv_obj_t *btn_master_device_apply;
+    lv_obj_t *btn_deviceconfig_back;
+    lv_obj_t *btn_devicelist_back;
+    lv_obj_t *btn_generate_report;
+    lv_obj_t *btn_wifi_apply;
+    lv_obj_t *btn_ethernet_apply;
+    lv_obj_t *btn_lte_apply;
+    lv_obj_t *btn_mqtt_apply;
+    lv_obj_t *btn_modbus_apply;
+    lv_obj_t *cont_booting_login;
+    lv_obj_t *btn_login_booting_confirm;
+    lv_obj_t *btn_login_booting_cancel;
+    lv_obj_t *lbl_login_booting_status;
+    lv_obj_t *cont_login_settings;
+    lv_obj_t *btn_login_settings_confirm;
+    lv_obj_t *btn_login_settings_cancel;
+    lv_obj_t *lbl_status_login_setting;
+    lv_obj_t *cont_generate_report;
+    lv_obj_t *btn_generate_report_confirm;
+    lv_obj_t *btn_generate_report_cancel;
+    lv_obj_t *cont_dashboard;
+    lv_obj_t *cont_analysis;
+    lv_obj_t *cont_event_logs;
+    lv_obj_t *cont_hw;
+    lv_obj_t *cont_menu;
+    lv_obj_t *cont_network_config;
+    lv_obj_t *cont_mqtt_config;
+    lv_obj_t *cont_modbus_config;
+    lv_obj_t *cont_system_admin;
+    lv_obj_t *cont_wifi;
+    lv_obj_t *cont_ethernet;
+    lv_obj_t *cont_lte;
+    lv_obj_t *cont_restart;
+    lv_obj_t *cont_restore;
+    lv_obj_t *cont_master;
+    lv_obj_t *cont_slave;
+    lv_obj_t *cont_device_config;
+    lv_obj_t *cont_device_viewlist;
+    lv_obj_t *cont_mqtt_form;
+    lv_obj_t *cont_master_device_form;
+    lv_obj_t *ddlist_net_option;
+    lv_obj_t *ddlist_wifi_mode;
+    lv_obj_t *ddlist_ethernet_mode;
+    lv_obj_t *ddlist_modbus_mode;
+    lv_obj_t *ta[UI_TEXTAREA_COUNT];
+    lv_obj_t *label_wifi_ip;
+    lv_obj_t *label_wifi_status;
+    lv_obj_t *label_ethernet_ip;
+    lv_obj_t *label_ethernet_subnet;
+    lv_obj_t *label_ethernet_gateway;
+    lv_obj_t *label_ethernet_status;
+    lv_obj_t *label_lte_status;
+    lv_obj_t *label_mqtt_status;
+    lv_obj_t *label_modbus_status;
+} view_widget_refs_t;
+
+extern lv_ui guider_ui;
+
+static view_factory_t s_view_factory = {
+    .generated = &guider_ui
+};
+
+// removed base_screen_loaded_cb
+
+static void check_scr_base_timer_cb(lv_timer_t *t)
+{
+    lv_ui *g = s_view_factory.generated;
+    if (g && g->scr_base && lv_obj_is_valid(g->scr_base)) {
+        custom_init(g);
+        lv_timer_del(t);
+    }
+}
+
+static void load_booting_screen(lv_ui *g, uint32_t time, uint32_t delay)
+{
+    if (!g) return;
+
+    setup_scr_scr_booting(g);
+    g->scr_base_del = true;
+    lv_screen_load_anim(g->scr_booting, LV_SCR_LOAD_ANIM_NONE, time, delay, true);
+    
+    lv_timer_create(check_scr_base_timer_cb, 50, NULL);
+}
+
+/*
+static void view_factory_load_screen_animation(view_factory_t *ui, lv_obj_t **new_scr, bool new_scr_del,
+                                             bool *old_scr_del, ui_setup_scr_t setup_scr,
+                                             lv_screen_load_anim_t anim_type, uint32_t time,
+                                             uint32_t delay, bool is_clean, bool auto_del)
+{
+    if (!ui || !ui->generated) return;
+
+    ui_load_scr_animation(ui->generated, new_scr, new_scr_del, old_scr_del, setup_scr,
+                          anim_type, time, delay, is_clean, auto_del);
+}
+*/
+
+/**
+ * @brief Trả về Instance duy nhất của View Factory
+ */
+view_factory_t *view_factory_get(void)
+{
+    return &s_view_factory;
+}
+
+/**
+ * @brief Khởi chạy quy trình mồi (Bootstrap) ban đầu.
+ * Vẽ layer bàn phím và khởi tạo màn hình Booting (NXP Code).
+ */
+void view_factory_bootstrap(void)
+{
+    lv_ui *g = s_view_factory.generated;
+
+    if (!g) return;
+
+    setup_bottom_layer();
+    init_scr_del_flag(g);
+    init_keyboard(g);
+    events_init(g);
+    load_booting_screen(g, 0, 0); // Hiện màn hình Load lần đầu
+}
+
+void view_factory_show_booting(view_factory_t *ui)
+{
+    lv_ui *g;
+
+    if (!ui || !ui->generated) return;
+
+    g = ui->generated;
+    load_booting_screen(g, 0, 0);
+}
+
+/**
+ * @brief Hàm nội bộ (Private) trích xuất toàn bộ hàng trăm biến tĩnh
+ * sinh ra bởi GUI Guider sang một Struct duy nhất để dễ quản lý.
+ */
+static void view_factory_get_widgets(view_factory_t *ui, view_widget_refs_t *out)
+{
+    lv_ui *g;
+
+    if (!out) return;
+
+    memset(out, 0, sizeof(*out));
+    if (!ui || !ui->generated) return;
+
+    g = ui->generated;
+    out->base_screen = g->scr_base;
+    out->booting_screen = g->scr_booting;
+    out->keyboard = g->g_kb_top_layer;
+    out->logs_container = g->scr_base_cont_logs;
+    out->critical_logs_label = g->scr_base_lbl_critical_logs;
+    out->clear_history_button = g->scr_base_btn_clear_history;
+
+    out->btn_dashboard = g->scr_base_btn_dashboard;
+    out->btn_analysis = g->scr_base_btn_analystis;
+    out->btn_event_logs = g->scr_base_btn_event_logs;
+    out->btn_settings = g->scr_base_btn_settings;
+    out->btn_restart = g->scr_base_btn_restart;
+    out->btn_restart_cancel = g->scr_base_btn_restart_cancel;
+    out->btn_restart_confirm = g->scr_base_btn_restart_confirm;
+    out->btn_restore_confirm = g->scr_base_btn_restore_confirm;
+    out->btn_restore_cancel = g->scr_base_btn_restore_cancel;
+    out->btn_net = g->scr_base_btn_net;
+    out->btn_mqtt = g->scr_base_btn_mqtt;
+    out->btn_modbus = g->scr_base_btn_modbus;
+    out->btn_sys_admin = g->scr_base_btn_sys_admin;
+    out->btn_net_back = g->scr_base_btn_net_back;
+    out->btn_mqtt_back = g->scr_base_btn_mqtt_back;
+    out->btn_modbus_back = g->scr_base_btn_modbus_back;
+    out->btn_sys_back = g->scr_base_btn_sys_back;
+    out->btn_restart_system = g->scr_base_btn_restart_system;
+    out->btn_factory_reset = g->scr_base_btn_factory_reset;
+    out->btn_master_adddevice = g->scr_base_btn_master_adddeivce;
+    out->btn_master_viewlist = g->scr_base_btn_masterviewlist;
+    out->btn_master_device_apply = g->scr_base_btn_master_device_apply;
+    out->btn_deviceconfig_back = g->scr_base_btn_deviceconfig_back;
+    out->btn_devicelist_back = g->scr_base_btn_devicelist_back;
+    out->btn_generate_report = g->scr_base_btn_generate_report;
+    out->btn_wifi_apply = g->scr_base_btn_wifi_apply;
+    out->btn_ethernet_apply = g->scr_base_btn_ethernet_apply;
+    out->btn_lte_apply = g->scr_base_btn_lte_apply;
+    out->btn_mqtt_apply = g->scr_base_btn_mqtt_apply;
+    out->btn_modbus_apply = g->scr_base_btn_modbus_apply;
+    
+    out->cont_booting_login = g->scr_base_cont_booting_login;
+    out->btn_login_booting_confirm = g->scr_base_btn_login_booting_confirm;
+    out->btn_login_booting_cancel = g->scr_base_btn_login_booting_cancel;
+    out->lbl_login_booting_status = g->scr_base_label_login_booting_status;
+    out->cont_login_settings = g->scr_base_cont_login_settings;
+    out->btn_login_settings_confirm = g->scr_base_btn_login_settings_confirm;
+    out->btn_login_settings_cancel = g->scr_base_btn_login_settings_cancel;
+    out->lbl_status_login_setting = g->scr_base_lbl_status_login_setting;
+    out->cont_generate_report = g->scr_base_cont_generate_report;
+    out->btn_generate_report_confirm = g->scr_base_btn_generate_report_confirm;
+    out->btn_generate_report_cancel = g->scr_base_btn_generate_report_cancel;
+
+    out->cont_dashboard = g->scr_base_cont_dashboard;
+    out->cont_analysis = g->scr_base_cont_data_analysis;
+    out->cont_event_logs = g->scr_base_cont_event_logs;
+    out->cont_hw = g->scr_base_cont_hw;
+    out->cont_menu = g->scr_base_cont_menu;
+    out->cont_network_config = g->scr_base_cont_networkconfig;
+    out->cont_mqtt_config = g->scr_base_cont_mqtt_config;
+    out->cont_modbus_config = g->scr_base_cont_modbus_config;
+    out->cont_system_admin = g->scr_base_cont_system_admin;
+    out->cont_wifi = g->scr_base_cont_wifi;
+    out->cont_ethernet = g->scr_base_cont_ethernet;
+    out->cont_lte = g->scr_base_cont_lte;
+    out->cont_restart = g->scr_base_cont_restart;
+    out->cont_restore = g->scr_base_cont_restore;
+    out->cont_master = g->scr_base_cont_master;
+    out->cont_slave = g->scr_base_cont_slave;
+    out->cont_device_config = g->scr_base_cont_device_config;
+    out->cont_device_viewlist = g->scr_base_cont_device_viewlist;
+    out->cont_mqtt_form = g->scr_base_cont_48;
+    out->cont_master_device_form = g->scr_base_cont_63;
+
+    out->ddlist_net_option = g->scr_base_ddlist_net_option;
+    out->ddlist_wifi_mode = g->scr_base_ddlist_wifi_mode;
+    out->ddlist_ethernet_mode = g->scr_base_ddlist_ethernet_mode;
+    out->ddlist_modbus_mode = g->scr_base_ddlist_modbus_mode;
+
+    out->ta[UI_TEXTAREA_WIFI_SSID] = g->scr_base_ta_wifi_ssid;
+    out->ta[UI_TEXTAREA_WIFI_PASS] = g->scr_base_ta_wifi_pass;
+    out->ta[UI_TEXTAREA_WIFI_IP] = g->scr_base_ta_wifi_ip;
+    out->ta[UI_TEXTAREA_WIFI_SUBNET] = g->scr_base_ta_wifi_subnetmark;
+    out->ta[UI_TEXTAREA_WIFI_GATEWAY] = g->scr_base_ta_wifi_gateway;
+    out->ta[UI_TEXTAREA_ETHERNET_IP] = g->scr_base_ta_ethernet_ip;
+    out->ta[UI_TEXTAREA_ETHERNET_SUBNET] = g->scr_base_ta_ethernet_subnet;
+    out->ta[UI_TEXTAREA_ETHERNET_GATEWAY] = g->scr_base_ta_ethernet_gateway;
+    out->ta[UI_TEXTAREA_LTE_APN] = g->scr_base_ta_lte_apn;
+    out->ta[UI_TEXTAREA_LTE_USERNAME] = g->scr_base_ta_lte_username;
+    out->ta[UI_TEXTAREA_LTE_PASS] = g->scr_base_ta_lte_pass;
+    out->ta[UI_TEXTAREA_LTE_PIN_CODE] = g->scr_base_ta_lte_pin_code;
+    out->ta[UI_TEXTAREA_MQTT_HOST] = g->scr_base_ta_mqtt_host;
+    out->ta[UI_TEXTAREA_MQTT_PORT] = g->scr_base_ta_mqtt_port;
+    out->ta[UI_TEXTAREA_MQTT_USER] = g->scr_base_ta_mqtt_user;
+    out->ta[UI_TEXTAREA_MQTT_PASS] = g->scr_base_ta_mqtt_pass;
+    out->ta[UI_TEXTAREA_SLAVE_ID] = g->scr_base_ta_slave_id;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_NAME] = NULL;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] = g->scr_base_ta_master_device_slaveid;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] = g->scr_base_ta_master_device_address;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] = g->scr_base_ta_master_device_quantity;
+    out->ta[UI_TEXTAREA_MASTER_DEVICE_REMAP] = g->scr_base_ta_master_device_register_mapping;
+    out->ta[UI_TEXTAREA_LOGIN_USER] = g->scr_base_ta_login_booting_user;
+    out->ta[UI_TEXTAREA_LOGIN_PASS] = g->scr_base_ta_login_booting_pass;
+    out->ta[UI_TEXTAREA_SECURE_SETTINGS_PASS] = g->scr_base_ta_login_settings_pass;
+
+    out->label_wifi_ip = g->scr_base_label_111;
+    out->label_wifi_status = g->scr_base_lbl_wifi_status;
+    out->label_ethernet_ip = g->scr_base_label_117;
+    out->label_ethernet_subnet = g->scr_base_label_115;
+    out->label_ethernet_gateway = g->scr_base_label_116;
+    out->label_ethernet_status = g->scr_base_lbl_ethernet_status;
+    out->label_lte_status = g->scr_base_lbl_lte_status;
+    out->label_mqtt_status = g->scr_base_lbl_mqtt_status;
+    out->label_modbus_status = g->scr_base_lbl_modbus_status;
+}
+
+void view_factory_get_shell_refs(view_factory_t *ui, ui_shell_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->base_screen = refs.base_screen;
+    out->booting_screen = refs.booting_screen;
+    out->keyboard = refs.keyboard;
+    out->btn_dashboard = refs.btn_dashboard;
+    out->btn_analysis = refs.btn_analysis;
+    out->btn_event_logs = refs.btn_event_logs;
+    out->btn_settings = refs.btn_settings;
+}
+
+void view_factory_get_main_view_refs(view_factory_t *ui, ui_main_view_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_dashboard = refs.cont_dashboard;
+    out->cont_analysis = refs.cont_analysis;
+    out->cont_event_logs = refs.cont_event_logs;
+    out->cont_hw = refs.cont_hw;
+}
+
+void view_factory_get_logs_refs(view_factory_t *ui, ui_logs_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->logs_container = refs.logs_container;
+    out->critical_logs_label = refs.critical_logs_label;
+    out->clear_history_button = refs.clear_history_button;
+}
+
+void view_factory_get_settings_nav_refs(view_factory_t *ui, ui_settings_nav_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_menu = refs.cont_menu;
+    out->cont_network_config = refs.cont_network_config;
+    out->cont_mqtt_config = refs.cont_mqtt_config;
+    out->cont_modbus_config = refs.cont_modbus_config;
+    out->cont_system_admin = refs.cont_system_admin;
+    out->btn_net = refs.btn_net;
+    out->btn_mqtt = refs.btn_mqtt;
+    out->btn_modbus = refs.btn_modbus;
+    out->btn_sys_admin = refs.btn_sys_admin;
+    out->btn_net_back = refs.btn_net_back;
+    out->btn_mqtt_back = refs.btn_mqtt_back;
+    out->btn_modbus_back = refs.btn_modbus_back;
+    out->btn_sys_back = refs.btn_sys_back;
+}
+
+void view_factory_get_network_refs(view_factory_t *ui, ui_network_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_wifi = refs.cont_wifi;
+    out->cont_ethernet = refs.cont_ethernet;
+    out->cont_lte = refs.cont_lte;
+    out->btn_wifi_apply = refs.btn_wifi_apply;
+    out->btn_ethernet_apply = refs.btn_ethernet_apply;
+    out->btn_lte_apply = refs.btn_lte_apply;
+    out->ddlist_net_option = refs.ddlist_net_option;
+    out->ddlist_wifi_mode = refs.ddlist_wifi_mode;
+    out->ddlist_ethernet_mode = refs.ddlist_ethernet_mode;
+    out->label_wifi_ip = refs.label_wifi_ip;
+    out->label_wifi_status = refs.label_wifi_status;
+    out->label_ethernet_ip = refs.label_ethernet_ip;
+    out->label_ethernet_subnet = refs.label_ethernet_subnet;
+    out->label_ethernet_gateway = refs.label_ethernet_gateway;
+    out->label_ethernet_status = refs.label_ethernet_status;
+    out->label_lte_status = refs.label_lte_status;
+}
+
+void view_factory_get_mqtt_refs(view_factory_t *ui, ui_mqtt_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_mqtt_config = refs.cont_mqtt_config;
+    out->cont_mqtt_form = refs.cont_mqtt_form;
+    out->btn_mqtt_apply = refs.btn_mqtt_apply;
+    out->label_mqtt_status = refs.label_mqtt_status;
+}
+
+void view_factory_get_modbus_refs(view_factory_t *ui, ui_modbus_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_modbus_config = refs.cont_modbus_config;
+    out->cont_master = refs.cont_master;
+    out->cont_slave = refs.cont_slave;
+    out->cont_device_config = refs.cont_device_config;
+    out->cont_device_viewlist = refs.cont_device_viewlist;
+    out->cont_master_device_form = refs.cont_master_device_form;
+    out->ddlist_modbus_mode = refs.ddlist_modbus_mode;
+    out->btn_master_adddevice = refs.btn_master_adddevice;
+    out->btn_master_viewlist = refs.btn_master_viewlist;
+    out->btn_master_device_apply = refs.btn_master_device_apply;
+    out->btn_modbus_apply = refs.btn_modbus_apply;
+    out->btn_deviceconfig_back = refs.btn_deviceconfig_back;
+    out->btn_devicelist_back = refs.btn_devicelist_back;
+    out->label_modbus_status = refs.label_modbus_status;
+}
+
+void view_factory_get_system_refs(view_factory_t *ui, ui_system_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_system_admin = refs.cont_system_admin;
+    out->cont_restart = refs.cont_restart;
+    out->cont_restore = refs.cont_restore;
+    out->btn_restart = refs.btn_restart;
+    out->btn_restart_cancel = refs.btn_restart_cancel;
+    out->btn_restart_confirm = refs.btn_restart_confirm;
+    out->btn_restore_confirm = refs.btn_restore_confirm;
+    out->btn_restore_cancel = refs.btn_restore_cancel;
+    out->btn_restart_system = refs.btn_restart_system;
+    out->btn_factory_reset = refs.btn_factory_reset;
+    out->btn_generate_report = refs.btn_generate_report;
+}
+
+void view_factory_get_login_refs(view_factory_t *ui, ui_login_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_booting_login = refs.cont_booting_login;
+    out->btn_login_booting_confirm = refs.btn_login_booting_confirm;
+    out->btn_login_booting_cancel = refs.btn_login_booting_cancel;
+    out->lbl_login_booting_status = refs.lbl_login_booting_status;
+    out->cont_login_settings = refs.cont_login_settings;
+    out->btn_login_settings_confirm = refs.btn_login_settings_confirm;
+    out->btn_login_settings_cancel = refs.btn_login_settings_cancel;
+    out->lbl_status_login_setting = refs.lbl_status_login_setting;
+}
+
+void view_factory_get_report_refs(view_factory_t *ui, ui_report_refs_t *out)
+{
+    view_widget_refs_t refs;
+
+    if (!out) return;
+    memset(out, 0, sizeof(*out));
+    view_factory_get_widgets(ui, &refs);
+    out->cont_generate_report = refs.cont_generate_report;
+    out->btn_generate_report_confirm = refs.btn_generate_report_confirm;
+    out->btn_generate_report_cancel = refs.btn_generate_report_cancel;
+}
+
+lv_obj_t *view_factory_get_base_screen(view_factory_t *ui)
+{
+    ui_shell_refs_t refs;
+
+    view_factory_get_shell_refs(ui, &refs);
+    return refs.base_screen;
+}
+
+lv_obj_t *view_factory_get_keyboard(view_factory_t *ui)
+{
+    ui_shell_refs_t refs;
+
+    view_factory_get_shell_refs(ui, &refs);
+    return refs.keyboard;
+}
+
+lv_obj_t *view_factory_get_textarea(view_factory_t *ui, ui_textarea_id_t id)
+{
+    view_widget_refs_t refs;
+
+    if ((size_t)id >= view_factory_textarea_count()) return NULL;
+
+    view_factory_get_widgets(ui, &refs);
+    return refs.ta[id];
+}
+
+size_t view_factory_textarea_count(void)
+{
+    return (size_t)UI_TEXTAREA_COUNT;
+}
+
+lv_obj_t *view_factory_resolve_textarea_container(view_factory_t *ui, lv_obj_t *ta)
+{
+    view_widget_refs_t refs;
+
+    if (!ta) return NULL;
+
+    view_factory_get_widgets(ui, &refs);
+    if (ta == refs.ta[UI_TEXTAREA_WIFI_SSID] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_PASS] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_IP] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        ta == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
+        return refs.cont_wifi;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||
+        ta == refs.ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
+        ta == refs.ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
+        return refs.cont_ethernet;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_LTE_APN] ||
+        ta == refs.ta[UI_TEXTAREA_LTE_USERNAME] ||
+        ta == refs.ta[UI_TEXTAREA_LTE_PASS] ||
+        ta == refs.ta[UI_TEXTAREA_LTE_PIN_CODE]) {
+        return refs.cont_lte;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_MQTT_HOST] ||
+        ta == refs.ta[UI_TEXTAREA_MQTT_PORT] ||
+        ta == refs.ta[UI_TEXTAREA_MQTT_USER] ||
+        ta == refs.ta[UI_TEXTAREA_MQTT_PASS]) {
+        return refs.cont_mqtt_form;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_SLAVE_ID]) {
+        return refs.cont_slave;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_NAME] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] ||
+        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_REMAP]) {
+        return refs.cont_master_device_form;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_LOGIN_USER] ||
+        ta == refs.ta[UI_TEXTAREA_LOGIN_PASS]) {
+        return refs.cont_booting_login;
+    }
+    if (ta == refs.ta[UI_TEXTAREA_SECURE_SETTINGS_PASS]) {
+        return refs.cont_login_settings;
+    }
+
+    return lv_obj_get_parent(ta);
+}
+
+ui_input_group_t view_factory_classify_input(view_factory_t *ui, lv_obj_t *obj)
+{
+    view_widget_refs_t refs;
+
+    if (!obj) return UI_INPUT_GROUP_DEFAULT;
+
+    view_factory_get_widgets(ui, &refs);
+    if (obj == refs.ta[UI_TEXTAREA_WIFI_IP] ||
+        obj == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        obj == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
+        return UI_INPUT_GROUP_WIFI_STATIC;
+    }
+    if (obj == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||
+        obj == refs.ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
+        obj == refs.ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
+        return UI_INPUT_GROUP_ETHERNET_STATIC;
+    }
+
+    return UI_INPUT_GROUP_DEFAULT;
+}

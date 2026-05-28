@@ -1,6 +1,6 @@
 #include "ui_test_data.h"
-#include "ui_frontend_api.h"
-#include "ui_dashboard.h"
+#include "ui_sub.h"
+#include "cmp_dashboard.h"
 #include "lvgl.h"
 #include "cJSON.h"
 #include <stdlib.h>
@@ -34,21 +34,21 @@ static void ui_test_timer_cb(lv_timer_t *timer) {
     // O3: 0.0 to 500.0 ppb -> (0 to 5000)
     cJSON_AddNumberToObject(root, "o3", rand() % 5001);
 
-    // CO2: 400.0 to 2500.0 ppm -> (4000 to 25000)
-    cJSON_AddNumberToObject(root, "co2", (rand() % 21001) + 4000);
+    // CO: 400.0 to 2500.0 ppm -> (4000 to 25000)
+    cJSON_AddNumberToObject(root, "co", (rand() % 21001) + 4000);
+
+    // AQI: 0 to 500 (integer, not scaled x10)
+    cJSON_AddNumberToObject(root, "aqi", rand() % 501);    
 
     // Convert cJSON object to string and post it via Frontend API
     char *json_str = cJSON_PrintUnformatted(root);
     if (json_str) {
-        ui_frontend_post_json(UI_FRONTEND_TOPIC_SENSOR_DATA, json_str);
+        ui_sub_post_json(SUB_TOPIC_SENSOR_DATA, json_str);
         cJSON_free(json_str);
     }
 
     // Clean up
     cJSON_Delete(root);
-
-    // Call render to immediately update the visual UI with the new state
-    ui_dashboard_render(true);
 }
 
 void ui_test_inject_random_dashboard_data(void) {

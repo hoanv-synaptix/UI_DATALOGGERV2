@@ -72,13 +72,13 @@ typedef struct
 	lv_obj_t *scr_base_lbl_no2_val;
 	lv_obj_t *scr_base_lbl_no2_unit;
 	lv_obj_t *scr_base_cont_o3;
-	lv_obj_t *scr_base_lbl_03;
-	lv_obj_t *scr_base_lbl_03_val;
+	lv_obj_t *scr_base_lbl_o3;
+	lv_obj_t *scr_base_lbl_o3_val;
 	lv_obj_t *scr_base_lbl_o3_unit;
 	lv_obj_t *scr_base_cont_co2;
-	lv_obj_t *scr_base_lbl_co2;
-	lv_obj_t *scr_base_lbl_co2_val;
-	lv_obj_t *scr_base_lbl_co2_unit;
+	lv_obj_t *scr_base_lbl_co;
+	lv_obj_t *scr_base_lbl_co_val;
+	lv_obj_t *scr_base_lbl_co_unit;
 	lv_obj_t *scr_base_cont_so2;
 	lv_obj_t *scr_base_lbl_so2;
 	lv_obj_t *scr_base_lbl_so2_val;
@@ -146,9 +146,9 @@ typedef struct
 	lv_obj_t *scr_base_btn_sys_admin_label;
 	lv_obj_t *scr_base_cont_networkconfig;
 	lv_obj_t *scr_base_cont_net_back;
+	lv_obj_t *scr_base_img_18;
 	lv_obj_t *scr_base_btn_net_back;
 	lv_obj_t *scr_base_btn_net_back_label;
-	lv_obj_t *scr_base_img_18;
 	lv_obj_t *scr_base_label_107;
 	lv_obj_t *scr_base_ddlist_net_option;
 	lv_obj_t *scr_base_cont_40;
@@ -161,8 +161,6 @@ typedef struct
 	lv_obj_t *scr_base_label_111;
 	lv_obj_t *scr_base_ddlist_wifi_mode;
 	lv_obj_t *scr_base_ta_wifi_ip;
-	lv_obj_t *scr_base_label_112;
-	lv_obj_t *scr_base_cont_41;
 	lv_obj_t *scr_base_lbl_wifi_status;
 	lv_obj_t *scr_base_btn_wifi_apply;
 	lv_obj_t *scr_base_btn_wifi_apply_label;
@@ -179,8 +177,6 @@ typedef struct
 	lv_obj_t *scr_base_label_115;
 	lv_obj_t *scr_base_ddlist_ethernet_mode;
 	lv_obj_t *scr_base_ta_ethernet_ip;
-	lv_obj_t *scr_base_label_114;
-	lv_obj_t *scr_base_cont_43;
 	lv_obj_t *scr_base_lbl_ethernet_status;
 	lv_obj_t *scr_base_btn_ethernet_apply;
 	lv_obj_t *scr_base_btn_ethernet_apply_label;
@@ -192,8 +188,6 @@ typedef struct
 	lv_obj_t *scr_base_label_122;
 	lv_obj_t *scr_base_label_121;
 	lv_obj_t *scr_base_ta_lte_pass;
-	lv_obj_t *scr_base_label_120;
-	lv_obj_t *scr_base_cont_45;
 	lv_obj_t *scr_base_lbl_lte_status;
 	lv_obj_t *scr_base_btn_lte_apply;
 	lv_obj_t *scr_base_btn_lte_apply_label;
@@ -202,9 +196,9 @@ typedef struct
 	lv_obj_t *scr_base_label_126;
 	lv_obj_t *scr_base_cont_mqtt_config;
 	lv_obj_t *scr_base_cont_mqtt_back;
+	lv_obj_t *scr_base_img_19;
 	lv_obj_t *scr_base_btn_mqtt_back;
 	lv_obj_t *scr_base_btn_mqtt_back_label;
-	lv_obj_t *scr_base_img_19;
 	lv_obj_t *scr_base_label_147;
 	lv_obj_t *scr_base_cont_47;
 	lv_obj_t *scr_base_cont_48;
@@ -215,25 +209,21 @@ typedef struct
 	lv_obj_t *scr_base_label_132;
 	lv_obj_t *scr_base_label_131;
 	lv_obj_t *scr_base_ta_mqtt_pass;
-	lv_obj_t *scr_base_label_130;
-	lv_obj_t *scr_base_cont_49;
 	lv_obj_t *scr_base_lbl_mqtt_status;
 	lv_obj_t *scr_base_btn_mqtt_apply;
 	lv_obj_t *scr_base_btn_mqtt_apply_label;
 	lv_obj_t *scr_base_ta_mqtt_user;
 	lv_obj_t *scr_base_cont_modbus_config;
 	lv_obj_t *scr_base_cont_modbus_back;
+	lv_obj_t *scr_base_img_20;
 	lv_obj_t *scr_base_btn_modbus_back;
 	lv_obj_t *scr_base_btn_modbus_back_label;
-	lv_obj_t *scr_base_img_20;
 	lv_obj_t *scr_base_label_168;
 	lv_obj_t *scr_base_cont_51;
 	lv_obj_t *scr_base_cont_54;
 	lv_obj_t *scr_base_label_161;
 	lv_obj_t *scr_base_label_160;
 	lv_obj_t *scr_base_label_159;
-	lv_obj_t *scr_base_label_157;
-	lv_obj_t *scr_base_cont_55;
 	lv_obj_t *scr_base_lbl_modbus_status;
 	lv_obj_t *scr_base_btn_modbus_apply;
 	lv_obj_t *scr_base_btn_modbus_apply_label;
@@ -255,9 +245,9 @@ typedef struct
 	lv_obj_t *scr_base_ddlist_modbus_baudrate;
 	lv_obj_t *scr_base_cont_system_admin;
 	lv_obj_t *scr_base_cont_sys_back;
+	lv_obj_t *scr_base_img_23;
 	lv_obj_t *scr_base_btn_sys_back;
 	lv_obj_t *scr_base_btn_sys_back_label;
-	lv_obj_t *scr_base_img_23;
 	lv_obj_t *scr_base_label_194;
 	lv_obj_t *scr_base_cont_72;
 	lv_obj_t *scr_base_label_205;
@@ -296,15 +286,16 @@ typedef struct
 	lv_obj_t *scr_base_cont_69;
 	lv_obj_t *scr_base_cont_70;
 	lv_obj_t *scr_base_lbl_device_action;
-	lv_obj_t *scr_base_lbl_deivce_;
+	lv_obj_t *scr_base_lbl_deivce_quantity;
 	lv_obj_t *scr_base_lbl_device_register;
 	lv_obj_t *scr_base_lbl_device_slave_id;
 	lv_obj_t *scr_base_lbl_device_stt;
+	lv_obj_t *scr_base_lbl_device_register_remap;
 	lv_obj_t *scr_base_label_184;
 	lv_obj_t *scr_base_cont_devicelist_back;
+	lv_obj_t *scr_base_img_21;
 	lv_obj_t *scr_base_btn_devicelist_back;
 	lv_obj_t *scr_base_btn_devicelist_back_label;
-	lv_obj_t *scr_base_img_21;
 	lv_obj_t *scr_base_cont_device_config;
 	lv_obj_t *scr_base_cont_62;
 	lv_obj_t *scr_base_cont_63;
@@ -322,9 +313,9 @@ typedef struct
 	lv_obj_t *scr_base_ta_master_device_register_mapping;
 	lv_obj_t *scr_base_label_183;
 	lv_obj_t *scr_base_cont_deviceconfig_back;
+	lv_obj_t *scr_base_img_22;
 	lv_obj_t *scr_base_btn_deviceconfig_back;
 	lv_obj_t *scr_base_btn_deviceconfig_back_label;
-	lv_obj_t *scr_base_img_22;
 	lv_obj_t *scr_base_cont_restart;
 	lv_obj_t *scr_base_cont_restart_system;
 	lv_obj_t *scr_base_img_12;
@@ -428,7 +419,7 @@ LV_IMAGE_DECLARE(_padlock_RGB565A8_24x24);
 LV_IMAGE_DECLARE(_user_RGB565A8_24x24);
 
 LV_FONT_DECLARE(lv_font_montserratMedium_16)
-LV_FONT_DECLARE(lv_font_montserratMedium_12)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_15)
 LV_FONT_DECLARE(lv_font_Roboto_Black_15)
 LV_FONT_DECLARE(lv_font_Roboto_Black_25)
 LV_FONT_DECLARE(lv_font_Roboto_Black_72)
@@ -439,16 +430,15 @@ LV_FONT_DECLARE(lv_font_Roboto_Black_14)
 LV_FONT_DECLARE(lv_font_Roboto_Black_26)
 LV_FONT_DECLARE(lv_font_Roboto_Black_12)
 LV_FONT_DECLARE(lv_font_Roboto_Black_16)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_12)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_14)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_40)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_12)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_14)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_15)
-LV_FONT_DECLARE(lv_font_Roboto_Regular_10)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_13)
-LV_FONT_DECLARE(lv_font_Roboto_Regular_15)
-LV_FONT_DECLARE(lv_font_Roboto_Bold_10)
+LV_FONT_DECLARE(lv_font_montserratMedium_12)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_14)
+LV_FONT_DECLARE(lv_font_Roboto_Regular_15)
+LV_FONT_DECLARE(lv_font_Roboto_Black_10)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_13)
+LV_FONT_DECLARE(lv_font_Roboto_Bold_10)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_9)
 LV_FONT_DECLARE(lv_font_Roboto_Black_18)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_18)
