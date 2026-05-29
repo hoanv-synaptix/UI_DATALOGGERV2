@@ -49,14 +49,12 @@ typedef struct
 	lv_obj_t *scr_base_lbl_pm10;
 	lv_obj_t *scr_base_lbl_pm10_val;
 	lv_obj_t *scr_base_lbl_pm10_unit;
-	lv_obj_t *scr_base_cont_pm10_status;
-	lv_obj_t *scr_base_lbl_pm10_status;
+	lv_obj_t *scr_base_img_34;
 	lv_obj_t *scr_base_cont_pm25;
 	lv_obj_t *scr_base_lbl_pm25;
 	lv_obj_t *scr_base_lbl_pm25_val;
 	lv_obj_t *scr_base_lbl_pm25_uint;
-	lv_obj_t *scr_base_cont_status;
-	lv_obj_t *scr_base_lbl_pm25_status;
+	lv_obj_t *scr_base_img_35;
 	lv_obj_t *scr_base_cont_21;
 	lv_obj_t *scr_base_lbl_temp;
 	lv_obj_t *scr_base_lbl_temp_val;
@@ -399,6 +397,8 @@ void setup_scr_scr_booting(lv_ui *ui);
 void setup_scr_scr_base(lv_ui *ui);
 LV_IMAGE_DECLARE(_text_synaptix_color_RGB565A8_256x65);
 LV_IMAGE_DECLARE(_bg_base_RGB565_800x480);
+LV_IMAGE_DECLARE(_PM25_RGB565A8_40x40);
+LV_IMAGE_DECLARE(_PM10_RGB565A8_40x40);
 LV_IMAGE_DECLARE(_weather_RGB565A8_32x32);
 LV_IMAGE_DECLARE(_humidity_RGB565A8_32x32);
 LV_IMAGE_DECLARE(_next_RGB565A8_32x32);
@@ -426,11 +426,11 @@ LV_FONT_DECLARE(lv_font_Roboto_Black_72)
 LV_FONT_DECLARE(lv_font_Roboto_Black_30)
 LV_FONT_DECLARE(lv_font_Roboto_Black_48)
 LV_FONT_DECLARE(lv_font_Roboto_Black_20)
-LV_FONT_DECLARE(lv_font_Roboto_Black_14)
 LV_FONT_DECLARE(lv_font_Roboto_Black_26)
 LV_FONT_DECLARE(lv_font_Roboto_Black_12)
 LV_FONT_DECLARE(lv_font_Roboto_Black_16)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_14)
+LV_FONT_DECLARE(lv_font_Roboto_Black_14)
 LV_FONT_DECLARE(lv_font_Roboto_Bold_40)
 LV_FONT_DECLARE(lv_font_Roboto_Regular_12)
 LV_FONT_DECLARE(lv_font_montserratMedium_12)

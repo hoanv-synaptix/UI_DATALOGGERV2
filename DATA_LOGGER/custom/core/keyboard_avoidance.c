@@ -55,6 +55,24 @@ static lv_keyboard_mode_t get_keyboard_mode_for_ta(ui_textarea_id_t id) {
     }
 }
 
+static void kb_set_translate_y(void * var, int32_t v) {
+    lv_obj_set_style_translate_y((lv_obj_t*)var, v, 0);
+}
+
+static void kb_anim_ready_cb(lv_anim_t * a)
+{
+    lv_obj_t * kb = a->var;
+    if (!kb) return;
+    lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
+    
+    lv_obj_t * scr = lv_scr_act();
+    if (scr) {
+        lv_obj_set_style_pad_bottom(scr, 0, 0);
+        lv_obj_clear_flag(scr, LV_OBJ_FLAG_SCROLLABLE);
+        lv_obj_update_layout(scr);
+    }
+}
+
 static void custom_ta_event_handler(lv_event_t * e) {
     lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t * ta = lv_event_get_target(e);
@@ -71,11 +89,27 @@ static void custom_ta_event_handler(lv_event_t * e) {
         }
         
         lv_keyboard_set_textarea(kb, ta);
-        lv_obj_remove_flag(kb, LV_OBJ_FLAG_HIDDEN);
 
         lv_coord_t kb_h = lv_obj_get_height(kb);
         if(kb_h <= 0) kb_h = 240;
 
+        if (lv_obj_has_flag(kb, LV_OBJ_FLAG_HIDDEN)) {
+            lv_obj_set_style_translate_y(kb, kb_h, 0);
+            lv_obj_remove_flag(kb, LV_OBJ_FLAG_HIDDEN);
+        }
+
+        // Bàn phím trượt lên
+        lv_anim_del(kb, (lv_anim_exec_xcb_t)kb_set_translate_y);
+        lv_anim_t a_kb;
+        lv_anim_init(&a_kb);
+        lv_anim_set_var(&a_kb, kb);
+        lv_anim_set_time(&a_kb, 150);
+        lv_anim_set_values(&a_kb, lv_obj_get_style_translate_y(kb, 0), 0);
+        lv_anim_set_exec_cb(&a_kb, (lv_anim_exec_xcb_t)kb_set_translate_y);
+        lv_anim_set_path_cb(&a_kb, lv_anim_path_ease_out);
+        lv_anim_start(&a_kb);
+
+        // Mở rộng màn hình và cuộn đến TA
         lv_obj_t * scr = lv_scr_act();
         lv_obj_add_flag(scr, LV_OBJ_FLAG_SCROLLABLE);
         lv_obj_set_style_pad_bottom(scr, kb_h + 20, 0);
@@ -85,17 +119,33 @@ static void custom_ta_event_handler(lv_event_t * e) {
 
     } else if(code == LV_EVENT_DEFOCUSED || code == LV_EVENT_CANCEL || code == LV_EVENT_READY) {
         lv_keyboard_set_textarea(kb, NULL);
-        lv_obj_add_flag(kb, LV_OBJ_FLAG_HIDDEN);
 
+        lv_coord_t kb_h = lv_obj_get_height(kb);
+        if(kb_h <= 0) kb_h = 240;
+
+        // Bàn phím trượt xuống
+        lv_anim_del(kb, (lv_anim_exec_xcb_t)kb_set_translate_y);
+        lv_anim_t a_kb;
+        lv_anim_init(&a_kb);
+        lv_anim_set_var(&a_kb, kb);
+        lv_anim_set_time(&a_kb, 150); // Giảm thời gian trượt xuống để đỡ lag
+        lv_anim_set_delay(&a_kb, 0); 
+        lv_anim_set_values(&a_kb, lv_obj_get_style_translate_y(kb, 0), kb_h);
+        lv_anim_set_exec_cb(&a_kb, (lv_anim_exec_xcb_t)kb_set_translate_y);
+        lv_anim_set_path_cb(&a_kb, lv_anim_path_ease_in);
+        lv_anim_set_ready_cb(&a_kb, kb_anim_ready_cb);
+        lv_anim_start(&a_kb);
+
+        // Trả tất cả các container bị cuộn về vị trí cũ để không bị khoảng trắng
         lv_obj_t * scr = lv_scr_act();
-        // Trượt về toạ độ gốc ngay lập tức (không dùng animation) để tránh lòi nền trắng
-        lv_obj_scroll_to(scr, 0, 0, LV_ANIM_OFF);
-        // Xoá khoảng đệm
-        lv_obj_set_style_pad_bottom(scr, 0, 0);
-        // Khoá không cho cuộn nữa
-        lv_obj_clear_flag(scr, LV_OBJ_FLAG_SCROLLABLE);
-        // Cập nhật lại layout
-        lv_obj_update_layout(scr);
+        lv_obj_t * parent = ta;
+        while(parent) {
+            if (lv_obj_has_flag(parent, LV_OBJ_FLAG_SCROLLABLE)) {
+                lv_obj_scroll_to(parent, 0, 0, LV_ANIM_ON);
+            }
+            if (parent == scr) break;
+            parent = lv_obj_get_parent(parent);
+        }
     }
 }
 
@@ -104,6 +154,9 @@ static ui_textarea_id_t ta_ids[UI_TEXTAREA_COUNT];
 
 static void apply_keyboard_avoidance(void) {
     if (!kb_event_bound && guider_ui.g_kb_top_layer) {
+        // Xoá event ẩn phím mặc định của GUI Guider để animation trượt xuống không bị ngắt quãng
+        lv_obj_remove_event_cb(guider_ui.g_kb_top_layer, kb_event_cb);
+        
         lv_obj_add_event_cb(guider_ui.g_kb_top_layer, custom_kb_event_handler, LV_EVENT_READY, NULL);
         lv_obj_add_event_cb(guider_ui.g_kb_top_layer, custom_kb_event_handler, LV_EVENT_CANCEL, NULL);
         kb_event_bound = true;
@@ -142,6 +195,10 @@ static void kb_poll_timer_cb(lv_timer_t * t) {
     }
 }
 
+static lv_timer_t *s_kb_timer = NULL;
+
 void keyboard_avoidance_init(void) {
-    lv_timer_create(kb_poll_timer_cb, 500, NULL);
+    if (!s_kb_timer) {
+        s_kb_timer = lv_timer_create(kb_poll_timer_cb, 1000, NULL);
+    }
 }

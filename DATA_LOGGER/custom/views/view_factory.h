@@ -171,14 +171,14 @@ typedef struct {
 } ui_report_refs_t;
 
 /**
- * @brief Lấy đối tượng View Factory (Singleton pattern)
+ * @brief Trả về Instance duy nhất
  */
 view_factory_t *view_factory_get(void);
 
 /**
- * @brief Khởi tạo lần đầu cho toàn bộ View
+ * @brief Kiểm tra xem giao diện chính đã load xong chưa
  */
-void view_factory_bootstrap(void);
+bool view_factory_is_base_ready(void);
 
 /**
  * @brief Hiện màn hình Booting (Khởi động)
@@ -196,6 +196,12 @@ void view_factory_get_modbus_refs(view_factory_t *ui, ui_modbus_refs_t *out);
 void view_factory_get_system_refs(view_factory_t *ui, ui_system_refs_t *out);
 void view_factory_get_login_refs(view_factory_t *ui, ui_login_refs_t *out);
 void view_factory_get_report_refs(view_factory_t *ui, ui_report_refs_t *out);
+
+/**
+ * @brief Invalidate the widget cache. Must be called when the screen is
+ *        deleted or recreated so that stale pointers are not reused.
+ */
+void view_factory_invalidate_cache(void);
 
 // --- Trích xuất tài nguyên dùng chung ---
 lv_obj_t *view_factory_get_base_screen(view_factory_t *ui);

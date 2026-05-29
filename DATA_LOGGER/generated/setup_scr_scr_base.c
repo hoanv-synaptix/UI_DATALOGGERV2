@@ -361,7 +361,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_dashboard, 101, 49);
     lv_obj_set_size(ui->scr_base_cont_dashboard, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_dashboard, LV_SCROLLBAR_MODE_OFF);
-    lv_obj_add_flag(ui->scr_base_cont_dashboard, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_dashboard, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_dashboard, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -633,49 +632,18 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_pad_left(ui->scr_base_lbl_pm10_unit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->scr_base_lbl_pm10_unit, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes scr_base_cont_pm10_status
-    ui->scr_base_cont_pm10_status = lv_obj_create(ui->scr_base_cont_pm10);
-    lv_obj_set_pos(ui->scr_base_cont_pm10_status, 110, 13);
-    lv_obj_set_size(ui->scr_base_cont_pm10_status, 85, 30);
-    lv_obj_set_scrollbar_mode(ui->scr_base_cont_pm10_status, LV_SCROLLBAR_MODE_OFF);
+    //Write codes scr_base_img_34
+    ui->scr_base_img_34 = lv_image_create(ui->scr_base_cont_pm10);
+    lv_obj_set_pos(ui->scr_base_img_34, 150, 8);
+    lv_obj_set_size(ui->scr_base_img_34, 40, 40);
+    lv_obj_add_flag(ui->scr_base_img_34, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_base_img_34, &_PM25_RGB565A8_40x40);
+    lv_image_set_pivot(ui->scr_base_img_34, 50,50);
+    lv_image_set_rotation(ui->scr_base_img_34, 0);
 
-    //Write style for scr_base_cont_pm10_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_border_width(ui->scr_base_cont_pm10_status, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scr_base_cont_pm10_status, 25, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scr_base_cont_pm10_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scr_base_cont_pm10_status, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_cont_pm10_status, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_cont_pm10_status, 244, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_cont_pm10_status, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_cont_pm10_status, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_cont_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui->scr_base_cont_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_cont_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_cont_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_cont_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
-    //Write codes scr_base_lbl_pm10_status
-    ui->scr_base_lbl_pm10_status = lv_label_create(ui->scr_base_cont_pm10_status);
-    lv_obj_set_pos(ui->scr_base_lbl_pm10_status, 0, 8);
-    lv_obj_set_size(ui->scr_base_lbl_pm10_status, 85, 15);
-    lv_label_set_text(ui->scr_base_lbl_pm10_status, "GOOD");
-    lv_label_set_long_mode(ui->scr_base_lbl_pm10_status, LV_LABEL_LONG_WRAP);
-
-    //Write style for scr_base_lbl_pm10_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_border_width(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_color(ui->scr_base_lbl_pm10_status, lv_color_hex(0x34D399), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_lbl_pm10_status, &lv_font_Roboto_Black_14, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_lbl_pm10_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->scr_base_lbl_pm10_status, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_line_space(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_pm10_status, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_lbl_pm10_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    //Write style for scr_base_img_34, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_base_img_34, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_base_img_34, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_cont_pm25
     ui->scr_base_cont_pm25 = lv_obj_create(ui->scr_base_cont_dashboard);
@@ -767,49 +735,19 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_pad_left(ui->scr_base_lbl_pm25_uint, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_shadow_width(ui->scr_base_lbl_pm25_uint, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
-    //Write codes scr_base_cont_status
-    ui->scr_base_cont_status = lv_obj_create(ui->scr_base_cont_pm25);
-    lv_obj_set_pos(ui->scr_base_cont_status, 110, 13);
-    lv_obj_set_size(ui->scr_base_cont_status, 85, 30);
-    lv_obj_set_scrollbar_mode(ui->scr_base_cont_status, LV_SCROLLBAR_MODE_OFF);
+    //Write codes scr_base_img_35
+    ui->scr_base_img_35 = lv_image_create(ui->scr_base_cont_pm25);
+    lv_obj_set_pos(ui->scr_base_img_35, 147, 8);
+    lv_obj_set_size(ui->scr_base_img_35, 40, 40);
+    lv_obj_add_flag(ui->scr_base_img_35, LV_OBJ_FLAG_CLICKABLE);
+    lv_image_set_src(ui->scr_base_img_35, &_PM10_RGB565A8_40x40);
+    lv_image_set_pivot(ui->scr_base_img_35, 50,50);
+    lv_image_set_rotation(ui->scr_base_img_35, 0);
 
-    //Write style for scr_base_cont_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_border_width(ui->scr_base_cont_status, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_opa(ui->scr_base_cont_status, 25, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_color(ui->scr_base_cont_status, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_border_side(ui->scr_base_cont_status, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_cont_status, 20, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_cont_status, 244, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_color(ui->scr_base_cont_status, lv_color_hex(0x0F172A), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_grad_dir(ui->scr_base_cont_status, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_cont_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui->scr_base_cont_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_cont_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_cont_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_cont_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-
-    //Write codes scr_base_lbl_pm25_status
-    ui->scr_base_lbl_pm25_status = lv_label_create(ui->scr_base_cont_status);
-    lv_obj_set_pos(ui->scr_base_lbl_pm25_status, 0, 8);
-    lv_obj_set_size(ui->scr_base_lbl_pm25_status, 85, 15);
-    lv_label_set_text(ui->scr_base_lbl_pm25_status, "GOOD");
-    lv_label_set_long_mode(ui->scr_base_lbl_pm25_status, LV_LABEL_LONG_WRAP);
-
-    //Write style for scr_base_lbl_pm25_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_border_width(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_radius(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_color(ui->scr_base_lbl_pm25_status, lv_color_hex(0x34D399), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_lbl_pm25_status, &lv_font_Roboto_Black_14, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_lbl_pm25_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_letter_space(ui->scr_base_lbl_pm25_status, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_line_space(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_lbl_pm25_status, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_bg_opa(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_top(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_right(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_bottom(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_pad_left(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_lbl_pm25_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    //Write style for scr_base_img_35, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
+    lv_obj_set_style_image_recolor_opa(ui->scr_base_img_35, 198, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_recolor(ui->scr_base_img_35, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_image_opa(ui->scr_base_img_35, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_cont_21
     ui->scr_base_cont_21 = lv_obj_create(ui->scr_base_cont_dashboard);
@@ -2041,6 +1979,7 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_pos(ui->scr_base_cont_hw, 101, 48);
     lv_obj_set_size(ui->scr_base_cont_hw, 680, 420);
     lv_obj_set_scrollbar_mode(ui->scr_base_cont_hw, LV_SCROLLBAR_MODE_OFF);
+    lv_obj_add_flag(ui->scr_base_cont_hw, LV_OBJ_FLAG_HIDDEN);
 
     //Write style for scr_base_cont_hw, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_border_width(ui->scr_base_cont_hw, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -9210,20 +9149,20 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_label_set_long_mode(ui->scr_base_lbl_status_login_setting, LV_LABEL_LONG_WRAP);
 
     //Write style for scr_base_lbl_status_login_setting, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->scr_base_lbl_status_login_setting, lv_color_hex(0xABABAB), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui->scr_base_lbl_status_login_setting, &lv_font_Roboto_Regular_14, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->scr_base_lbl_status_login_setting, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_lbl_status_login_setting, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->scr_base_lbl_status_login_setting, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_lbl_status_login_setting, 30, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_bottom(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->scr_base_lbl_status_login_setting, 30, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_lbl_status_login_setting, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_btn_login_settings_confirm
     ui->scr_base_btn_login_settings_confirm = lv_button_create(ui->scr_base_cont_76);
@@ -9263,10 +9202,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_width(ui->scr_base_btn_login_settings_cancel_label, LV_PCT(100));
 
     //Write style for scr_base_btn_login_settings_cancel, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_text_color(ui->scr_base_btn_login_settings_cancel, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_btn_login_settings_cancel, &lv_font_Roboto_Black_15, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_btn_login_settings_cancel, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_btn_login_settings_cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_btn_login_settings_cancel, 193, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui->scr_base_btn_login_settings_cancel, lv_color_hex(0x1d1d1d), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_grad_dir(ui->scr_base_btn_login_settings_cancel, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -9274,8 +9209,12 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_border_opa(ui->scr_base_btn_login_settings_cancel, 37, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_color(ui->scr_base_btn_login_settings_cancel, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui->scr_base_btn_login_settings_cancel, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_btn_login_settings_cancel, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->scr_base_btn_login_settings_cancel, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_btn_login_settings_cancel, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_base_btn_login_settings_cancel, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_base_btn_login_settings_cancel, &lv_font_Roboto_Black_15, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_base_btn_login_settings_cancel, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_btn_login_settings_cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_ta_login_settings_pass
     ui->scr_base_ta_login_settings_pass = lv_textarea_create(ui->scr_base_cont_76);
@@ -9432,20 +9371,20 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_label_set_long_mode(ui->scr_base_label_login_booting_status, LV_LABEL_LONG_WRAP);
 
     //Write style for scr_base_label_login_booting_status, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_bg_opa(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_width(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_color(ui->scr_base_label_login_booting_status, lv_color_hex(0xABABAB), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(ui->scr_base_label_login_booting_status, &lv_font_Roboto_Regular_14, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_opa(ui->scr_base_label_login_booting_status, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_letter_space(ui->scr_base_label_login_booting_status, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_line_space(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_text_align(ui->scr_base_label_login_booting_status, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_top(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_right(ui->scr_base_label_login_booting_status, 30, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_bottom(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_pad_left(ui->scr_base_label_login_booting_status, 30, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_label_login_booting_status, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_btn_login_booting_confirm
     ui->scr_base_btn_login_booting_confirm = lv_button_create(ui->scr_base_cont_78);
@@ -9485,10 +9424,6 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_width(ui->scr_base_btn_login_booting_cancel_label, LV_PCT(100));
 
     //Write style for scr_base_btn_login_booting_cancel, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
-    lv_obj_set_style_text_color(ui->scr_base_btn_login_booting_cancel, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_font(ui->scr_base_btn_login_booting_cancel, &lv_font_Roboto_Black_15, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_opa(ui->scr_base_btn_login_booting_cancel, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_text_align(ui->scr_base_btn_login_booting_cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_opa(ui->scr_base_btn_login_booting_cancel, 193, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_color(ui->scr_base_btn_login_booting_cancel, lv_color_hex(0x1d1d1d), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_bg_grad_dir(ui->scr_base_btn_login_booting_cancel, LV_GRAD_DIR_NONE, LV_PART_MAIN|LV_STATE_DEFAULT);
@@ -9496,8 +9431,12 @@ void setup_scr_scr_base(lv_ui *ui)
     lv_obj_set_style_border_opa(ui->scr_base_btn_login_booting_cancel, 37, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_color(ui->scr_base_btn_login_booting_cancel, lv_color_hex(0x2195f6), LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_border_side(ui->scr_base_btn_login_booting_cancel, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
-    lv_obj_set_style_shadow_width(ui->scr_base_btn_login_booting_cancel, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
     lv_obj_set_style_radius(ui->scr_base_btn_login_booting_cancel, 12, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_shadow_width(ui->scr_base_btn_login_booting_cancel, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->scr_base_btn_login_booting_cancel, lv_color_hex(0xffffff), LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_font(ui->scr_base_btn_login_booting_cancel, &lv_font_Roboto_Black_15, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_opa(ui->scr_base_btn_login_booting_cancel, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+    lv_obj_set_style_text_align(ui->scr_base_btn_login_booting_cancel, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes scr_base_ta_login_booting_user
     ui->scr_base_ta_login_booting_user = lv_textarea_create(ui->scr_base_cont_78);

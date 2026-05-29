@@ -1,7 +1,5 @@
-build/object/generated/ctrl_screen.o: \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_screen.c \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_screen.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h \
+build/object/generated/_PM10_RGB565A8_40x40.o: \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\images\_pm10_rgb565a8_40x40.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \
@@ -685,24 +683,7 @@ build/object/generated/ctrl_screen.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/libs/ffmpeg/lv_ffmpeg.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_private.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\app_state.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_navigation.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_input.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_pub.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_runtime_guard.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_modbus_list.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\modbus_config_service.h \
- G:/HoaNV/Projects/DataloggerV2/Synaptix/services/mmbRTU/mbs_command.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_form_read.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_screen.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\views\view_factory.h:
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h:
 
@@ -2071,29 +2052,3 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/widgets/lottie/lv_lottie_
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src\lv_conf_internal.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/osal/lv_os_private.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\app_state.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_navigation.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ctrl_input.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_pub.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\controllers\ui_runtime_guard.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_modbus_list.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\modbus_config_service.h:
-
-G:/HoaNV/Projects/DataloggerV2/Synaptix/services/mmbRTU/mbs_command.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_form_read.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:

@@ -99,16 +99,13 @@ static view_factory_t s_view_factory = {
     .generated = &guider_ui
 };
 
+/* Cache cac widget reference — chi build mot lan, khong doi sau setup_ui() */
+static view_widget_refs_t s_widget_cache;
+static bool               s_cache_valid = false;
+
 // removed base_screen_loaded_cb
 
-static void check_scr_base_timer_cb(lv_timer_t *t)
-{
-    lv_ui *g = s_view_factory.generated;
-    if (g && g->scr_base && lv_obj_is_valid(g->scr_base)) {
-        custom_init(g);
-        lv_timer_del(t);
-    }
-}
+
 
 static void load_booting_screen(lv_ui *g, uint32_t time, uint32_t delay)
 {
@@ -117,8 +114,6 @@ static void load_booting_screen(lv_ui *g, uint32_t time, uint32_t delay)
     setup_scr_scr_booting(g);
     g->scr_base_del = true;
     lv_screen_load_anim(g->scr_booting, LV_SCR_LOAD_ANIM_NONE, time, delay, true);
-    
-    lv_timer_create(check_scr_base_timer_cb, 50, NULL);
 }
 
 /*
@@ -142,22 +137,13 @@ view_factory_t *view_factory_get(void)
     return &s_view_factory;
 }
 
-/**
- * @brief Khởi chạy quy trình mồi (Bootstrap) ban đầu.
- * Vẽ layer bàn phím và khởi tạo màn hình Booting (NXP Code).
- */
-void view_factory_bootstrap(void)
+bool view_factory_is_base_ready(void)
 {
     lv_ui *g = s_view_factory.generated;
-
-    if (!g) return;
-
-    setup_bottom_layer();
-    init_scr_del_flag(g);
-    init_keyboard(g);
-    events_init(g);
-    load_booting_screen(g, 0, 0); // Hiện màn hình Load lần đầu
+    return (g && g->scr_base && lv_obj_is_valid(g->scr_base));
 }
+
+
 
 void view_factory_show_booting(view_factory_t *ui)
 {
@@ -173,15 +159,18 @@ void view_factory_show_booting(view_factory_t *ui)
  * @brief Hàm nội bộ (Private) trích xuất toàn bộ hàng trăm biến tĩnh
  * sinh ra bởi GUI Guider sang một Struct duy nhất để dễ quản lý.
  */
-static void view_factory_get_widgets(view_factory_t *ui, view_widget_refs_t *out)
+static const view_widget_refs_t *view_factory_get_widgets_ptr(view_factory_t *ui)
 {
     lv_ui *g;
+    view_widget_refs_t *out = &s_widget_cache;
 
-    if (!out) return;
+    if (!ui || !ui->generated) return NULL;
+
+    if (s_cache_valid) {
+        return out;
+    }
 
     memset(out, 0, sizeof(*out));
-    if (!ui || !ui->generated) return;
-
     g = ui->generated;
     out->base_screen = g->scr_base;
     out->booting_screen = g->scr_booting;
@@ -294,179 +283,198 @@ static void view_factory_get_widgets(view_factory_t *ui, view_widget_refs_t *out
     out->label_lte_status = g->scr_base_lbl_lte_status;
     out->label_mqtt_status = g->scr_base_lbl_mqtt_status;
     out->label_modbus_status = g->scr_base_lbl_modbus_status;
+
+    s_cache_valid = true;
+    return out;
+}
+
+void view_factory_invalidate_cache(void)
+{
+    s_cache_valid = false;
+    memset(&s_widget_cache, 0, sizeof(s_widget_cache));
 }
 
 void view_factory_get_shell_refs(view_factory_t *ui, ui_shell_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->base_screen = refs.base_screen;
-    out->booting_screen = refs.booting_screen;
-    out->keyboard = refs.keyboard;
-    out->btn_dashboard = refs.btn_dashboard;
-    out->btn_analysis = refs.btn_analysis;
-    out->btn_event_logs = refs.btn_event_logs;
-    out->btn_settings = refs.btn_settings;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->base_screen = refs->base_screen;
+    out->booting_screen = refs->booting_screen;
+    out->keyboard = refs->keyboard;
+    out->btn_dashboard = refs->btn_dashboard;
+    out->btn_analysis = refs->btn_analysis;
+    out->btn_event_logs = refs->btn_event_logs;
+    out->btn_settings = refs->btn_settings;
 }
 
 void view_factory_get_main_view_refs(view_factory_t *ui, ui_main_view_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_dashboard = refs.cont_dashboard;
-    out->cont_analysis = refs.cont_analysis;
-    out->cont_event_logs = refs.cont_event_logs;
-    out->cont_hw = refs.cont_hw;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_dashboard = refs->cont_dashboard;
+    out->cont_analysis = refs->cont_analysis;
+    out->cont_event_logs = refs->cont_event_logs;
+    out->cont_hw = refs->cont_hw;
 }
 
 void view_factory_get_logs_refs(view_factory_t *ui, ui_logs_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->logs_container = refs.logs_container;
-    out->critical_logs_label = refs.critical_logs_label;
-    out->clear_history_button = refs.clear_history_button;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->logs_container = refs->logs_container;
+    out->critical_logs_label = refs->critical_logs_label;
+    out->clear_history_button = refs->clear_history_button;
 }
 
 void view_factory_get_settings_nav_refs(view_factory_t *ui, ui_settings_nav_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_menu = refs.cont_menu;
-    out->cont_network_config = refs.cont_network_config;
-    out->cont_mqtt_config = refs.cont_mqtt_config;
-    out->cont_modbus_config = refs.cont_modbus_config;
-    out->cont_system_admin = refs.cont_system_admin;
-    out->btn_net = refs.btn_net;
-    out->btn_mqtt = refs.btn_mqtt;
-    out->btn_modbus = refs.btn_modbus;
-    out->btn_sys_admin = refs.btn_sys_admin;
-    out->btn_net_back = refs.btn_net_back;
-    out->btn_mqtt_back = refs.btn_mqtt_back;
-    out->btn_modbus_back = refs.btn_modbus_back;
-    out->btn_sys_back = refs.btn_sys_back;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_menu = refs->cont_menu;
+    out->cont_network_config = refs->cont_network_config;
+    out->cont_mqtt_config = refs->cont_mqtt_config;
+    out->cont_modbus_config = refs->cont_modbus_config;
+    out->cont_system_admin = refs->cont_system_admin;
+    out->btn_net = refs->btn_net;
+    out->btn_mqtt = refs->btn_mqtt;
+    out->btn_modbus = refs->btn_modbus;
+    out->btn_sys_admin = refs->btn_sys_admin;
+    out->btn_net_back = refs->btn_net_back;
+    out->btn_mqtt_back = refs->btn_mqtt_back;
+    out->btn_modbus_back = refs->btn_modbus_back;
+    out->btn_sys_back = refs->btn_sys_back;
 }
 
 void view_factory_get_network_refs(view_factory_t *ui, ui_network_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_wifi = refs.cont_wifi;
-    out->cont_ethernet = refs.cont_ethernet;
-    out->cont_lte = refs.cont_lte;
-    out->btn_wifi_apply = refs.btn_wifi_apply;
-    out->btn_ethernet_apply = refs.btn_ethernet_apply;
-    out->btn_lte_apply = refs.btn_lte_apply;
-    out->ddlist_net_option = refs.ddlist_net_option;
-    out->ddlist_wifi_mode = refs.ddlist_wifi_mode;
-    out->ddlist_ethernet_mode = refs.ddlist_ethernet_mode;
-    out->label_wifi_ip = refs.label_wifi_ip;
-    out->label_wifi_status = refs.label_wifi_status;
-    out->label_ethernet_ip = refs.label_ethernet_ip;
-    out->label_ethernet_subnet = refs.label_ethernet_subnet;
-    out->label_ethernet_gateway = refs.label_ethernet_gateway;
-    out->label_ethernet_status = refs.label_ethernet_status;
-    out->label_lte_status = refs.label_lte_status;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_wifi = refs->cont_wifi;
+    out->cont_ethernet = refs->cont_ethernet;
+    out->cont_lte = refs->cont_lte;
+    out->btn_wifi_apply = refs->btn_wifi_apply;
+    out->btn_ethernet_apply = refs->btn_ethernet_apply;
+    out->btn_lte_apply = refs->btn_lte_apply;
+    out->ddlist_net_option = refs->ddlist_net_option;
+    out->ddlist_wifi_mode = refs->ddlist_wifi_mode;
+    out->ddlist_ethernet_mode = refs->ddlist_ethernet_mode;
+    out->label_wifi_ip = refs->label_wifi_ip;
+    out->label_wifi_status = refs->label_wifi_status;
+    out->label_ethernet_ip = refs->label_ethernet_ip;
+    out->label_ethernet_subnet = refs->label_ethernet_subnet;
+    out->label_ethernet_gateway = refs->label_ethernet_gateway;
+    out->label_ethernet_status = refs->label_ethernet_status;
+    out->label_lte_status = refs->label_lte_status;
 }
 
 void view_factory_get_mqtt_refs(view_factory_t *ui, ui_mqtt_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_mqtt_config = refs.cont_mqtt_config;
-    out->cont_mqtt_form = refs.cont_mqtt_form;
-    out->btn_mqtt_apply = refs.btn_mqtt_apply;
-    out->label_mqtt_status = refs.label_mqtt_status;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_mqtt_config = refs->cont_mqtt_config;
+    out->cont_mqtt_form = refs->cont_mqtt_form;
+    out->btn_mqtt_apply = refs->btn_mqtt_apply;
+    out->label_mqtt_status = refs->label_mqtt_status;
 }
 
 void view_factory_get_modbus_refs(view_factory_t *ui, ui_modbus_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_modbus_config = refs.cont_modbus_config;
-    out->cont_master = refs.cont_master;
-    out->cont_slave = refs.cont_slave;
-    out->cont_device_config = refs.cont_device_config;
-    out->cont_device_viewlist = refs.cont_device_viewlist;
-    out->cont_master_device_form = refs.cont_master_device_form;
-    out->ddlist_modbus_mode = refs.ddlist_modbus_mode;
-    out->btn_master_adddevice = refs.btn_master_adddevice;
-    out->btn_master_viewlist = refs.btn_master_viewlist;
-    out->btn_master_device_apply = refs.btn_master_device_apply;
-    out->btn_modbus_apply = refs.btn_modbus_apply;
-    out->btn_deviceconfig_back = refs.btn_deviceconfig_back;
-    out->btn_devicelist_back = refs.btn_devicelist_back;
-    out->label_modbus_status = refs.label_modbus_status;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_modbus_config = refs->cont_modbus_config;
+    out->cont_master = refs->cont_master;
+    out->cont_slave = refs->cont_slave;
+    out->cont_device_config = refs->cont_device_config;
+    out->cont_device_viewlist = refs->cont_device_viewlist;
+    out->cont_master_device_form = refs->cont_master_device_form;
+    out->ddlist_modbus_mode = refs->ddlist_modbus_mode;
+    out->btn_master_adddevice = refs->btn_master_adddevice;
+    out->btn_master_viewlist = refs->btn_master_viewlist;
+    out->btn_master_device_apply = refs->btn_master_device_apply;
+    out->btn_modbus_apply = refs->btn_modbus_apply;
+    out->btn_deviceconfig_back = refs->btn_deviceconfig_back;
+    out->btn_devicelist_back = refs->btn_devicelist_back;
+    out->label_modbus_status = refs->label_modbus_status;
 }
 
 void view_factory_get_system_refs(view_factory_t *ui, ui_system_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_system_admin = refs.cont_system_admin;
-    out->cont_restart = refs.cont_restart;
-    out->cont_restore = refs.cont_restore;
-    out->btn_restart = refs.btn_restart;
-    out->btn_restart_cancel = refs.btn_restart_cancel;
-    out->btn_restart_confirm = refs.btn_restart_confirm;
-    out->btn_restore_confirm = refs.btn_restore_confirm;
-    out->btn_restore_cancel = refs.btn_restore_cancel;
-    out->btn_restart_system = refs.btn_restart_system;
-    out->btn_factory_reset = refs.btn_factory_reset;
-    out->btn_generate_report = refs.btn_generate_report;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_system_admin = refs->cont_system_admin;
+    out->cont_restart = refs->cont_restart;
+    out->cont_restore = refs->cont_restore;
+    out->btn_restart = refs->btn_restart;
+    out->btn_restart_cancel = refs->btn_restart_cancel;
+    out->btn_restart_confirm = refs->btn_restart_confirm;
+    out->btn_restore_confirm = refs->btn_restore_confirm;
+    out->btn_restore_cancel = refs->btn_restore_cancel;
+    out->btn_restart_system = refs->btn_restart_system;
+    out->btn_factory_reset = refs->btn_factory_reset;
+    out->btn_generate_report = refs->btn_generate_report;
 }
 
 void view_factory_get_login_refs(view_factory_t *ui, ui_login_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_booting_login = refs.cont_booting_login;
-    out->btn_login_booting_confirm = refs.btn_login_booting_confirm;
-    out->btn_login_booting_cancel = refs.btn_login_booting_cancel;
-    out->lbl_login_booting_status = refs.lbl_login_booting_status;
-    out->cont_login_settings = refs.cont_login_settings;
-    out->btn_login_settings_confirm = refs.btn_login_settings_confirm;
-    out->btn_login_settings_cancel = refs.btn_login_settings_cancel;
-    out->lbl_status_login_setting = refs.lbl_status_login_setting;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_booting_login = refs->cont_booting_login;
+    out->btn_login_booting_confirm = refs->btn_login_booting_confirm;
+    out->btn_login_booting_cancel = refs->btn_login_booting_cancel;
+    out->lbl_login_booting_status = refs->lbl_login_booting_status;
+    out->cont_login_settings = refs->cont_login_settings;
+    out->btn_login_settings_confirm = refs->btn_login_settings_confirm;
+    out->btn_login_settings_cancel = refs->btn_login_settings_cancel;
+    out->lbl_status_login_setting = refs->lbl_status_login_setting;
 }
 
 void view_factory_get_report_refs(view_factory_t *ui, ui_report_refs_t *out)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!out) return;
     memset(out, 0, sizeof(*out));
-    view_factory_get_widgets(ui, &refs);
-    out->cont_generate_report = refs.cont_generate_report;
-    out->btn_generate_report_confirm = refs.btn_generate_report_confirm;
-    out->btn_generate_report_cancel = refs.btn_generate_report_cancel;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return;
+    out->cont_generate_report = refs->cont_generate_report;
+    out->btn_generate_report_confirm = refs->btn_generate_report_confirm;
+    out->btn_generate_report_cancel = refs->btn_generate_report_cancel;
 }
 
 lv_obj_t *view_factory_get_base_screen(view_factory_t *ui)
@@ -487,12 +495,13 @@ lv_obj_t *view_factory_get_keyboard(view_factory_t *ui)
 
 lv_obj_t *view_factory_get_textarea(view_factory_t *ui, ui_textarea_id_t id)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if ((size_t)id >= view_factory_textarea_count()) return NULL;
 
-    view_factory_get_widgets(ui, &refs);
-    return refs.ta[id];
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return NULL;
+    return refs->ta[id];
 }
 
 size_t view_factory_textarea_count(void)
@@ -502,51 +511,52 @@ size_t view_factory_textarea_count(void)
 
 lv_obj_t *view_factory_resolve_textarea_container(view_factory_t *ui, lv_obj_t *ta)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!ta) return NULL;
 
-    view_factory_get_widgets(ui, &refs);
-    if (ta == refs.ta[UI_TEXTAREA_WIFI_SSID] ||
-        ta == refs.ta[UI_TEXTAREA_WIFI_PASS] ||
-        ta == refs.ta[UI_TEXTAREA_WIFI_IP] ||
-        ta == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
-        ta == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
-        return refs.cont_wifi;
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return NULL;
+    if (ta == refs->ta[UI_TEXTAREA_WIFI_SSID] ||
+        ta == refs->ta[UI_TEXTAREA_WIFI_PASS] ||
+        ta == refs->ta[UI_TEXTAREA_WIFI_IP] ||
+        ta == refs->ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        ta == refs->ta[UI_TEXTAREA_WIFI_GATEWAY]) {
+        return refs->cont_wifi;
     }
-    if (ta == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||
-        ta == refs.ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
-        ta == refs.ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
-        return refs.cont_ethernet;
+    if (ta == refs->ta[UI_TEXTAREA_ETHERNET_IP] ||
+        ta == refs->ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
+        ta == refs->ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
+        return refs->cont_ethernet;
     }
-    if (ta == refs.ta[UI_TEXTAREA_LTE_APN] ||
-        ta == refs.ta[UI_TEXTAREA_LTE_USERNAME] ||
-        ta == refs.ta[UI_TEXTAREA_LTE_PASS] ||
-        ta == refs.ta[UI_TEXTAREA_LTE_PIN_CODE]) {
-        return refs.cont_lte;
+    if (ta == refs->ta[UI_TEXTAREA_LTE_APN] ||
+        ta == refs->ta[UI_TEXTAREA_LTE_USERNAME] ||
+        ta == refs->ta[UI_TEXTAREA_LTE_PASS] ||
+        ta == refs->ta[UI_TEXTAREA_LTE_PIN_CODE]) {
+        return refs->cont_lte;
     }
-    if (ta == refs.ta[UI_TEXTAREA_MQTT_HOST] ||
-        ta == refs.ta[UI_TEXTAREA_MQTT_PORT] ||
-        ta == refs.ta[UI_TEXTAREA_MQTT_USER] ||
-        ta == refs.ta[UI_TEXTAREA_MQTT_PASS]) {
-        return refs.cont_mqtt_form;
+    if (ta == refs->ta[UI_TEXTAREA_MQTT_HOST] ||
+        ta == refs->ta[UI_TEXTAREA_MQTT_PORT] ||
+        ta == refs->ta[UI_TEXTAREA_MQTT_USER] ||
+        ta == refs->ta[UI_TEXTAREA_MQTT_PASS]) {
+        return refs->cont_mqtt_form;
     }
-    if (ta == refs.ta[UI_TEXTAREA_SLAVE_ID]) {
-        return refs.cont_slave;
+    if (ta == refs->ta[UI_TEXTAREA_SLAVE_ID]) {
+        return refs->cont_slave;
     }
-    if (ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_NAME] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] ||
-        ta == refs.ta[UI_TEXTAREA_MASTER_DEVICE_REMAP]) {
-        return refs.cont_master_device_form;
+    if (ta == refs->ta[UI_TEXTAREA_MASTER_DEVICE_NAME] ||
+        ta == refs->ta[UI_TEXTAREA_MASTER_DEVICE_SLAVEID] ||
+        ta == refs->ta[UI_TEXTAREA_MASTER_DEVICE_ADDRESS] ||
+        ta == refs->ta[UI_TEXTAREA_MASTER_DEVICE_QUANTITY] ||
+        ta == refs->ta[UI_TEXTAREA_MASTER_DEVICE_REMAP]) {
+        return refs->cont_master_device_form;
     }
-    if (ta == refs.ta[UI_TEXTAREA_LOGIN_USER] ||
-        ta == refs.ta[UI_TEXTAREA_LOGIN_PASS]) {
-        return refs.cont_booting_login;
+    if (ta == refs->ta[UI_TEXTAREA_LOGIN_USER] ||
+        ta == refs->ta[UI_TEXTAREA_LOGIN_PASS]) {
+        return refs->cont_booting_login;
     }
-    if (ta == refs.ta[UI_TEXTAREA_SECURE_SETTINGS_PASS]) {
-        return refs.cont_login_settings;
+    if (ta == refs->ta[UI_TEXTAREA_SECURE_SETTINGS_PASS]) {
+        return refs->cont_login_settings;
     }
 
     return lv_obj_get_parent(ta);
@@ -554,19 +564,20 @@ lv_obj_t *view_factory_resolve_textarea_container(view_factory_t *ui, lv_obj_t *
 
 ui_input_group_t view_factory_classify_input(view_factory_t *ui, lv_obj_t *obj)
 {
-    view_widget_refs_t refs;
+    const view_widget_refs_t *refs;
 
     if (!obj) return UI_INPUT_GROUP_DEFAULT;
 
-    view_factory_get_widgets(ui, &refs);
-    if (obj == refs.ta[UI_TEXTAREA_WIFI_IP] ||
-        obj == refs.ta[UI_TEXTAREA_WIFI_SUBNET] ||
-        obj == refs.ta[UI_TEXTAREA_WIFI_GATEWAY]) {
+    refs = view_factory_get_widgets_ptr(ui);
+    if (!refs) return UI_INPUT_GROUP_DEFAULT;
+    if (obj == refs->ta[UI_TEXTAREA_WIFI_IP] ||
+        obj == refs->ta[UI_TEXTAREA_WIFI_SUBNET] ||
+        obj == refs->ta[UI_TEXTAREA_WIFI_GATEWAY]) {
         return UI_INPUT_GROUP_WIFI_STATIC;
     }
-    if (obj == refs.ta[UI_TEXTAREA_ETHERNET_IP] ||
-        obj == refs.ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
-        obj == refs.ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
+    if (obj == refs->ta[UI_TEXTAREA_ETHERNET_IP] ||
+        obj == refs->ta[UI_TEXTAREA_ETHERNET_SUBNET] ||
+        obj == refs->ta[UI_TEXTAREA_ETHERNET_GATEWAY]) {
         return UI_INPUT_GROUP_ETHERNET_STATIC;
     }
 

@@ -56,3 +56,114 @@ char *ui_form_read_mqtt(view_factory_t *ui) {
 
     return json_str;
 }
+
+char *ui_form_read_wifi(view_factory_t *ui) {
+    if (!ui) return NULL;
+
+    lv_obj_t *ta_ssid = view_factory_get_textarea(ui, UI_TEXTAREA_WIFI_SSID);
+    lv_obj_t *ta_pass = view_factory_get_textarea(ui, UI_TEXTAREA_WIFI_PASS);
+
+    if (!ta_ssid) return NULL;
+
+    const char *ssid_str = lv_textarea_get_text(ta_ssid);
+    if (!ssid_str || strlen(ssid_str) == 0) return NULL;
+
+    cJSON *root = cJSON_CreateObject();
+    if (!root) return NULL;
+
+    cJSON_AddStringToObject(root, "ssid", ssid_str);
+
+    const char *pass_str = ta_pass ? lv_textarea_get_text(ta_pass) : "";
+    cJSON_AddStringToObject(root, "password", pass_str ? pass_str : "");
+
+    // Optional static IP fields
+    lv_obj_t *ta_ip = view_factory_get_textarea(ui, UI_TEXTAREA_WIFI_IP);
+    if (ta_ip) {
+        const char *ip = lv_textarea_get_text(ta_ip);
+        if (ip && strlen(ip) > 0) cJSON_AddStringToObject(root, "ip", ip);
+    }
+
+    lv_obj_t *ta_subnet = view_factory_get_textarea(ui, UI_TEXTAREA_WIFI_SUBNET);
+    if (ta_subnet) {
+        const char *subnet = lv_textarea_get_text(ta_subnet);
+        if (subnet && strlen(subnet) > 0) cJSON_AddStringToObject(root, "subnet", subnet);
+    }
+
+    lv_obj_t *ta_gw = view_factory_get_textarea(ui, UI_TEXTAREA_WIFI_GATEWAY);
+    if (ta_gw) {
+        const char *gw = lv_textarea_get_text(ta_gw);
+        if (gw && strlen(gw) > 0) cJSON_AddStringToObject(root, "gateway", gw);
+    }
+
+    char *json_str = cJSON_PrintUnformatted(root);
+    cJSON_Delete(root);
+    return json_str;
+}
+
+char *ui_form_read_ethernet(view_factory_t *ui) {
+    if (!ui) return NULL;
+
+    lv_obj_t *ta_ip = view_factory_get_textarea(ui, UI_TEXTAREA_ETHERNET_IP);
+    if (!ta_ip) return NULL;
+
+    const char *ip_str = lv_textarea_get_text(ta_ip);
+    if (!ip_str || strlen(ip_str) == 0) return NULL;
+
+    cJSON *root = cJSON_CreateObject();
+    if (!root) return NULL;
+
+    cJSON_AddStringToObject(root, "ip", ip_str);
+
+    lv_obj_t *ta_subnet = view_factory_get_textarea(ui, UI_TEXTAREA_ETHERNET_SUBNET);
+    if (ta_subnet) {
+        const char *subnet = lv_textarea_get_text(ta_subnet);
+        if (subnet && strlen(subnet) > 0) cJSON_AddStringToObject(root, "subnet", subnet);
+    }
+
+    lv_obj_t *ta_gw = view_factory_get_textarea(ui, UI_TEXTAREA_ETHERNET_GATEWAY);
+    if (ta_gw) {
+        const char *gw = lv_textarea_get_text(ta_gw);
+        if (gw && strlen(gw) > 0) cJSON_AddStringToObject(root, "gateway", gw);
+    }
+
+    char *json_str = cJSON_PrintUnformatted(root);
+    cJSON_Delete(root);
+    return json_str;
+}
+
+char *ui_form_read_lte(view_factory_t *ui) {
+    if (!ui) return NULL;
+
+    lv_obj_t *ta_apn = view_factory_get_textarea(ui, UI_TEXTAREA_LTE_APN);
+    if (!ta_apn) return NULL;
+
+    const char *apn_str = lv_textarea_get_text(ta_apn);
+    if (!apn_str || strlen(apn_str) == 0) return NULL;
+
+    cJSON *root = cJSON_CreateObject();
+    if (!root) return NULL;
+
+    cJSON_AddStringToObject(root, "apn", apn_str);
+
+    lv_obj_t *ta_user = view_factory_get_textarea(ui, UI_TEXTAREA_LTE_USERNAME);
+    if (ta_user) {
+        const char *user = lv_textarea_get_text(ta_user);
+        if (user && strlen(user) > 0) cJSON_AddStringToObject(root, "username", user);
+    }
+
+    lv_obj_t *ta_pass = view_factory_get_textarea(ui, UI_TEXTAREA_LTE_PASS);
+    if (ta_pass) {
+        const char *pass = lv_textarea_get_text(ta_pass);
+        if (pass && strlen(pass) > 0) cJSON_AddStringToObject(root, "password", pass);
+    }
+
+    lv_obj_t *ta_pin = view_factory_get_textarea(ui, UI_TEXTAREA_LTE_PIN_CODE);
+    if (ta_pin) {
+        const char *pin = lv_textarea_get_text(ta_pin);
+        if (pin && strlen(pin) > 0) cJSON_AddStringToObject(root, "pin_code", pin);
+    }
+
+    char *json_str = cJSON_PrintUnformatted(root);
+    cJSON_Delete(root);
+    return json_str;
+}

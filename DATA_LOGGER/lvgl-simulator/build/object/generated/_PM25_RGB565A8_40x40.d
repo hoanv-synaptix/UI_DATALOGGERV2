@@ -1,5 +1,5 @@
-build/object/generated/lv_font_Roboto_Regular_10.o: \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\guider_fonts\lv_font_roboto_regular_10.c \
+build/object/generated/_PM25_RGB565A8_40x40.o: \
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\generated\images\_pm25_rgb565a8_40x40.c \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lvgl.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\lv_version.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\lvgl\src/lv_init.h \

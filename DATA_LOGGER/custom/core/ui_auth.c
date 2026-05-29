@@ -1,8 +1,8 @@
 #include "ui_auth.h"
 #include <string.h>
 
-#define HARDCODED_ADMIN_USER "1"
-#define HARDCODED_ADMIN_PASS "1"
+#define HARDCODED_ADMIN_USER "a"
+#define HARDCODED_ADMIN_PASS "a"
 
 bool ui_auth_verify_login(const char *username, const char *password) {
     if (!username || !password) return false;

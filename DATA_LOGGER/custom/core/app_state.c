@@ -4,6 +4,7 @@
 #include "cmp_modbus_list.h"
 #include "ui_auth.h"
 #include "modbus_config_service.h"
+#include <string.h>
 
 /**
  * @brief Hàm trợ giúp: Ẩn một đối tượng giao diện LVGL
@@ -482,6 +483,29 @@ ui_action_effect_t ui_state_dispatch(ui_runtime_state_t *state, ui_action_t acti
     return UI_ACTION_EFFECT_NONE; // Không có yêu cầu nào đẩy xuống Firmware
 }
 
+static ui_runtime_state_t s_prev_state = {0};
+
+static bool state_equals(const ui_runtime_state_t *a, const ui_runtime_state_t *b) {
+    if (a->main_view != b->main_view) return false;
+    if (a->settings_view != b->settings_view) return false;
+    if (a->dialog != b->dialog) return false;
+    if (a->net_transport != b->net_transport) return false;
+    if (a->wifi_mode != b->wifi_mode) return false;
+    if (a->ethernet_mode != b->ethernet_mode) return false;
+    if (a->modbus_role != b->modbus_role) return false;
+    if (a->modbus_overlay != b->modbus_overlay) return false;
+    if (a->dialog_return_main_view != b->dialog_return_main_view) return false;
+    if (a->dialog_return_settings_view != b->dialog_return_settings_view) return false;
+    if (a->live.wifi_connected != b->live.wifi_connected) return false;
+    if (a->live.wifi_status != b->live.wifi_status) return false;
+    if (a->live.ethernet_status != b->live.ethernet_status) return false;
+    if (a->live.lte_status != b->live.lte_status) return false;
+    if (a->live.mqtt_status != b->live.mqtt_status) return false;
+    if (a->live.modbus_status != b->live.modbus_status) return false;
+    if (strcmp(a->live.wifi_live_ip, b->live.wifi_live_ip) != 0) return false;
+    return true;
+}
+
 void ui_state_render(view_factory_t *ui, const ui_runtime_state_t *state)
 {
     ui_main_view_refs_t main_refs;
@@ -491,6 +515,11 @@ void ui_state_render(view_factory_t *ui, const ui_runtime_state_t *state)
     ui_mqtt_refs_t mqtt_refs;
 
     if (!ui || !state) return;
+
+    if (state_equals(&s_prev_state, state)) {
+        return; // Không đổi, không cần render lại
+    }
+    s_prev_state = *state;
     
     // Thu thập tham chiếu (References) đến các Object (Widget) sinh tự động
     view_factory_get_main_view_refs(ui, &main_refs);

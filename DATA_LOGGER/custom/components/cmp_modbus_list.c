@@ -88,10 +88,11 @@ static void clear_rows(void) {
 static lv_obj_t *create_cell_label(lv_obj_t *parent, lv_coord_t x, lv_coord_t w,
                                     const char *text) {
     lv_obj_t *lbl = lv_label_create(parent);
+    if (!lbl) return NULL;
     lv_obj_set_pos(lbl, x, 0);
     lv_obj_set_size(lbl, w, LIST_ROW_HEIGHT);
     lv_label_set_text(lbl, text);
-    lv_label_set_long_mode(lbl, LV_LABEL_LONG_SCROLL_CIRCULAR);
+    lv_label_set_long_mode(lbl, LV_LABEL_LONG_DOT);
     lv_obj_set_style_text_color(lbl, lv_color_hex(LIST_TEXT_COLOR), LV_PART_MAIN);
     lv_obj_set_style_text_font(lbl, &lv_font_Roboto_Bold_13, LV_PART_MAIN);
     lv_obj_set_style_text_align(lbl, LV_TEXT_ALIGN_CENTER, LV_PART_MAIN);
@@ -127,6 +128,7 @@ void cmp_modbus_list_render(void) {
 
     for (uint16_t i = 0; i < count && i < MBS_MAX_COMMANDS; i++) {
         lv_obj_t *row = lv_obj_create(s_list_container);
+        if (!row) break;
         lv_obj_set_pos(row, 0, LIST_START_Y + i * (LIST_ROW_HEIGHT + LIST_ROW_GAP));
         lv_obj_set_size(row, LIST_ROW_WIDTH, LIST_ROW_HEIGHT);
         lv_obj_set_scrollbar_mode(row, LV_SCROLLBAR_MODE_OFF);
@@ -138,25 +140,26 @@ void cmp_modbus_list_render(void) {
 
         /* Cột: STT (Số thứ tự) */
         snprintf(buf, sizeof(buf), "%d", i + 1);
-        create_cell_label(row, 18, 36, buf);
+        if (!create_cell_label(row, 18, 36, buf)) break;
 
         /* Cột: SLAVE ID */
         snprintf(buf, sizeof(buf), "%d", list[i].id);
-        create_cell_label(row, 65, 80, buf);
+        if (!create_cell_label(row, 65, 80, buf)) break;
 
         /* Cột: LOẠI THANH GHI (Dịch từ Function Code) */
-        create_cell_label(row, 152, 120, modbus_config_func_name(list[i].func));
+        if (!create_cell_label(row, 152, 120, modbus_config_func_name(list[i].func))) break;
 
         /* Cột: THANH GHI MAP MỚI */
         snprintf(buf, sizeof(buf), "%d", list[i].reg_addr_remap);
-        create_cell_label(row, 287, 130, buf);
+        if (!create_cell_label(row, 287, 130, buf)) break;
 
         /* Cột: SỐ LƯỢNG */
         snprintf(buf, sizeof(buf), "%d", list[i].reg_quantity);
-        create_cell_label(row, 434, 80, buf);
+        if (!create_cell_label(row, 434, 80, buf)) break;
 
         /* Cột: THAO TÁC - Tạo nút bấm Sửa (Edit) và Xóa (Delete) */
         lv_obj_t *edit_btn = lv_button_create(row);
+        if (!edit_btn) break;
         lv_obj_set_pos(edit_btn, 524, 5);
         lv_obj_set_size(edit_btn, 34, 30);
         lv_obj_set_style_bg_opa(edit_btn, 0, LV_PART_MAIN);
@@ -176,6 +179,7 @@ void cmp_modbus_list_render(void) {
         lv_obj_add_event_cb(edit_btn, edit_btn_cb, LV_EVENT_SHORT_CLICKED, (void *)(uintptr_t)i);
 
         lv_obj_t *del_btn = lv_button_create(row);
+        if (!del_btn) break;
         lv_obj_set_pos(del_btn, 564, 5);
         lv_obj_set_size(del_btn, 34, 30);
         lv_obj_set_style_bg_opa(del_btn, 0, LV_PART_MAIN);

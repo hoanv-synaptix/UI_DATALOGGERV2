@@ -5,137 +5,231 @@
 #include "lvgl.h"
 #include "ctrl_screen.h"
 #include "aqi_service.h"
+#include "cJSON.h"
 
-static ui_backend_status_t s_backend_status = UI_BACKEND_STATUS_UNKNOWN;
+static volatile ui_backend_status_t s_backend_status = UI_BACKEND_STATUS_UNKNOWN;
 
-/**
- * @brief Cấu trúc gói tin bất đồng bộ dùng cho lv_async_call.
- * Khi nhận dữ liệu từ luồng (Thread) khác, ta cần bọc payload lại và chuyển
- * giao vào Thread chính của LVGL để tránh crash bộ nhớ.
- */
+/* =========================================================================
+ * Cấu trúc gói tin JSON bất đồng bộ (dùng chung cả 2 path)
+ * ========================================================================= */
 typedef struct {
     ui_sub_topic_t topic;
     char *payload;
-} async_json_t;
+} ui_json_msg_t;
 
-#include "cJSON.h"
+/* ---------- Hàm xử lý JSON trong LVGL thread (safe) ---------- */
+static void process_json_msg(ui_json_msg_t *msg)
+{
+    if (!msg) return;
 
-/**
- * @brief Hàm Callback được LVGL Thread gọi để thực thi parse JSON và cập nhật giao diện.
- * 
- * @param user_data Con trỏ trỏ tới gói tin `async_json_t` đã được bọc
- */
-static void async_json_handler(void *user_data) {
-    async_json_t *data = (async_json_t *)user_data;
-    if (data) {
-        if (data->topic == SUB_TOPIC_SENSOR_DATA) {
-            // Bước 1: Phân tích cú pháp JSON
-            cJSON *root = cJSON_Parse(data->payload);
-            if (root) {
-                ui_sensor_data_t sensor_data = {0};
-                cJSON *item;
-                
-                // Bước 2: Trích xuất các trường dữ liệu một cách an toàn
-                item = cJSON_GetObjectItem(root, "pm10"); if (item && cJSON_IsNumber(item)) sensor_data.pm10 = item->valueint;
-                item = cJSON_GetObjectItem(root, "pm25"); if (item && cJSON_IsNumber(item)) sensor_data.pm25 = item->valueint;
-                item = cJSON_GetObjectItem(root, "temp"); if (item && cJSON_IsNumber(item)) sensor_data.temp = item->valueint;
-                item = cJSON_GetObjectItem(root, "humi"); if (item && cJSON_IsNumber(item)) sensor_data.humi = item->valueint;
-                item = cJSON_GetObjectItem(root, "no2"); if (item && cJSON_IsNumber(item)) sensor_data.no2 = item->valueint;
-                item = cJSON_GetObjectItem(root, "o3"); if (item && cJSON_IsNumber(item)) sensor_data.o3 = item->valueint;
-                item = cJSON_GetObjectItem(root, "co"); if (item && cJSON_IsNumber(item)) sensor_data.co = item->valueint;
-                item = cJSON_GetObjectItem(root, "so2"); if (item && cJSON_IsNumber(item)) sensor_data.so2 = item->valueint;
-                item = cJSON_GetObjectItem(root, "aqi"); if (item && cJSON_IsNumber(item)) sensor_data.aqi = item->valueint;
-                
-                // Bước 3: Đẩy cấu trúc C tĩnh sạch sẽ sang Controller
-                ui_screen_controller_apply_sensor_data(&sensor_data);
-                
-                // Giải phóng bộ nhớ cJSON
-                cJSON_Delete(root);
-            }
-        } else if (data->topic == SUB_TOPIC_SYS_STATUS) {
-            // TODO: Parse SYS_STATUS JSON into a struct here and dispatch to Controller
-            // example: cJSON_Parse(data->payload);
+    if (msg->topic == SUB_TOPIC_SENSOR_DATA) {
+        cJSON *root = cJSON_Parse(msg->payload);
+        if (root) {
+            ui_sensor_data_t sd = {0};
+            cJSON *it;
+
+            it = cJSON_GetObjectItem(root, "pm10"); if (it && cJSON_IsNumber(it)) sd.pm10 = it->valueint;
+            it = cJSON_GetObjectItem(root, "pm25"); if (it && cJSON_IsNumber(it)) sd.pm25 = it->valueint;
+            it = cJSON_GetObjectItem(root, "temp"); if (it && cJSON_IsNumber(it)) sd.temp = it->valueint;
+            it = cJSON_GetObjectItem(root, "humi"); if (it && cJSON_IsNumber(it)) sd.humi = it->valueint;
+            it = cJSON_GetObjectItem(root, "no2");  if (it && cJSON_IsNumber(it)) sd.no2  = it->valueint;
+            it = cJSON_GetObjectItem(root, "o3");   if (it && cJSON_IsNumber(it)) sd.o3   = it->valueint;
+            it = cJSON_GetObjectItem(root, "co");   if (it && cJSON_IsNumber(it)) sd.co   = it->valueint;
+            it = cJSON_GetObjectItem(root, "so2");  if (it && cJSON_IsNumber(it)) sd.so2  = it->valueint;
+            it = cJSON_GetObjectItem(root, "aqi");  if (it && cJSON_IsNumber(it)) sd.aqi  = it->valueint;
+
+            ui_screen_controller_apply_sensor_data(&sd);
+            cJSON_Delete(root);
         }
-        
-        // Dọn dẹp bộ nhớ đã cấp phát bằng malloc ở hàm ui_sub_post_json
-        free(data->payload);
-        free(data);
+    } else if (msg->topic == SUB_TOPIC_SYS_STATUS) {
+        /* TODO: Parse SYS_STATUS JSON → dispatch to controller */
+    }
+
+    free(msg->payload);
+    free(msg);
+}
+
+/* =========================================================================
+ * SENSOR: Latest-Wins Mailbox (dùng chung cả 2 path)
+ * ========================================================================= */
+static ui_sensor_data_t s_latest_sensor;
+static volatile bool    s_sensor_dirty = false;
+
+/* =========================================================================
+ * FIRMWARE PATH (FreeRTOS): Queue + Critical Section + drain timer
+ * ========================================================================= */
+#ifndef _WIN32
+
+#include "FreeRTOS.h"
+#include "queue.h"
+
+#define UI_JSON_QUEUE_DEPTH  8
+static QueueHandle_t s_json_queue = NULL;
+static lv_timer_t   *s_drain_timer = NULL;
+
+#define UI_DRAIN_MAX_PER_TICK  3   /* Max JSON messages processed per LVGL tick */
+
+static void ui_drain_timer_cb(lv_timer_t *timer)
+{
+    (void)timer;
+
+    /* 1. Drain queue JSON -- bounded to prevent blocking LVGL main loop */
+    if (s_json_queue) {
+        ui_json_msg_t *msg;
+        uint8_t processed = 0;
+        while (processed < UI_DRAIN_MAX_PER_TICK &&
+               xQueueReceive(s_json_queue, &msg, 0) == pdTRUE) {
+            process_json_msg(msg);
+            processed++;
+        }
+    }
+
+    /* 2. Drain sensor mailbox (latest-wins) */
+    if (s_sensor_dirty) {
+        ui_sensor_data_t copy;
+        taskENTER_CRITICAL();
+        copy = s_latest_sensor;
+        s_sensor_dirty = false;
+        taskEXIT_CRITICAL();
+
+        ui_screen_controller_apply_sensor_data(&copy);
     }
 }
 
-bool ui_sub_post_json(ui_sub_topic_t topic, const char *json_payload) {
+void ui_sub_init(void)
+{
+    if (!s_json_queue) s_json_queue = xQueueCreate(UI_JSON_QUEUE_DEPTH, sizeof(ui_json_msg_t *));
+    if (!s_drain_timer) s_drain_timer = lv_timer_create(ui_drain_timer_cb, 50, NULL);
+}
+
+
+bool ui_sub_post_json(ui_sub_topic_t topic, const char *json_payload)
+{
     if (!json_payload) return false;
-    
-    // Cấp phát bộ nhớ cho gói tin
-    async_json_t *data = (async_json_t *)malloc(sizeof(async_json_t));
-    if (!data) return false;
-    
-    data->topic = topic;
-    
-    // Cấp phát và sao chép chuỗi JSON vào vùng nhớ Heap an toàn (tránh mất data khi biến cục bộ bị hủy)
+
+    ui_json_msg_t *msg = (ui_json_msg_t *)malloc(sizeof(ui_json_msg_t));
+    if (!msg) return false;
+
+    msg->topic = topic;
+
     size_t len = strlen(json_payload);
-    data->payload = (char *)malloc(len + 1);
-    if (!data->payload) {
-        free(data);
+    msg->payload = (char *)malloc(len + 1);
+    if (!msg->payload) {
+        free(msg);
         return false;
     }
-    strcpy(data->payload, json_payload);
-    
-    // Đẩy việc xử lý hàm callback vào hàng đợi chính của LVGL để đảm bảo Thread-safe
-    lv_async_call(async_json_handler, data);
-    return true;
-}
+    strcpy(msg->payload, json_payload);
 
-bool ui_sub_post_backend_status(ui_backend_status_t status)
-{
-    s_backend_status = status;
-    return true;
-}
-
-#include "cmp_dashboard.h"
-
-static void async_sensor_data_handler(void *user_data) {
-    ui_sensor_data_t *data = (ui_sensor_data_t *)user_data;
-    if (data) {
-        ui_screen_controller_apply_sensor_data(data);
-        free(data); // Giải phóng RAM đã cấp phát
+    if (!s_json_queue) {
+        free(msg->payload);
+        free(msg);
+        return false;
     }
-}
 
-bool ui_sub_post_sensor_data(const struct ui_sensor_data_t *data) {
-    if (!data) return false;
-    
-    // Cấp phát Heap để sao chép toàn bộ Struct sang Thread của UI
-    ui_sensor_data_t *copy = (ui_sensor_data_t *)malloc(sizeof(ui_sensor_data_t));
-    if (!copy) return false;
-    
-    *copy = *data;
-    
-    // Gọi thực thi bất đồng bộ an toàn
-    lv_async_call(async_sensor_data_handler, copy);
+    if (xQueueSend(s_json_queue, &msg, pdMS_TO_TICKS(10)) != pdTRUE) {
+        free(msg->payload);
+        free(msg);
+        return false;
+    }
+
     return true;
 }
 
-#ifndef _WIN32
+bool ui_sub_post_sensor_data(const struct ui_sensor_data_t *data)
+{
+    if (!data) return false;
+
+    taskENTER_CRITICAL();
+    s_latest_sensor = *data;
+    s_sensor_dirty  = true;
+    taskEXIT_CRITICAL();
+
+    return true;
+}
+
 #include "app_param.h"
 
 bool ui_sub_post_app_param(const struct AppParam *param) {
     if (!param) return false;
 
     ui_sensor_data_t ui_data = {0};
-    
-    // Ánh xạ (Mapping) và scale dữ liệu x10 để chuyển từ float sang int32_t
+
     ui_data.pm10 = (int32_t)(param->iaqi.pm10 * 10.0f);
     ui_data.pm25 = (int32_t)(param->iaqi.pm25 * 10.0f);
     ui_data.temp = (int32_t)(param->iaqi.t * 10.0f);
     ui_data.humi = (int32_t)(param->iaqi.h * 10.0f);
     ui_data.no2  = (int32_t)(param->iaqi.no2 * 10.0f);
     ui_data.o3   = (int32_t)(param->iaqi.o3 * 10.0f);
-    ui_data.co  = (int32_t)(param->iaqi.co * 10.0f);
+    ui_data.co   = (int32_t)(param->iaqi.co * 10.0f);
     ui_data.so2  = (int32_t)(param->iaqi.so2 * 10.0f);
-    ui_data.aqi  = (int32_t)(param->aqi); // AQI là số nguyên 0-500, không scale x10
-    
-    // Đẩy vào hệ thống xử lý bất đồng bộ
+    ui_data.aqi  = (int32_t)(param->aqi);
+
     return ui_sub_post_sensor_data(&ui_data);
 }
-#endif // _WIN32
+
+/* =========================================================================
+ * SIMULATOR PATH (_WIN32): lv_async_call — single-thread, an toàn
+ * ========================================================================= */
+#else
+
+static void async_json_handler(void *user_data) {
+    process_json_msg((ui_json_msg_t *)user_data);
+}
+
+static lv_timer_t *s_sim_drain_timer = NULL;
+
+static void sim_drain_timer_cb(lv_timer_t *timer) {
+    (void)timer;
+    if (s_sensor_dirty) {
+        s_sensor_dirty = false;
+        ui_screen_controller_apply_sensor_data(&s_latest_sensor);
+    }
+}
+
+void ui_sub_init(void)
+{
+    if (!s_sim_drain_timer)
+        s_sim_drain_timer = lv_timer_create(sim_drain_timer_cb, 50, NULL);
+}
+
+bool ui_sub_post_json(ui_sub_topic_t topic, const char *json_payload)
+{
+    if (!json_payload) return false;
+
+    ui_json_msg_t *msg = (ui_json_msg_t *)malloc(sizeof(ui_json_msg_t));
+    if (!msg) return false;
+
+    msg->topic = topic;
+
+    size_t len = strlen(json_payload);
+    msg->payload = (char *)malloc(len + 1);
+    if (!msg->payload) {
+        free(msg);
+        return false;
+    }
+    strcpy(msg->payload, json_payload);
+
+    lv_async_call(async_json_handler, msg);
+    return true;
+}
+
+bool ui_sub_post_sensor_data(const struct ui_sensor_data_t *data)
+{
+    if (!data) return false;
+
+    s_latest_sensor = *data;
+    s_sensor_dirty  = true;
+    return true;
+}
+
+#endif /* _WIN32 */
+
+/* =========================================================================
+ * COMMON: Backend status (không cần thread-safety, chỉ đọc/ghi 1 biến)
+ * ========================================================================= */
+
+bool ui_sub_post_backend_status(ui_backend_status_t status)
+{
+    s_backend_status = status;
+    return true;
+}

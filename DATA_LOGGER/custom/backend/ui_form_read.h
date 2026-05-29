@@ -21,6 +21,9 @@ extern "C" {
  *         LƯU Ý: Người gọi hàm phải free() chuỗi này sau khi dùng xong.
  */
 char *ui_form_read_mqtt(view_factory_t *ui);
+char *ui_form_read_wifi(view_factory_t *ui);
+char *ui_form_read_ethernet(view_factory_t *ui);
+char *ui_form_read_lte(view_factory_t *ui);
 
 #ifdef __cplusplus
 }

@@ -20,7 +20,7 @@ void ui_runtime_guard_init(view_factory_t *ui, ui_runtime_rebind_cb_t rebind_cb)
 {
     s_ui = ui;
     s_rebind_cb = rebind_cb;
-    if (!s_watchdog_timer) s_watchdog_timer = lv_timer_create(watchdog_cb, 100U, NULL);
+    if (!s_watchdog_timer) s_watchdog_timer = lv_timer_create(watchdog_cb, 1000U, NULL);
 }
 
 void ui_runtime_guard_mark_bound(lv_obj_t *scr_base)

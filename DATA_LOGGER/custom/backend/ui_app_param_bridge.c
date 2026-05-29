@@ -13,12 +13,16 @@ static void bridge_timer_cb(lv_timer_t *timer) {
     ui_sub_post_app_param(&app_param);
 }
 
+static lv_timer_t *s_bridge_timer = NULL;
+
 void ui_app_param_bridge_start(void) {
     // Gọi ngay lần đầu tiên để cập nhật UI lập tức
     bridge_timer_cb(NULL);
     
     // Tạo timer của LVGL để tự động quét biến app_param mỗi 1 giây (1000 ms)
-    lv_timer_create(bridge_timer_cb, 1000, NULL);
+    if (!s_bridge_timer) {
+        s_bridge_timer = lv_timer_create(bridge_timer_cb, 1000, NULL);
+    }
 }
 
 #endif // _WIN32

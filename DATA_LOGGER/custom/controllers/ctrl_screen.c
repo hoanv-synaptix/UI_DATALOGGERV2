@@ -11,6 +11,7 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "cJSON.h"
 
 #define UI_KEYBOARD_MARGIN 12
 #define UI_TOP_SAFE_MARGIN 72
@@ -41,11 +42,19 @@ static void bind_cb(lv_obj_t *obj, lv_event_cb_t cb, lv_event_code_t code, void 
     lv_obj_add_event_cb(obj, cb, code, user_data);
 }
 
+static lv_timer_t *s_login_timer = NULL;
+static lv_timer_t *s_secure_timer = NULL;
+
 static void login_success_timer_cb(lv_timer_t * t)
 {
     view_factory_t *ui = s_ctx.ui;
+    if (!ui) {
+        s_login_timer = NULL;
+        lv_timer_del(t);
+        return;
+    }
     ui_login_refs_t login_refs;
-    
+
     lv_textarea_set_text(view_factory_get_textarea(ui, UI_TEXTAREA_LOGIN_USER), "");
     lv_textarea_set_text(view_factory_get_textarea(ui, UI_TEXTAREA_LOGIN_PASS), "");
     view_factory_get_login_refs(ui, &login_refs);
@@ -53,25 +62,29 @@ static void login_success_timer_cb(lv_timer_t * t)
     lv_obj_set_style_text_color(login_refs.lbl_login_booting_status, lv_color_hex(0xABABAB), 0);
     
     ui_screen_controller_dispatch(ui, UI_ACTION_SHOW_DASHBOARD, 0);
+    s_login_timer = NULL;
     lv_timer_del(t);
 }
 
 static void secure_settings_success_timer_cb(lv_timer_t * t)
 {
     view_factory_t *ui = s_ctx.ui;
-    
+    if (!ui) {
+        s_secure_timer = NULL;
+        lv_timer_del(t);
+        return;
+    }
+
     lv_textarea_set_text(view_factory_get_textarea(ui, UI_TEXTAREA_SECURE_SETTINGS_PASS), "");
     
     ui_screen_controller_dispatch(ui, UI_ACTION_SHOW_SETTINGS_MENU, 0);
+    s_secure_timer = NULL;
     lv_timer_del(t);
 }
 
 static void handle_action_effect(view_factory_t *ui, const ui_runtime_state_t *state, ui_action_effect_t effect)
 {
-    (void)ui;
-    (void)state;
-    
-    // Todo: Implement JSON packing for other configs (Wifi, LTE, etc.) if needed in the future.
+    (void)state; /* accessed via s_ctx.state */
     if (effect == UI_ACTION_EFFECT_REQUEST_RESTART) {
         ui_pub_submit_json(PUB_TOPIC_SYS_CTRL, "{\"cmd\": \"restart\"}");
     } else if (effect == UI_ACTION_EFFECT_REQUEST_FACTORY_RESET) {
@@ -79,9 +92,9 @@ static void handle_action_effect(view_factory_t *ui, const ui_runtime_state_t *s
     } else if (effect == UI_ACTION_EFFECT_SUBMIT_GENERATE_REPORT) {
         ui_pub_submit_json(PUB_TOPIC_SYS_CTRL, "{\"cmd\": \"generate_report\"}");
     } else if (effect == UI_ACTION_EFFECT_LOGIN_SUCCESS) {
-        lv_timer_create(login_success_timer_cb, 1000, ui);
+        if (!s_login_timer) s_login_timer = lv_timer_create(login_success_timer_cb, 1000, ui);
     } else if (effect == UI_ACTION_EFFECT_SECURE_SETTINGS_SUCCESS) {
-        lv_timer_create(secure_settings_success_timer_cb, 1000, ui);
+        if (!s_secure_timer) s_secure_timer = lv_timer_create(secure_settings_success_timer_cb, 1000, ui);
     } else if (effect == UI_ACTION_EFFECT_SUBMIT_MODBUS_DEVICE) {
         modbus_config_sync_to_firmware();
     } else if (effect == UI_ACTION_EFFECT_SUBMIT_MQTT_CONFIG) {
@@ -90,13 +103,45 @@ static void handle_action_effect(view_factory_t *ui, const ui_runtime_state_t *s
             // Validation Pass
             s_ctx.state.live.mqtt_status = UI_CONNECTION_STATUS_CONNECTING;
             ui_pub_submit_json(PUB_TOPIC_MQTT, json);
-            free(json);
+            cJSON_free(json);
         } else {
             // Validation Fail -> Đổi status thành Lỗi (Màu Đỏ)
             s_ctx.state.live.mqtt_status = UI_CONNECTION_STATUS_ERROR;
         }
         // Kích hoạt render lại nhãn lbl_status
         ui_state_render(ui, &s_ctx.state);
+    } else if (effect == UI_ACTION_EFFECT_SUBMIT_WIFI_CONFIG) {
+        char *json = ui_form_read_wifi(ui);
+        if (json) {
+            s_ctx.state.live.wifi_status = UI_CONNECTION_STATUS_CONNECTING;
+            ui_pub_submit_json(PUB_TOPIC_WIFI, json);
+            cJSON_free(json);
+        } else {
+            s_ctx.state.live.wifi_status = UI_CONNECTION_STATUS_ERROR;
+        }
+        ui_state_render(ui, &s_ctx.state);
+    } else if (effect == UI_ACTION_EFFECT_SUBMIT_ETHERNET_CONFIG) {
+        char *json = ui_form_read_ethernet(ui);
+        if (json) {
+            s_ctx.state.live.ethernet_status = UI_CONNECTION_STATUS_CONNECTING;
+            ui_pub_submit_json(PUB_TOPIC_ETHERNET, json);
+            cJSON_free(json);
+        } else {
+            s_ctx.state.live.ethernet_status = UI_CONNECTION_STATUS_ERROR;
+        }
+        ui_state_render(ui, &s_ctx.state);
+    } else if (effect == UI_ACTION_EFFECT_SUBMIT_LTE_CONFIG) {
+        char *json = ui_form_read_lte(ui);
+        if (json) {
+            s_ctx.state.live.lte_status = UI_CONNECTION_STATUS_CONNECTING;
+            ui_pub_submit_json(PUB_TOPIC_LTE, json);
+            cJSON_free(json);
+        } else {
+            s_ctx.state.live.lte_status = UI_CONNECTION_STATUS_ERROR;
+        }
+        ui_state_render(ui, &s_ctx.state);
+    } else if (effect == UI_ACTION_EFFECT_SUBMIT_MODBUS_CONFIG) {
+        modbus_config_sync_to_firmware();
     }
 }
 
@@ -159,6 +204,18 @@ void ui_screen_controller_enter(view_factory_t *ui)
 void ui_screen_controller_exit(void)
 {
     ui_input_policy_unbind();
+
+    if (s_login_timer) {
+        lv_timer_del(s_login_timer);
+        s_login_timer = NULL;
+    }
+    if (s_secure_timer) {
+        lv_timer_del(s_secure_timer);
+        s_secure_timer = NULL;
+    }
+
+    view_factory_invalidate_cache();
+
     s_ctx.bound_scr_base = NULL;
     s_ctx.ui = NULL;
 }
@@ -197,5 +254,6 @@ void ui_screen_controller_apply_sensor_data(const struct ui_sensor_data_t *data)
 {
     if (!data) return;
     cmp_dashboard_apply_data(data);
-    ui_state_render(s_ctx.ui, &s_ctx.state);
+    /* Chỉ vẽ lại phần Dashboard — tránh full re-render navigation/layout */
+    cmp_dashboard_render(s_ctx.state.main_view == UI_MAIN_VIEW_DASHBOARD);
 }

@@ -44,7 +44,19 @@ typedef struct {
 } cmp_dashboard_state_t;
 
 static cmp_dashboard_state_t s_dash_state = {0};
+static cmp_dashboard_state_t s_last_rendered_state = {0};
+static bool s_first_render = true;
 
+/**
+ * @brief Thiết lập long_mode SCROLL_CIRCULAR cho tất cả status label một lần duy nhất.
+ * Phải gọi SAU KHI guider_ui được khởi tạo và scr_base được load.
+ */
+static void setup_label_scroll_modes(void)
+{
+    lv_ui *g = &guider_ui;
+    if (g->scr_base_lbl_Aqi_status)
+        lv_label_set_long_mode(g->scr_base_lbl_Aqi_status, LV_LABEL_LONG_SCROLL_CIRCULAR);
+}
 
 void cmp_dashboard_init(void)
 {
@@ -55,6 +67,7 @@ void cmp_dashboard_init(void)
     // Chạy Simulator PC: Dùng data giả ngẫu nhiên
     ui_test_inject_random_dashboard_data();
 #endif
+    setup_label_scroll_modes();
 }
 
 
@@ -99,8 +112,6 @@ static void apply_dashboard_label(lv_obj_t *val_lbl, lv_obj_t *status_lbl, const
         lv_obj_set_style_text_color(val_lbl, color_from_level(level), LV_PART_MAIN | LV_STATE_DEFAULT);
     }
     if (status_lbl) {
-        // Cho chữ tự động chạy ngang (marquee) nếu quá dài
-        lv_label_set_long_mode(status_lbl, LV_LABEL_LONG_SCROLL_CIRCULAR);
         lv_label_set_text(status_lbl, status_text_from_level(level));
         lv_obj_set_style_text_color(status_lbl, color_from_level(level), LV_PART_MAIN | LV_STATE_DEFAULT);
     }
@@ -152,46 +163,67 @@ void cmp_dashboard_render(bool is_active)
     char buf[16];
 
     // Cập nhật Vòng cung AQI (Arc)
-    if (g->scr_base_arc_aqi) {
-        lv_color_t color = color_from_level(s_dash_state.aqi_level);
-        lv_arc_set_value(g->scr_base_arc_aqi, s_dash_state.aqi);
-        lv_obj_set_style_arc_color(g->scr_base_arc_aqi, color, LV_PART_INDICATOR | LV_STATE_DEFAULT);
-        lv_obj_set_style_bg_color(g->scr_base_arc_aqi, color, LV_PART_KNOB | LV_STATE_DEFAULT);
+    if (s_dash_state.aqi != s_last_rendered_state.aqi || s_first_render) {
+        if (g->scr_base_arc_aqi) {
+            lv_color_t color = color_from_level(s_dash_state.aqi_level);
+            lv_arc_set_value(g->scr_base_arc_aqi, s_dash_state.aqi);
+            lv_obj_set_style_arc_color(g->scr_base_arc_aqi, color, LV_PART_INDICATOR | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_color(g->scr_base_arc_aqi, color, LV_PART_KNOB | LV_STATE_DEFAULT);
+        }
+
+        // AQI (Giá trị nguyên)
+        snprintf(buf, sizeof(buf), "%d", (int)s_dash_state.aqi);
+        apply_dashboard_label(g->scr_base_lbl_aqi_val, g->scr_base_lbl_Aqi_status, buf, s_dash_state.aqi_level);
     }
 
-    // AQI (Giá trị nguyên)
-    snprintf(buf, sizeof(buf), "%d", (int)s_dash_state.aqi);
-    apply_dashboard_label(g->scr_base_lbl_aqi_val, g->scr_base_lbl_Aqi_status, buf, s_dash_state.aqi_level);
-
     // PM10 (Giá trị thập phân chia 10)
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.pm10);
-    apply_dashboard_label(g->scr_base_lbl_pm10_val, g->scr_base_lbl_pm10_status, buf, s_dash_state.pm10_level);
+    if (s_dash_state.pm10 != s_last_rendered_state.pm10 || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.pm10);
+        apply_dashboard_label(g->scr_base_lbl_pm10_val, NULL, buf, s_dash_state.pm10_level);
+    }
 
     // PM2.5
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.pm25);
-    apply_dashboard_label(g->scr_base_lbl_pm25_val, g->scr_base_lbl_pm25_status, buf, s_dash_state.pm25_level);
+    if (s_dash_state.pm25 != s_last_rendered_state.pm25 || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.pm25);
+        apply_dashboard_label(g->scr_base_lbl_pm25_val, NULL, buf, s_dash_state.pm25_level);
+    }
 
     // Nhiệt độ (Không có nhãn trạng thái đi kèm)
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.temp);
-    apply_dashboard_label(g->scr_base_lbl_temp_val, NULL, buf, s_dash_state.temp_level);
+    if (s_dash_state.temp != s_last_rendered_state.temp || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.temp);
+        apply_dashboard_label(g->scr_base_lbl_temp_val, NULL, buf, s_dash_state.temp_level);
+    }
 
     // Độ ẩm (Không có nhãn trạng thái đi kèm)
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.humi);
-    apply_dashboard_label(g->scr_base_lbl_humi_val, NULL, buf, s_dash_state.humi_level);
+    if (s_dash_state.humi != s_last_rendered_state.humi || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.humi);
+        apply_dashboard_label(g->scr_base_lbl_humi_val, NULL, buf, s_dash_state.humi_level);
+    }
 
     // NO2
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.no2);
-    apply_dashboard_label(g->scr_base_lbl_no2_val, NULL, buf, s_dash_state.no2_level);
+    if (s_dash_state.no2 != s_last_rendered_state.no2 || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.no2);
+        apply_dashboard_label(g->scr_base_lbl_no2_val, NULL, buf, s_dash_state.no2_level);
+    }
 
     // O3 
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.o3);
-    apply_dashboard_label(g->scr_base_lbl_o3_val, NULL, buf, s_dash_state.o3_level);
+    if (s_dash_state.o3 != s_last_rendered_state.o3 || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.o3);
+        apply_dashboard_label(g->scr_base_lbl_o3_val, NULL, buf, s_dash_state.o3_level);
+    }
 
     // CO
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.co);
-    apply_dashboard_label(g->scr_base_lbl_co_val, NULL, buf, s_dash_state.co_level);
+    if (s_dash_state.co != s_last_rendered_state.co || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.co);
+        apply_dashboard_label(g->scr_base_lbl_co_val, NULL, buf, s_dash_state.co_level);
+    }
 
     // SO2
-    ui_format_decimal(buf, sizeof(buf), s_dash_state.so2);
-    apply_dashboard_label(g->scr_base_lbl_so2_val, NULL, buf, s_dash_state.so2_level);
+    if (s_dash_state.so2 != s_last_rendered_state.so2 || s_first_render) {
+        ui_format_decimal(buf, sizeof(buf), s_dash_state.so2);
+        apply_dashboard_label(g->scr_base_lbl_so2_val, NULL, buf, s_dash_state.so2_level);
+    }
+
+    s_last_rendered_state = s_dash_state;
+    s_first_render = false;
 }

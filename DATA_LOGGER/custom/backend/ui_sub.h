@@ -3,8 +3,8 @@
  * @brief Cổng nhận dữ liệu (Subscriber) từ hệ thống Nhúng (Hardware) lên Giao diện (UI).
  * 
  * Đây là cánh cửa duy nhất để Firmware cập nhật trạng thái lên màn hình LVGL.
- * Tất cả dữ liệu đẩy lên đây sẽ được đưa vào hàng đợi bất đồng bộ (lv_async_call) 
- * để đảm bảo an toàn luồng (Thread-safe) cho LVGL.
+ * Dữ liệu JSON được đẩy qua FreeRTOS Queue, dữ liệu Sensor dùng Latest-Wins Mailbox.
+ * LVGL drain timer (chạy trong LVGL task) dequeue và xử lý — đảm bảo an toàn luồng.
  */
 #ifndef __UI_SUB_H_
 #define __UI_SUB_H_
@@ -57,10 +57,10 @@ typedef enum {
 bool ui_sub_post_json(ui_sub_topic_t topic, const char *json_payload);
 
 /**
- * @brief Cập nhật trạng thái kết nối mạng của thiết bị
- * @param status Trạng thái mạng hiện tại
- * @return true nếu cập nhật thành công
+ * @brief Khởi tạo các tài nguyên (Queue, Timer) cho luồng Sub. Phải gọi trong LVGL thread.
  */
+void ui_sub_init(void);
+
 bool ui_sub_post_backend_status(ui_backend_status_t status);
 
 struct ui_sensor_data_t; // Forward declaration để tránh include chéo

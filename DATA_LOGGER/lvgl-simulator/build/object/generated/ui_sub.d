@@ -690,8 +690,7 @@ build/object/generated/ui_sub.o: \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\core\app_state.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h \
  g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h \
- g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h
+ g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h:
 
@@ -2074,5 +2073,3 @@ g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\backend\ui_sub.h:
 g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\domain\aqi_service.h:
 
 g:\hoanv\projects\ui_dataloggerv2\data_logger\libs\cjson\cjson.h:
-
-g:\hoanv\projects\ui_dataloggerv2\data_logger\custom\components\cmp_dashboard.h:
